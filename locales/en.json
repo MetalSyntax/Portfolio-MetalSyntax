@@ -1,0 +1,44 @@
+{
+    "head":{
+      "home":"MetalSyntax - Wonder Díaz",
+      "portfolio":"MetalSyntax - Portfolio",
+      "achievements":"MetalSyntax - Achievements"
+    },
+    "links": {
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "achievements": "Achievements",
+      "english": "English",
+      "spanish": "Spanish"
+    },
+    "footer":{
+        "text": "Develop by MetalSyntax with Vue.js and TailWindCss."
+    },
+    "home": {
+      "toptitle": "Convergence of Knowledge",
+      "title": "Developer Web",
+      "subtitle": "Experience in designing and developing Websites and Web Apps",
+      "heroparagraph1": "Hi, I am ",
+      "heroparagraph2": "Industrial engineer and web developer. A passionate about technology. With experience in",
+      "heroparagraph3": "In addition to Frameworks, Libraries and CMS such as",
+      "heroparagraph4": "among others.",
+      "title1": "Engineering",
+      "text1": "Implemented management knowledge, Lean Manufacturing, continuous improvement and quality to offer the best results.",
+      "title2":"Developing",
+      "text2": "Creation of attractive and dynamic websites. Immersive and intuitive web apps with native looks.",
+      "title3": "Design",
+      "text3": "Thinking about the User Experience (UX) and the design of Interfaces (UI) to provide unique experiences in each person.",
+      "title4" :"Marketing",
+      "text4": "Development of plans for users to feel identified with the brand through the main social networks and SEO.",
+      "title5":"Analysis",
+      "text5": "Interpreting the data with the most powerful tools to grow business and carry out scalability planning.",
+      "title6": "Support",
+      "text6": "Checking the availability, accessibility and security of websites to meet the demand for services."
+    },
+    "portfolio": {
+      "title": "Portfolio"
+    },
+    "achievements": {
+      "title": "Achievements"
+    }
+}  

@@ -1,0 +1,44 @@
+{
+    "head":{
+      "home":"MetalSyntax - Wonder Díaz",
+      "portfolio":"MetalSyntax - Portafolio",
+      "achievements":"MetalSyntax - Certificados"
+    },
+    "links": {
+        "home": "Inicio",
+        "portfolio": "Portafolio",
+        "achievements": "Certificados",
+        "english": "Ingles",
+        "spanish": "Español"
+    },
+    "footer":{
+        "text": "Desarrollador por MetalSyntax con Vue.js y TailWindCss."
+    },
+    "home": {
+      "toptitle": "Convergencia del conocimiento",
+      "title": "Desarrollador Web",
+      "subtitle": "Experiencia en diseño y desarrollo de sitios web y aplicaciones web",
+      "heroparagraph1": "Hola, soy ",
+      "heroparagraph2": "Ingeniero industrial y desarrollador web. Un apasionado de la tecnología. Con experiencia en",
+      "heroparagraph3": "Además de Frameworks, Librerías y CMS como ",
+      "heroparagraph4": "entre otras.",
+      "title1": "Ingenieria",
+      "text1": "Implementando conocimientos de Gestión, Lean Manufacturing, Mejora Continua y Calidad para ofrecer los mejores resultados.",
+      "title2": "Desarrollo",
+      "text2": "Creación de sitios webs atractivos y dinámicos. Web apps inmersiva e intuitivas con apariencia nativas.",
+      "title3": "Diseño",
+      "text3": "Pensando en la Experiencia del Usuario (UX) y el diseño de Interfaces (UI) para brindar experiencias únicas en cada persona.",
+      "title4": "Marketing",
+      "text4": "Desarrollo de planes para que los usuarios se sientan identificados con la marca a través de las principales redes sociales y SEO.",
+      "title5": "Análisis",
+      "text5": "Interpretando los datos con las herramientas mas pontentes para hacer crecer los negocios y realizar planificaciones de escalabilidad.",
+      "title6": "Soporte",
+      "text6": "Comprobando la disponibilidad, accesibilidad y seguridad de los sitios web para satisfacer la demanda de los servicios."
+    },
+    "portfolio": {
+      "title": "Portafolio"
+    },
+    "achievements": {
+      "title": "Certificaciones"
+    }
+}  
