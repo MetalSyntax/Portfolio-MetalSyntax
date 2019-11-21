@@ -1,7 +1,7 @@
 {
   "name": "nuxt-portfolio",
   "version": "1.0.0",
-  "description": "My Portfolio in Nuxt.js",
+  "description": "Wonder Diaz Portfolio. Develop by MetalSyntax with Vue.js and TailWindCss.",
   "author": "MetalSyntax",
   "private": true,
   "scripts": {
@@ -11,12 +11,17 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/robots": "^2.4.2",
+    "@nuxtjs/sitemap": "^2.0.0",
     "aos": "^3.0.0-beta.6",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.3.0",
-    "vue-i18n": "^8.15.0"
+    "vue-i18n": "^8.15.0",
+    "vue-tailwind-modal": "0.0.7",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.2.1",
     "@nuxtjs/tailwindcss": "^1.0.0"
   }
 }

@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-ms.ico' }
     ]
   },
   /*
@@ -23,7 +23,9 @@ export default {
   * 
   */ 
  router: {
-  middleware: 'i18n'
+  middleware: 'i18n',
+  linkActiveClass: 'active-link',
+  linkExactActiveClass: 'exact-active-link'
   },
   /*
   ** Global CSS
@@ -35,26 +37,84 @@ export default {
   */
   plugins: [
     '~/plugins/i18n.js',
+    '~/plugins/typed.js',
     {src: "@/plugins/aos", ssr: false}
   ],
   /*
   ** Generates
   */
   generate: {
-    routes: ['/', '/portfolio','/achievements','/es', '/es/portfolio','/es/achievements']
+    routes: [
+    '/', 
+    '/portfolio',
+    '/achievements',
+    '/experience',
+    '/es', 
+    '/es/portfolio',
+    '/es/achievements',
+    '/es/experience', 
+    '/pt', 
+    '/pt/portfolio',
+    '/pt/achievements',
+    '/pt/experience'
+  ]
+  },
+  /*
+  ** Detect Browser Language
+  */
+  detectBrowserLanguage: {
+    useCookie: true,
+    cookieKey: 'i18n_redirected'
   },
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss','@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/robots','@nuxtjs/sitemap'
   ],
+  /*
+  *
+  */
+  googleAnalytics: {
+    id: 'UA-86102577-2'
+  },
+  /* 
+   * Sitemap 
+  */
+ sitemap: {
+  hostname: 'http://metalsyntax.000webhostapp.com/',
+  routes: [
+    '/',
+    '/portfolio',
+    '/achievements',
+    '/experience',
+    '/es',
+    '/es/portfolio',
+    '/es/achievements',
+    '/es/experience',
+    '/pt', 
+    '/pt/portfolio',
+    '/pt/achievements',
+    '/pt/experience'
+  ],
+  path: '/sitemap.xml',
+  gzip: true,
+  generate: false,
+  },
+  /*
+  *
+  */
+  robots: {
+    UserAgent: '*',
+    Disallow: '/'
+  },
   /*
   ** Build configuration
   */

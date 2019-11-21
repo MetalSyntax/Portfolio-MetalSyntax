@@ -1,7 +1,7 @@
 <template>
 <div>
  <div class="w-full p-4">
-  <h1 class="text-gray-800 text-center text-3xl">{{ $t('achievements.title') }}</h1>
+  <h1 class="text-gray-800 text-center text-3xl">&lt;{{ $t('achievements.title') }}/&gt;</h1>
  </div>
 <div class="py-4 px-2">
  <div class="flex flex-wrap -mx-2"> 
@@ -26,7 +26,14 @@
 <script>
 export default {
   head () {
-    return { title: this.$t('head.achievements') }
+    return { 
+    title: this.$t('head.achievements'), 
+    meta: [
+          { 
+            hid: 'description', name: 'description', content: this.$t('description.achievements') 
+          }
+        ]
+      }
     },
    data(){
      return {

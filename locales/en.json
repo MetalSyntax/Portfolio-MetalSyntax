@@ -1,25 +1,37 @@
 {
     "head":{
-      "home":"MetalSyntax - Wonder Díaz",
-      "portfolio":"MetalSyntax - Portfolio",
-      "achievements":"MetalSyntax - Achievements"
+      "home":"MetalSyntax - Wonder Diaz | Web Developer",
+      "portfolio":"MetalSyntax - Portfolio | Web Developer",
+      "achievements":"MetalSyntax - Achievements | Web Developer",
+      "experience":"MetalSyntax - Experience | Web Developer"
+    },
+    "description":{
+      "home":"Wonder Diaz. Develop by MetalSyntax with Vue.js and TailWindCss.",
+      "portfolio":"Wonder Diaz | Portfolio. Develop by MetalSyntax with Vue.js and TailWindCss.",
+      "achievements":"Wonder Diaz | Achievements. Develop by MetalSyntax with Vue.js and TailWindCss.",
+      "experience":"Wonder Diaz | Experience. Develop by MetalSyntax with Vue.js and TailWindCss."
     },
     "links": {
       "home": "Home",
       "portfolio": "Portfolio",
       "achievements": "Achievements",
+      "experience": "Experience",
       "english": "English",
-      "spanish": "Spanish"
+      "spanish": "Spanish",
+      "portuguese": "Portuguese"
     },
     "footer":{
-        "text": "Develop by MetalSyntax with Vue.js and TailWindCss."
+        "text": "Developed by MetalSyntax with Vue.js and TailWindCss."
     },
     "home": {
       "toptitle": "Convergence of Knowledge",
-      "title": "Developer Web",
+      "title": "Web Developer",
+      "titletyped1": "Industrial Engineer",
+      "titletyped2": "Web Developer",
+      "titletyped3": "Web Desing",
       "subtitle": "Experience in designing and developing Websites and Web Apps",
-      "heroparagraph1": "Hi, I am ",
-      "heroparagraph2": "Industrial engineer and web developer. A passionate about technology. With experience in",
+      "heroparagraph1": "Hi, i'm ",
+      "heroparagraph2": "I've experience in",
       "heroparagraph3": "In addition to Frameworks, Libraries and CMS such as",
       "heroparagraph4": "among others.",
       "title1": "Engineering",
@@ -40,5 +52,14 @@
     },
     "achievements": {
       "title": "Achievements"
+    },
+    "experience": {
+      "title": "Experience",
+      "status": "Present",
+      "work1": "Web Design",
+      "work2": "Webmaster",
+      "work3": "Web Developer",
+      "work4": "Web programmer",
+      "work5": "Industrial Engineering Intern"
     }
 }  

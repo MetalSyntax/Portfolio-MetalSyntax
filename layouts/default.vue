@@ -2,7 +2,7 @@
   <div>
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <nav class="flex items-center justify-between flex-wrap background_nav p-4 shadow-lg">
+      <nav class="flex items-center justify-between flex-wrap background_nav p-2 shadow-lg">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <nuxt-link :to="$i18n.path('')">
           <span class="font-semibold hover:text-white text-gray-200 text-xl tracking-tight"><img id="logo" class="h-10 px-2 inline" src="../assets/img/icons/Logo-MS.png" alt="Logo">Wonder Diaz</span>
@@ -14,23 +14,28 @@
           </button>
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div class="text-sm lg:flex-grow">
-            <nuxt-link :to="$i18n.path('')" class="block mt-4 lg:inline-block lg:mt-0 link hover:text-white mr-4 text-base p-2">
+          <div class="text-md lg:flex-grow my-1">
+            <nuxt-link :to="$i18n.path('')" class="font-semibold block lg:inline-block lg:mt-0 link hover:text-white hover-bg rounded mr-4 text-base py-3 px-4">
                 {{ $t('links.home') }}
             </nuxt-link>
-            <nuxt-link :to="$i18n.path('portfolio')" class="block mt-4 lg:inline-block lg:mt-0 link hover:text-white mr-4 text-base p-2">
+            <nuxt-link :to="$i18n.path('portfolio')" class="font-semibold block lg:inline-block lg:mt-0 link hover:text-white hover-bg rounded mr-4 text-base py-3 px-4">
                {{ $t('links.portfolio') }}
             </nuxt-link>
-            <nuxt-link :to="$i18n.path('achievements')" class="block mt-4 lg:inline-block lg:mt-0 link hover:text-white mr-4 text-base p-2">
+            <nuxt-link :to="$i18n.path('achievements')" class=" font-semibold block lg:inline-block lg:mt-0 link hover:text-white hover-bg rounded mr-4 text-base py-3 px-4">
               {{ $t('links.achievements') }}
-            </nuxt-link>    
+            </nuxt-link>
+            <nuxt-link :to="$i18n.path('experience')" class=" font-semibold block lg:inline-block lg:mt-0 link hover:text-white hover-bg rounded mr-4 text-base py-3 px-4">
+              {{ $t('links.experience') }}
+            </nuxt-link>
           </div>
-           <!--<button class="bg-teal-500 p-2 rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4" v-on:click="switchLocale()">{{ displayLocale }}</button>-->
-           <nuxt-link v-if="$i18n.locale === 'en'" :to="`/es` + $route.fullPath" class="button_switch p-2 rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4" active-class="none" exact>
-            {{ $t('links.spanish') }}
+           <nuxt-link v-if="$i18n.locale === 'en'" :to="`/es` + $route.fullPath" class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4 py-3 px-4" active-class="none" exact>
+            {{ $t('links.spanish')}}
           </nuxt-link>
-          <nuxt-link v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="button_switch p-2 rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4" active-class="none" exact>
-            {{ $t('links.english') }}
+          <nuxt-link v-else-if="$i18n.locale === 'es'" :to="`/pt` + $route.fullPath.replace(/^\/[^\/]+/, '')" class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4 py-3 px-4" active-class="none" exact>
+            {{ $t('links.portuguese')}}
+          </nuxt-link>
+          <nuxt-link v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" class="font-semibold button_switch  rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4 py-3 px-4" active-class="none" exact>
+            {{ $t('links.english')}}
           </nuxt-link>
         </div>
       </nav>
@@ -53,15 +58,18 @@
     <div class="flex mb-0">
       <div class="w-full inline-flex content-center justify-center background_footer p-2 shadow-lg">
       <div class="text-sm flex">
-            <nuxt-link :to="$i18n.path('')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2">
+            <nuxt-link :to="$i18n.path('')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded">
                 {{ $t('links.home') }} 
             </nuxt-link>
-            <nuxt-link :to="$i18n.path('portfolio')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2">
+            <nuxt-link :to="$i18n.path('portfolio')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded">
                {{ $t('links.portfolio') }}
             </nuxt-link>
-            <nuxt-link :to="$i18n.path('achievements')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2">
+            <nuxt-link :to="$i18n.path('achievements')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded">
               {{ $t('links.achievements') }}
-            </nuxt-link>    
+            </nuxt-link>
+            <nuxt-link :to="$i18n.path('experience')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2">
+              {{ $t('links.experience') }}
+            </nuxt-link>
           </div>
       </div>
       </div>
@@ -77,6 +85,15 @@
 
 <script>
     export default {
+      head() {
+    return {
+      link: [
+           {
+            rel: 'canonical', href: 'https://metalsyntax.000webhostapp.com' + this.$route.path,
+            },
+          ],
+         }
+        },
         data() {
             return {
                 open: false,
@@ -87,23 +104,8 @@
             toggle(){
               this.open = !this.open;
             },
-            /*switchLocale () {
-              if (this.$i18n.locale === 'en') {
-              this.$i18n.locale = 'es'
-              this.$router
-               } else {
-              this.$i18n.locale = 'en'
-                  }
-                }*/
               },
             computed: {
-              /*displayLocale () {
-              let other = 'EN'
-              if (this.$i18n.locale === 'en') {
-              other = 'ES'
-              }
-              return other
-            },*/
           }
         }
 </script>
@@ -113,29 +115,29 @@
   filter: none;
 }
 .icons-social{
-  /*filter: grayscale(50%) brightness(100%) sepia(100%) hue-rotate(100deg) saturate(100%) contrast(1);*/
   filter: none;
 }
 .link{
   color:#00C08B;
-  /*background: #00ffb9*/
 }
 .link-footer{
   color:#00C08B;
 }
 .link-footer:hover{
   color:#E2E8F0;
-  /*background: #00C08B;*/
 }
 .link:hover{
   color:#E2E8F0;
-  /*background: #00C08B;*/
 }
 .button_switch{
-  background: #00ffb9;
+  background: #00C08B;
 }
 .button_switch:hover{
-  background: #00C08B
+  background: #00C08B;
+}
+.hover-bg:hover{
+  background: #00C08B;
+
 }
 .background_nav{
   background: #050505;

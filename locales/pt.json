@@ -1,0 +1,65 @@
+{
+    "head":{
+      "home":"MetalSyntax - Wonder Diaz | Desenvolvedor Web",
+      "portfolio":"MetalSyntax - Portfólio | Desenvolvedor Web",
+      "achievements":"MetalSyntax - Certificações | Desenvolvedor Web",
+      "experience":"MetalSyntax - Experiência | Desenvolvedor Web"
+    },
+    "description":{
+      "home":"Wonder Diaz. Desenvolvido pelo MetalSyntax com Vue.js e TailWindCss.",
+      "portfolio":"Wonder Diaz | Portfólio. Desenvolvido pelo MetalSyntax com Vue.js e TailWindCss.",
+      "achievements":"Wonder Diaz | Certificações. Desenvolvido pelo MetalSyntax com Vue.js e TailWindCss.",
+      "experience":"Wonder Diaz | Experiência. Desenvolvido pelo MetalSyntax com Vue.js e TailWindCss."
+    },
+    "links": {
+        "home": "Início",
+        "portfolio": "Portafolio",
+        "achievements": "Certificações",
+        "experience": "Experiência",
+        "english": "inglês",
+        "spanish": "Espanhol",
+        "portuguese": "Português"
+    },
+    "footer":{
+        "text": "Desenvolvido por MetalSyntax com Vue.js e TailWindCss."
+    },
+    "home": {
+      "toptitle": "Convergência do conhecimento",
+      "title": "Desenvolvedor Web",
+      "titletyped1": "Engenheiro industrial",
+      "titletyped2": "Desenvolvedor Web",
+      "titletyped3": "Desenhador Web",
+      "subtitle": "Experiência em desenho e desenvolvimento de sites e aplicativos web",
+      "heroparagraph1": "Ola, eu sou ",
+      "heroparagraph2": "Tenho experiência em",
+      "heroparagraph3": "Além dos frameworks, bibliotecas e CMS, como ",
+      "heroparagraph4": "entre outras.",
+      "title1": "Engenharia",
+      "text1": "Implementando conhecimentos de Gestão, Lean Manufacturing, Melhoria Contínua e Qualidade para oferecer os melhores resultados.      ",
+      "title2": "Desarrollo",
+      "text2": "Criação de sites criativos e dinâmicos. Aplicativos da Web imersivos e intuitivos com aparência nativa.",
+      "title3": "Desenho",
+      "text3": "Pensando na Experiência do Usuário (UX) e no design de Interfaces (UI) para fornecer experiências únicas em cada pessoa.",
+      "title4": "Marketing",
+      "text4": "Desenvolvimento de planos para que os usuários se sintam identificados com a marca através das principais redes sociais e SEO.",
+      "title5": "Análise",
+      "text5": "Interpretar os dados com as ferramentas mais poderosas para aumentar os negócios e executar o planejamento de escalabilidade.",
+      "title6": "Suporte",
+      "text6": "Verificar a disponibilidade, acessibilidade e segurança dos sites para atender à demanda por serviços."
+    },
+    "portfolio": {
+      "title": "Portfólio"
+    },
+    "achievements": {
+      "title": "Certificações"
+    },
+    "experience": {
+      "title": "Experiência",
+      "status": "Presente",
+      "work1": "Desenhador Web",
+      "work2": "Webmaster",
+      "work3": "Desenvolvedor Web",
+      "work4": "Programador da Web",
+      "work5": "Estagiário de Engenharia Industrial"
+    }
+}  

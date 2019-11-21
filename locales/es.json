@@ -1,28 +1,40 @@
 {
     "head":{
-      "home":"MetalSyntax - Wonder Díaz",
-      "portfolio":"MetalSyntax - Portafolio",
-      "achievements":"MetalSyntax - Certificados"
+      "home":"MetalSyntax - Wonder Diaz | Desarrollador Web",
+      "portfolio":"MetalSyntax - Portafolio | Desarrollador Web",
+      "achievements":"MetalSyntax - Certificados | Desarrollador Web",
+      "experience":"MetalSyntax - Experiencia | Desarrollador Web"
+    },
+    "description":{
+      "home":"Wonder Diaz. Desarrollado por MetalSyntax con Vue.js y TailWindCss.",
+      "portfolio":"Wonder Diaz | Portafolio. Desarrollado por MetalSyntax con Vue.js y TailWindCss.",
+      "achievements":"Wonder Diaz | Certificados. Desarrollado por MetalSyntax con Vue.js y TailWindCss.",
+      "experience":"Wonder Diaz | Experiencia. Desarrollado por MetalSyntax con Vue.js y TailWindCss."
     },
     "links": {
         "home": "Inicio",
         "portfolio": "Portafolio",
         "achievements": "Certificados",
+        "experience": "Experiencia",
         "english": "Ingles",
-        "spanish": "Español"
+        "spanish": "Español",
+        "portuguese": "Portugués"
     },
     "footer":{
-        "text": "Desarrollador por MetalSyntax con Vue.js y TailWindCss."
+        "text": "Desarrollado por MetalSyntax con Vue.js y TailWindCss."
     },
     "home": {
       "toptitle": "Convergencia del conocimiento",
       "title": "Desarrollador Web",
+      "titletyped1": "Ingeniero Industrial",
+      "titletyped2": "Desarrollador Web",
+      "titletyped3": "Diseñador Web",
       "subtitle": "Experiencia en diseño y desarrollo de sitios web y aplicaciones web",
       "heroparagraph1": "Hola, soy ",
-      "heroparagraph2": "Ingeniero industrial y desarrollador web. Un apasionado de la tecnología. Con experiencia en",
+      "heroparagraph2": "Tengo experiencia en",
       "heroparagraph3": "Además de Frameworks, Librerías y CMS como ",
       "heroparagraph4": "entre otras.",
-      "title1": "Ingenieria",
+      "title1": "Ingeniería",
       "text1": "Implementando conocimientos de Gestión, Lean Manufacturing, Mejora Continua y Calidad para ofrecer los mejores resultados.",
       "title2": "Desarrollo",
       "text2": "Creación de sitios webs atractivos y dinámicos. Web apps inmersiva e intuitivas con apariencia nativas.",
@@ -31,7 +43,7 @@
       "title4": "Marketing",
       "text4": "Desarrollo de planes para que los usuarios se sientan identificados con la marca a través de las principales redes sociales y SEO.",
       "title5": "Análisis",
-      "text5": "Interpretando los datos con las herramientas mas pontentes para hacer crecer los negocios y realizar planificaciones de escalabilidad.",
+      "text5": "Interpretando los datos con las herramientas más potentes para hacer crecer los negocios y realizar planificaciones de escalabilidad.",
       "title6": "Soporte",
       "text6": "Comprobando la disponibilidad, accesibilidad y seguridad de los sitios web para satisfacer la demanda de los servicios."
     },
@@ -40,5 +52,14 @@
     },
     "achievements": {
       "title": "Certificaciones"
+    },
+    "experience": {
+      "title": "Experiencia",
+      "status": "Presente",
+      "work1": "Diseñador Web",
+      "work2": "Webmaster",
+      "work3": "Desarrollador Web",
+      "work4": "Programador Web",
+      "work5": "Pasante de Ingenieria Industrial"
     }
 }  
