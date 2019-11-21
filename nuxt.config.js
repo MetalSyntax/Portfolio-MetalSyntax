@@ -12,7 +12,10 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon-ms.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-ms.ico' },
+      { rel: 'alternate', hreflang: 'en', href: 'http://metalsyntax.000webhostapp.com/' },
+      { rel: 'alternate', hreflang: 'es', href: 'http://metalsyntax.000webhostapp.com/es' },
+      { rel: 'alternate', hreflang: 'pt', href: 'http://metalsyntax.000webhostapp.com/pt' },
     ]
   },
   /*
@@ -77,7 +80,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/robots','@nuxtjs/sitemap'
+    '@nuxtjs/robots','@nuxtjs/sitemap','@nuxtjs/pwa'
   ],
   /*
   *
@@ -122,6 +125,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    vendor: ['vue-i18n'],
     extend (config, ctx) {
     }
   }

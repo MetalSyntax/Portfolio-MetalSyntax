@@ -67,7 +67,7 @@
             <nuxt-link :to="$i18n.path('achievements')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded">
               {{ $t('links.achievements') }}
             </nuxt-link>
-            <nuxt-link :to="$i18n.path('experience')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2">
+            <nuxt-link :to="$i18n.path('experience')" class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded">
               {{ $t('links.experience') }}
             </nuxt-link>
           </div>
@@ -103,8 +103,8 @@
         methods: {
             toggle(){
               this.open = !this.open;
-            },
               },
+            },
             computed: {
           }
         }
