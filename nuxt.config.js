@@ -85,6 +85,19 @@ export default {
   /*
   *
   */
+ pwa: {
+  manifest: {
+    name: 'Wonder Diaz Portfolio. MetalSyntax',
+    short_name: 'MetalSyntax PWA',
+    background_color: "#000",
+    description: "Wonder Diaz Portfolio. Develop by MetalSyntax with Vue.js and TailWindCss.",
+    lang: 'en',
+    display: 'standalone'
+    }
+  },
+  /*
+  *
+  */
   googleAnalytics: {
     id: 'UA-86102577-2'
   },

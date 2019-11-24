@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="w-full p-4">
-            <h1 class="text-gray-800 text-center text-3xl">&lt;{{ $t('experience.title') }}/&gt;</h1>
+        <div class="w-full p-4 title-background shadow-lg">
+            <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('experience.title') }}/&gt;</h1>
         </div>
         <div class="py-4 px-2">
             <div class="flex flex-wrap -mx-2">
@@ -11,6 +11,11 @@
                             <h2 class="font-bold text-xl mb-2 text-left">{{item.title }}</h2>
                     <p class="text-gray-700 text-base text-left">{{item.yearfirst }} - {{item.yearlast }}</p>
                             <p class="text-gray-700 text-base text-left">{{item.company }}</p>
+                            <ul class="list-disc">
+                                <li>{{item.task1 }}</li>
+                                <li>{{item.task2 }}</li>
+                                <li>{{item.task3 }}</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -32,13 +37,19 @@ export default {
   data(){
      return {
        items: [
-        {title: this.$t('experience.work1'), yearfirst:'2019', yearlast: this.$t('experience.status'), company:'Virtually Present'},
-        {title: this.$t('experience.work2'), yearfirst:'2018', yearlast:'2019', company:'Siglo Global SL'},
-        {title: this.$t('experience.work3'), yearfirst:'2018', yearlast:'2019', company:'Kainver'},
-        {title: this.$t('experience.work4'), yearfirst:'2018', yearlast:'2018', company:'Domiserver'},
-        {title: this.$t('experience.work5'), yearfirst:'2017', yearlast:'2018', company:'Sanofi'},
+        {title: this.$t('experience.work1'), yearfirst:'2019', yearlast: this.$t('experience.status'), company:'Virtually Present', task1: this.$t('experience.task1work1'), task2: this.$t('experience.task2work1'),  task3: this.$t('experience.task3work1')},
+        {title: this.$t('experience.work2'), yearfirst:'2018', yearlast:'2019', company:'Siglo Global SL',task1: this.$t('experience.task1work2'), task2: this.$t('experience.task2work2'),  task3: this.$t('experience.task3work2')},
+        {title: this.$t('experience.work3'), yearfirst:'2018', yearlast:'2019', company:'Kainver', task1: this.$t('experience.task1work3'), task2: this.$t('experience.task2work3'),  task3: this.$t('experience.task3work3')},
+        {title: this.$t('experience.work4'), yearfirst:'2018', yearlast:'2018', company:'Domiserver', task1: this.$t('experience.task1work4'), task2: this.$t('experience.task2work4'),  task3: this.$t('experience.task3work4')},
+        {title: this.$t('experience.work5'), yearfirst:'2017', yearlast:'2018', company:'Sanofi', task1: this.$t('experience.task1work5'), task2: this.$t('experience.task2work5'),  task3: this.$t('experience.task3work5')},
         ]   
     }
   }
 }
 </script>
+
+<style>
+    .title-background{
+        background: #1c1c1c;
+    }
+</style>

@@ -57,9 +57,24 @@
       "title": "Experiencia",
       "status": "Presente",
       "work1": "Diseñador Web",
+      "task1work1": "Desarrollo Frontend de sitios webs",
+      "task2work1": "Mejora de los sitios webs",
+      "task3work1": "Documentación de procesos y código",
       "work2": "Webmaster",
+      "task1work2": "Desarrollo de sitios web",
+      "task2work2": "Mantenimiento y mejora de sitios web",
+      "task3work2": "Actividades de marketing y diseño",
       "work3": "Desarrollador Web",
+      "task1work3": "Creación de sitios webs",
+      "task2work3": "Personalización de temas ",
+      "task3work3": "Auditorias y mejoras de los proyectos web",
       "work4": "Programador Web",
-      "work5": "Pasante de Ingenieria Industrial"
+      "task1work4": "Creación de sitios webs",
+      "task2work4": "Optimización de portales web",
+      "task3work4": "Elaboración de Manuales de Programación",
+      "work5": "Pasante de Ingenieria Industrial",
+      "task1work5": "Propuesta de mejora para el sistema general de OEE",
+      "task2work5": "Propuesta de una guía rápida para el OEE",
+      "task3work5": "Propuesta de Mejora del Reporte Mensual Global OEE"
     }
 }  

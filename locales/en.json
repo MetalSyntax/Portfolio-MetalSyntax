@@ -57,9 +57,24 @@
       "title": "Experience",
       "status": "Present",
       "work1": "Web Design",
+      "task1work1": "Frontend development of websites",
+      "task2work1": "Website improvement",
+      "task3work1": "Process documentation and code",
       "work2": "Webmaster",
+      "task1work2": "Website Development",
+      "task2work2": "Website maintenance and improvement",
+      "task3work2": "Marketing and design activities",
       "work3": "Web Developer",
+      "task1work3": "Creation of webs ",
+      "task2work3": "Customization of themes",
+      "task3work3": "Audits and improvements of web projects",
       "work4": "Web programmer",
-      "work5": "Industrial Engineering Intern"
+      "task1work4": "Creation of webs",
+      "task2work4": "Web portal optimization",
+      "task3work4": "Development of Programming Manual",
+      "work5": "Industrial Engineering Intern",
+      "task1work5": "Improvement proposal for the general OEE system",
+      "task2work5": "Proposal for a quick guide for the OEE",
+      "task3work5": "OEE Global Monthly Report Improvement Proposal"
     }
 }  

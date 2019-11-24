@@ -1,7 +1,7 @@
 <template>
 <div>
- <div class="w-full p-4">
-  <h1 class="text-gray-800 text-center text-3xl">&lt;{{ $t('portfolio.title') }}/&gt;</h1>
+ <div class="w-full p-4 title-background shadow-lg">
+  <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('portfolio.title') }}/&gt;</h1>
  </div>
 <div class="py-4 px-2">
  <div class="flex flex-wrap justify-center -mx-2">
@@ -118,5 +118,8 @@ export default {
 .projects:hover{
   /*box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);*/
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.50);
+}
+.title-background{
+  background: #1c1c1c;
 }
 </style>

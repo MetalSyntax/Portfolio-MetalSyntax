@@ -1,7 +1,7 @@
 <template>
 <div>
- <div class="w-full p-4">
-  <h1 class="text-gray-800 text-center text-3xl">&lt;{{ $t('achievements.title') }}/&gt;</h1>
+ <div class="w-full p-4 title-background shadow-lg">
+  <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('achievements.title') }}/&gt;</h1>
  </div>
 <div class="py-4 px-2">
  <div class="flex flex-wrap -mx-2"> 
@@ -197,5 +197,11 @@ export default {
    }
 };
 </script>
+
+<style>
+    .title-background{
+        background: #1c1c1c;
+    }
+</style>
 
 
