@@ -6,7 +6,7 @@
 <div class="py-4 px-2">
  <div class="flex flex-wrap -mx-2"> 
   <div v-for="item in items" v-bind:key="item.id" class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 px-2" data-aos="fade-down"  data-aos-easing="linear" data-aos-duration="500">
-  <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2">
+  <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 achievements">
     <a :href="item.link">
     <img class="w-20 h-20 rounded-full" :src="item.img" :alt="item.title">
     </a>
@@ -38,6 +38,7 @@ export default {
    data(){
      return {
        items: [
+      /*Platzi*/
       { title: 'Desarrollo con Vue.js', 
       company: 'Platzi',
       link: "https://platzi.com/@MetalSyntax/carrera/98-vue/diploma/detalle/",
@@ -130,7 +131,27 @@ export default {
       company: 'Platzi', 
       link: "https://platzi.com/@MetalSyntax/carrera/4-outbound-marketing/diploma/detalle/",
       img: require('../../assets/img/diplomas/Outbound-Marketing.png')},
-      
+      { title: 'Negocios Online',
+      company: 'Platzi', 
+      link: "https://platzi.com/@MetalSyntax/carrera/6-negocios/diploma/detalle/",
+      img: require('../../assets/img/diplomas/Negocios-online.png')},
+      { title: 'Gestión de Proyectos',
+      company: 'Platzi', 
+      link: "https://platzi.com/@MetalSyntax/carrera/82-gestion-proyectos/diploma/detalle/",
+      img: require('../../assets/img/diplomas/Gestion-de-proyectos.png')},
+      { title: 'Transformación Digital',
+      company: 'Platzi', 
+      link: "https://platzi.com/@MetalSyntax/carrera/85-transformacion-digital/diploma/detalle/",
+      img: require('../../assets/img/diplomas/Transfomacion-digital.png')},
+      { title: 'Ventas y Mercadeo',
+      company: 'Platzi', 
+      link: "https://platzi.com/@MetalSyntax/carrera/80-ventas-mercadeo/diploma/detalle/",
+      img: require('../../assets/img/diplomas/Ventas-mercadeo.png')},
+      { title: 'Blockchain y Criptomonedas',
+      company: 'Platzi', 
+      link: "https://platzi.com/@MetalSyntax/carrera/73-blockchain-criptomonedas/diploma/detalle/",
+      img: require('../../assets/img/diplomas/Blockchain.png')},
+      /*LinkedIn*/
       { title: 'Desarrollador de Ecosistemas',
       company: 'LinkedIn Learning', 
       link: "http://www.linkedin.com/learning/paths/convirtete-en-desarrollador-de-ecosistemas",
@@ -171,7 +192,7 @@ export default {
       company: 'LinkedIn Learning', 
       link: "http://www.linkedin.com/learning/paths/conviertete-en-experto-en-marketing-digital",
       img: require('../../assets/img/diplomas/linkedin.png')},
-      
+      /*Carlos Slim*/
       { title: 'Sistemas Informaticos', 
       company: 'Fundación Carlos Slim',
       link: "https://aprende.org/pages.php?r=.cfcs_oficial_infographic&diplomadoID=dtsi",
@@ -201,6 +222,9 @@ export default {
 <style>
     .title-background{
         background: #1c1c1c;
+    }
+    .achievements:hover{
+      border: solid 2px #00C08B;
     }
 </style>
 

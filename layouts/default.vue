@@ -132,13 +132,12 @@
 .button_switch{
   background: #00C08B;
 }
-.button_switch:hover{
+/*.button_switch:hover{
   background: #00C08B;
-}
-.hover-bg:hover{
+}*/
+/*.hover-bg:hover{
   background: #00C08B;
-
-}
+}*/
 .background_nav{
   background: #050505;
 }

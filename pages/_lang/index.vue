@@ -28,7 +28,7 @@
       <div class="flex flex-wrap -mx-2">
         <div v-for="item in items" v-bind:key="item.id" class="sm:w-full md:w-1/2 lg:w-1/3 px-4 py-2" data-aos="fade">
         <div class="rounded overflow-hidden shadow-lg my-2 px-4 bg-white">
-          <div class="px-8 py-4">
+          <div class="px-4 py-4">
             <div class="font-bold text-xl mb-2 text-center">
               <img class="h-10 px-2 inline skills" :src="item.image" :alt="item.title">
               <h3>{{ item.title }}</h3>

@@ -52,4 +52,7 @@ export default {
     .title-background{
         background: #1c1c1c;
     }
+    /*.experience:hover{
+      border: solid 2px #00C08B;
+    }*/
 </style>
