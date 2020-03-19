@@ -128,8 +128,8 @@ export default {
   *
   */
   robots: {
-    UserAgent: '*',
-    Disallow: '/'
+    /*UserAgent: '*',
+    Disallow: '/'*/
   },
   /*
   ** Build configuration

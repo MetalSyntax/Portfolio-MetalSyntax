@@ -1,9 +1,9 @@
 {
     "head":{
-      "home":"MetalSyntax - Wonder Diaz | Desarrollador Web",
-      "portfolio":"MetalSyntax - Portafolio | Desarrollador Web",
-      "achievements":"MetalSyntax - Certificados | Desarrollador Web",
-      "experience":"MetalSyntax - Experiencia | Desarrollador Web"
+      "home":"Inicio | Wonder Diaz | Desarrollador Web",
+      "portfolio":"Portafolio | Wonder Diaz | Desarrollador Web",
+      "achievements":"Certificados | Wonder Diaz | Desarrollador Web",
+      "experience":"Experiencia | Wonder Diaz | Desarrollador Web"
     },
     "description":{
       "home":"Wonder Diaz. Desarrollado por MetalSyntax con Vue.js y TailWindCss.",
