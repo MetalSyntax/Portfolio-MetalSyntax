@@ -11,18 +11,19 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^3.0.0-beta.19",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/robots": "^2.4.2",
-    "@nuxtjs/sitemap": "^2.0.0",
+    "@nuxtjs/sitemap": "^2.2.1",
+    "alpinejs": "^2.3.1",
     "aos": "^3.0.0-beta.6",
-    "nuxt": "^2.0.0",
-    "nuxt-i18n": "^6.3.0",
-    "vue-i18n": "^8.15.0",
+    "nuxt": "^2.12.2",
+    "nuxt-i18n": "^6.11.0",
+    "vue-i18n": "^8.17.4",
     "vue-tailwind-modal": "0.0.7",
     "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
-    "@nuxtjs/google-analytics": "^2.2.1",
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/google-analytics": "^2.2.3",
+    "@nuxtjs/tailwindcss": "^1.4.1"
   }
 }
