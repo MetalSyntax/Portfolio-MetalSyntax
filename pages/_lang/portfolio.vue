@@ -62,28 +62,28 @@ export default {
           title: "Ofertas del Motor",
           company: "kainver",
           year: "2019",
-          link: "#",
+          link: "https://www.behance.net/gallery/96603035/ODM",
           image: require("../../assets/img/computers/ofertasdelmotor.jpg")
         },
         {
           title: "Mi Secretaria Virtual",
           company: "kainver",
           year: "2019",
-          link: "#",
+          link: "https://www.behance.net/gallery/96600341/MSV",
           image: require("../../assets/img/computers/misecretariavirtual.jpg")
         },
         {
           title: "Renderizados",
           company: "kainver",
           year: "2019",
-          link: "#",
+          link: "https://www.behance.net/gallery/96600761/Renderizados",
           image: require("../../assets/img/computers/renderizados.jpg")
         },
         {
           title: "Soluciones Web",
           company: "kainver",
           year: "2019",
-          link: "#",
+          link: "https://www.behance.net/gallery/79186095/Soluciones-Web",
           image: require("../../assets/img/computers/solucionesweb.jpg")
         },
         {
@@ -112,49 +112,49 @@ export default {
           title: "Lawfrim",
           company: "kainver",
           year: "2018",
-          link: "#",
+          link: "https://www.behance.net/gallery/96604757/Tienda-de-Webs-Abogados-1",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-1.jpg")
         },
         {
           title: "R. Jurídico",
           company: "kainver",
           year: "2018",
-          link: "#",
+          link: "https://www.behance.net/gallery/96604783/Tienda-de-Webs-Abogados-2",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-2.jpg")
         },
         {
           title: "Planchart",
           company: "kainver",
           year: "2018",
-          link: "#",
+          link: "https://www.behance.net/gallery/96604795/Tienda-de-Webs-Abogados-3",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-3.jpg")
         },
         {
           title: "Brick State",
           company: "kainver",
           year: "2018",
-          link: "#",
+          link: "https://www.behance.net/gallery/96604291/Tienda-de-Webs-Construccion-1",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-1.jpg")
         },
         {
           title: "Avantia",
           company: "kainver",
           year: "2018",
-          link: "#",
+          link: "https://www.behance.net/gallery/96604325/Tienda-de-Webs-Construccion-2",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-2.jpg")
         },
         {
           title: "Alliance",
           company: "kainver",
           year: "2018",
-          link: "#",
+          link: "https://www.behance.net/gallery/96604455/Tienda-de-Webs-Construccion-3",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-3.jpg")
         },
         {
           title: "MediaOrbit",
           company: "kainver",
           year: "2018",
-          link: "#",
+          link: "https://www.behance.net/gallery/96604987/Tienda-de-Webs-Inmuebles-1",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-1.jpg")
         },
         {

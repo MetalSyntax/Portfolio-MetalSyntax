@@ -13,9 +13,7 @@
           data-aos-easing="linear"
           data-aos-duration="500"
         >
-          <div
-            class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 achievements"
-          >
+          <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 achievements">
             <a :href="item.link" target="_blank">
               <img class="w-20 h-20 rounded-full" :src="item.img" :alt="item.title" />
             </a>
@@ -384,13 +382,13 @@ export default {
         {
           title: "Lean Management, Mejora Continua y Calidad",
           company: "UJAP",
-          link:"#",
+          link:"https://drive.google.com/open?id=1Ta36Uw2mWauRKtTuzn9XixAAaWOM6HwP",
           img: require("../../assets/img/diplomas/UJAP.png")
         },
         {
           title: "Diseño y Desarrollo de Base de Datos",
           company: "UCV",
-          link:"#",
+          link:"https://drive.google.com/open?id=1H1rC_Kr8roxrBleEMMxfI7Ch-rse87bD",
           img: require("../../assets/img/diplomas/UCV.png")
         }
       ]

@@ -1,7 +1,7 @@
 <template>
   <div>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg">
+    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg fixed w-full">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <nuxt-link :to="$i18n.path('')">
           <span class="font-semibold hover:text-white text-gray-200 text-xl tracking-tight">
