@@ -66,7 +66,7 @@ export default {
           task1: this.$t("experience.task1work2"),
           task2: this.$t("experience.task2work2"),
           task3: this.$t("experience.task3work2"),
-          img: require("../../assets/img/bussines/SG.png")
+          img: require("../../assets/img/bussines/SBT.png")
         },
         {
           title: this.$t("experience.work3"),
