@@ -39,6 +39,15 @@
           </p>
         </div>
       </div>
+          <div class="flex flex-wrap w-4/5 ml-auto mr-auto content-center justify-center">
+           <div 
+           class="justify-center w-24 md:w-3/12 lg:w-2/12 xl:w-1/12" 
+           v-for="icon in icons" 
+           v-bind:key="icons.id"
+           data-aos="fade">
+                <img class="w-full p-1 px-2 inline" :src="icon.image" :alt="icon.title" />
+            </div>
+          </div>
       <div class="py-4 px-2">
         <div class="flex flex-wrap -mx-2">
           <div
@@ -50,7 +59,7 @@
             <div class="rounded overflow-hidden shadow-lg my-2 px-4 bg-white">
               <div class="px-4 py-4">
                 <div class="font-bold text-xl mb-2 text-center">
-                  <img class="h-10 px-2 inline skills" :src="item.image" :alt="item.title" />
+                  <img class="h-10 lg:h-16 px-2 inline skills" :src="item.image" :alt="item.title" />
                   <h3>{{ item.title }}</h3>
                 </div>
                 <p class="text-gray-700 text-base text-center">{{ item.text }}</p>
@@ -79,6 +88,56 @@ export default {
   },
   data() {
     return {
+      icons: [
+        {
+          title:"HTML5",
+          image: require("../../assets/img/tech/HTML5.png")
+        },
+        {
+          title:"CSS3",
+          image: require("../../assets/img/tech/CSS.png")
+        },
+        {
+          title:"Javascript",
+          image: require("../../assets/img/tech/JS.png")
+        },
+        {
+          title:"PHP",
+          image: require("../../assets/img/tech/php.png")
+        },
+        {
+          title:"Python",
+          image: require("../../assets/img/tech/PY.png")
+        },
+        {
+          title:"Vue",
+          image: require("../../assets/img/tech/vuejs.png")
+        },
+        {
+          title:"TailWind",
+          image: require("../../assets/img/tech/tailwindcss.png")
+        },
+        {
+          title:"Bootstrap",
+          image: require("../../assets/img/tech/bootstrap4.png")
+        },
+        {
+          title:"Node.js",
+          image: require("../../assets/img/tech/nodejs.png")
+        },
+        {
+          title:"WordPress",
+          image: require("../../assets/img/tech/WordPress.png")
+        },
+        {
+          title:"Mongodb",
+          image: require("../../assets/img/tech/mongodb.png")
+        },
+        {
+          title:"MySQL",
+          image: require("../../assets/img/tech/mysql.png")
+        }
+      ],
       items: [
         {
           title: this.$t("home.title1"),

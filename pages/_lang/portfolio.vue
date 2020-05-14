@@ -20,12 +20,13 @@
             <div>
               <a :href="item.link" target="_blank">
                 <p
-                  class="text-center text-gray-900 text-xl pl-2 pt-2 font-semibold"
+                  class="text-center text-gray-900 text-xl pt-2 font-semibold title-hover"
                 >{{ item.title }}</p>
-                <p class="text-center text-gray-700 text-sm pl-2 pb-2 block opacity-75">
+              </a>
+                <p class="text-center text-gray-700 text-sm pb-1 block opacity-75">
                   {{ item.company }} - {{ item.year }}
                 </p>
-              </a>
+                 <p class="text-gray-700 text-base text-center pb-2">{{ item.description }}</p>
             </div>
           </div>
         </div>
@@ -53,8 +54,9 @@ export default {
       items: [
         {
           title: "Radio Caribe",
+          company: "Freelance",
           year: "2019",
-          company: "Independiente",
+          description: "",
           link: "http://www.radiocaribe.com/",
           image: require("../../assets/img/computers/radiocaribe.jpg")
         },
@@ -62,6 +64,7 @@ export default {
           title: "Ofertas del Motor",
           company: "kainver",
           year: "2019",
+          description: "",
           link: "https://www.behance.net/gallery/96603035/ODM",
           image: require("../../assets/img/computers/ofertasdelmotor.jpg")
         },
@@ -69,6 +72,7 @@ export default {
           title: "Mi Secretaria Virtual",
           company: "kainver",
           year: "2019",
+          description: "",
           link: "https://www.behance.net/gallery/96600341/MSV",
           image: require("../../assets/img/computers/misecretariavirtual.jpg")
         },
@@ -76,6 +80,7 @@ export default {
           title: "Renderizados",
           company: "kainver",
           year: "2019",
+          description: "",
           link: "https://www.behance.net/gallery/96600761/Renderizados",
           image: require("../../assets/img/computers/renderizados.jpg")
         },
@@ -83,6 +88,7 @@ export default {
           title: "Soluciones Web",
           company: "kainver",
           year: "2019",
+          description: "",
           link: "https://www.behance.net/gallery/79186095/Soluciones-Web",
           image: require("../../assets/img/computers/solucionesweb.jpg")
         },
@@ -90,6 +96,7 @@ export default {
           title: "Traductores Malaga",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/72284307/Traductores-Malaga",
           image: require("../../assets/img/computers/TraductoresMalaga.jpg")
         },
@@ -97,6 +104,7 @@ export default {
           title: "AW Travel Guides",
           company: "kainver",
           year: "2019",
+          description: "",
           link: "https://www.behance.net/gallery/79183575/AW-Travel-Guides",
           image: require("../../assets/img/computers/AwTravelGuides.jpg")
         },
@@ -104,6 +112,7 @@ export default {
           title: "Life Fitness",
           company: "kainver",
           year: "2018",
+          description: "",
           link:
             "https://www.behance.net/gallery/76360309/Tiendas-de-Webs-Gimnasio-1",
           image: require("../../assets/img/computers/tiendadewebs-gimnasios-web-1.jpg")
@@ -112,6 +121,7 @@ export default {
           title: "Lawfrim",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/96604757/Tienda-de-Webs-Abogados-1",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-1.jpg")
         },
@@ -119,6 +129,7 @@ export default {
           title: "R. Jurídico",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/96604783/Tienda-de-Webs-Abogados-2",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-2.jpg")
         },
@@ -126,6 +137,7 @@ export default {
           title: "Planchart",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/96604795/Tienda-de-Webs-Abogados-3",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-3.jpg")
         },
@@ -133,6 +145,7 @@ export default {
           title: "Brick State",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/96604291/Tienda-de-Webs-Construccion-1",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-1.jpg")
         },
@@ -140,6 +153,7 @@ export default {
           title: "Avantia",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/96604325/Tienda-de-Webs-Construccion-2",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-2.jpg")
         },
@@ -147,6 +161,7 @@ export default {
           title: "Alliance",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/96604455/Tienda-de-Webs-Construccion-3",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-3.jpg")
         },
@@ -154,6 +169,7 @@ export default {
           title: "MediaOrbit",
           company: "kainver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/96604987/Tienda-de-Webs-Inmuebles-1",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-1.jpg")
         },
@@ -161,6 +177,7 @@ export default {
           title: "Starlines",
           company: "kainver",
           year: "2018",
+          description: "",
           link:
             "https://www.behance.net/gallery/76362391/Tiendas-de-Webs-Inmobiliarias-2",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-2.jpg")
@@ -169,6 +186,7 @@ export default {
           title: "Netcoms",
           company: "kainver",
           year: "2018",
+          description: "",
           link:
             "https://www.behance.net/gallery/76361415/Tienda-de-Webs-Inmobiliarias-3",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-3.jpg")
@@ -177,13 +195,15 @@ export default {
           title: "Gearworks",
           company: "kainver",
           year: "2018",
-          link: "#",
+          description: "",
+          link: "https://www.behance.net/gallery/96599965/Tiendas-de-Web-Marketing-1",
           image: require("../../assets/img/computers/tiendadewebs-marketing-web-1.jpg")
         },
         {
           title: "MediaBurn",
           company: "kainver",
           year: "2018",
+          description: "",
           link:
             "https://www.behance.net/gallery/73168833/Tienda-de-Webs-Marketing-2",
           image: require("../../assets/img/computers/tiendadewebs-marketing-web-2.jpg")
@@ -192,6 +212,7 @@ export default {
           title: "App-Market",
           company: "kainver",
           year: "2018",
+          description: "",
           link:
             "https://www.behance.net/gallery/73164583/Tienda-de-Webs-Marketing-3",
           image: require("../../assets/img/computers/tiendadewebs-marketing-web-3.jpg")
@@ -200,6 +221,7 @@ export default {
           title: "Domiserver",
           company: "Domiserver",
           year: "2018",
+          description: "",
           link: "https://www.behance.net/gallery/66801367/DomiServer",
           image: require("../../assets/img/computers/Domiserver.jpg")
         },
@@ -214,6 +236,7 @@ export default {
           title: "Methods",
           company: "Personal",
           year: "2017",
+          description: "",
           link: "https://metalsyntax.github.io/Methods/",
           image: require("../../assets/img/computers/metalsyntax-github-io-Methods.jpg")
         },
@@ -221,6 +244,7 @@ export default {
           title: "Code of Paid",
           company: "Personal",
           year: "2017",
+          description: "",
           link: "https://www.behance.net/gallery/66803173/Code-of-Paid",
           image: require("../../assets/img/computers/metalsyntax-github-io-Code-Of-Paid.jpg")
         },
@@ -228,6 +252,7 @@ export default {
           title: "Syntax Note",
           company: "Personal",
           year: "2019",
+          description: "",
           link: "https://metalsyntax.github.io/Notes/",
           image: require("../../assets/img/computers/metalsyntax-github-io-Notes.jpg")
         },
@@ -235,6 +260,7 @@ export default {
           title: "Syntax Monitor",
           company: "Personal",
           year: "2019",
+          description: "",
           link: "https://metalsyntax.github.io/Syntax-Monitor/",
           image: require("../../assets/img/computers/metalsyntax-github-io-Syntax-Monitor.jpg")
         }
@@ -250,5 +276,8 @@ export default {
 }
 .projects:hover {
   border: solid 2px #00c08b;
+}
+.title-hover:hover{
+  color:#00c08b;
 }
 </style>

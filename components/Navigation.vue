@@ -48,21 +48,21 @@
         <nuxt-link
           v-if="$i18n.locale === 'es'"
           :to="`/en` + $route.fullPath"
-          class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4 py-3 px-4"
+          class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4 py-3 px-4"
           active-class="none"
           exact
         >{{ $t('links.english')}}</nuxt-link>
         <nuxt-link
           v-else-if="$i18n.locale === 'en'"
           :to="`/pt` + $route.fullPath.replace(/^\/[^\/]+/, '')"
-          class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4 py-3 px-4"
+          class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4 py-3 px-4"
           active-class="none"
           exact
         >{{ $t('links.portuguese')}}</nuxt-link>
         <nuxt-link
           v-else
           :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
-          class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-800 hover:text-white mr-4 py-3 px-4"
+          class="font-semibold button_switch rounded leading-none flex items-center bg-white block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4 py-3 px-4"
           active-class="none"
           exact
         >{{ $t('links.spanish')}}</nuxt-link>
