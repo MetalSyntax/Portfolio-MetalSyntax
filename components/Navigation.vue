@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg fixed w-full">
+    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg w-full z-10" :class="{'flex': scrollPosition < 100, 'fixed': scrollPosition > 100}">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <nuxt-link :to="$i18n.path('')">
           <span class="font-semibold hover:text-white text-gray-200 text-xl tracking-tight">
@@ -76,13 +76,23 @@ export default {
     data() {
     return {
         open: false,
-        langs: ["en", "es", "pt"]
-        }
+        langs: ["en", "es", "pt"],
+        scrollPosition: null
+      }
     },
     methods: {
         toggle() {
-            this.open = !this.open;
+          this.open = !this.open;
         },
+        updateScroll() {
+          this.scrollPosition = window.scrollY
+        },
+      },
+    mounted() {
+      window.addEventListener('scroll', this.updateScroll);
+    },
+    destroy() {
+      window.removeEventListener('scroll', this.updateScroll)
     },
     watch: {
     '$route' () {

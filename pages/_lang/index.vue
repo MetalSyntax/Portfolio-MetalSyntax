@@ -111,7 +111,7 @@ export default {
         },
         {
           title:"Vue",
-          image: require("../../assets/img/tech/vuejs.png")
+          image: require("../../assets/img/tech/Vuejs.png")
         },
         {
           title:"TailWind",

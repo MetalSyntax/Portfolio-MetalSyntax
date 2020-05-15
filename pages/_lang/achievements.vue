@@ -19,7 +19,7 @@
             </a>
             <div class="text-sm">
               <a :href="item.link" target="_blank">
-                <p class="mx-2 text-gray-900 font-regular text-lg">{{ item.title }}</p>
+                <p class="mx-2 text-gray-900 font-regular text-lg title-hover">{{ item.title }}</p>
                 <p class="text-gray-700 block pl-2 opacity-75 text-sm">{{ item.company }}</p>
               </a>
             </div>

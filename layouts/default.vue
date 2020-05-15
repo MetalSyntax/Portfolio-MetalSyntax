@@ -84,6 +84,9 @@ button:focus {
   background: #00100b;
 }
 .title-background {
-  background: #001810;
+  background: #00976D;
+}
+.title-hover:hover{
+  color:#00976D;
 }
 </style>

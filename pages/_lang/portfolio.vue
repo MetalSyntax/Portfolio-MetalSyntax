@@ -277,7 +277,4 @@ export default {
 .projects:hover {
   border: solid 2px #00c08b;
 }
-.title-hover:hover{
-  color:#00c08b;
-}
 </style>

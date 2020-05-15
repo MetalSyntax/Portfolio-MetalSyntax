@@ -3,7 +3,7 @@
     <div class="w-full p-4 title-background shadow-lg">
       <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('experience.title') }}/&gt;</h1>
     </div>
-    <div class="py-4 px-2">
+    <div class="py-4 px-2 h-full lg:h-screen">
       <div class="flex flex-wrap -mx-2">
         <div
           v-for="item in items"

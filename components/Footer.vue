@@ -66,7 +66,7 @@
         <div
           class="w-full inline-flex content-center justify-center background_footer p-2 shadow-lg"
         >
-          <div class="text-sm flex">
+          <div class="font-semibold text-sm flex">
             <nuxt-link
               :to="$i18n.path('')"
               class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded"
@@ -88,7 +88,7 @@
       </div>
       <div class="flex mb-0">
         <div class="w-full background_copy pb-4 p-2 shadow-lg">
-          <p class="text-center text-gray-200">© 2019 Copyright | {{ $t('footer.text') }}</p>
+          <p class="text-center text-gray-200">© {{ new Date().getFullYear() }} | {{ $t('footer.text') }}</p>
         </div>
       </div>
     </footer>
