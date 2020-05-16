@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-gray-100">
+    <div class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 lighten">
       <div class="flex flex-wrap py-4 px-4">
         <div class="sm:w-full md:w-1/6 lg:w-1/6"></div>
         <div class="sm:w-full md:w-4/6 lg:w-4/6">
@@ -41,10 +41,10 @@
       </div>
           <div class="flex flex-wrap w-4/5 ml-auto mr-auto content-center justify-center">
            <div 
-           class="justify-center w-24 md:w-3/12 lg:w-2/12 xl:w-1/12" 
-           v-for="icon in icons" 
-           v-bind:key="icons.id"
-           data-aos="fade">
+            class="justify-center w-24 md:w-3/12 lg:w-2/12 xl:w-1/12" 
+            v-for="icon in icons" 
+            v-bind:key="icons.id"
+            data-aos="fade">
                 <img class="w-full p-1 px-2 inline" :src="icon.image" :alt="icon.title" />
             </div>
           </div>
@@ -62,7 +62,7 @@
                   <img class="h-10 lg:h-16 px-2 inline skills" :src="item.image" :alt="item.title" />
                   <h3>{{ item.title }}</h3>
                 </div>
-                <p class="text-gray-700 text-base text-center">{{ item.text }}</p>
+                <p class="text-gray-900 text-base text-center">{{ item.text }}</p>
               </div>
             </div>
           </div>
@@ -183,8 +183,9 @@ export default {
 
 <style>
 .full-display {
-  height: calc(100vh - 72px);
-  background: url("../../assets/img/background/device-electronics.jpg");
+  height: 100vh;
+  background-image: url("../../assets/img/background/home-background-white.jpg");
+  background-color: #001810;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: normal;
@@ -197,5 +198,16 @@ export default {
 }
 .skills:hover {
   filter: grayscale(100);
+}
+@media (min-width: 1023px) {
+  .full-display {
+    height: calc(100vh - 72px);
+  }
+}
+.glitch{
+  background: transparent !important;
+}
+.lighten{
+  background:#f5f5f5;
 }
 </style>
