@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg w-full z-10" :class="{'flex': scrollPosition < 100, 'fixed': scrollPosition > 100}">
+    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg w-full z-10 sticky top-0" >
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <nuxt-link :to="$i18n.path('')">
             <img
@@ -24,10 +24,8 @@
           </svg>
         </button>
       </div>
-        <div
-          :class="open ? 'block': 'hidden'"
-          class="w-full block lg:flex lg:items-center lg:w-auto"
-        >
+      <transition name="fade">
+        <div v-if="open" class="w-full block lg:flex lg:items-center lg:w-auto">
           <div  class="text-md lg:flex-grow my-1">
             <nuxt-link
               :to="$i18n.path('')"
@@ -68,6 +66,7 @@
             exact
           >{{ $t('links.spanish')}}</nuxt-link>
         </div>
+      </transition>
     </nav>
 </template>
 
@@ -81,23 +80,23 @@ export default {
     return {
         open: false,
         langs: ["en", "es", "pt"],
-        scrollPosition: null
+        /*scrollPosition: null*/
       }
     },
     methods: {
         toggle() {
           this.open = !this.open;
         },
-        updateScroll() {
+        /*updateScroll() {
           this.scrollPosition = window.scrollY
-        },
+        },*/
       },
-    mounted() {
+    /*mounted() {
       window.addEventListener('scroll', this.updateScroll);
     },
     destroy() {
       window.removeEventListener('scroll', this.updateScroll)
-    },
+    },*/
     watch: {
     '$route' () {
       this.open = false
@@ -107,5 +106,10 @@ export default {
 </script>
 
 <style>
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
