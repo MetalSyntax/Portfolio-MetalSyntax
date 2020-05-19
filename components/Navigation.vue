@@ -24,8 +24,9 @@
           </svg>
         </button>
       </div>
-      <transition name="fade">
-        <div v-if="open" class="w-full block lg:flex lg:items-center lg:w-auto">
+      <!--<transition name="fade">-->
+        <div :class="open ? 'block': 'hidden'"
+              class="w-full block lg:flex lg:items-center lg:w-auto">
           <div  class="text-md lg:flex-grow my-1">
             <nuxt-link
               :to="$i18n.path('')"
@@ -66,7 +67,7 @@
             exact
           >{{ $t('links.spanish')}}</nuxt-link>
         </div>
-      </transition>
+      <!--</transition>-->
     </nav>
 </template>
 
@@ -106,10 +107,10 @@ export default {
 </script>
 
 <style>
-.fade-enter-active, .fade-leave-active {
+/*.fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
-}
+}*/
 </style>

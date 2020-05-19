@@ -185,7 +185,7 @@ export default {
 .full-display {
   height: 100vh;
   background-image: url("../../assets/img/background/home-background-white.jpg");
-  background-color: #001810;
+  background-color: #e4e4e4;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: normal;
