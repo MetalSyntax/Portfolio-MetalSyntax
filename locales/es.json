@@ -48,7 +48,14 @@
       "text6": "Comprobando la disponibilidad, accesibilidad y seguridad de los sitios web para satisfacer la demanda de los servicios."
     },
     "portfolio": {
-      "title": "Portafolio"
+      "title": "Portafolio",
+      "project25":"Radio para venezolanos en el exterior.",
+      "project24":"Venta de vehículos en España.",
+      "project23":"Secretarias virtuales para actividades administrativas de empresas.",
+      "project22":"Renderizados fotorealistas de alta calidad.",
+      "project21":"Alternativas para impulsar y posicionar productos.",
+      "project20":"Red de profesionales en la traducción jurada en Malaga.",
+      "project19":"Web de viajes para destinos, guías, hoteles, tour, vacaciones y más."
     },
     "achievements": {
       "title": "Certificaciones"

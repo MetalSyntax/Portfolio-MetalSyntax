@@ -56,7 +56,7 @@ export default {
           title: "Radio Caribe",
           company: "Freelance",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project25"),
           link: "http://www.radiocaribe.com/",
           image: require("../../assets/img/computers/radiocaribe.jpg")
         },
@@ -64,7 +64,7 @@ export default {
           title: "Ofertas del Motor",
           company: "kainver",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project24"),
           link: "https://www.behance.net/gallery/96603035/ODM",
           image: require("../../assets/img/computers/ofertasdelmotor.jpg")
         },
@@ -72,7 +72,7 @@ export default {
           title: "Mi Secretaria Virtual",
           company: "kainver",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project23"),
           link: "https://www.behance.net/gallery/96600341/MSV",
           image: require("../../assets/img/computers/misecretariavirtual.jpg")
         },
@@ -80,7 +80,7 @@ export default {
           title: "Renderizados",
           company: "kainver",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project22"),
           link: "https://www.behance.net/gallery/96600761/Renderizados",
           image: require("../../assets/img/computers/renderizados.jpg")
         },
@@ -88,7 +88,7 @@ export default {
           title: "Soluciones Web",
           company: "kainver",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project21"),
           link: "https://www.behance.net/gallery/79186095/Soluciones-Web",
           image: require("../../assets/img/computers/solucionesweb.jpg")
         },
@@ -96,7 +96,7 @@ export default {
           title: "Traductores Malaga",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project20"),
           link: "https://www.behance.net/gallery/72284307/Traductores-Malaga",
           image: require("../../assets/img/computers/TraductoresMalaga.jpg")
         },
@@ -104,7 +104,7 @@ export default {
           title: "AW Travel Guides",
           company: "kainver",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project19"),
           link: "https://www.behance.net/gallery/79183575/AW-Travel-Guides",
           image: require("../../assets/img/computers/AwTravelGuides.jpg")
         },
