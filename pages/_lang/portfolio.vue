@@ -112,7 +112,7 @@ export default {
           title: "Life Fitness",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project18"),
           link:
             "https://www.behance.net/gallery/76360309/Tiendas-de-Webs-Gimnasio-1",
           image: require("../../assets/img/computers/tiendadewebs-gimnasios-web-1.jpg")
@@ -121,7 +121,7 @@ export default {
           title: "Lawfrim",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project17"),
           link: "https://www.behance.net/gallery/96604757/Tienda-de-Webs-Abogados-1",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-1.jpg")
         },
@@ -129,7 +129,7 @@ export default {
           title: "R. Jurídico",
           company: "kainver",
           year: "2018",
-          description: "",
+          escription: this.$t("portfolio.project16"),
           link: "https://www.behance.net/gallery/96604783/Tienda-de-Webs-Abogados-2",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-2.jpg")
         },
@@ -137,7 +137,7 @@ export default {
           title: "Planchart",
           company: "kainver",
           year: "2018",
-          description: "",
+          escription: this.$t("portfolio.project15"),
           link: "https://www.behance.net/gallery/96604795/Tienda-de-Webs-Abogados-3",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-3.jpg")
         },
@@ -145,7 +145,7 @@ export default {
           title: "Brick State",
           company: "kainver",
           year: "2018",
-          description: "",
+          escription: this.$t("portfolio.project14"),
           link: "https://www.behance.net/gallery/96604291/Tienda-de-Webs-Construccion-1",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-1.jpg")
         },
@@ -153,7 +153,7 @@ export default {
           title: "Avantia",
           company: "kainver",
           year: "2018",
-          description: "",
+          escription: this.$t("portfolio.project13"),
           link: "https://www.behance.net/gallery/96604325/Tienda-de-Webs-Construccion-2",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-2.jpg")
         },
@@ -161,7 +161,7 @@ export default {
           title: "Alliance",
           company: "kainver",
           year: "2018",
-          description: "",
+          escription: this.$t("portfolio.project12"),
           link: "https://www.behance.net/gallery/96604455/Tienda-de-Webs-Construccion-3",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-3.jpg")
         },

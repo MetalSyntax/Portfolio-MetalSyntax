@@ -10,7 +10,7 @@
             />
         </nuxt-link>
         <nuxt-link :to="$i18n.path('')" class="font-semibold hover:text-white text-gray-200 text-xl tracking-tight">
-          <glitch text="Wonder Diaz"></glitch>
+          Wonder Diaz<!--<glitch text="Wonder Diaz"></glitch>-->
         </nuxt-link>
       </div>
       <div class="block lg:hidden">
@@ -72,11 +72,11 @@
 </template>
 
 <script>
-import Glitch from 'vue-glitch'
+/*import Glitch from 'vue-glitch'*/
 
 export default {
     name: 'Navigation',
-    components: { Glitch },
+    /*components: { Glitch },*/
     data() {
     return {
         open: false,

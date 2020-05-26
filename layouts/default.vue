@@ -15,7 +15,7 @@
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import Glitch from 'vue-glitch'
+/*import Glitch from 'vue-glitch'*/
 
 export default {
   head() {
