@@ -169,7 +169,7 @@ export default {
           title: "MediaOrbit",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project11"),
           link: "https://www.behance.net/gallery/96604987/Tienda-de-Webs-Inmuebles-1",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-1.jpg")
         },
@@ -177,7 +177,7 @@ export default {
           title: "Starlines",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project10"),
           link:
             "https://www.behance.net/gallery/76362391/Tiendas-de-Webs-Inmobiliarias-2",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-2.jpg")
@@ -186,7 +186,7 @@ export default {
           title: "Netcoms",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project9"),
           link:
             "https://www.behance.net/gallery/76361415/Tienda-de-Webs-Inmobiliarias-3",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-3.jpg")
@@ -195,7 +195,7 @@ export default {
           title: "Gearworks",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project8"),
           link: "https://www.behance.net/gallery/96599965/Tiendas-de-Web-Marketing-1",
           image: require("../../assets/img/computers/tiendadewebs-marketing-web-1.jpg")
         },
@@ -203,7 +203,7 @@ export default {
           title: "MediaBurn",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project7"),
           link:
             "https://www.behance.net/gallery/73168833/Tienda-de-Webs-Marketing-2",
           image: require("../../assets/img/computers/tiendadewebs-marketing-web-2.jpg")
@@ -212,7 +212,7 @@ export default {
           title: "App-Market",
           company: "kainver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project6"),
           link:
             "https://www.behance.net/gallery/73164583/Tienda-de-Webs-Marketing-3",
           image: require("../../assets/img/computers/tiendadewebs-marketing-web-3.jpg")
@@ -221,7 +221,7 @@ export default {
           title: "Domiserver",
           company: "Domiserver",
           year: "2018",
-          description: "",
+          description: this.$t("portfolio.project5"),
           link: "https://www.behance.net/gallery/66801367/DomiServer",
           image: require("../../assets/img/computers/Domiserver.jpg")
         },
@@ -229,6 +229,7 @@ export default {
           title: "Latin Talents",
           company: "Domiserver",
           year: "2018",
+          description: this.$t("portfolio.project4"),
           link: "https://www.behance.net/gallery/66800623/LatinTalents",
           image: require("../../assets/img/computers/LatinTalen.jpg")
         },
@@ -236,7 +237,7 @@ export default {
           title: "Methods",
           company: "Personal",
           year: "2017",
-          description: "",
+          description: this.$t("portfolio.project3"),
           link: "https://metalsyntax.github.io/Methods/",
           image: require("../../assets/img/computers/metalsyntax-github-io-Methods.jpg")
         },
@@ -244,7 +245,7 @@ export default {
           title: "Code of Paid",
           company: "Personal",
           year: "2017",
-          description: "",
+          description: this.$t("portfolio.project2"),
           link: "https://www.behance.net/gallery/66803173/Code-of-Paid",
           image: require("../../assets/img/computers/metalsyntax-github-io-Code-Of-Paid.jpg")
         },
@@ -252,7 +253,7 @@ export default {
           title: "Syntax Note",
           company: "Personal",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project1"),
           link: "https://metalsyntax.github.io/Notes/",
           image: require("../../assets/img/computers/metalsyntax-github-io-Notes.jpg")
         },
@@ -260,7 +261,7 @@ export default {
           title: "Syntax Monitor",
           company: "Personal",
           year: "2019",
-          description: "",
+          description: this.$t("portfolio.project0"),
           link: "https://metalsyntax.github.io/Syntax-Monitor/",
           image: require("../../assets/img/computers/metalsyntax-github-io-Syntax-Monitor.jpg")
         }
