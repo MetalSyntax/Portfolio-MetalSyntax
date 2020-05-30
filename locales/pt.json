@@ -71,10 +71,10 @@
       "project6":"",
       "project5":"",
       "project4":"",
-      "project3":"",
-      "project2":"",
-      "project1":"",
-      "project0":""
+      "project3":"Aplicativo da Web para cálculos relacionados à Engenharia de Métodos.",
+      "project2":"Aplicativo da Web para gerar um código simples usando um ID pessoal.",
+      "project1":"Aplicativo que permite salvar informações através do arquivo de notas.",
+      "project0":"Pedido de verificação de taxas paralelas de dólares na Venezuela."
     },
     "achievements": {
       "title": "Certificações"
@@ -103,4 +103,4 @@
       "task2work5": "Uma guia rápido para o OEE",
       "task3work5": "Melhoria de aprimoramento global de relatórios da OEE"
     }
-}  
+}
