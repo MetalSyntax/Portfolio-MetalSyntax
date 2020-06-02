@@ -32,7 +32,7 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://www.instagram.com/metalsyntax/">
+            <!--<a class="p-1" href="https://www.instagram.com/metalsyntax/">
               <img
                 class="icons-social"
                 src="../assets/img/social/instagram.png"
@@ -40,7 +40,7 @@
                 height="35"
                 width="35"
               />
-            </a>
+            </a>-->
             <a class="p-1" href="https://twitter.com/MetalSyntax">
               <img
                 class="icons-social"
@@ -50,7 +50,7 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://www.facebook.com/MetalSyntax1101/">
+            <!--<a class="p-1" href="https://www.facebook.com/MetalSyntax1101/">
               <img
                 class="icons-social"
                 src="../assets/img/social/facebook.png"
@@ -58,7 +58,7 @@
                 height="35"
                 width="35"
               />
-            </a>
+            </a>-->
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default {
         }
     },
     watch: {
-    
+
   }
 }
 </script>
