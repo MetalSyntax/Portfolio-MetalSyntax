@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg w-full z-10 sticky top-0" >
+    <nav class="flex items-center justify-between flex-wrap background_nav px-6 py-2 shadow-lg w-full z-10 sticky top-0" :class="{'scrolled': !view.atTopOfPage}">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <nuxt-link :to="$i18n.path('')">
             <img
@@ -15,7 +15,7 @@
       </div>
       <div class="block lg:hidden">
         <button
-          @click="toggle" 
+          @click="toggle"
           class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-200 hover:text-white hover:border-white"
         >
           <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@
       <!--<transition name="fade">-->
         <div :class="open ? 'block': 'hidden'"
               class="w-full block lg:flex lg:items-center lg:w-auto">
-          <div  class="text-md lg:flex-grow my-1">
+          <div class="text-md lg:flex-grow my-1">
             <nuxt-link
               :to="$i18n.path('')"
               class="font-semibold block lg:inline-block lg:mt-0 link hover:text-white hover-bg rounded mr-4 text-base py-3 px-4"
@@ -82,16 +82,29 @@ export default {
         open: false,
         langs: ["en", "es", "pt"],
         /*scrollPosition: null*/
+        view: {
+            atTopOfPage: true
+        },
       }
+    },
+    beforeMount () {
+      window.addEventListener('scroll', this.handleScroll);
     },
     methods: {
         toggle() {
           this.open = !this.open;
         },
+        handleScroll() {
+        if(window.pageYOffset>0) {
+            if(this.view.atTopOfPage) this.view.atTopOfPage = false
+        } else {
+            if(!this.view.atTopOfPage) this.view.atTopOfPage = true
+        }
         /*updateScroll() {
           this.scrollPosition = window.scrollY
         },*/
       },
+    },
     /*mounted() {
       window.addEventListener('scroll', this.updateScroll);
     },
@@ -113,4 +126,8 @@ export default {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }*/
+nav.scrolled {
+    @apply shadow-2xl;
+    border-bottom: 0px;
+}
 </style>

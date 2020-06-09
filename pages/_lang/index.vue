@@ -30,20 +30,20 @@
         <div class="sm:w-full md:w-4/6 lg:w-4/6">
           <p class="text-gray-900 text-center text-xl">
             {{ $t('home.heroparagraph2') }}
-            <b>HTML, CSS, JavaScript, JSON, PHP, SQL, NoSQL</b>
+            <strong>HTML5, CSS3, JavaScript, JSON, PHP, SQL, NoSQL</strong>
             .
             {{ $t('home.heroparagraph3') }}
-            <b>JQuery, Angular 1.x, Gulp.js, WebPack, Vue, Nuxt, Node.js,Sass, Less, Materialize, Bootstrap, TailWindCss, WordPress</b>
+            <strong>JQuery, WebPack, Vue, Nuxt, React, Next.js, Node.js, Sass, Materialize, Bootstrap, TailWindCss, WordPress</strong>
             ,
             {{ $t('home.heroparagraph4') }}
           </p>
         </div>
       </div>
           <div class="flex flex-wrap w-4/5 ml-auto mr-auto content-center justify-center">
-           <div 
-            class="justify-center w-24 md:w-3/12 lg:w-2/12 xl:w-1/12" 
-            v-for="icon in icons" 
-            v-bind:key="icons.id"
+           <div
+            class="justify-center w-24 md:w-3/12 lg:w-2/12 xl:w-1/12"
+            v-for="icon in icons"
+            v-bind:key="icon"
             data-aos="fade">
                 <img class="w-full p-1 px-2 inline" :src="icon.image" :alt="icon.title" />
             </div>
@@ -106,8 +106,12 @@ export default {
           image: require("../../assets/img/tech/php.png")
         },
         {
-          title:"Python",
-          image: require("../../assets/img/tech/PY.png")
+          title:"MySQL",
+          image: require("../../assets/img/tech/mysql.png")
+        },
+        {
+          title:"WordPress",
+          image: require("../../assets/img/tech/WordPress.png")
         },
         {
           title:"Vue",
@@ -118,24 +122,20 @@ export default {
           image: require("../../assets/img/tech/tailwindcss.png")
         },
         {
-          title:"Bootstrap",
-          image: require("../../assets/img/tech/bootstrap4.png")
-        },
-        {
           title:"Node.js",
           image: require("../../assets/img/tech/nodejs.png")
-        },
-        {
-          title:"WordPress",
-          image: require("../../assets/img/tech/WordPress.png")
         },
         {
           title:"Mongodb",
           image: require("../../assets/img/tech/mongodb.png")
         },
         {
-          title:"MySQL",
-          image: require("../../assets/img/tech/mysql.png")
+          title:"Bootstrap",
+          image: require("../../assets/img/tech/bootstrap4.png")
+        },
+        {
+          title:"Materialize",
+          image: require("../../assets/img/tech/materialize.png")
         }
       ],
       items: [
