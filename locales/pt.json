@@ -21,7 +21,7 @@
         "portuguese": "Português"
     },
     "footer":{
-        "text": "Desenvolvido por MetalSyntax com Vue.js e TailWindCss."
+        "text": "Desenvolvido por MetalSyntax com Vue.js, Nuxt.js e TailWindCss."
     },
     "home": {
       "toptitle": "Convergência do conhecimento",
