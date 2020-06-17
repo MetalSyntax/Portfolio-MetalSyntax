@@ -3,10 +3,61 @@
     <div class="w-full p-4 title-background shadow-lg">
       <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('portfolio.title') }}/&gt;</h1>
     </div>
+    <div class="w-full px-4 py-4">
+      <ul class="flex flex-wrap">
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-green-500 rounded py-2 px-4 title-background text-white"
+            href="#"
+            @click="itemsFilterkey = 'All'"
+            :class="{ active: itemsFilterkey == 'All' }"
+          >All</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#"
+            @click="itemsFilterkey = 'kainver'"
+            :class="{ active: itemsFilterkey == 'kainver' }"
+          >Kainver</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center text-bold block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#"
+            @click="itemsFilterkey = 'Domiserver'"
+            :class="{ active: itemsFilterkey == 'Domiserver' }"
+          >Domiserver</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#"
+            @click="itemsFilterkey = 'Personal'"
+            :class="{ active: itemsFilterkey == 'Personal' }"
+          >Personal</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#"
+            @click="itemsFilterkey = 'Freelance'"
+            :class="{ active: itemsFilterkey == 'Freelance' }"
+          >Freelance</a>
+        </li>
+      </ul>
+      <!-- <select name="items" id="items">
+        <option value="All">All</option>
+        <option value="Kainver">Kainver</option>
+        <option value="DomiServer">DomiServer</option>
+        <option value="Personal">Personal</option>
+        <option value="Freelance">Freelance</option>
+      </select> -->
+    </div>
     <div class="py-4 px-2">
       <div class="flex flex-wrap justify-center -mx-2">
         <div
-          v-for="item in items"
+          v-for="item in itemFilter"
           v-bind:key="item.id"
           class="sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 justify-center"
           data-aos="fade-down"
@@ -23,10 +74,10 @@
                   class="text-center text-gray-900 text-xl pt-2 font-semibold title-hover"
                 >{{ item.title }}</p>
               </a>
-                <p class="text-center text-gray-700 text-sm pb-1 block opacity-75">
-                  {{ item.company }} - {{ item.year }}
-                </p>
-                 <p class="text-gray-700 text-base text-center pb-2">{{ item.description }}</p>
+              <p
+                class="text-center text-gray-700 text-sm pb-1 block opacity-75"
+              >{{ item.company }} - {{ item.year }}</p>
+              <p class="text-gray-700 text-base text-center pb-2">{{ item.description }}</p>
             </div>
           </div>
         </div>
@@ -51,6 +102,7 @@ export default {
   },
   data() {
     return {
+      itemsFilterkey: "All",
       items: [
         {
           title: "Radio Caribe",
@@ -122,7 +174,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project17"),
-          link: "https://www.behance.net/gallery/96604757/Tienda-de-Webs-Abogados-1",
+          link:
+            "https://www.behance.net/gallery/96604757/Tienda-de-Webs-Abogados-1",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-1.jpg")
         },
         {
@@ -130,7 +183,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project16"),
-          link: "https://www.behance.net/gallery/96604783/Tienda-de-Webs-Abogados-2",
+          link:
+            "https://www.behance.net/gallery/96604783/Tienda-de-Webs-Abogados-2",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-2.jpg")
         },
         {
@@ -138,7 +192,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project15"),
-          link: "https://www.behance.net/gallery/96604795/Tienda-de-Webs-Abogados-3",
+          link:
+            "https://www.behance.net/gallery/96604795/Tienda-de-Webs-Abogados-3",
           image: require("../../assets/img/computers/tiendadewebs-abogados-web-3.jpg")
         },
         {
@@ -146,7 +201,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project14"),
-          link: "https://www.behance.net/gallery/96604291/Tienda-de-Webs-Construccion-1",
+          link:
+            "https://www.behance.net/gallery/96604291/Tienda-de-Webs-Construccion-1",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-1.jpg")
         },
         {
@@ -154,7 +210,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project13"),
-          link: "https://www.behance.net/gallery/96604325/Tienda-de-Webs-Construccion-2",
+          link:
+            "https://www.behance.net/gallery/96604325/Tienda-de-Webs-Construccion-2",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-2.jpg")
         },
         {
@@ -162,7 +219,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project12"),
-          link: "https://www.behance.net/gallery/96604455/Tienda-de-Webs-Construccion-3",
+          link:
+            "https://www.behance.net/gallery/96604455/Tienda-de-Webs-Construccion-3",
           image: require("../../assets/img/computers/tiendadewebs-construccion-web-3.jpg")
         },
         {
@@ -170,7 +228,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project11"),
-          link: "https://www.behance.net/gallery/96604987/Tienda-de-Webs-Inmuebles-1",
+          link:
+            "https://www.behance.net/gallery/96604987/Tienda-de-Webs-Inmuebles-1",
           image: require("../../assets/img/computers/tiendadewebs-inmobiliarias-web-1.jpg")
         },
         {
@@ -196,7 +255,8 @@ export default {
           company: "kainver",
           year: "2018",
           description: this.$t("portfolio.project8"),
-          link: "https://www.behance.net/gallery/96599965/Tiendas-de-Web-Marketing-1",
+          link:
+            "https://www.behance.net/gallery/96599965/Tiendas-de-Web-Marketing-1",
           image: require("../../assets/img/computers/tiendadewebs-marketing-web-1.jpg")
         },
         {
@@ -267,6 +327,34 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    itemFilter() {
+      return this[this.itemsFilterkey];
+    },
+    All() {
+      return this.items;
+    },
+    kainver() {
+      return this.items.filter(function(item) {
+        return item.company == "kainver";
+      });
+    },
+    Domiserver() {
+      return this.items.filter(function(item) {
+        return item.company == "Domiserver";
+      });
+    },
+    Freelance() {
+      return this.items.filter(function(item) {
+        return item.company == "Freelance";
+      });
+    },
+    Personal() {
+      return this.items.filter(function(item) {
+        return item.company == "Personal";
+      });
+    }
   }
 };
 </script>
