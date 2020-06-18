@@ -74,10 +74,12 @@
       "project3":"Aplicativo da Web para cálculos relacionados à Engenharia de Métodos.",
       "project2":"Aplicativo da Web para gerar um código simples usando um ID pessoal.",
       "project1":"Aplicativo que permite salvar informações através do arquivo de notas.",
-      "project0":"Pedido de verificação de taxas paralelas de dólares na Venezuela."
+      "project0":"Pedido de verificação de taxas paralelas de dólares na Venezuela.",
+      "filter":"Todos"
     },
     "achievements": {
-      "title": "Certificações"
+      "title": "Certificações",
+      "filter":"Todos"
     },
     "experience": {
       "title": "Experiência",

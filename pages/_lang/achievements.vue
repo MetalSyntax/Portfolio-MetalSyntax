@@ -3,10 +3,75 @@
     <div class="w-full p-4 title-background shadow-lg">
       <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('achievements.title') }}/&gt;</h1>
     </div>
+    <div class="w-full px-4 py-4">
+      <ul class="hidden lg:flex flex-wrap">
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#all"
+            @click="itemsFilterkey = 'All'"
+            :class="{ active: itemsFilterkey == 'All' }"
+          >{{ $t('achievements.filter') }}</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#platzi"
+            @click="itemsFilterkey = 'Platzi'"
+            :class="{ active: itemsFilterkey == 'Platzi' }"
+          >Platzi</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center text-bold block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#linkedIn"
+            @click="itemsFilterkey = 'LinkedIn'"
+            :class="{ active: itemsFilterkey == 'LinkedIn Learning'}"
+          >LinkedIn Learning</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#aprende"
+            @click="itemsFilterkey = 'Aprende'"
+            :class="{ active: itemsFilterkey == 'Fundación Carlos Slim' }"
+          >Aprende.org</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#universidad"
+            @click="itemsFilterkey = 'Universidad'"
+            :class="{ active: itemsFilterkey == 'Universidad' }"
+          >Universidad</a>
+        </li>
+      </ul>
+      <select
+        name="items"
+        class="lg:hidden flex justify-center mx-auto text-center block rounded projects focus:border-green border border-white shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4 outline-none"
+        v-model="itemsFilterkey"
+      >
+        <option
+          value="All"
+        >{{ $t('achievements.filter') }}</option>
+        <option
+          value="Platzi"
+        >Platzi</option>
+        <option
+          value="LinkedIn"
+        >LinkedIn Learning</option>
+        <option
+          value="Aprende"
+        >Aprende.org</option>
+        <option
+          value="Universidad"
+        >Universidad</option>
+      </select>
+    </div>
     <div class="py-4 px-2">
       <div class="flex flex-wrap -mx-2">
         <div
-          v-for="item in items"
+          v-for="item in itemFilter"
           v-bind:key="item.id"
           class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 px-2"
           data-aos="fade-down"
@@ -46,6 +111,7 @@ export default {
   },
   data() {
     return {
+      itemsFilterkey: "All",
       items: [
         /*Platzi*/
         {
@@ -382,17 +448,47 @@ export default {
         {
           title: "Lean Management, Mejora Continua y Calidad",
           company: "UJAP",
+          academy: "Universidad",
           link:"https://drive.google.com/open?id=1Ta36Uw2mWauRKtTuzn9XixAAaWOM6HwP",
           img: require("../../assets/img/diplomas/UJAP.png")
         },
         {
           title: "Diseño y Desarrollo de Base de Datos",
           company: "UCV",
+          academy: "Universidad",
           link:"https://drive.google.com/open?id=1H1rC_Kr8roxrBleEMMxfI7Ch-rse87bD",
           img: require("../../assets/img/diplomas/UCV.png")
         }
       ]
     };
+  },
+  computed: {
+    itemFilter() {
+      return this[this.itemsFilterkey];
+    },
+    All() {
+      return this.items;
+    },
+    Platzi() {
+      return this.items.filter(function(item) {
+        return item.company == "Platzi";
+      });
+    },
+    LinkedIn() {
+      return this.items.filter(function(item) {
+        return item.company == "LinkedIn Learning";
+      });
+    },
+    Aprende() {
+      return this.items.filter(function(item) {
+        return item.company == "Fundación Carlos Slim";
+      });
+    },
+    Universidad() {
+      return this.items.filter(function(item) {
+        return item.academy == "Universidad";
+      });
+    }
   }
 };
 </script>

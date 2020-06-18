@@ -74,10 +74,12 @@
       "project3":"Web application for calculations related to Method Engineering.",
       "project2":"Web application to generate a simple code using a personal ID.",
       "project1":"Application that allows saving information through the notes file.",
-      "project0":"Application for the verification of parallel dollar rates in Venezuela."
+      "project0":"Application for the verification of parallel dollar rates in Venezuela.",
+      "filter":"All"
     },
     "achievements": {
-      "title": "Achievements"
+      "title": "Achievements",
+      "filter":"All"
     },
     "experience": {
       "title": "Experience",

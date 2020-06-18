@@ -204,9 +204,9 @@ export default {
     height: calc(100vh - 72px);
   }
 }
-.glitch{
+/*.glitch{
   background: transparent !important;
-}
+}*/
 .lighten{
   background:#f5f5f5;
 }

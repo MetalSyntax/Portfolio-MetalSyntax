@@ -74,10 +74,12 @@
       "project3":"Aplicación Web para cálculos relacionados con la Ingeniería de Métodos.",
       "project2":"Aplicación Web para generar un código sencillo mediante un ID personal.",
       "project1":"Aplicación que permite guardar información a través del archivo de notas.",
-      "project0":"Aplicación para la verificación de tasas del dólar paralelo en Venezuela."
+      "project0":"Aplicación para la verificación de tasas del dólar paralelo en Venezuela.",
+      "filter":"Todos"
     },
     "achievements": {
-      "title": "Certificaciones"
+      "title": "Certificaciones",
+      "filter":"Todos"
     },
     "experience": {
       "title": "Experiencia",

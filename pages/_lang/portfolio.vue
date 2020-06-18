@@ -4,19 +4,19 @@
       <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('portfolio.title') }}/&gt;</h1>
     </div>
     <div class="w-full px-4 py-4">
-      <ul class="flex flex-wrap">
+      <ul class="hidden lg:flex flex-wrap">
         <li class="flex-1 mr-2">
           <a
-            class="text-center block border border-green-500 rounded py-2 px-4 title-background text-white"
-            href="#"
+            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            href="#all"
             @click="itemsFilterkey = 'All'"
             :class="{ active: itemsFilterkey == 'All' }"
-          >All</a>
+          >{{ $t('portfolio.filter') }}</a>
         </li>
         <li class="flex-1 mr-2">
           <a
             class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
-            href="#"
+            href="#kainver"
             @click="itemsFilterkey = 'kainver'"
             :class="{ active: itemsFilterkey == 'kainver' }"
           >Kainver</a>
@@ -24,15 +24,15 @@
         <li class="flex-1 mr-2">
           <a
             class="text-center text-bold block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
-            href="#"
+            href="#domiserver"
             @click="itemsFilterkey = 'Domiserver'"
-            :class="{ active: itemsFilterkey == 'Domiserver' }"
+            :class="{ active: itemsFilterkey == 'Domiserver'}"
           >Domiserver</a>
         </li>
         <li class="flex-1 mr-2">
           <a
             class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
-            href="#"
+            href="#personal"
             @click="itemsFilterkey = 'Personal'"
             :class="{ active: itemsFilterkey == 'Personal' }"
           >Personal</a>
@@ -40,21 +40,35 @@
         <li class="flex-1 mr-2">
           <a
             class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
-            href="#"
+            href="#freelance"
             @click="itemsFilterkey = 'Freelance'"
             :class="{ active: itemsFilterkey == 'Freelance' }"
           >Freelance</a>
         </li>
       </ul>
-      <!-- <select name="items" id="items">
-        <option value="All">All</option>
-        <option value="Kainver">Kainver</option>
-        <option value="DomiServer">DomiServer</option>
-        <option value="Personal">Personal</option>
-        <option value="Freelance">Freelance</option>
-      </select> -->
+      <select
+        name="items"
+        class="lg:hidden flex justify-center mx-auto text-center block rounded projects focus:border-green border border-white shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4 outline-none"
+        v-model="itemsFilterkey"
+      >
+        <option
+          value="All"
+        >{{ $t('portfolio.filter') }}</option>
+        <option
+          value="kainver"
+        >Kainver</option>
+        <option
+          value="Domiserver"
+        >DomiServer</option>
+        <option
+          value="Personal"
+        >Personal</option>
+        <option
+          value="Freelance"
+        >Freelance</option>
+      </select>
     </div>
-    <div class="py-4 px-2">
+    <div class="pb-4 px-2">
       <div class="flex flex-wrap justify-center -mx-2">
         <div
           v-for="item in itemFilter"
