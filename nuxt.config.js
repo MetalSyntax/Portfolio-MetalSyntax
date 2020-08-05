@@ -23,8 +23,8 @@ export default {
   */
   loading: { color: '#fff' },
   /*
-  * 
-  */ 
+  *
+  */
  router: {
   middleware: 'i18n',
   linkActiveClass: 'active-link',
@@ -48,15 +48,15 @@ export default {
   */
   generate: {
     routes: [
-    '/', 
+    '/',
     '/portfolio',
     '/achievements',
     '/experience',
-    '/es', 
+    '/es',
     '/es/portfolio',
     '/es/achievements',
-    '/es/experience', 
-    '/pt', 
+    '/es/experience',
+    '/pt',
     '/pt/portfolio',
     '/pt/achievements',
     '/pt/experience'
@@ -80,7 +80,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/robots','@nuxtjs/sitemap','@nuxtjs/pwa'
+    '@nuxtjs/robots','@nuxtjs/sitemap',['@nuxtjs/pwa', {icon: false }],
   ],
   /*
   *
@@ -92,7 +92,7 @@ export default {
     background_color: "#000",
     description: "Wonder Diaz Portfolio. Develop by MetalSyntax with Vue.js and TailWindCss.",
     lang: 'en',
-    display: 'standalone'
+    display: 'standalone',
     }
   },
   /*
@@ -101,8 +101,8 @@ export default {
   googleAnalytics: {
     id: 'UA-86102577-2'
   },
-  /* 
-   * Sitemap 
+  /*
+   * Sitemap
   */
  sitemap: {
   hostname: 'http://metalsyntax.000webhostapp.com/',
@@ -115,7 +115,7 @@ export default {
     '/es/portfolio',
     '/es/achievements',
     '/es/experience',
-    '/pt', 
+    '/pt',
     '/pt/portfolio',
     '/pt/achievements',
     '/pt/experience'
@@ -141,5 +141,5 @@ export default {
     vendor: ['vue-i18n'],
     extend (config, ctx) {
     }
-  }
+  },
 }
