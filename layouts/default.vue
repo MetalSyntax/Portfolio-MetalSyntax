@@ -23,7 +23,7 @@ export default {
       link: [
         {
           rel: "canonical",
-          href: "https://metalsyntax.000webhostapp.com" + this.$route.path
+          href: "https://metalsyntax.now.sh" + this.$route.path
         }
       ]
     };

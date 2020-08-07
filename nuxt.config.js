@@ -13,9 +13,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-ms.ico' },
-      { rel: 'alternate', hreflang: 'en', href: 'http://metalsyntax.000webhostapp.com/' },
-      { rel: 'alternate', hreflang: 'es', href: 'http://metalsyntax.000webhostapp.com/es' },
-      { rel: 'alternate', hreflang: 'pt', href: 'http://metalsyntax.000webhostapp.com/pt' },
+      { rel: 'alternate', hreflang: 'en', href: 'http://metalsyntax.now.sh/' },
+      { rel: 'alternate', hreflang: 'es', href: 'http://metalsyntax.now.sh/es' },
+      { rel: 'alternate', hreflang: 'pt', href: 'http://metalsyntax.now.sh/pt' },
     ]
   },
   /*
@@ -74,13 +74,13 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss','@nuxtjs/google-analytics'
+    '@nuxtjs/tailwindcss','@nuxtjs/google-analytics','@nuxtjs/pwa',
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/robots','@nuxtjs/sitemap',['@nuxtjs/pwa', {icon: false }],
+    '@nuxtjs/robots','@nuxtjs/sitemap',//['@nuxtjs/pwa', {icon: false }],
   ],
   /*
   *
@@ -105,7 +105,7 @@ export default {
    * Sitemap
   */
  sitemap: {
-  hostname: 'http://metalsyntax.000webhostapp.com/',
+  hostname: 'http://metalsyntax.now.sh/',
   routes: [
     '/',
     '/portfolio',
