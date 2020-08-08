@@ -93,15 +93,16 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/google-analytics",
-    "@nuxtjs/pwa"
+    "@nuxtjs/google-analytics"/*,
+    "@nuxtjs/pwa"*/
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     "@nuxtjs/robots",
-    "@nuxtjs/sitemap" //['@nuxtjs/pwa', {icon: false }],
+    "@nuxtjs/sitemap",
+    ['@nuxtjs/pwa', {icon: false }],
   ],
   /*
    *
@@ -163,5 +164,5 @@ export default {
     vendor: ["vue-i18n"],
     extend(config, ctx) {}
   },
-  buildDir: 'nuxt-dist'
+  buildDir: 'dist'
 };
