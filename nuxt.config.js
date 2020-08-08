@@ -1,9 +1,18 @@
 export default {
-  mode: "universal",
-  target: "static",
   /*
-   ** Headers of the page
-   */
+  ** Nuxt rendering mode
+  ** See https://nuxtjs.org/api/configuration-mode
+  */
+  mode: "universal",
+  /*
+  ** Nuxt target
+  ** See https://nuxtjs.org/api/configuration-target
+  */
+  target: "static",
+ /*
+  ** Headers of the page
+  ** See https://nuxtjs.org/api/configuration-head
+  */
   head: {
     title: process.env.npm_package_name || "",
     meta: [
@@ -43,8 +52,9 @@ export default {
    */
   css: [],
   /*
-   ** Plugins to load before mounting the App
-   */
+  ** Plugins to load before mounting the App
+  ** https://nuxtjs.org/guide/plugins
+  */
   plugins: [
     "~/plugins/i18n.js",
     "~/plugins/typed.js",
@@ -54,7 +64,7 @@ export default {
    ** Generates
    */
   generate: {
-    dir: "public",
+    dir: "dist",
     routes: [
       "/",
       "/portfolio",
