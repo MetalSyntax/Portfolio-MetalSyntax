@@ -10,7 +10,8 @@
             />
         </nuxt-link>
         <nuxt-link :to="$i18n.path('')" class="font-semibold hover:text-white text-gray-200 text-xl tracking-tight">
-          Wonder Diaz<!--<glitch text="Wonder Diaz"></glitch>-->
+          Wonder Diaz
+          <!--<glitch text="Wonder Diaz"></glitch>-->
         </nuxt-link>
       </div>
       <div class="block lg:hidden">
