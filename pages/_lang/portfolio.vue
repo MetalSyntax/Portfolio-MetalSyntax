@@ -119,6 +119,22 @@ export default {
       itemsFilterkey: "All",
       items: [
         {
+          title: "Lior Pedidos App",
+          company: "Personal",
+          year: "2020",
+          description: this.$t("portfolio.project27"),
+          link: "https://lior-app.vercel.app/",
+          image: require("../../assets/img/computers/Lior-Pedidos-App.jpg")
+        },
+        {
+          title: "Syntax Project Next",
+          company: "Personal",
+          year: "2020",
+          description: this.$t("portfolio.project26"),
+          link: "https://syntax-project-next.now.sh/",
+          image: require("../../assets/img/computers/Syntax-Project-Next.jpg")
+        },
+        {
           title: "Radio Caribe",
           company: "Freelance",
           year: "2019",
