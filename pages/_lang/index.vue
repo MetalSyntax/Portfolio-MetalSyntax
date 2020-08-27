@@ -95,7 +95,7 @@ export default {
         },
         {
           title:"Nuxt",
-          image: require("../../assets/img/tech/nuxt.png")
+          image: require("../../assets/img/tech/Nuxt.png")
         },
         {
           title:"Next",
