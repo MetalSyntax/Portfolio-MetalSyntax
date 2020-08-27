@@ -68,7 +68,12 @@
         >Universidad</option>
       </select>
     </div>
-    <div class="py-4 px-2">
+    <div
+    :class="[
+    itemsFilterkey == 'LinkedIn' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'Aprende' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'Universidad' ? 'lg:h-screen' : '']"
+    class="py-4 px-2">
       <div class="flex flex-wrap -mx-2">
         <div
           v-for="item in itemFilter"
@@ -459,7 +464,7 @@ export default {
           link:"https://drive.google.com/open?id=1H1rC_Kr8roxrBleEMMxfI7Ch-rse87bD",
           img: require("../../assets/img/diplomas/UCV.png")
         }
-      ]
+      ],
     };
   },
   computed: {

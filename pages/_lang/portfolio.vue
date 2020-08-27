@@ -68,7 +68,12 @@
         >Freelance</option>
       </select>
     </div>
-    <div class="pb-4 px-2">
+    <div
+    :class="[
+    itemsFilterkey == 'Domiserver' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'Personal' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'Freelance' ? 'lg:h-screen' : '']"
+    class="pb-4 px-2">
       <div class="flex flex-wrap justify-center -mx-2">
         <div
           v-for="item in itemFilter"

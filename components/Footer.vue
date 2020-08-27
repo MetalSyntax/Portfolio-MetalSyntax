@@ -32,15 +32,6 @@
                 width="35"
               />
             </a>
-            <!--<a class="p-1" href="https://www.instagram.com/metalsyntax/">
-              <img
-                class="icons-social"
-                src="../assets/img/social/instagram.png"
-                alt="Instagram"
-                height="35"
-                width="35"
-              />
-            </a>-->
             <a class="p-1" href="https://twitter.com/MetalSyntax">
               <img
                 class="icons-social"
@@ -50,6 +41,33 @@
                 width="35"
               />
             </a>
+            <a class="p-1" href="mailto:wonderdxk@gmail.com">
+              <img
+                class="icons-social"
+                src="../assets/img/social/gmail.png"
+                alt="Twitter"
+                height="35"
+                width="35"
+              />
+            </a>
+            <a class="p-1" href="https://api.whatsapp.com/send?phone=584241143120">
+              <img
+                class="icons-social"
+                src="../assets/img/social/whatsapp.png"
+                alt="Twitter"
+                height="35"
+                width="35"
+              />
+            </a>
+            <!--<a class="p-1" href="https://www.instagram.com/metalsyntax/">
+              <img
+                class="icons-social"
+                src="../assets/img/social/instagram.png"
+                alt="Instagram"
+                height="35"
+                width="35"
+              />
+            </a>-->
             <!--<a class="p-1" href="https://www.facebook.com/MetalSyntax1101/">
               <img
                 class="icons-social"

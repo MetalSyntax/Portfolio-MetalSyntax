@@ -45,7 +45,7 @@
             v-for="icon in icons"
             v-bind:key="icon"
             data-aos="fade">
-                <img class="w-full p-1 px-2 inline" :src="icon.image" :alt="icon.title" />
+                <img class="w-full p-1 px-2 inline" :title="icon.title" :src="icon.image" :alt="icon.title" />
             </div>
           </div>
       <div class="py-4 px-2">
@@ -59,7 +59,7 @@
             <div class="rounded overflow-hidden shadow-lg my-2 px-4 bg-white">
               <div class="px-4 py-4">
                 <div class="font-bold text-xl mb-2 text-center">
-                  <img class="h-10 lg:h-16 px-2 inline skills" :src="item.image" :alt="item.title" />
+                  <img class="h-10 lg:h-16 px-2 inline skills" :src="item.image" :alt="item.title"/>
                   <h3>{{ item.title }}</h3>
                 </div>
                 <p class="text-gray-900 text-base text-center">{{ item.text }}</p>
@@ -90,53 +90,45 @@ export default {
     return {
       icons: [
         {
-          title:"HTML5",
-          image: require("../../assets/img/tech/HTML5.png")
-        },
-        {
-          title:"CSS3",
-          image: require("../../assets/img/tech/CSS.png")
-        },
-        {
-          title:"Javascript",
-          image: require("../../assets/img/tech/JS.png")
-        },
-        {
-          title:"PHP",
-          image: require("../../assets/img/tech/php.png")
-        },
-        {
-          title:"MySQL",
-          image: require("../../assets/img/tech/mysql.png")
-        },
-        {
           title:"WordPress",
           image: require("../../assets/img/tech/WordPress.png")
         },
         {
-          title:"Vue",
-          image: require("../../assets/img/tech/Vuejs.png")
+          title:"Nuxt",
+          image: require("../../assets/img/tech/nuxt.png")
+        },
+        {
+          title:"Next",
+          image: require("../../assets/img/tech/Nextjs.png")
+        },
+        {
+          title:"Python",
+          image: require("../../assets/img/tech/python.png")
+        },
+        {
+          title:"Flask",
+          image: require("../../assets/img/tech/flask.png")
         },
         {
           title:"TailWind",
           image: require("../../assets/img/tech/tailwindcss.png")
         },
         {
-          title:"Node.js",
-          image: require("../../assets/img/tech/nodejs.png")
-        },
-        {
-          title:"Mongodb",
-          image: require("../../assets/img/tech/mongodb.png")
-        },
-        {
           title:"Bootstrap",
           image: require("../../assets/img/tech/bootstrap4.png")
         },
         {
-          title:"Materialize",
-          image: require("../../assets/img/tech/materialize.png")
-        }
+          title:"MongoDB",
+          image: require("../../assets/img/tech/Mongodb-new.png")
+        },
+        {
+          title:"Adobe XD",
+          image: require("../../assets/img/tech/experience.png")
+        },
+        {
+          title:"Figma",
+          image: require("../../assets/img/tech/Figma-1.png")
+        },
       ],
       items: [
         {
