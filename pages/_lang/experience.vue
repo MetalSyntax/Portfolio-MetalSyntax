@@ -14,7 +14,7 @@
           data-aos-duration="500"
         >
           <div class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white experience ">
-          <img class="px-2 py-2 w-3/4 md:w-1/3 m-auto" :src="item.img" :alt="item.title" />
+          <img class="px-2 py-2 w-3/4 md:w-1/3 m-auto" :title="item.title" :src="item.img" :alt="item.title" />
             <div class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center items-center">
               <h2 class="font-bold text-xl mb-2 text-center md:text-left w-full">{{item.title }}</h2>
               <p class="text-gray-700 text-base text-center md:text-left w-full">{{item.yearfirst }} - {{item.yearlast }}</p>

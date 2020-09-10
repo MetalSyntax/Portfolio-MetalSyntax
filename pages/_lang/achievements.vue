@@ -85,7 +85,7 @@
         >
           <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 achievements">
             <a :href="item.link" target="_blank">
-              <img class="w-20 h-20 rounded-full" :src="item.img" :alt="item.title" />
+              <img class="w-20 h-20 rounded-full" :title="item.title" :src="item.img" :alt="item.title" />
             </a>
             <div class="text-sm">
               <a :href="item.link" target="_blank">
