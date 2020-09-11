@@ -3,7 +3,7 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  mode: "universal",
+  /*mode: "universal",*/
   /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
@@ -95,8 +95,8 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-analytics",
-    /*"@nuxtjs/pwa",*/
-    '@aceforth/nuxt-optimized-images'
+    '@aceforth/nuxt-optimized-images',
+    ["@nuxtjs/pwa"]
   ],
   /*
    ** Nuxt.js modules
@@ -104,10 +104,29 @@ export default {
   modules: [
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
-    ['@nuxtjs/pwa', {icon: false }],
+    /*['@nuxtjs/pwa', {icon: false }]*/
   ],
   optimizedImages: {
-    optimizeImages: true
+    inlineImageLimit: 2000,
+    imagesName: ({ isDev }) => isDev ? '[path][name][hash:optimized].[ext]' : 'img/[contenthash:7].[ext]',
+    responsiveImagesName: ({ isDev }) => isDev ? '[path][name]--[width][hash:optimized].[ext]' : 'img/[contenthash:7]-[width].[ext]',
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    mozjpeg: {
+      quality: 80,
+    },
+    optipng: {
+      optimizationLevel: 3,
+    },
+    pngquant: false,
+    svgo: {
+      // enable/disable svgo plugins here
+    },
+    webp: {
+      preset: 'default',
+      quality: 80,
+    },
   },
   /*
    *
@@ -169,5 +188,5 @@ export default {
     vendor: ["vue-i18n"],
     extend(config, ctx) {}
   },
-  buildDir: 'dist'
+  /*buildDir: 'dist'*/
 };
