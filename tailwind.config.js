@@ -6,23 +6,23 @@
 */
 module.exports = {
   theme: {
-    /*colors:{
-      background:{
-        primary: 'var(--bg-background-primary)',
-        secondary: 'var(--bg-background-secondary)',
-        ternary: 'var(--bg-background-ternary)'
-      },
-      black:'#000',
-      white:'#FFF',
-      green:{
-        100: '#00C08B',
-      },
-      gray: {
-        500: '#1c1c1c',
-        600: '0f0f0f',
-        800: '#050505'
+    extend: {
+      colors: {
+        aqua: {
+          '100':'#00c08b',
+          '200':'#00976D'
+        },
+        graylight: {
+          '100':'#f5f5f5',
+          '200':'#e4e4e4',
+          '300':'#e2e8f0'
+        },
+        grayblacked: {
+          '100':'#00100b',
+          '200':'#001810',
+        },
       }
-    }*/
+    }
   },
   variants: {},
   plugins: []

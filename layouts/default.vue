@@ -51,43 +51,5 @@ export default {
 </script>
 
 <style>
-#logo {
-  filter: none;
-}
-.icons-social {
-  filter: none;
-}
-.link {
-  color: #00c08b;
-}
-.link-footer {
-  color: #00c08b;
-}
-.link-footer:hover {
-  color: #e2e8f0;
-}
-.link:hover {
-  color: #e2e8f0;
-}
-.button_switch {
-  background: #00c08b;
-}
-button:focus {
-  outline: 0px auto white;
-}
-.background_nav {
-  background: #00100b;
-}
-.background_footer {
-  background: #001810;
-}
-.background_copy {
-  background: #00100b;
-}
-.title-background {
-  background: #00976D;
-}
-.title-hover:hover{
-  color:#00976D;
-}
+
 </style>

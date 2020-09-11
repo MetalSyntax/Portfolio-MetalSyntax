@@ -58,7 +58,8 @@ export default {
   plugins: [
     "~/plugins/i18n.js",
     "~/plugins/typed.js",
-    { src: "@/plugins/aos", ssr: false }
+    { src: "@/plugins/aos", ssr: false },
+    { src: '@/plugins/vue-awesome-swiper', mode: 'client' },
   ],
   /*
    ** Generates
@@ -93,8 +94,9 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/google-analytics"/*,
-    "@nuxtjs/pwa"*/
+    "@nuxtjs/google-analytics",
+    /*"@nuxtjs/pwa",*/
+    '@aceforth/nuxt-optimized-images'
   ],
   /*
    ** Nuxt.js modules
@@ -104,6 +106,9 @@ export default {
     "@nuxtjs/sitemap",
     ['@nuxtjs/pwa', {icon: false }],
   ],
+  optimizedImages: {
+    optimizeImages: true
+  },
   /*
    *
    */

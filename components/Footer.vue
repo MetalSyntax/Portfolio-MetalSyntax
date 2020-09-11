@@ -2,7 +2,7 @@
   <footer class="footer">
       <div class="flex mb-0">
         <div
-          class="w-full inline-flex content-center justify-center background_footer pt-4 p-2 shadow-lg"
+          class="w-full inline-flex content-center justify-center bg-grayblacked-100 pt-4 p-2 shadow-lg"
         >
           <div class="flex">
             <a class="p-1" href="https://behance.net/MetalSyntax">
@@ -82,31 +82,31 @@
       </div>
       <div class="flex mb-0">
         <div
-          class="w-full inline-flex content-center justify-center background_footer p-2 shadow-lg"
+          class="w-full inline-flex content-center justify-center bg-grayblacked-100 p-2 shadow-lg"
         >
           <div class="font-semibold text-sm flex">
             <nuxt-link
               :to="$i18n.path('')"
-              class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded"
+              class="link-footer-style hover:text-white"
             >{{ $t('links.home') }}</nuxt-link>
             <nuxt-link
               :to="$i18n.path('portfolio')"
-              class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded"
+              class="link-footer-style hover:text-white"
             >{{ $t('links.portfolio') }}</nuxt-link>
             <nuxt-link
               :to="$i18n.path('achievements')"
-              class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded"
+              class="link-footer-style hover:text-white"
             >{{ $t('links.achievements') }}</nuxt-link>
             <nuxt-link
               :to="$i18n.path('experience')"
-              class="block lg:inline-block lg:mt-0 link-footer hover:text-white text-base p-2 hover-bg rounded"
+              class="link-footer-style hover:text-white"
             >{{ $t('links.experience') }}</nuxt-link>
           </div>
         </div>
       </div>
       <div class="flex mb-0">
-        <div class="w-full background_copy pb-4 p-2 shadow-lg">
-          <p class="text-center text-gray-200">© {{ new Date().getFullYear() }} | {{ $t('footer.text') }}</p>
+        <div class="w-full bg-grayblacked-200 pb-4 p-2 shadow-lg">
+          <p class="text-center text-gray-200">© Copyright {{ new Date().getFullYear() }} | {{ $t('footer.text') }}</p>
         </div>
       </div>
     </footer>
@@ -127,5 +127,15 @@ export default {
 </script>
 
 <style>
-
+.icons-social {
+  filter: none;
+}
+.link-footer-style {
+  @apply block text-aqua-100 text-base p-2 rounded;
+}
+@media (min-width: 1024px) {
+  .link-footer-style {
+    @apply inline-block mt-0;
+  }
+}
 </style>

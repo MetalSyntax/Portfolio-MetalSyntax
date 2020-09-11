@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="w-full p-4 title-background shadow-lg">
+    <div class="w-full p-4 bg-aqua-200 shadow-lg">
       <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('achievements.title') }}/&gt;</h1>
     </div>
     <div class="w-full px-4 py-4">
       <ul class="hidden lg:flex flex-wrap">
         <li class="flex-1 mr-2">
           <a
-            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            class="button-filter hover:bg-gray-100 hover:border-aqua-100"
             href="#all"
             @click="itemsFilterkey = 'All'"
             :class="{ active: itemsFilterkey == 'All' }"
@@ -15,7 +15,7 @@
         </li>
         <li class="flex-1 mr-2">
           <a
-            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            class="button-filter"
             href="#platzi"
             @click="itemsFilterkey = 'Platzi'"
             :class="{ active: itemsFilterkey == 'Platzi' }"
@@ -23,7 +23,7 @@
         </li>
         <li class="flex-1 mr-2">
           <a
-            class="text-center text-bold block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            class="button-filter"
             href="#linkedIn"
             @click="itemsFilterkey = 'LinkedIn'"
             :class="{ active: itemsFilterkey == 'LinkedIn Learning'}"
@@ -31,7 +31,7 @@
         </li>
         <li class="flex-1 mr-2">
           <a
-            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            class="button-filter"
             href="#aprende"
             @click="itemsFilterkey = 'Aprende'"
             :class="{ active: itemsFilterkey == 'Fundación Carlos Slim' }"
@@ -39,7 +39,7 @@
         </li>
         <li class="flex-1 mr-2">
           <a
-            class="text-center block border border-white rounded projects shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4"
+            class="button-filter"
             href="#universidad"
             @click="itemsFilterkey = 'Universidad'"
             :class="{ active: itemsFilterkey == 'Universidad' }"
@@ -48,7 +48,7 @@
       </ul>
       <select
         name="items"
-        class="lg:hidden flex justify-center mx-auto text-center block rounded projects focus:border-green border border-white shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4 outline-none"
+        class="lg:hidden flex justify-center mx-auto text-center block rounded border-2 border-white hover:border-aqua-100 focus:border-green border border-white shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4 outline-none"
         v-model="itemsFilterkey"
       >
         <option
@@ -83,13 +83,32 @@
           data-aos-easing="linear"
           data-aos-duration="500"
         >
-          <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 achievements">
+          <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 border-2 border-white hover:border-aqua-100">
             <a :href="item.link" target="_blank">
-              <img class="w-20 h-20 rounded-full" :title="item.title" :src="item.img" :alt="item.title" />
+              <picture>
+              <source
+                :title="item.title"
+                :alt="item.title"
+                :src="require(`~/assets/img/diplomas/${item.image}.png?webp`)"
+                type="image/webp"
+              />
+              <source
+                :title="item.title"
+                :alt="item.title"
+                :src="require(`~/assets/img/diplomas/${item.image}.png`)"
+                type="image/jpeg"
+              />
+              <img
+                class="w-20 h-20 rounded-full"
+                :src="require(`~/assets/img/diplomas/${item.image}.png`)"
+                :alt="item.title"
+                :title="item.title"
+              />
+            </picture>
             </a>
             <div class="text-sm">
               <a :href="item.link" target="_blank">
-                <p class="mx-2 text-gray-900 font-regular sm:text-sm md:text-lg title-hover">{{ item.title }}</p>
+                <p class="mx-2 text-gray-900 font-regular sm:text-sm md:text-lg hover:text-aqua-200">{{ item.title }}</p>
                 <p class="text-gray-700 block pl-2 opacity-75 text-sm">{{ item.company }}</p>
               </a>
             </div>
@@ -124,217 +143,217 @@ export default {
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/98-vue/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Vue.png")
+          image: "Vue"
         },
         {
           title: "Arquitectura Frontend",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/42-arquitecto/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Arquitecto-Frontend.png")
+          image: "Arquitecto-Frontend"
         },
         {
           title: "Desarrollo con WordPress",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/52-desarrollo-wordpress/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Wordpress.png")
+          image: "Wordpress"
         },
         {
           title: "Desarrollo con Angular",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/77-desarrollo-angular/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Angular.png")
+          image: "Angular"
         },
         {
           title: "Backend con GO",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/54-backend-go/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Goland.png")
+          image: "Goland"
         },
         {
           title: "Bases de Datos",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/10-base-de-datos/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Base-de-datos.png")
+          image: "Base-de-datos"
         },
         {
           title: "Backend con PHP",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/57-desarrollo-php/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Backend PHP.png")
+          image: "Backend PHP"
         },
         {
           title: "Frontend con React.JS",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/62-desarrollo-react/diploma/detalle/",
-          img: require("../../assets/img/diplomas/React.png")
+          image: "React"
         },
         {
           title: "Backend con JavaScript",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/97-backend-javascript/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Backend-JS.png")
+          image: "Backend-JS"
         },
         {
           title: "Desarrollo con Node.js",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/99-desarrollo-nodejs/diploma/detalle/",
-          img: require("../../assets/img/diplomas/NodeJS.png")
+          image: "NodeJS"
         },
         {
           title: "Diseño de Experiencia de Usuario",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/103-diseno-ux/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Diseno-UX.png")
+          image: "Diseno-UX"
         },
         {
           title: "Diseño de Interfaces",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/102-interfaces-ui/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Diseno-UI.png")
+          image: "Diseno-UI"
         },
         {
           title: "Ingles",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/81-idioma-ingles/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Ingles.png")
+          image: "Ingles"
         },
         {
           title: "Apps con React Native",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/94-react-native/diploma/detalle/",
-          img: require("../../assets/img/diplomas/React-Native.png")
+          image: "React-Native"
         },
         {
           title: "Backend con Ruby",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/53-backend-ruby/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Backend-Ruby.png")
+          image: "Backend-Ruby"
         },
         {
           title: "Diseño de Producto",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/104-diseno-producto/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Diseno-Producto.png")
+          image: "Diseno-Producto"
         },
         {
           title: "Desarrollo de Apps multiplataforma",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/41-multiplataforma/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Apps-Multiplataformas.png")
+          image: "Apps-Multiplataformas"
         },
         {
           title: "Diseño Grafico",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/69-diseno-grafico/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Diseno-Grafico.png")
+          image: "Diseno-Grafico"
         },
         {
           title: "Email Marketing",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/59-email-marketing/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Email-Marketing.png")
+          image: "Email-Marketing"
         },
         {
           title: "Estrategia y Marketing Digital",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/83-estrategia-marketing/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Estrategia-Marketing-Digital.png")
+          image: "Estrategia-Marketing-Digital"
         },
         {
           title: "Marketing Basado en Datos",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/63-data-marketing/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Marketing-Basado-Datos.png")
+          image: "Marketing-Basado-Datos"
         },
         {
           title: "Inbound Marketing",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/75-inbound-marketing/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Inbound-Marketing.png")
+          image: "Inbound-Marketing"
         },
         {
           title: "Outbound Marketing",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/4-outbound-marketing/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Outbound-Marketing.png")
+          image: "Outbound-Marketing"
         },
         {
           title: "Negocios Online",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/6-negocios/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Negocios-online.png")
+          image: "Negocios-online"
         },
         {
           title: "Gestión de Proyectos",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/82-gestion-proyectos/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Gestion-de-proyectos.png")
+          image: "Gestion-de-proyectos"
         },
         {
           title: "Transformación Digital",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/85-transformacion-digital/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Transfomacion-digital.png")
+          image: "Transfomacion-digital"
         },
         {
           title: "Ventas y Mercadeo",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/80-ventas-mercadeo/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Ventas-mercadeo.png")
+          image: "Ventas-mercadeo"
         },
         {
           title: "Blockchain y Criptomonedas",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/carrera/73-blockchain-criptomonedas/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Blockchain.png")
+          image: "Blockchain"
         },
         {
           title: "Carrera de JavaScript",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/ruta/100-escuela-javascript/diploma/detalle/",
-          img: require("../../assets/img/diplomas/JavaScript.png")
+          image: "JavaScript"
         },
           {
           title: "Desarrollo Profesional",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/ruta/46-habilidades-blandas/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Desarrollo-Profesional.png")
+          image: "Desarrollo-Profesional"
         },
           {
           title: "SeguridadInformática",
           company: "Platzi",
           link:
             "https://platzi.com/@MetalSyntax/ruta/38-seguridad-informatica/diploma/detalle/",
-          img: require("../../assets/img/diplomas/Seguridad-Informática.png")
+          image: "Seguridad-Informática"
         },
         /*LinkedIn*/
         {
@@ -342,77 +361,77 @@ export default {
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/convirtete-en-desarrollador-de-ecosistemas",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Desarrollador Web Front-End",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-desarrollador-web-front-end",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Desarrollador multiplataforma para móviles",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-desarrollador-multiplataforma-para-moviles",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Especialista en seguridad de la información",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-especialista-en-seguridad-de-la-informacion",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Experto en marketing digital",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-experto-en-marketing-digital",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Gestor de proyectos",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-experto-en-marketing-digital",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Coordinador de proyectos",
           company: "LinkedIn Learning",
           link:
             "https://www.linkedin.com/learning/paths/conviertete-en-coordinador-de-proyectos",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Diseñador web front-end",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-experto-en-marketing-digital",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Desarrollador web full-stack",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-experto-en-marketing-digital",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Experto SEO",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-experto-en-marketing-digital",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         {
           title: "Experto en marketing en social media",
           company: "LinkedIn Learning",
           link:
             "http://www.linkedin.com/learning/paths/conviertete-en-experto-en-marketing-digital",
-          img: require("../../assets/img/diplomas/linkedin.png")
+          image: "linkedin"
         },
         /*Carlos Slim*/
         {
@@ -420,34 +439,34 @@ export default {
           company: "Fundación Carlos Slim",
           link:
             "https://aprende.org/pages.php?r=.cfcs_oficial_infographic&diplomadoID=dtsi",
-          img: require("../../assets/img/diplomas/dtsi.png")
+          image: "dtsi"
         },
         {
           title: "Integridad Web",
           company: "Fundación Carlos Slim",
           link:
             "https://aprende.org/pages.php?r=.cfcs_oficial_infographic&diplomadoID=dtiw",
-          img: require("../../assets/img/diplomas/dtiw.png")
+          image: "dtiw"
         },
         {
           title: "Tecnico en Big Data",
           company: "Fundación Carlos Slim",
           link:
             "https://aprende.org/pages.php?r=.cfcs_oficial_infographic&diplomadoID=dtbd",
-          img: require("../../assets/img/diplomas/dtbd.png")
+          image: "dtbd"
         },
         {
           title: "Gestión de AVA",
           company: "Fundación Carlos Slim",
           link:
             "https://aprende.org/pages.php?r=.cfcs_oficial_infographic&diplomadoID=dtgava",
-          img: require("../../assets/img/diplomas/dtgava.png")
+          image: "dtgava"
         },
         {
           title: "Desarrollo de sitios web",
           company: "Fundación Carlos Slim",
           link:"https://aprende.org/pages.php?r=.cfcs_oficial_infographic&diplomadoID=dswam",
-          img: require("../../assets/img/diplomas/dswam.png")
+          image: "dswam"
         },
         /*Universidades*/
         {
@@ -455,14 +474,14 @@ export default {
           company: "UJAP",
           academy: "Universidad",
           link:"https://drive.google.com/open?id=1Ta36Uw2mWauRKtTuzn9XixAAaWOM6HwP",
-          img: require("../../assets/img/diplomas/UJAP.png")
+          image: "UJAP"
         },
         {
           title: "Diseño y Desarrollo de Base de Datos",
           company: "UCV",
           academy: "Universidad",
           link:"https://drive.google.com/open?id=1H1rC_Kr8roxrBleEMMxfI7Ch-rse87bD",
-          img: require("../../assets/img/diplomas/UCV.png")
+          image: "UCV"
         }
       ],
     };
@@ -499,11 +518,11 @@ export default {
 </script>
 
 <style>
-.achievements {
-  border: solid 2px #fff;
+.button-filter {
+ @apply text-center block border border-white rounded border-2 border-white shadow-lg text-green-500 py-2 px-4;
 }
-.achievements:hover {
-  border: solid 2px #00c08b;
+.button-filter:hover {
+  @apply bg-gray-100 border-aqua-100;
 }
 </style>
 

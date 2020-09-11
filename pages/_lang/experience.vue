@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="w-full p-4 title-background shadow-lg">
-      <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('experience.title') }}/&gt;</h1>
+    <div class="w-full p-4 bg-aqua-200 shadow-lg">
+      <h1 class="text-gray-100 text-center text-3xl">
+        &lt;{{ $t("experience.title") }}/&gt;
+      </h1>
     </div>
     <div class="py-4 px-2 h-full lg:h-screen">
       <div class="flex flex-wrap -mx-2">
@@ -13,16 +15,50 @@
           data-aos-easing="linear"
           data-aos-duration="500"
         >
-          <div class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white experience ">
-          <img class="px-2 py-2 w-3/4 md:w-1/3 m-auto" :title="item.title" :src="item.img" :alt="item.title" />
-            <div class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center items-center">
-              <h2 class="font-bold text-xl mb-2 text-center md:text-left w-full">{{item.title }}</h2>
-              <p class="text-gray-700 text-base text-center md:text-left w-full">{{item.yearfirst }} - {{item.yearlast }}</p>
-              <p class="text-gray-700 text-base text-center md:text-left w-full">{{item.company }}</p>
+          <div
+            class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white border-2 border-white hover:border-aqua-100"
+          >
+            <picture class="px-2 py-2 w-3/4 md:w-1/3 m-auto">
+              <source
+                :title="item.title"
+                :alt="item.title"
+                :src="require(`~/assets/img/bussines/${item.image}.png?webp`)"
+                type="image/webp"
+              />
+              <source
+                :title="item.title"
+                :alt="item.title"
+                :src="require(`~/assets/img/bussines/${item.image}.png`)"
+                type="image/jpeg"
+              />
+              <img
+                :src="require(`~/assets/img/bussines/${item.image}.png`)"
+                :alt="item.title"
+                :title="item.title"
+              />
+            </picture>
+            <div
+              class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center items-center"
+            >
+              <h2
+                class="font-bold text-xl mb-2 text-center md:text-left w-full"
+              >
+                {{ item.title }}
+              </h2>
+              <p
+                class="text-gray-700 text-base text-center md:text-left w-full"
+              >
+                {{ item.yearfirst }} - {{ item.yearlast }}
+              </p>
+              <p
+                class="text-gray-700 text-base text-center md:text-left w-full"
+              >
+                {{ item.company }}
+              </p>
               <ul class="list-disc text-center md:text-left w-full">
-                <li>{{item.task1 }}</li>
-                <li>{{item.task2 }}</li>
-                <li>{{item.task3 }}</li>
+                <li class="list-none">{{ item.task1 }}</li>
+                <li class="list-none">{{ item.task2 }}</li>
+                <li class="list-none">{{ item.task3 }}</li>
               </ul>
             </div>
           </div>
@@ -57,7 +93,7 @@ export default {
           task1: this.$t("experience.task1work1"),
           task2: this.$t("experience.task2work1"),
           task3: this.$t("experience.task3work1"),
-          img: require("../../assets/img/bussines/VP.png")
+          image: "VP"
         },
         {
           title: this.$t("experience.work2"),
@@ -67,7 +103,7 @@ export default {
           task1: this.$t("experience.task1work2"),
           task2: this.$t("experience.task2work2"),
           task3: this.$t("experience.task3work2"),
-          img: require("../../assets/img/bussines/SBT.png")
+          image: "SBT"
         },
         {
           title: this.$t("experience.work3"),
@@ -77,7 +113,7 @@ export default {
           task1: this.$t("experience.task1work3"),
           task2: this.$t("experience.task2work3"),
           task3: this.$t("experience.task3work3"),
-          img: require("../../assets/img/bussines/kainver.png")
+          image: "kainver"
         },
         {
           title: this.$t("experience.work4"),
@@ -87,7 +123,7 @@ export default {
           task1: this.$t("experience.task1work4"),
           task2: this.$t("experience.task2work4"),
           task3: this.$t("experience.task3work4"),
-          img: require("../../assets/img/bussines/DomiServer.png")
+          image: "DomiServer"
         },
         {
           title: this.$t("experience.work5"),
@@ -97,7 +133,7 @@ export default {
           task1: this.$t("experience.task1work5"),
           task2: this.$t("experience.task2work5"),
           task3: this.$t("experience.task3work5"),
-          img: require("../../assets/img/bussines/Sanofi.png")
+          image: "Sanofi"
         }
       ]
     };
@@ -106,13 +142,5 @@ export default {
 </script>
 
 <style>
-.experience {
-  border: solid 2px #fff;
-}
-.experience:hover {
-  border: solid 2px #00c08b;
-}
-li {
-  list-style-type: none;
-}
+
 </style>
