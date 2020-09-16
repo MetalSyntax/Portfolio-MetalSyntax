@@ -7,7 +7,7 @@
       <ul class="hidden lg:flex flex-wrap">
         <li class="flex-1 mr-2">
           <a
-            class="button-filter hover:bg-gray-100 hover:border-aqua-100"
+            class="button-filter hover:bg-white hover:border-aqua-100"
             href="#all"
             @click="itemsFilterkey = 'All'"
             :class="{ active: itemsFilterkey == 'All' }"
@@ -48,7 +48,7 @@
       </ul>
       <select
         name="items"
-        class="lg:hidden flex justify-center mx-auto text-center block rounded border-2 border-white hover:border-aqua-100 focus:border-green border border-white shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4 outline-none"
+        class="lg:hidden flex justify-center mx-auto text-center rounded border-2 border-white hover:border-aqua-100 focus:border-green-500  shadow-lg text-black hover:text-green-500 hover:bg-white py-2 px-4 outline-none"
         v-model="itemsFilterkey"
       >
         <option
@@ -72,7 +72,7 @@
     :class="[
     itemsFilterkey == 'LinkedIn' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Aprende' ? 'lg:h-screen' : '',
-    itemsFilterkey == 'Universidad' ? 'lg:h-screen' : '']"
+    itemsFilterkey == 'Universidad' ? 'h-screen' : '']"
     class="py-4 px-2">
       <div class="flex flex-wrap -mx-2">
         <div
@@ -519,10 +519,10 @@ export default {
 
 <style>
 .button-filter {
- @apply text-center block border border-white rounded border-2 border-white shadow-lg text-green-500 py-2 px-4;
+ @apply block text-center rounded border-2 border-white shadow-lg text-black py-2 px-4;
 }
 .button-filter:hover {
-  @apply bg-gray-100 border-aqua-100;
+  @apply  bg-white text-aqua-200 border-aqua-100;
 }
 </style>
 

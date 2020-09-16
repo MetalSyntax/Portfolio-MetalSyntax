@@ -48,7 +48,7 @@
       </ul>
       <select
         name="items"
-        class="lg:hidden flex justify-center mx-auto text-center block rounded border-2 border-white hover:border-aqua-100 focus:border-green border-white shadow-lg text-green-500 hover:bg-gray-100 py-2 px-4 outline-none"
+        class="lg:hidden flex justify-center mx-auto text-center rounded border-2 border-white hover:border-aqua-100 focus:border-green-500 shadow-lg text-black hover:text-green-500 hover:bg-white py-2 px-4 outline-none"
         v-model="itemsFilterkey"
       >
         <option value="All">{{ $t('portfolio.filter') }}</option>
@@ -104,7 +104,7 @@
                 >{{ item.title }}</p>
               </a>
               <p
-                class="text-center text-gray-700 text-sm pb-1 block opacity-75"
+                class="text-center text-aqua-100 font-semibold text-sm pb-1 block opacity-75"
               >{{ item.company }} - {{ item.year }}</p>
               <p class="text-gray-700 text-base text-center pb-2">{{ item.description }}</p>
             </div>
@@ -135,7 +135,7 @@ export default {
       items: [
         {
           title: "Lior Pedidos App",
-          company: "Personal",
+          company: "Freelance",
           year: "2020",
           description: this.$t("portfolio.project27"),
           link: "https://lior-app.vercel.app/",
@@ -406,9 +406,9 @@ export default {
 
 <style>
 .button-filter-project {
-  @apply block text-green-500 text-center rounded border-2 border-white shadow-lg  py-2 px-4;
+  @apply block text-black text-center rounded border-2 border-white shadow-lg   bg-white py-2 px-4;
 }
 .button-filter-project:hover {
-   @apply border-aqua-100 bg-gray-100;
+   @apply bg-white border-aqua-100 text-aqua-200 ;
 }
 </style>

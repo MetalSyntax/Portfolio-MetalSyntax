@@ -86,19 +86,19 @@
         >
           <div class="font-semibold text-sm flex">
             <nuxt-link
-              :to="$i18n.path('')"
+              :to="localePath('/')"
               class="link-footer-style hover:text-white"
             >{{ $t('links.home') }}</nuxt-link>
             <nuxt-link
-              :to="$i18n.path('portfolio')"
+              :to="localePath('/portfolio')"
               class="link-footer-style hover:text-white"
             >{{ $t('links.portfolio') }}</nuxt-link>
             <nuxt-link
-              :to="$i18n.path('achievements')"
+              :to="localePath('/achievements')"
               class="link-footer-style hover:text-white"
             >{{ $t('links.achievements') }}</nuxt-link>
             <nuxt-link
-              :to="$i18n.path('experience')"
+              :to="localePath('/experience')"
               class="link-footer-style hover:text-white"
             >{{ $t('links.experience') }}</nuxt-link>
           </div>
@@ -117,7 +117,7 @@ export default {
     name: 'Footer',
     data() {
     return {
-        langs: ["en", "es", "pt"]
+        /*langs: ["en", "es", "pt"]*/
         }
     },
     watch: {

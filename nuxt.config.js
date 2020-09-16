@@ -1,3 +1,5 @@
+import i18n from './config/i18n'
+
 export default {
   /*
   ** Nuxt rendering mode
@@ -43,7 +45,7 @@ export default {
    *
    */
   router: {
-    middleware: "i18n",
+    /*middleware: "i18n",*/
     linkActiveClass: "active-link",
     linkExactActiveClass: "exact-active-link"
   },
@@ -84,10 +86,10 @@ export default {
   /*
    ** Detect Browser Language
    */
-  detectBrowserLanguage: {
+  /*detectBrowserLanguage: {
     useCookie: true,
     cookieKey: "i18n_redirected"
-  },
+  },*/
   /*
    ** Nuxt.js dev-modules
    */
@@ -96,7 +98,8 @@ export default {
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-analytics",
     '@aceforth/nuxt-optimized-images',
-    ["@nuxtjs/pwa"]
+    ["@nuxtjs/pwa"],
+    ['nuxt-i18n']
   ],
   /*
    ** Nuxt.js modules
@@ -104,8 +107,59 @@ export default {
   modules: [
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
+    /*['nuxt-i18n'],*/
     /*['@nuxtjs/pwa', {icon: false }]*/
   ],
+  i18n: {
+    strategy: 'prefix_and_default',
+    defaultLocale: 'en',
+    seo: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+    },
+    parsePages: false,
+    pages: {
+      index: {
+        en: '/',
+        es: '/',
+        pt: '/',
+      },
+      portfolio: {
+        en: '/portfolio',
+        es: '/portfolio',
+        pt: '/portfolio',
+      },
+      achievements: {
+        en: '/achievements',
+        es: '/achievements',
+        pt: '/achievements',
+      },
+      experience: {
+        en: '/experience',
+        es: '/experience',
+        pt: '/experience',
+      },
+    },
+     locales: [
+      {
+         code: 'en',
+         name: 'English',
+         iso: 'en-US'
+      },
+      {
+         code: 'es',
+         name: 'Español',
+         iso: 'es-ES'
+      },
+      {
+        code: 'pt',
+        name: 'Portuguese',
+        iso: 'pt-PT'
+     },
+    ],
+    vueI18n: i18n
+  },
   optimizedImages: {
     inlineImageLimit: 2000,
     imagesName: ({ isDev }) => isDev ? '[path][name][hash:optimized].[ext]' : 'img/[contenthash:7].[ext]',
@@ -185,7 +239,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    vendor: ["vue-i18n"],
+    /*vendor: ["vue-i18n"],*/
     extend(config, ctx) {}
   },
   /*buildDir: 'dist'*/

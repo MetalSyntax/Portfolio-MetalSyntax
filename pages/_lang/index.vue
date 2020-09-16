@@ -251,7 +251,7 @@ export default {
         },
         {
           title: "Python",
-          image: "Python-trans",
+          image: "Python",
         },
         {
           title: "Flask",
@@ -259,7 +259,7 @@ export default {
         },
         {
           title: "Bootstrap",
-          image: "bootstrap4",
+          image: "bootstrap",
         },
         {
           title: "Adobe XD",
