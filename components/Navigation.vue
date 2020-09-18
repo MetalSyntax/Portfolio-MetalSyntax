@@ -51,7 +51,7 @@
           <button
             class="bg-aqua-100 text-gray-900 hover:text-white font-semibold py-2 px-4 rounded inline-flex items-center"
           >
-            <span class="mr-1">Language</span>
+            <span class="mr-1">{{ $t('links.language')}}</span>
             <svg
               class="fill-current h-4 w-4"
               xmlns="http://www.w3.org/2000/svg"

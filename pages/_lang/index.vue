@@ -47,33 +47,6 @@
         </div>
       </div>
       <div class="w-full ml-auto mr-auto">
-        <!--<div
-          class="justify-center w-24 md:w-3/12 lg:w-2/12 xl:w-1/12"
-          v-for="icon in icons"
-          v-bind:key="icon"
-          data-aos="fade"
-        >
-          <picture>
-            <source
-              :title="icon.title"
-              :alt="icon.title"
-              :src="require(`~/assets/img/tech/${icon.image}.png?webp`)"
-              type="image/webp"
-            />
-            <source
-              :title="icon.title"
-              :alt="icon.title"
-              :src="require(`~/assets/img/tech/${icon.image}.png`)"
-              type="image/png"
-            />
-            <img
-              class="w-full p-1 px-2 inline"
-              :title="icon.title"
-              :src="require(`~/assets/img/tech/${icon.image}.png`)"
-              :alt="icon.title"
-            />
-          </picture>
-        </div>-->
         <swiper class="swiper" :options="swiperOption">
           <swiper-slide v-for="icon in icons" v-bind:key="icon">
             <picture class="flex justify-center">
@@ -98,32 +71,6 @@
             </picture>
           </swiper-slide>
         </swiper>
-        <!--<div v-swiper="swiperOption">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="icon in icons" v-bind:key="icon">
-              <picture>
-                <source
-                  :title="icon.title"
-                  :alt="icon.title"
-                  :src="require(`~/assets/img/tech/${icon.image}.png?webp`)"
-                  type="image/webp"
-                />
-                <source
-                  :title="icon.title"
-                  :alt="icon.title"
-                  :src="require(`~/assets/img/tech/${icon.image}.png`)"
-                  type="image/png"
-                />
-                <img
-                  class="w-32 p-1 px-2 inline"
-                  :title="icon.title"
-                  :src="require(`~/assets/img/tech/${icon.image}.png`)"
-                  :alt="icon.title"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>-->
       </div>
       <div class="py-4 px-2">
         <div class="flex flex-wrap -mx-2">

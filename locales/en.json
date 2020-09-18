@@ -18,7 +18,8 @@
       "experience": "Experience",
       "english": "English",
       "spanish": "Spanish",
-      "portuguese": "Portuguese"
+      "portuguese": "Portuguese",
+      "language":"Languages"
     },
     "footer":{
         "text": "Developed by MetalSyntax with Vue.js, Nuxt.js and TailWindCss."
