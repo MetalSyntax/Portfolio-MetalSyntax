@@ -161,24 +161,40 @@ export default {
       },
       icons: [
         {
+          title: "HTML5",
+          image: "HTML5",
+        },
+        {
+          title: "CSS",
+          image: "CSS",
+        },
+        {
+          title: "Javascript",
+          image: "JS",
+        },
+        {
           title: "WordPress",
           image: "WordPress",
+        },
+        {
+          title: "Vue",
+          image: "Vuejs",
         },
         {
           title: "Nuxt",
           image: "Nuxt",
         },
         {
+          title: "React",
+          image: "Reactjs",
+        },
+        {
           title: "Next",
           image: "Nextjs",
         },
         {
-          title: "TailWind",
-          image: "tailwindcss",
-        },
-        {
-          title: "MongoDB",
-          image: "Mongodb-new",
+          title: "JSON",
+          image: "JSON",
         },
         {
           title: "Node",
@@ -189,12 +205,8 @@ export default {
           image: "express-trans",
         },
         {
-          title: "Vue",
-          image: "Vuejs",
-        },
-        {
-          title: "React",
-          image: "Reactjs",
+          title: "MongoDB",
+          image: "Mongodb-new",
         },
         {
           title: "Python",
@@ -207,6 +219,14 @@ export default {
         {
           title: "Bootstrap",
           image: "bootstrap",
+        },
+        {
+          title: "Materialize",
+          image: "materialize",
+        },
+        {
+          title: "TailWind",
+          image: "tailwindcss",
         },
         {
           title: "Adobe XD",

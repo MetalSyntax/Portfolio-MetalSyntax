@@ -110,6 +110,9 @@ export default {
     /*['nuxt-i18n'],*/
     /*['@nuxtjs/pwa', {icon: false }]*/
   ],
+  /*
+   *
+   */
   i18n: {
     strategy: 'prefix_and_default',
     defaultLocale: 'en',
@@ -160,6 +163,9 @@ export default {
     ],
     vueI18n: i18n
   },
+  /*
+   *
+   */
   optimizedImages: {
     inlineImageLimit: 2000,
     imagesName: ({ isDev }) => isDev ? '[path][name][hash:optimized].[ext]' : 'img/[contenthash:7].[ext]',
