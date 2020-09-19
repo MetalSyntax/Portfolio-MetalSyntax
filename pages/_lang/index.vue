@@ -47,36 +47,38 @@
         </div>
       </div>
       <div class="w-full ml-auto mr-auto">
-        <swiper class="swiper" :options="swiperOption">
-          <swiper-slide v-for="icon in icons" v-bind:key="icon">
-            <picture class="flex justify-center">
-              <source
-                :title="icon.title"
-                :alt="icon.title"
-                :src="require(`~/assets/img/tech/${icon.image}.png?webp`)"
-                type="image/webp"
-              />
-              <source
-                :title="icon.title"
-                :alt="icon.title"
-                :src="require(`~/assets/img/tech/${icon.image}.png`)"
-                type="image/png"
-              />
-              <img
-                class="w-32 p-1 px-2 inline"
-                :title="icon.title"
-                :src="require(`~/assets/img/tech/${icon.image}.png`)"
-                :alt="icon.title"
-              />
-            </picture>
-          </swiper-slide>
-        </swiper>
+        <div v-swiper="swiperOption">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="icon in icons" :key="icon.id">
+              <picture class="flex justify-center">
+                <source
+                  :title="icon.title"
+                  :alt="icon.title"
+                  :src="require(`~/assets/img/tech/${icon.image}.png?webp`)"
+                  type="image/webp"
+                />
+                <source
+                  :title="icon.title"
+                  :alt="icon.title"
+                  :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                  type="image/png"
+                />
+                <img
+                  class="w-32 p-1 px-2 inline"
+                  :title="icon.title"
+                  :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                  :alt="icon.title"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="py-4 px-2">
         <div class="flex flex-wrap -mx-2">
           <div
             v-for="item in items"
-            v-bind:key="item.id"
+            :key="item.id"
             class="sm:w-full md:w-1/2 lg:w-1/3 px-4 py-2"
             data-aos="fade"
           >
@@ -117,6 +119,8 @@
 </template>
 
 <script>
+import { directive } from 'vue-awesome-swiper'
+
 export default {
   head() {
     return {
@@ -283,7 +287,10 @@ export default {
           image: "communications",
         },
       ],
-    };
+    }
+  },
+  directives: {
+    swiper: directive
   },
 };
 </script>

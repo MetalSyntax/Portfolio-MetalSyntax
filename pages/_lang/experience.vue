@@ -29,7 +29,7 @@
                 :title="item.title"
                 :alt="item.title"
                 :src="require(`~/assets/img/bussines/${item.image}.png`)"
-                type="image/jpeg"
+                type="image/png"
               />
               <img
                 :src="require(`~/assets/img/bussines/${item.image}.png`)"

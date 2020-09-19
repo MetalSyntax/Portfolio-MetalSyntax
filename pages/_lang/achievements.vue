@@ -96,7 +96,7 @@
                 :title="item.title"
                 :alt="item.title"
                 :src="require(`~/assets/img/diplomas/${item.image}.png`)"
-                type="image/jpeg"
+                type="image/png"
               />
               <img
                 class="w-20 h-20 rounded-full"
