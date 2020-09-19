@@ -80,13 +80,13 @@
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :src="require(`~/assets/img/computers/${item.image}.jpg?webp`)"
+                  :srcset="require(`~/assets/img/computers/${item.image}.jpg?webp`)"
                   type="image/webp"
                 />
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :src="require(`~/assets/img/computers/${item.image}.jpg`)"
+                  :srcset="require(`~/assets/img/computers/${item.image}.jpg`)"
                   type="image/jpeg"
                 />
                 <img

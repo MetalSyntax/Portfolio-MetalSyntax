@@ -89,13 +89,13 @@
               <source
                 :title="item.title"
                 :alt="item.title"
-                :src="require(`~/assets/img/diplomas/${item.image}.png?webp`)"
+                :srcset="require(`~/assets/img/diplomas/${item.image}.png?webp`)"
                 type="image/webp"
               />
               <source
                 :title="item.title"
                 :alt="item.title"
-                :src="require(`~/assets/img/diplomas/${item.image}.png`)"
+                :srcset="require(`~/assets/img/diplomas/${item.image}.png`)"
                 type="image/png"
               />
               <img

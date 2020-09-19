@@ -54,13 +54,13 @@
                 <source
                   :title="icon.title"
                   :alt="icon.title"
-                  :src="require(`~/assets/img/tech/${icon.image}.png?webp`)"
+                  :srcset="require(`~/assets/img/tech/${icon.image}.png?webp`)"
                   type="image/webp"
                 />
                 <source
                   :title="icon.title"
                   :alt="icon.title"
-                  :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                  :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
                   type="image/png"
                 />
                 <img
@@ -89,7 +89,7 @@
                     <source
                       :title="item.title"
                       :alt="item.title"
-                      :src="
+                      :srcset="
                         require(`~/assets/img/icons/${item.image}.png?webp`)
                       "
                       type="image/webp"
@@ -97,7 +97,7 @@
                     <source
                       :title="item.title"
                       :alt="item.title"
-                      :src="require(`~/assets/img/icons/${item.image}.png`)"
+                      :srcset="require(`~/assets/img/icons/${item.image}.png`)"
                       type="image/png"
                     />
                     <img

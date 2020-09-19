@@ -219,8 +219,9 @@ export default {
       name: "Wonder Diaz Portfolio. MetalSyntax",
       short_name: "MetalSyntax PWA",
       background_color: "#000",
-      description: "Wonder Diaz Portfolio. Develop by MetalSyntax with Vue.js and TailWindCss.",
+      description: "Wonder Diaz Portfolio. Develop by MetalSyntax with Nuxt.js and TailWindCss.",
       lang: "en",
+      start_url: routerBase + '?standalone=true',
       display: "standalone"
     }
   },
