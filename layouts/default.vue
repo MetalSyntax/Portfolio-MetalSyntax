@@ -23,7 +23,7 @@ export default {
       link: [
         {
           rel: "canonical",
-          href: "https://metalsyntax.now.sh" + this.$route.path
+          href: "https://metalsyntax.vercel.app" + this.$route.path
         }
       ]
     };

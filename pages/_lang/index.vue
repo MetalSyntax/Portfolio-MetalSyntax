@@ -22,9 +22,9 @@
               <span class="typing"></span>/&gt;
             </h2>
           </vue-typed-js>
-          <h3
+          <!--<h3
             class="text-gray-900 font-regular text-center items-center text-2xl lg:text-3xl py-2"
-          >{{ $t("home.subtitle") }}</h3>
+          >{{ $t("home.subtitle") }}</h3>-->
         </div>
       </div>
     </div>
@@ -32,18 +32,7 @@
       <div class="flex flex-wrap py-4 px-4">
         <div class="sm:w-full md:w-1/6 lg:w-1/6"></div>
         <div class="sm:w-full md:w-4/6 lg:w-4/6">
-          <p class="text-gray-900 text-center text-xl">
-            {{ $t("home.heroparagraph2") }}
-            <strong>HTML5, CSS3, JavaScript, JSON, PHP, SQL, NoSQL</strong>
-            .
-            {{ $t("home.heroparagraph3") }}
-            <strong>
-              JQuery, WebPack, Vue, Nuxt, React, Next.js, Node.js, Sass,
-              Materialize, Bootstrap, TailWindCss, WordPress
-            </strong>
-            ,
-            {{ $t("home.heroparagraph4") }}
-          </p>
+          <p class="text-gray-900 text-center text-xl" v-html="$t('home.heroparagraph')"></p>
         </div>
       </div>
       <div class="w-full ml-auto mr-auto">
@@ -52,7 +41,7 @@
             <div class="swiper-slide" v-for="icon in icons" :key="icon.id">
               <picture class="flex justify-center">
                 <source
-                  :title="icon.title"
+                  :title="icon.title" 
                   :alt="icon.title"
                   :srcset="require(`~/assets/img/tech/${icon.image}.png?webp`)"
                   type="image/webp"
@@ -72,6 +61,7 @@
               </picture>
             </div>
           </div>
+          <div class="swiper-pagination" slot="pagination"></div>
         </div>
       </div>
       <div class="py-4 px-2">
@@ -119,7 +109,7 @@
 </template>
 
 <script>
-import { directive } from 'vue-awesome-swiper'
+import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
 
 export default {
   head() {
@@ -140,9 +130,26 @@ export default {
         slidesPerView: 6,
         spaceBetween: 10,
         loop: true,
+        effect: 'coverflow',
+        //grabCursor: true,
+        //centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 0,
+          slideShadows : true
+        },
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+          el: '.swiper-pagination',
+          dynamicBullets: true,
+          clickable: true
+        },
+        navigation: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
         },
         breakpoints: {
           1024: {
@@ -214,7 +221,7 @@ export default {
         },
         {
           title: "Python",
-          image: "Python",
+          image: "python",
         },
         {
           title: "Flask",
@@ -289,6 +296,10 @@ export default {
       ],
     }
   },
+  components: {
+    Swiper,
+    SwiperSlide
+  },
   directives: {
     swiper: directive
   },
@@ -311,5 +322,9 @@ export default {
     height: calc(100vh - 72px);
     background-image: url("../../assets/img/background/home-background-white.jpg");
   }
+}
+:root {
+--swiper-navigation-color: #00c08b !important;
+--swiper-theme-color: #00c08b !important;
 }
 </style>

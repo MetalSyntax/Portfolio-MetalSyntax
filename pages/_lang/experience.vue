@@ -51,7 +51,7 @@
                 {{ item.yearfirst }} - {{ item.yearlast }}
               </p>
               <p
-                class="text-gray-700 text-base text-center md:text-left w-full"
+                class="text-gray-700 text-base text-center md:text-left w-full text-aqua-100"
               >
                 {{ item.company }}
               </p>
@@ -86,53 +86,63 @@ export default {
     return {
       items: [
         {
-          title: this.$t("experience.work1"),
+          title: this.$t("experience.work5"),
+          yearfirst: "2021",
+          yearlast: this.$t("experience.status"),
+          company: "RedGage, LLC.",
+          task1: this.$t("experience.task1work5"),
+          task2: this.$t("experience.task2work5"),
+          task3: this.$t("experience.task3work5"),
+          image: "RG"
+        },
+        {
+          title: this.$t("experience.work4"),
           yearfirst: "2019",
           yearlast: this.$t("experience.status"),
-          company: "Virtually Present",
-          task1: this.$t("experience.task1work1"),
-          task2: this.$t("experience.task2work1"),
-          task3: this.$t("experience.task3work1"),
+          company: "Virtually Present, LLC.",
+          task1: this.$t("experience.task1work4"),
+          task2: this.$t("experience.task2work4"),
+          task3: this.$t("experience.task3work4"),
           image: "VP"
+        },
+        {
+          title: this.$t("experience.work3"),
+          yearfirst: "2018",
+          yearlast: this.$t("experience.status"),
+          company: "Siglo Global, S.L.U.",
+          task1: this.$t("experience.task1work3"),
+          task2: this.$t("experience.task2work3"),
+          task3: this.$t("experience.task3work3"),
+          image: "SG"
         },
         {
           title: this.$t("experience.work2"),
           yearfirst: "2018",
           yearlast: "2019",
-          company: "Siglo Global SL",
+          company: "Kainver Venezuela",
           task1: this.$t("experience.task1work2"),
           task2: this.$t("experience.task2work2"),
           task3: this.$t("experience.task3work2"),
-          image: "SBT"
-        },
-        {
-          title: this.$t("experience.work3"),
-          yearfirst: "2018",
-          yearlast: "2019",
-          company: "Kainver",
-          task1: this.$t("experience.task1work3"),
-          task2: this.$t("experience.task2work3"),
-          task3: this.$t("experience.task3work3"),
           image: "kainver"
         },
         {
-          title: this.$t("experience.work4"),
+          title: this.$t("experience.work1"),
           yearfirst: "2018",
           yearlast: "2018",
           company: "Domiserver",
-          task1: this.$t("experience.task1work4"),
-          task2: this.$t("experience.task2work4"),
-          task3: this.$t("experience.task3work4"),
+          task1: this.$t("experience.task1work1"),
+          task2: this.$t("experience.task2work1"),
+          task3: this.$t("experience.task3work1"),
           image: "DomiServer"
         },
         {
-          title: this.$t("experience.work5"),
+          title: this.$t("experience.work0"),
           yearfirst: "2017",
           yearlast: "2018",
-          company: "Sanofi",
-          task1: this.$t("experience.task1work5"),
-          task2: this.$t("experience.task2work5"),
-          task3: this.$t("experience.task3work5"),
+          company: "Sanofi Venezuela",
+          task1: this.$t("experience.task1work0"),
+          task2: this.$t("experience.task2work0"),
+          task3: this.$t("experience.task3work0"),
           image: "Sanofi"
         }
       ]
