@@ -1,8 +1,9 @@
 <template>
   <div class="Content overflow-x-hidden">
-    <div class="bg-gray-100">
+    <section class="bg-gray-100">
       <div class="flex flex-wrap content-center py-8 px-4 bg-white shadow-xl full-display">
         <div class="w-full">
+          <img class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-1/5" src="~/assets/img/WonderDiazPhotoGrey.jpg" alt="Wonder Diaz"/>
           <h1
             class="text-gray-900 font-semibold items-center text-center text-4xl lg:text-5xl py-2"
           >Wonder Díaz</h1>
@@ -27,15 +28,15 @@
           >{{ $t("home.subtitle") }}</h3>-->
         </div>
       </div>
-    </div>
-    <div class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
+    </section>
+    <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
       <div class="flex flex-wrap py-4 px-4">
         <div class="sm:w-full md:w-1/6 lg:w-1/6"></div>
         <div class="sm:w-full md:w-4/6 lg:w-4/6">
-          <p class="text-gray-900 text-center text-xl" v-html="$t('home.heroparagraph')"></p>
+          <h3 class="text-gray-900 text-center text-2xl lg:text-3xl " v-html="$t('home.heroparagraph')"></h3>
         </div>
       </div>
-      <div class="w-full ml-auto mr-auto">
+      <div class="w-full ml-auto lg:py-4 mr-auto">
         <div v-swiper="swiperOption">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="icon in icons" :key="icon.id">
@@ -64,7 +65,60 @@
           <div class="swiper-pagination" slot="pagination"></div>
         </div>
       </div>
-      <div class="py-4 px-2">
+      <div class="flex flex-wrap justify-center w-full py-4 px-4">
+        <h2 class="text-center w-full py-4 text-3xl">{{$t('home.project')}}</h2>
+        <div
+          v-for="item in portfolio"
+          v-bind:key="item.id"
+          class="sm:w-full md:w-1/2 lg:w-1/3 px-2 justify-center"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
+          <div class="rounded-lg overflow-hidden shadow-lg mx-auto my-2 bg-white border-2 border-gray-100 hover:border-aqua-100">
+            <a :href="item.link" target="_blank">
+              <picture>
+                <source
+                  :title="item.title"
+                  :alt="item.title"
+                  :srcset="require(`~/assets/img/computers/${item.image}.jpg?webp`)"
+                  type="image/webp"
+                />
+                <source
+                  :title="item.title"
+                  :alt="item.title"
+                  :srcset="require(`~/assets/img/computers/${item.image}.jpg`)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="w-full"
+                  :src="require(`~/assets/img/computers/${item.image}.jpg`)"
+                  :alt="item.title"
+                  :title="item.title"
+                />
+              </picture>
+            </a>
+            <div>
+              <a :href="item.link" target="_blank">
+                <p
+                  class="text-center text-gray-900 text-xl pt-2 font-semibold hover:text-aqua-200"
+                >{{ item.title }}</p>
+              </a>
+              <p
+                class="text-center text-aqua-100 font-semibold text-sm pb-1 block opacity-75"
+              >{{ item.company }} - {{ item.year }}</p>
+              <p class="text-gray-700 text-base text-center pb-2">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+        <nuxt-link
+            :to="localePath('/portfolio')"
+            class="block bg-aqua-100 text-xl text-black hover:text-white mt-4 px-4 py-2 border-2 rounded-lg"
+          >
+          {{ $t('home.more') }}
+        </nuxt-link>
+      </div>
+      <!--<div class="py-4 px-2">
         <div class="flex flex-wrap -mx-2">
           <div
             v-for="item in items"
@@ -103,8 +157,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>-->
+    </section>
   </div>
 </template>
 
@@ -148,7 +202,7 @@ export default {
         },
         navigation: true,
         autoplay: {
-          delay: 2500,
+          delay: 1000,
           disableOnInteraction: false
         },
         breakpoints: {
@@ -200,6 +254,14 @@ export default {
           image: "Reactjs",
         },
         {
+          title: "Flux Pattern Architecture in React",
+          image: "ReactFlux",
+        },
+        {
+          title: "Redux",
+          image: "Redux",
+        },
+        {
           title: "Next",
           image: "Nextjs",
         },
@@ -218,6 +280,10 @@ export default {
         {
           title: "MongoDB",
           image: "Mongodb-new",
+        },
+        {
+          title: "Apache Cordova",
+          image: "ApacheCordova",
         },
         {
           title: "Python",
@@ -294,6 +360,32 @@ export default {
           image: "communications",
         },
       ],
+      portfolio: [
+        {
+          title: "Lior Pedidos App",
+          company: "Freelance",
+          year: "2020",
+          description: this.$t("portfolio.project27"),
+          link: "https://lior-app.vercel.app/",
+          image: "Lior-Pedidos-App",
+        },
+        {
+          title: "Syntax Project Next",
+          company: "Personal",
+          year: "2020",
+          description: this.$t("portfolio.project26"),
+          link: "https://syntax-project-next.now.sh/",
+          image: "Syntax-Project-Next",
+        },
+        {
+          title: "Radio Caribe",
+          company: "Freelance",
+          year: "2019",
+          description: this.$t("portfolio.project25"),
+          link: "http://www.radiocaribe.com/",
+          image: "radiocaribe",
+        }
+      ]
     }
   },
   components: {

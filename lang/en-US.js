@@ -31,7 +31,8 @@ export default {
     titletyped2: "Web Developer",
     titletyped3: "Web Desing",
     subtitle: "Experience in design and development of websites and web applications",
-    heroparagraph: "I've experience developing in HTML5, CSS3, JavaScript, PHP, Python and Designing in <strong>Adobe XD</strong>, Figma, Adobe Photoshop and Adobe Illustrator. In addition using Frameworks, Libraries and CMS such as JQuery, Vue.js, Nuxt.js, <strong>React.js</strong>, Flux, Redux, Next.js, Node.js, Less, Sass, Bootstrap, TailWindCss, Materialize, <strong>WordPress</strong>, Cordova, among others.",
+    //heroparagraph: "I've experience developing in HTML5, CSS3, JavaScript, PHP, Python and designing in <strong>Adobe XD</strong>, Figma, Adobe Photoshop and Adobe Illustrator. In addition using Frameworks, Libraries and CMS such as JQuery, Vue.js, Nuxt.js, <strong>React.js</strong>, Flux, Redux, Next.js, Node.js, Less, Sass, Bootstrap, TailWindCss, Materialize, <strong>WordPress</strong>, Cordova, among others.",
+    heroparagraph: "I've experience developing and designing with the following technologies and tools",
     title1: "Engineering",
     text1: "Implemented management knowledge, Lean Manufacturing, continuous improvement and quality to offer the best results.",
     title2: "Developing",
@@ -43,7 +44,9 @@ export default {
     title5: "Analysis",
     text5: "Interpreting the data with the most powerful tools to grow business and carry out scalability planning.",
     title6: "Support",
-    text6: "Checking the availability, accessibility and security of websites to meet the demand for services."
+    text6: "Checking the availability, accessibility and security of websites to meet the demand for services.",
+    project: "Recent projects",
+    more: "See more"
   },
   portfolio: {
     title: 'Portfolio',

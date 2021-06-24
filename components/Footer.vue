@@ -5,7 +5,7 @@
           class="w-full inline-flex content-center justify-center bg-grayblacked-100 pt-4 p-2 shadow-lg"
         >
           <div class="flex">
-            <a class="p-1" href="https://behance.net/MetalSyntax">
+            <a class="p-1" href="https://behance.net/MetalSyntax" target="_blank">
               <img
                 class="icons-social"
                 src="../assets/img/social/behance.png"
@@ -14,7 +14,7 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://github.com/metalsyntax">
+            <a class="p-1" href="https://github.com/metalsyntax" target="_blank">
               <img
                 class="icons-social"
                 src="../assets/img/social/github.png"
@@ -23,7 +23,7 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://linkedin.com/in/metalsyntax/">
+            <a class="p-1" href="https://linkedin.com/in/metalsyntax/" target="_blank">
               <img
                 class="icons-social"
                 src="../assets/img/social/linkedin.png"
@@ -32,7 +32,7 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://twitter.com/MetalSyntax">
+            <a class="p-1" href="https://twitter.com/MetalSyntax" target="_blank">
               <img
                 class="icons-social"
                 src="../assets/img/social/twitter.png"
@@ -41,7 +41,7 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="mailto:wonderdxk@gmail.com">
+            <a class="p-1" href="mailto:wonderdxk@gmail.com" target="_blank">
               <img
                 class="icons-social"
                 src="../assets/img/social/gmail.png"
@@ -50,7 +50,7 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://api.whatsapp.com/send?phone=584241143120">
+            <a class="p-1" href="https://api.whatsapp.com/send?phone=584241143120" target="_blank">
               <img
                 class="icons-social"
                 src="../assets/img/social/whatsapp.png"
@@ -84,7 +84,7 @@
         <div
           class="w-full inline-flex content-center justify-center bg-grayblacked-100 p-2 shadow-lg"
         >
-          <div class="font-semibold text-sm flex">
+          <div class="font-semibold text-sm flex flex-wrap justify-center">
             <nuxt-link
               :to="localePath('/')"
               class="link-footer-style hover:text-white"

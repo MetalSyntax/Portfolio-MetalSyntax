@@ -15,30 +15,29 @@
           data-aos-easing="linear"
           data-aos-duration="500"
         >
-          <div
-            class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white border-2 border-white hover:border-aqua-100"
-          >
+          <div class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white border-2 border-white rounded-lg hover:border-aqua-100">
             <picture class="px-2 py-2 w-3/4 md:w-1/3 m-auto">
-              <source
-                :title="item.title"
-                :alt="item.title"
-                :srcset="require(`~/assets/img/bussines/${item.image}.png?webp`)"
-                type="image/webp"
-              />
-              <source
-                :title="item.title"
-                :alt="item.title"
-                :srcset="require(`~/assets/img/bussines/${item.image}.png`)"
-                type="image/png"
-              />
-              <img
-                :src="require(`~/assets/img/bussines/${item.image}.png`)"
-                :alt="item.title"
-                :title="item.title"
-              />
-            </picture>
+                <source
+                  :title="item.title"
+                  :alt="item.title"
+                  :srcset="require(`~/assets/img/bussines/${item.image}.png?webp`)"
+                  type="image/webp"
+                />
+                <source
+                  :title="item.title"
+                  :alt="item.title"
+                  :srcset="require(`~/assets/img/bussines/${item.image}.png`)"
+                  type="image/png"
+                />
+                <img
+                  class="mx-auto"
+                  :src="require(`~/assets/img/bussines/${item.image}.png`)"
+                  :alt="item.title"
+                  :title="item.title"
+                />
+              </picture>
             <div
-              class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center items-center"
+              class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center lg:justify-start items-center"
             >
               <h2
                 class="font-bold text-xl mb-2 text-center md:text-left w-full"
@@ -50,11 +49,13 @@
               >
                 {{ item.yearfirst }} - {{ item.yearlast }}
               </p>
+              <a :href="item.website !== '#' ? `https://${item.website}` : item.website" :target="item.website == '#' ? '' : '_blank'">
               <p
                 class="text-gray-700 text-base text-center md:text-left w-full text-aqua-100"
               >
                 {{ item.company }}
               </p>
+              </a>
               <ul class="list-disc text-center md:text-left w-full">
                 <li class="list-none">{{ item.task1 }}</li>
                 <li class="list-none">{{ item.task2 }}</li>
@@ -90,6 +91,7 @@ export default {
           yearfirst: "2021",
           yearlast: this.$t("experience.status"),
           company: "RedGage, LLC.",
+          website: "www.redgage.com",
           task1: this.$t("experience.task1work5"),
           task2: this.$t("experience.task2work5"),
           task3: this.$t("experience.task3work5"),
@@ -100,6 +102,7 @@ export default {
           yearfirst: "2019",
           yearlast: this.$t("experience.status"),
           company: "Virtually Present, LLC.",
+          website: "virtuallypresent.net",
           task1: this.$t("experience.task1work4"),
           task2: this.$t("experience.task2work4"),
           task3: this.$t("experience.task3work4"),
@@ -110,6 +113,7 @@ export default {
           yearfirst: "2018",
           yearlast: this.$t("experience.status"),
           company: "Siglo Global, S.L.U.",
+          website: "#",
           task1: this.$t("experience.task1work3"),
           task2: this.$t("experience.task2work3"),
           task3: this.$t("experience.task3work3"),
@@ -120,6 +124,7 @@ export default {
           yearfirst: "2018",
           yearlast: "2019",
           company: "Kainver Venezuela",
+          website: "#",
           task1: this.$t("experience.task1work2"),
           task2: this.$t("experience.task2work2"),
           task3: this.$t("experience.task3work2"),
@@ -130,6 +135,7 @@ export default {
           yearfirst: "2018",
           yearlast: "2018",
           company: "Domiserver",
+          website: "#",
           task1: this.$t("experience.task1work1"),
           task2: this.$t("experience.task2work1"),
           task3: this.$t("experience.task3work1"),
@@ -140,6 +146,7 @@ export default {
           yearfirst: "2017",
           yearlast: "2018",
           company: "Sanofi Venezuela",
+          website: "www.sanofi.com.ve",
           task1: this.$t("experience.task1work0"),
           task2: this.$t("experience.task2work0"),
           task3: this.$t("experience.task3work0"),

@@ -31,7 +31,8 @@ export default {
     titletyped2: 'Desarrollador Web',
     titletyped3: 'Diseñador Web',
     subtitle: 'Experiencia en diseño y desarrollo de sitios web y aplicaciones web',
-    heroparagraph: "Tengo experiencia desarrollando en HTML5, CSS3, JavaScript, PHP, Python y diseñando en <strong> Adobe XD </strong>, Figma, Adobe Photoshop y Adobe Illustrator. Además de usar Frameworks, Bibliotecas y CMS como JQuery, Vue.js, Nuxt.js, <strong> React.js </strong>, Flux, Redux, Next.js, Node.js, Less, Sass, Bootstrap, TailWindCss , Materialise, <strong> WordPress </strong>, Córdoba, entre otros.",
+    //heroparagraph: "Tengo experiencia desarrollando en HTML5, CSS3, JavaScript, PHP, Python y diseñando en <strong> Adobe XD </strong>, Figma, Adobe Photoshop y Adobe Illustrator. Además de usar Frameworks, Bibliotecas y CMS como JQuery, Vue.js, Nuxt.js, <strong> React.js </strong>, Flux, Redux, Next.js, Node.js, Less, Sass, Bootstrap, TailWindCss , Materialise, <strong> WordPress </strong>, Córdoba, entre otros.",
+    heroparagraph: "Tengo experiencia desarrollando y diseñando con las siguientes tecnologías y herramientas",
     title1: 'Ingeniería',
     text1: 'Implementando conocimientos de Gestión, Lean Manufacturing, Mejora Continua y Calidad para ofrecer los mejores resultados.',
     title2: 'Desarrollo',
@@ -43,7 +44,9 @@ export default {
     title5: 'Análisis',
     text5: 'Interpretando los datos con las herramientas más potentes para hacer crecer los negocios y realizar planificaciones de escalabilidad.',
     title6: 'Soporte',
-    text6: 'Comprobando la disponibilidad, accesibilidad y seguridad de los sitios web para satisfacer la demanda de los servicios.'
+    text6: 'Comprobando la disponibilidad, accesibilidad y seguridad de los sitios web para satisfacer la demanda de los servicios.',
+    project: "Proyectos recientes",
+    more: "Ver más"
   },
   portfolio: {
     title: 'Portafolio',
