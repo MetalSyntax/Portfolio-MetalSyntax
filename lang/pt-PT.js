@@ -31,7 +31,6 @@ export default {
     titletyped2: 'Desenvolvedor Web',
     titletyped3: 'Desenhador Web',
     subtitle: 'Experiência em desenho e desenvolvimento de sites e aplicativos web',
-    //heroparagraph: "Tenho experiência em desenvolvimento em HTML5, CSS3, JavaScript, PHP, Python e desenhando em <strong> Adobe XD </strong>, Figma, Adobe Photoshop e Adobe Illustrator. Além de usar Frameworks, Bibliotecas e CMS como JQuery, Vue.js, Nuxt.js, <strong> React.js </strong>, Flux, Redux, Next.js, Node.js, Less, Sass, Bootstrap, TailWindCss, Materialize , <strong> WordPress </strong>, Córdoba, entre outros.",
     heroparagraph: "Tenho experiência em desenvolvimento e desenhando com nas seguintes tecnologias e ferramentas",
     title1: 'Engenharia',
     text1: 'Implementando conhecimentos de Gestão, Lean Manufacturing, Melhoria Contínua e Qualidade para oferecer os melhores resultados.      ',
@@ -46,7 +45,9 @@ export default {
     title6: 'Suporte',
     text6: 'Verificar a disponibilidade, acessibilidade e segurança dos sites para atender à demanda por serviços.',
     project: "Projetos recentes",
-    more: "Olhar mais"
+    more: "Olhar mais",
+    calltoaction: "Você está interessado em meus serviços?, me mande um e-mail!",
+    contact: "contate-me"
   },
   portfolio: {
     title: 'Portfólio',

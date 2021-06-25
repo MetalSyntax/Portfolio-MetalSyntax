@@ -2,7 +2,7 @@
   <footer class="footer">
       <div class="flex mb-0">
         <div
-          class="w-full inline-flex content-center justify-center bg-grayblacked-100 pt-4 p-2 shadow-lg"
+          class="w-full inline-flex content-center justify-center bg-grayblacked-100 pt-6 p-4 shadow-lg"
         >
           <div class="flex">
             <a class="p-1" href="https://behance.net/MetalSyntax" target="_blank">
@@ -59,24 +59,6 @@
                 width="35"
               />
             </a>
-            <!--<a class="p-1" href="https://www.instagram.com/metalsyntax/">
-              <img
-                class="icons-social"
-                src="../assets/img/social/instagram.png"
-                alt="Instagram"
-                height="35"
-                width="35"
-              />
-            </a>-->
-            <!--<a class="p-1" href="https://www.facebook.com/MetalSyntax1101/">
-              <img
-                class="icons-social"
-                src="../assets/img/social/facebook.png"
-                alt="Facebook"
-                height="35"
-                width="35"
-              />
-            </a>-->
           </div>
         </div>
       </div>
@@ -106,7 +88,7 @@
       </div>
       <div class="flex mb-0">
         <div class="w-full bg-grayblacked-200 pb-4 p-2 shadow-lg">
-          <p class="text-center text-gray-200">© Copyright {{ new Date().getFullYear() }} | {{ $t('footer.text') }}</p>
+          <p class="text-center text-gray-200">©{{ new Date().getFullYear() }} | {{ $t('footer.text') }}</p>
         </div>
       </div>
     </footer>

@@ -31,7 +31,6 @@ export default {
     titletyped2: "Web Developer",
     titletyped3: "Web Desing",
     subtitle: "Experience in design and development of websites and web applications",
-    //heroparagraph: "I've experience developing in HTML5, CSS3, JavaScript, PHP, Python and designing in <strong>Adobe XD</strong>, Figma, Adobe Photoshop and Adobe Illustrator. In addition using Frameworks, Libraries and CMS such as JQuery, Vue.js, Nuxt.js, <strong>React.js</strong>, Flux, Redux, Next.js, Node.js, Less, Sass, Bootstrap, TailWindCss, Materialize, <strong>WordPress</strong>, Cordova, among others.",
     heroparagraph: "I've experience developing and designing with the following technologies and tools",
     title1: "Engineering",
     text1: "Implemented management knowledge, Lean Manufacturing, continuous improvement and quality to offer the best results.",
@@ -46,7 +45,9 @@ export default {
     title6: "Support",
     text6: "Checking the availability, accessibility and security of websites to meet the demand for services.",
     project: "Recent projects",
-    more: "See more"
+    more: "See more",
+    calltoaction: "Are you interested in my work?, let's me a email!",
+    contact: "Contact me"
   },
   portfolio: {
     title: 'Portfolio',
@@ -67,7 +68,7 @@ export default {
     project13: '18 years of experience in technical innovation, use of new technologies and best quality practices.',
     project12: 'We offer comprehensive infrastructure, urban planning and interior spaces services.',
     project11: 'We are dedicated to the promotion and marketing of real estate.',
-    project10: 'Organization specialized in the real estate sector, in managing the management of purchases, sales and rentals of real estate.',
+    project10: 'Organization specialized in the real estate sector, in managing the management of purchases, sales and rentals.',
     project9: 'Asset management oriented to provide support to the investor in real estate projects.',
     project8: 'We have the experience and creativity to help you drive the performance of your business.',
     project7: 'We develop effective marketing strategies for social networks.',

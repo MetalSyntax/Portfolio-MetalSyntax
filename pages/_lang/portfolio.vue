@@ -63,7 +63,7 @@
     itemsFilterkey == 'Domiserver' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Personal' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Freelance' ? 'lg:h-screen' : '']"
-      class="pb-4 px-2"
+      class="p-4 px-2"
     >
       <div class="flex flex-wrap justify-center -mx-2">
         <div
@@ -106,7 +106,7 @@
               <p
                 class="text-center text-aqua-100 font-semibold text-sm pb-1 block opacity-75"
               >{{ item.company }} - {{ item.year }}</p>
-              <p class="text-gray-700 text-base text-center pb-2">{{ item.description }}</p>
+              <p class="text-gray-700 text-base text-center p-2">{{ item.description }}</p>
             </div>
           </div>
         </div>
