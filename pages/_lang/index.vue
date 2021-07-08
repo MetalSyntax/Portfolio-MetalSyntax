@@ -27,7 +27,7 @@
       </div>
     </section>
     <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
-      <div class="flex flex-wrap py-4 px-4 sm:w-full md:w-4/6 lg:w-4/6 mx-auto my-0">
+      <div class="flex flex-wrap px-4 py-6 lg:p-4 sm:w-full md:w-4/6 lg:w-4/6 mx-auto my-0">
         <h3 class="text-gray-900 text-center text-2xl lg:text-3xl" v-html="$t('home.heroparagraph')"></h3>
       </div>
       <div class="w-full ml-auto lg:py-4 mr-auto">
@@ -102,7 +102,7 @@
               <p
                 class="text-center text-aqua-100 font-semibold text-sm pb-1 block opacity-75"
               >{{ item.company }} - {{ item.year }}</p>
-              <p class="text-gray-700 text-base text-center pb-2">{{ item.description }}</p>
+              <p class="text-gray-700 text-base text-center p-2">{{ item.description }}</p>
             </div>
           </div>
         </div>
@@ -112,10 +112,6 @@
           >
           {{ $t('home.more') }}
         </nuxt-link>
-      </section>
-      <section class="flex flex-wrap justify-center lg:justify-between items-center w-full py-6 px-4 bg-graylight-200">
-        <h3 class="text-2xl lg:text-3xl text-center lg:text-left" >{{ $t('home.calltoaction') }}</h3>
-        <a class="bg-aqua-100 text-2xl text-black hover:text-white px-4 py-2 border-2 rounded-lg" href="mailto:wonderdxk@gmail.com">{{ $t('home.contact') }}</a>
       </section>
   </div>
 </template>
@@ -364,7 +360,8 @@ export default {
   filter: grayscale(100);
 }
 .full-display {
-  @apply bg-graylight-200 bg-center bg-no-repeat h-screen;
+  @apply bg-graylight-200 bg-center bg-no-repeat;
+  height: calc(100vh - 56px);
   background-blend-mode: normal;
 }
 @media (min-width: 1023px) {

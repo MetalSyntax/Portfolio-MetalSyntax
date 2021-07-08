@@ -1,9 +1,20 @@
 <template>
   <div>
     <div class="w-full p-4 bg-aqua-200 shadow-lg">
-      <h1 class="text-gray-100 text-center text-3xl">
-        &lt;{{ $t("experience.title") }}/&gt;
-      </h1>
+      <vue-typed-js
+            class="justify-center py-2"
+            :strings="[
+              $t('experience.title')
+            ]"
+            :loop="true"
+            :showCursor="false"
+            :typeSpeed="100"
+          >
+            <h1 class="text-gray-100 font-medium text-center items-center text-3xl lg:text-4xl">
+              &lt;
+              <span class="typing"></span>/&gt;
+            </h1>
+          </vue-typed-js>
     </div>
     <div class="py-4 px-2 h-full lg:h-screen">
       <div class="flex flex-wrap -mx-2">

@@ -1,9 +1,22 @@
 <template>
   <div>
     <div class="w-full p-4 bg-aqua-200 shadow-lg">
-      <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('portfolio.title') }}/&gt;</h1>
+      <vue-typed-js
+            class="justify-center py-2"
+            :strings="[
+              $t('portfolio.title')
+            ]"
+            :loop="true"
+            :showCursor="false"
+            :typeSpeed="100"
+          >
+            <h1 class="text-gray-100 font-medium text-center items-center text-3xl lg:text-4xl">
+              &lt;
+              <span class="typing"></span>/&gt;
+            </h1>
+          </vue-typed-js>
     </div>
-    <div class="w-full px-4 py-4">
+    <div class="w-full px-2 pt-6">
       <ul class="hidden lg:flex flex-wrap">
         <li class="flex-1 mr-2">
           <a
@@ -12,6 +25,14 @@
             @click="itemsFilterkey = 'All'"
             :class="{ active: itemsFilterkey == 'All' }"
           >{{ $t('portfolio.filter') }}</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="button-filter-project"
+            href="#virtually"
+            @click="itemsFilterkey = 'virtually'"
+            :class="{ active: itemsFilterkey == 'virtually' }"
+          >Virtually Present</a>
         </li>
         <li class="flex-1 mr-2">
           <a
@@ -48,10 +69,11 @@
       </ul>
       <select
         name="items"
-        class="lg:hidden flex justify-center mx-auto text-center rounded border-2 border-white hover:border-aqua-100 focus:border-green-500 shadow-lg text-black hover:text-green-500 hover:bg-white py-2 px-4 outline-none"
+        class="lg:hidden flex w-full justify-center mx-auto text-center rounded border-2 border-white hover:border-aqua-100 focus:border-green-500 shadow-lg text-black hover:text-green-500 hover:bg-white py-2 px-4 outline-none"
         v-model="itemsFilterkey"
       >
         <option value="All">{{ $t('portfolio.filter') }}</option>
+        <option value="Virtually">Virtually Present</option>
         <option value="kainver">Kainver</option>
         <option value="Domiserver">DomiServer</option>
         <option value="Personal">Personal</option>
@@ -60,6 +82,7 @@
     </div>
     <div
       :class="[
+    itemsFilterkey == 'Virtually' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Domiserver' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Personal' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Freelance' ? 'lg:h-screen' : '']"
@@ -80,18 +103,18 @@
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/computers/${item.image}.jpg?webp`)"
+                  :srcset="require(`~/assets/img/projects/${item.image}-.jpg?webp`)"
                   type="image/webp"
                 />
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/computers/${item.image}.jpg`)"
+                  :srcset="require(`~/assets/img/projects/${item.image}-.jpg`)"
                   type="image/jpeg"
                 />
                 <img
                   class="w-full"
-                  :src="require(`~/assets/img/computers/${item.image}.jpg`)"
+                  :src="require(`~/assets/img/projects/${item.image}-.jpg`)"
                   :alt="item.title"
                   :title="item.title"
                 />
@@ -104,7 +127,7 @@
                 >{{ item.title }}</p>
               </a>
               <p
-                class="text-center text-aqua-100 font-semibold text-sm pb-1 block opacity-75"
+                class="text-center text-aqua-100 font-semibold text-sm block opacity-75"
               >{{ item.company }} - {{ item.year }}</p>
               <p class="text-gray-700 text-base text-center p-2">{{ item.description }}</p>
             </div>
@@ -134,12 +157,28 @@ export default {
       itemsFilterkey: "All",
       items: [
         {
+          title: "Syntax Stream",
+          company: "Personal",
+          year: "2021",
+          description: this.$t("portfolio.project28"),
+          link: "https://www.behance.net/gallery/121536125/Stream-Syntax",
+          image: "Syntax-Stream",
+        },
+        {
+          title: "The Senior Care Foundation",
+          company: "Virtually Present",
+          year: "2021",
+          description: this.$t("portfolio.project30"),
+          link: "https://theseniorcarefoundation.org/",
+          image: "TSCF",
+        },
+        {
           title: "Lior Pedidos App",
           company: "Freelance",
           year: "2020",
           description: this.$t("portfolio.project27"),
           link: "https://lior-app.vercel.app/",
-          image: "Lior-Pedidos-App",
+          image: "Lior-App",
         },
         {
           title: "Syntax Project Next",
@@ -147,7 +186,15 @@ export default {
           year: "2020",
           description: this.$t("portfolio.project26"),
           link: "https://syntax-project-next.now.sh/",
-          image: "Syntax-Project-Next",
+          image: "Tech-Cube",
+        },
+        {
+          title: "Bardisa LYL Center",
+          company: "Virtually Present",
+          year: "2020",
+          description: this.$t("portfolio.project29"),
+          link: "https://bardisalylcenter.com/",
+          image: "BDS",
         },
         {
           title: "Radio Caribe",
@@ -155,7 +202,31 @@ export default {
           year: "2019",
           description: this.$t("portfolio.project25"),
           link: "http://www.radiocaribe.com/",
-          image: "radiocaribe",
+          image: "Radio-Caribe",
+        },
+        {
+          title: "Florida Doctors Group",
+          company: "Virtually Present",
+          year: "2019",
+          description: this.$t("portfolio.project31"),
+          link: "https://fdgmso.com/",
+          image: "FDGMSO",
+        },
+        {
+          title: "Syntax Note",
+          company: "Personal",
+          year: "2019",
+          description: this.$t("portfolio.project1"),
+          link: "https://metalsyntax.github.io/Notes/",
+          image: "Syntax-Note"
+        },
+        {
+          title: "Syntax Monitor",
+          company: "Personal",
+          year: "2019",
+          description: this.$t("portfolio.project0"),
+          link: "https://metalsyntax.github.io/Syntax-Monitor/",
+          image: "Syntax-Monitor"
         },
         {
           title: "Ofertas del Motor",
@@ -163,7 +234,7 @@ export default {
           year: "2019",
           description: this.$t("portfolio.project24"),
           link: "https://www.behance.net/gallery/96603035/ODM",
-          image: "ofertasdelmotor",
+          image: "Ofertas-del-motor",
         },
         {
           title: "Mi Secretaria Virtual",
@@ -171,7 +242,7 @@ export default {
           year: "2019",
           description: this.$t("portfolio.project23"),
           link: "https://www.behance.net/gallery/96600341/MSV",
-          image: "misecretariavirtual",
+          image: "Mi-Secretaria-Virtual",
         },
         {
           title: "Renderizados",
@@ -179,7 +250,7 @@ export default {
           year: "2019",
           description: this.$t("portfolio.project22"),
           link: "https://www.behance.net/gallery/96600761/Renderizados",
-          image: "renderizados",
+          image: "Renderizados",
         },
         {
           title: "Soluciones Web",
@@ -187,15 +258,7 @@ export default {
           year: "2019",
           description: this.$t("portfolio.project21"),
           link: "https://www.behance.net/gallery/79186095/Soluciones-Web",
-          image: "solucionesweb",
-        },
-        {
-          title: "Traductores Malaga",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project20"),
-          link: "https://www.behance.net/gallery/72284307/Traductores-Malaga",
-          image: "TraductoresMalaga",
+          image: "Soluciones-Web",
         },
         {
           title: "AW Travel Guides",
@@ -203,9 +266,17 @@ export default {
           year: "2019",
           description: this.$t("portfolio.project19"),
           link: "https://www.behance.net/gallery/79183575/AW-Travel-Guides",
-          image: "AwTravelGuides",
+          image: "AW-Travel-Guides",
         },
         {
+          title: "Traductores Malaga",
+          company: "kainver",
+          year: "2018",
+          description: this.$t("portfolio.project20"),
+          link: "https://www.behance.net/gallery/72284307/Traductores-Malaga",
+          image: "Traductores-Malaga",
+        },
+        /*{
           title: "Life Fitness",
           company: "kainver",
           year: "2018",
@@ -321,14 +392,14 @@ export default {
           link:
             "https://www.behance.net/gallery/73164583/Tienda-de-Webs-Marketing-3",
           image: "tiendadewebs-marketing-web-3"
-        },
+        },*/
         {
           title: "Domiserver",
           company: "Domiserver",
           year: "2018",
           description: this.$t("portfolio.project5"),
           link: "https://www.behance.net/gallery/66801367/DomiServer",
-          image: "Domiserver"
+          image: "DomiServer"
         },
         {
           title: "Latin Talents",
@@ -336,7 +407,7 @@ export default {
           year: "2018",
           description: this.$t("portfolio.project4"),
           link: "https://www.behance.net/gallery/66800623/LatinTalents",
-          image: "LatinTalen"
+          image: "LatinTalens"
         },
         {
           title: "Methods",
@@ -344,7 +415,7 @@ export default {
           year: "2017",
           description: this.$t("portfolio.project3"),
           link: "https://metalsyntax.github.io/Methods/",
-          image: "metalsyntax-github-io-Methods"
+          image: "Methods"
         },
         {
           title: "Code of Paid",
@@ -352,23 +423,7 @@ export default {
           year: "2017",
           description: this.$t("portfolio.project2"),
           link: "https://www.behance.net/gallery/66803173/Code-of-Paid",
-          image: "metalsyntax-github-io-Code-Of-Paid"
-        },
-        {
-          title: "Syntax Note",
-          company: "Personal",
-          year: "2019",
-          description: this.$t("portfolio.project1"),
-          link: "https://metalsyntax.github.io/Notes/",
-          image: "metalsyntax-github-io-Notes"
-        },
-        {
-          title: "Syntax Monitor",
-          company: "Personal",
-          year: "2019",
-          description: this.$t("portfolio.project0"),
-          link: "https://metalsyntax.github.io/Syntax-Monitor/",
-          image: "metalsyntax-github-io-Syntax-Monitor"
+          image: "Yanbal-Code-Of-Paid"
         },
       ],
     };
@@ -379,6 +434,11 @@ export default {
     },
     All() {
       return this.items;
+    },
+    virtually() {
+      return this.items.filter(function (item) {
+        return item.company == "Virtually Present";
+      });
     },
     kainver() {
       return this.items.filter(function (item) {
@@ -406,9 +466,9 @@ export default {
 
 <style>
 .button-filter-project {
-  @apply block text-black text-center rounded border-2 border-white shadow-lg   bg-white py-2 px-4;
+  @apply block text-black text-center rounded border-2 border-white shadow-lg bg-white py-2 px-4;
 }
 .button-filter-project:hover {
-   @apply bg-white border-aqua-100 text-aqua-200 ;
+  @apply bg-white border-aqua-100 text-aqua-200 ;
 }
 </style>

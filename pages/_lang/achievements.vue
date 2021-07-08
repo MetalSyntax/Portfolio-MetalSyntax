@@ -1,9 +1,22 @@
 <template>
   <div>
     <div class="w-full p-4 bg-aqua-200 shadow-lg">
-      <h1 class="text-gray-100 text-center text-3xl">&lt;{{ $t('achievements.title') }}/&gt;</h1>
+      <vue-typed-js
+            class="justify-center py-2"
+            :strings="[
+              $t('achievements.title')
+            ]"
+            :loop="true"
+            :showCursor="false"
+            :typeSpeed="100"
+          >
+            <h1 class="text-gray-100 font-medium text-center items-center text-3xl lg:text-4xl">
+              &lt;
+              <span class="typing"></span>/&gt;
+            </h1>
+          </vue-typed-js>
     </div>
-    <div class="w-full px-4 py-4">
+    <div class="w-full px-2 pt-6">
       <ul class="hidden lg:flex flex-wrap">
         <li class="flex-1 mr-2">
           <a
@@ -48,7 +61,7 @@
       </ul>
       <select
         name="items"
-        class="lg:hidden flex justify-center mx-auto text-center rounded border-2 border-white hover:border-aqua-100 focus:border-green-500  shadow-lg text-black hover:text-green-500 hover:bg-white py-2 px-4 outline-none"
+        class="lg:hidden flex w-full justify-center mx-auto text-center rounded border-2 border-white hover:border-aqua-100 focus:border-green-500  shadow-lg text-black hover:text-green-500 hover:bg-white py-2 px-4 outline-none"
         v-model="itemsFilterkey"
       >
         <option
