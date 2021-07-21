@@ -16,6 +16,11 @@
             </h1>
           </vue-typed-js>
     </div>
+    <div class="w-full px-6 py-4 text-center">
+        <span class="text-gray-900 font-base text-xl lg:text-2xl">
+          {{ $t('portfolio.heroparagraph') }}
+        </span>
+    </div>
     <div class="w-full px-2 pt-6">
       <ul class="hidden lg:flex flex-wrap">
         <li class="flex-1 mr-2">

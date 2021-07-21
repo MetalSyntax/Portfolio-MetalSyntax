@@ -65,7 +65,7 @@
         <div
           v-for="item in portfolio"
           v-bind:key="item.id"
-          class="sm:w-full md:w-1/2 lg:w-1/3 px-2 justify-center"
+          class="sm:w-full md:w-1/3 lg:w-1/4 px-2 justify-center"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="500"
@@ -76,18 +76,18 @@
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/computers/${item.image}.jpg?webp`)"
+                  :srcset="require(`~/assets/img/projects/${item.image}-.jpg?webp`)"
                   type="image/webp"
                 />
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/computers/${item.image}.jpg`)"
+                  :srcset="require(`~/assets/img/projects/${item.image}-.jpg`)"
                   type="image/jpeg"
                 />
                 <img
                   class="w-full"
-                  :src="require(`~/assets/img/computers/${item.image}.jpg`)"
+                  :src="require(`~/assets/img/projects/${item.image}-.jpg`)"
                   :alt="item.title"
                   :title="item.title"
                 />
@@ -316,12 +316,28 @@ export default {
       ],
       portfolio: [
         {
+          title: "Syntax Stream",
+          company: "Personal",
+          year: "2021",
+          description: this.$t("portfolio.project28"),
+          link: "https://www.behance.net/gallery/121536125/Stream-Syntax",
+          image: "Syntax-Stream",
+        },
+        {
+          title: "The Senior Care Foundation",
+          company: "Virtually Present",
+          year: "2021",
+          description: this.$t("portfolio.project30"),
+          link: "https://theseniorcarefoundation.org/",
+          image: "TSCF",
+        },
+        {
           title: "Lior Pedidos App",
           company: "Freelance",
           year: "2020",
           description: this.$t("portfolio.project27"),
           link: "https://lior-app.vercel.app/",
-          image: "Lior-Pedidos-App",
+          image: "Lior-App",
         },
         {
           title: "Syntax Project Next",
@@ -329,15 +345,7 @@ export default {
           year: "2020",
           description: this.$t("portfolio.project26"),
           link: "https://syntax-project-next.now.sh/",
-          image: "Syntax-Project-Next",
-        },
-        {
-          title: "Radio Caribe",
-          company: "Freelance",
-          year: "2019",
-          description: this.$t("portfolio.project25"),
-          link: "http://www.radiocaribe.com/",
-          image: "radiocaribe",
+          image: "Tech-Cube",
         }
       ]
     }
