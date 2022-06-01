@@ -36,7 +36,7 @@
     "imagemin-pngquant": "^9.0.1",
     "lqip-loader": "^2.2.0",
     "responsive-loader": "^2.1.1",
-    "sharp": "^0.26.0",
+    "sharp": "^0.30.5",
     "sqip-loader": "^1.0.0",
     "tailwindcss-dark-mode": "^1.1.6",
     "webp-loader": "^0.6.0"
