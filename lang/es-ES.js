@@ -52,6 +52,12 @@ export default {
   portfolio: {
     title: 'Portafolio',
     heroparagraph: 'Proyectos en los que he participado como desarrollador y/o diseñador web, y a los que he realizado mantenimientos y mejoras, mientras estuve activo en empresas o proyectos.',
+    project37: 'El directorio que te conecta con la industria farmaceutica',
+    project36: 'Tecnología aplicada a los recursos humanos',
+    project35: 'Empresa que suministra solo materias primas de primera clase',
+    project34: 'Contratista de remodelación cerca de usted',
+    project33: 'La atención y el servicio de alta calidad que necesita',
+    project32: 'Visita uno de los mejores hoteles en los cayos de Florida',
     project31: 'Organización de gestión de servicios de salud de propiedad privada.',
     project30: 'Organización sin fines de lucro, dedicada al cuidado y el bienestar de las personas mayores. ',
     project29: 'Enfoque holístico de la medicina convencional y alternativa ubicada en Florida.',

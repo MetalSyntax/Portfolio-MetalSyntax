@@ -52,6 +52,12 @@ export default {
   portfolio: {
     title: 'Portfolio',
     heroparagraph: 'Projects in which I have participated as a developer and/or web designer, and to which I have realized maintenance and improvements, while I was active in companies or projects.',
+    project37: '',
+    project36: '',
+    project35: '',
+    project34: '',
+    project33: '',
+    project32: '',
     project31: 'Privately-owned management health service organization in all Florida.',
     project30: 'Non-profit organization, dedicated to elder care and wellness.',
     project29: 'Holistic approach to conventional and alternative medicine located in Florida.',
