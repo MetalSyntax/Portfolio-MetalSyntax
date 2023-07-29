@@ -34,6 +34,22 @@
         <li class="flex-1 mr-2">
           <a
             class="button-filter-project"
+            href="#genesis"
+            @click="itemsFilterkey = 'genesis'"
+            :class="{ active: itemsFilterkey == 'genesis' }"
+          >Genesis Agency</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="button-filter-project"
+            href="#equipo360"
+            @click="itemsFilterkey = 'equipo360'"
+            :class="{ active: itemsFilterkey == 'equipo360' }"
+          >Equipo 360</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="button-filter-project"
             href="#virtually"
             @click="itemsFilterkey = 'virtually'"
             :class="{ active: itemsFilterkey == 'virtually' }"
@@ -78,19 +94,23 @@
         v-model="itemsFilterkey"
       >
         <option value="All">{{ $t('portfolio.filter') }}</option>
-        <option value="Virtually">Virtually Present</option>
+        <option value="genesis">Genesis Agency</option>
+        <option value="equipo360">Equipo 360 </option>
+        <option value="virtually">Virtually Present</option>
         <option value="kainver">Kainver</option>
-        <option value="Domiserver">DomiServer</option>
-        <option value="Personal">Personal</option>
-        <option value="Freelance">Freelance</option>
+        <option value="domiserver">DomiServer</option>
+        <option value="personal">Personal</option>
+        <option value="freelance">Freelance</option>
       </select>
     </div>
     <div
       :class="[
-    itemsFilterkey == 'Virtually' ? 'lg:h-screen' : '',
-    itemsFilterkey == 'Domiserver' ? 'lg:h-screen' : '',
-    itemsFilterkey == 'Personal' ? 'lg:h-screen' : '',
-    itemsFilterkey == 'Freelance' ? 'lg:h-screen' : '']"
+    itemsFilterkey == 'genesis' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'equipo360' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'virtually' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'domiserver' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'personal' ? 'lg:h-screen' : '',
+    itemsFilterkey == 'freelance' ? 'lg:h-screen' : '']"
       class="p-4 px-2"
     >
       <div class="flex flex-wrap justify-center -mx-2">
@@ -162,74 +182,98 @@ export default {
       itemsFilterkey: "All",
       items: [
         {
+          title: "Business Market Finders",
+          company: "Genesis Agency",
+          year: "2023",
+          description: this.$t("portfolio.businessmarketfinders"),
+          link: "https://www.behance.net/gallery/175709925/Business-Market-Finders",
+          image: "bmf",
+        },
+        {
+          title: "La Martena",
+          company: "Genesis Agency",
+          year: "2023",
+          description: this.$t("portfolio.lamartena"),
+          link: "http://lamartena.com/",
+          image: "lamartena",
+        },
+        {
           title: "PasareLab",
           company: "Equipo 360",
           year: "2022",
-          description: this.$t("portfolio.project37"),
-          //link: "https://theseniorcarefoundation.org/",
+          description: this.$t("portfolio.pasarelab"),
+          link: "https://www.behance.net/gallery/153310385/PasareLab",
           image: "pasarelab",
         },
         {
           title: "Work To Earn",
           company: "Equipo 360",
           year: "2022",
-          description: this.$t("portfolio.project36"),
-          //link: "https://theseniorcarefoundation.org/",
+          description: this.$t("portfolio.worktoearn"),
+          link: "https://www.behance.net/gallery/153310391/Work-To-Earn",
           image: "worktoearn",
         },
         {
           title: "Den Gode Fisk Fra Havet",
           company: "Equipo 360",
           year: "2022",
-          description: this.$t("portfolio.project35"),
-          link: "https://www.dengodefiskfrahavet.no/",
+          description: this.$t("portfolio.dengodefiskfrahavet"),
+          link: "https://www.behance.net/gallery/153310395/Den-Gode-Fisk-Fra-Havet",
           image: "dengodefiskfrahavet",
-        },
-        {
-          title: "Syntax Stream",
-          company: "Personal",
-          year: "2021",
-          description: this.$t("portfolio.project28"),
-          link: "https://www.behance.net/gallery/121536125/Stream-Syntax",
-          image: "Syntax-Stream",
         },
         {
           title: "Boundless Builders",
           company: "Virtually Present",
           year: "2021",
-          description: this.$t("portfolio.project34"),
-          //link: "#",
+          description: this.$t("portfolio.boundlessbuilders"),
+          link: "https://www.behance.net/gallery/153307579/Boundless-Builders",
           image: "boundless-builders",
         },
         {
           title: "Clinica Medica",
           company: "Virtually Present",
           year: "2021",
-          description: this.$t("portfolio.project33"),
-          //link: "#",
+          description: this.$t("portfolio.clinicamedica"),
+          link: "https://www.behance.net/gallery/153307581/Clinica-Medica",
           image: "clinicamedica",
         },
         {
           title: "Sand of Isla Morada",
           company: "Virtually Present",
           year: "2021",
-          description: this.$t("portfolio.project32"),
-          //link: "#",
+          description: this.$t("portfolio.sandsofislamorada"),
+          link: "https://sandsofislamorada.com/",
           image: "sandsofislamorada",
         },
         {
           title: "The Senior Care Foundation",
           company: "Virtually Present",
           year: "2021",
-          description: this.$t("portfolio.project30"),
+          description: this.$t("portfolio.theseniorcarefoundation"),
           link: "https://theseniorcarefoundation.org/",
           image: "TSCF",
+        },
+        {
+          title: "Vitalcare",
+          company: "Virtually Present",
+          year: "2021",
+          description: this.$t("portfolio.vitalcare"),
+          link: "https://www.behance.net/gallery/175651013/Vitalcare",
+          image: "vitalcare",
+        },
+        {
+          title: "Syntax Stream",
+          company: "Personal",
+          year: "2021",
+          description: this.$t("portfolio.syntaxstream"),
+          link: "https://www.behance.net/gallery/121536125/Stream-Syntax",
+          image: "Syntax-Stream",
         },
         {
           title: "Lior Pedidos App",
           company: "Freelance",
           year: "2020",
-          description: this.$t("portfolio.project27"),
+          description: this.$t("portfolio.liorapp"),
           link: "https://lior-app.vercel.app/",
           image: "Lior-App",
         },
@@ -237,15 +281,31 @@ export default {
           title: "Syntax Project Next",
           company: "Personal",
           year: "2020",
-          description: this.$t("portfolio.project26"),
+          description: this.$t("portfolio.syntaxprojectnext"),
           link: "https://syntax-project-next.now.sh/",
           image: "Tech-Cube",
+        },
+        {
+          title: "Classic Wheels Usa",
+          company: "Virtually Present",
+          year: "2020",
+          description: this.$t("portfolio.classicwheelsusa"),
+          link: "https://classicwheelsusa.com/",
+          image: "Classic-Wheels-Usa",
+        },
+        {
+          title: "Semilla Multicultural-",
+          company: "Virtually Present",
+          year: "2021",
+          description: this.$t("portfolio.semillamulticultural"),
+          link: "https://semillamulticultural.com/",
+          image: "Semilla-Multicultural",
         },
         {
           title: "Bardisa LYL Center",
           company: "Virtually Present",
           year: "2020",
-          description: this.$t("portfolio.project29"),
+          description: this.$t("portfolio.bardisalylcenter"),
           link: "https://bardisalylcenter.com/",
           image: "BDS",
         },
@@ -253,7 +313,7 @@ export default {
           title: "Radio Caribe",
           company: "Freelance",
           year: "2019",
-          description: this.$t("portfolio.project25"),
+          description: this.$t("portfolio.radiocaribe"),
           link: "http://www.radiocaribe.com/",
           image: "Radio-Caribe",
         },
@@ -261,7 +321,7 @@ export default {
           title: "Florida Doctors Group",
           company: "Virtually Present",
           year: "2019",
-          description: this.$t("portfolio.project31"),
+          description: this.$t("portfolio.floridadoctorsgroup"),
           link: "https://fdgmso.com/",
           image: "FDGMSO",
         },
@@ -269,7 +329,7 @@ export default {
           title: "Syntax Note",
           company: "Personal",
           year: "2019",
-          description: this.$t("portfolio.project1"),
+          description: this.$t("portfolio.syntaxnote"),
           link: "https://metalsyntax.github.io/Notes/",
           image: "Syntax-Note"
         },
@@ -277,7 +337,7 @@ export default {
           title: "Syntax Monitor",
           company: "Personal",
           year: "2019",
-          description: this.$t("portfolio.project0"),
+          description: this.$t("portfolio.syntaxmonitor"),
           link: "https://metalsyntax.github.io/Syntax-Monitor/",
           image: "Syntax-Monitor"
         },
@@ -285,7 +345,7 @@ export default {
           title: "Ofertas del Motor",
           company: "kainver",
           year: "2019",
-          description: this.$t("portfolio.project24"),
+          description: this.$t("portfolio.ofertasdelmotor"),
           link: "https://www.behance.net/gallery/96603035/ODM",
           image: "Ofertas-del-motor",
         },
@@ -293,7 +353,7 @@ export default {
           title: "Mi Secretaria Virtual",
           company: "kainver",
           year: "2019",
-          description: this.$t("portfolio.project23"),
+          description: this.$t("portfolio.misecretariavirtual"),
           link: "https://www.behance.net/gallery/96600341/MSV",
           image: "Mi-Secretaria-Virtual",
         },
@@ -301,7 +361,7 @@ export default {
           title: "Renderizados",
           company: "kainver",
           year: "2019",
-          description: this.$t("portfolio.project22"),
+          description: this.$t("portfolio.renderizados"),
           link: "https://www.behance.net/gallery/96600761/Renderizados",
           image: "Renderizados",
         },
@@ -309,7 +369,7 @@ export default {
           title: "Soluciones Web",
           company: "kainver",
           year: "2019",
-          description: this.$t("portfolio.project21"),
+          description: this.$t("portfolio.solucionesweb"),
           link: "https://www.behance.net/gallery/79186095/Soluciones-Web",
           image: "Soluciones-Web",
         },
@@ -317,7 +377,7 @@ export default {
           title: "AW Travel Guides",
           company: "kainver",
           year: "2019",
-          description: this.$t("portfolio.project19"),
+          description: this.$t("portfolio.awtravelguides"),
           link: "https://www.behance.net/gallery/79183575/AW-Travel-Guides",
           image: "AW-Travel-Guides",
         },
@@ -325,132 +385,15 @@ export default {
           title: "Traductores Malaga",
           company: "kainver",
           year: "2018",
-          description: this.$t("portfolio.project20"),
+          description: this.$t("portfolio.traductoresmalaga"),
           link: "https://www.behance.net/gallery/72284307/Traductores-Malaga",
           image: "Traductores-Malaga",
         },
-        /*{
-          title: "Life Fitness",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project18"),
-          link:
-            "https://www.behance.net/gallery/76360309/Tiendas-de-Webs-Gimnasio-1",
-          image: "tiendadewebs-gimnasios-web-1",
-        },
-        {
-          title: "Lawfrim",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project17"),
-          link:
-            "https://www.behance.net/gallery/96604757/Tienda-de-Webs-Abogados-1",
-          image: "tiendadewebs-abogados-web-1",
-        },
-        {
-          title: "R. Jurídico",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project16"),
-          link:
-            "https://www.behance.net/gallery/96604783/Tienda-de-Webs-Abogados-2",
-          image: "tiendadewebs-abogados-web-2",
-        },
-        {
-          title: "Planchart",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project15"),
-          link:
-            "https://www.behance.net/gallery/96604795/Tienda-de-Webs-Abogados-3",
-          image: "tiendadewebs-abogados-web-3",
-        },
-        {
-          title: "Brick State",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project14"),
-          link:
-            "https://www.behance.net/gallery/96604291/Tienda-de-Webs-Construccion-1",
-          image: "tiendadewebs-construccion-web-1",
-        },
-        {
-          title: "Avantia",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project13"),
-          link:
-            "https://www.behance.net/gallery/96604325/Tienda-de-Webs-Construccion-2",
-          image: "tiendadewebs-construccion-web-2",
-        },
-        {
-          title: "Alliance",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project12"),
-          link:
-            "https://www.behance.net/gallery/96604455/Tienda-de-Webs-Construccion-3",
-          image: "tiendadewebs-construccion-web-3",
-        },
-        {
-          title: "MediaOrbit",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project11"),
-          link:
-            "https://www.behance.net/gallery/96604987/Tienda-de-Webs-Inmuebles-1",
-          image: "tiendadewebs-inmobiliarias-web-1",
-        },
-        {
-          title: "Starlines",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project10"),
-          link:
-            "https://www.behance.net/gallery/76362391/Tiendas-de-Webs-Inmobiliarias-2",
-          image: "tiendadewebs-inmobiliarias-web-2",
-        },
-        {
-          title: "Netcoms",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project9"),
-          link:
-            "https://www.behance.net/gallery/76361415/Tienda-de-Webs-Inmobiliarias-3",
-          image: "tiendadewebs-inmobiliarias-web-3",
-        },
-        {
-          title: "Gearworks",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project8"),
-          link:
-            "https://www.behance.net/gallery/96599965/Tiendas-de-Web-Marketing-1",
-          image: "tiendadewebs-marketing-web-1",
-        },
-        {
-          title: "MediaBurn",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project7"),
-          link:
-            "https://www.behance.net/gallery/73168833/Tienda-de-Webs-Marketing-2",
-          image: "tiendadewebs-marketing-web-2"
-        },
-        {
-          title: "App-Market",
-          company: "kainver",
-          year: "2018",
-          description: this.$t("portfolio.project6"),
-          link:
-            "https://www.behance.net/gallery/73164583/Tienda-de-Webs-Marketing-3",
-          image: "tiendadewebs-marketing-web-3"
-        },*/
         {
           title: "Domiserver",
           company: "Domiserver",
           year: "2018",
-          description: this.$t("portfolio.project5"),
+          description: this.$t("portfolio.domiserver"),
           link: "https://www.behance.net/gallery/66801367/DomiServer",
           image: "DomiServer"
         },
@@ -458,7 +401,7 @@ export default {
           title: "Latin Talents",
           company: "Domiserver",
           year: "2018",
-          description: this.$t("portfolio.project4"),
+          description: this.$t("portfolio.latintalents"),
           link: "https://www.behance.net/gallery/66800623/LatinTalents",
           image: "LatinTalens"
         },
@@ -466,7 +409,7 @@ export default {
           title: "Methods",
           company: "Personal",
           year: "2017",
-          description: this.$t("portfolio.project3"),
+          description: this.$t("portfolio.methods"),
           link: "https://metalsyntax.github.io/Methods/",
           image: "Methods"
         },
@@ -474,7 +417,7 @@ export default {
           title: "Code of Paid",
           company: "Personal",
           year: "2017",
-          description: this.$t("portfolio.project2"),
+          description: this.$t("portfolio.codeofpaid"),
           link: "https://www.behance.net/gallery/66803173/Code-of-Paid",
           image: "Yanbal-Code-Of-Paid"
         },
@@ -487,6 +430,16 @@ export default {
     },
     All() {
       return this.items;
+    },
+    genesis() {
+      return this.items.filter(function (item) {
+        return item.company == "Genesis Agency";
+      });
+    },
+    equipo360() {
+      return this.items.filter(function (item) {
+        return item.company == "Equipo 360";
+      });
     },
     virtually() {
       return this.items.filter(function (item) {
@@ -522,6 +475,9 @@ export default {
   @apply block text-black text-center rounded border-2 border-white shadow-lg bg-white py-2 px-4;
 }
 .button-filter-project:hover {
+  @apply bg-white border-aqua-100 text-aqua-200 ;
+}
+.button-filter-project.active {
   @apply bg-white border-aqua-100 text-aqua-200 ;
 }
 </style>

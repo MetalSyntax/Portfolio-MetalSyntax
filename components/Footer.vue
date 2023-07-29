@@ -9,6 +9,15 @@
           class="w-full inline-flex content-center justify-center bg-grayblacked-100 pt-6 p-4 shadow-lg"
         >
           <div class="flex">
+            <a class="p-1" href="https://linktr.ee/MetalSyntax" target="_blank">
+              <img
+                class="icons-social"
+                src="../assets/img/social/linktree.png"
+                alt="Linktree"
+                height="35"
+                width="35"
+              />
+            </a>
             <a class="p-1" href="https://behance.net/MetalSyntax" target="_blank">
               <img
                 class="icons-social"
@@ -103,7 +112,7 @@ export default {
     name: 'Footer',
     data() {
     return {
-        /*langs: ["en", "es", "pt"]*/
+
         }
     },
     watch: {

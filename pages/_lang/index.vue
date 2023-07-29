@@ -10,9 +10,9 @@
           <vue-typed-js
             class="justify-center py-2"
             :strings="[
-              $t('home.titletyped1'),
-              $t('home.titletyped2'),
-              $t('home.titletyped3')
+              $t('home.industrialengineer'),
+              $t('home.webdeveloper'),
+              $t('home.webdesing')
             ]"
             :loop="true"
             :showCursor="false"
@@ -139,8 +139,6 @@ export default {
         spaceBetween: 10,
         loop: true,
         effect: 'coverflow',
-        //grabCursor: true,
-        //centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
           rotate: 0,
@@ -278,37 +276,37 @@ export default {
       ],
       items: [
         {
-          title: this.$t("home.title1"),
+          title: this.$t("home.engineering"),
           text: this.$t("home.text1"),
           alt: "Engineering",
           image: "engineer",
         },
         {
-          title: this.$t("home.title2"),
+          title: this.$t("home.developing"),
           text: this.$t("home.text2"),
           alt: "Source Code",
           image: "interface",
         },
         {
-          title: this.$t("home.title3"),
+          title: this.$t("home.design"),
           text: this.$t("home.text3"),
           alt: "Design",
           image: "tool",
         },
         {
-          title: this.$t("home.title4"),
+          title: this.$t("home.marketing"),
           text: this.$t("home.text4"),
           alt: "Commercial",
           image: "tools-and-utensils",
         },
         {
-          title: this.$t("home.title5"),
+          title: this.$t("home.analysis"),
           text: this.$t("home.text5"),
           alt: "Graph",
           image: "seo-and-web",
         },
         {
-          title: this.$t("home.title6"),
+          title: this.$t("home.support"),
           text: this.$t("home.text6"),
           alt: "Service",
           image: "communications",
@@ -319,7 +317,7 @@ export default {
           title: "Syntax Stream",
           company: "Personal",
           year: "2021",
-          description: this.$t("portfolio.project28"),
+          description: this.$t("portfolio.syntaxstream"),
           link: "https://www.behance.net/gallery/121536125/Stream-Syntax",
           image: "Syntax-Stream",
         },
@@ -327,7 +325,7 @@ export default {
           title: "The Senior Care Foundation",
           company: "Virtually Present",
           year: "2021",
-          description: this.$t("portfolio.project30"),
+          description: this.$t("portfolio.theseniorcarefoundation"),
           link: "https://theseniorcarefoundation.org/",
           image: "TSCF",
         },
@@ -335,7 +333,7 @@ export default {
           title: "Lior Pedidos App",
           company: "Freelance",
           year: "2020",
-          description: this.$t("portfolio.project27"),
+          description: this.$t("portfolio.liorapp"),
           link: "https://lior-app.vercel.app/",
           image: "Lior-App",
         },
@@ -343,7 +341,7 @@ export default {
           title: "Syntax Project Next",
           company: "Personal",
           year: "2020",
-          description: this.$t("portfolio.project26"),
+          description: this.$t("portfolio.syntaxprojectnext"),
           link: "https://syntax-project-next.now.sh/",
           image: "Tech-Cube",
         }

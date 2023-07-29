@@ -60,7 +60,6 @@ export default {
    * Router
    */
   router: {
-
     linkActiveClass: "active-link",
     linkExactActiveClass: "exact-active-link"
   },
@@ -129,13 +128,18 @@ export default {
   /*
    *
    */
+  // Internationalization configuration
   i18n: {
     strategy: "prefix_and_default",
+    // Set the default locale to "en"
     defaultLocale: "en",
     seo: true,
+    // Configure browser language detection
     detectBrowserLanguage: {
+      // Use a cookie to store the redirected language
       useCookie: true,
       cookieKey: "i18n_redirected",
+      // Redirect only on the root page
       onlyOnRoot: true
     },
     parsePages: false,
@@ -161,6 +165,10 @@ export default {
         pt: "/experience"
       }
     },
+   // Define a custom redirection function that changes the value of "defaultLocale"
+    vueI18n: {
+      fallbackLocale: "en"
+    },
     locales: [{
         code: "en",
         name: "English",
@@ -182,6 +190,22 @@ export default {
     ],
     lazy: true,
     langDir: 'lang/'
+  },
+  // Define a custom redirection function that changes the value of "defaultLocale"
+  detectBrowserLanguage: {
+    useCookie: true,
+    cookieKey: "i18n_redirected",
+    // Redirect only on the root page
+    onlyOnRoot: true,
+    // Define a custom redirection function that changes the value of "defaultLocale"
+    redirect: (/* String */ to, /* String */ from, /* Object */ context) => {
+      // Get the browser language
+      const browserLang = context.req.headers['accept-language'].split(',')[0].trim().substring(0, 2);
+      // Change the value of "defaultLocale"
+      context.app.i18n.defaultLocale = browserLang;
+      // Redirect the user to the appropriate page in the correct language
+      return `/${browserLang}${to}`;
+    }
   },
   /*
    * Optimize Images

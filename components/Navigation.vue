@@ -12,7 +12,6 @@
         class="font-semibold hover:text-white text-gray-200 text-xl tracking-tight"
       >
         Wonder Diaz
-        <!--<glitch text="Wonder Diaz"></glitch>-->
       </nuxt-link>
     </div>
     <div class="block lg:hidden">
@@ -26,10 +25,13 @@
         </svg>
       </button>
     </div>
-    <!--<transition name="fade">-->
     <div :class="open ? 'block': 'hidden'" class="w-full block lg:flex lg:items-center lg:w-auto">
       <div class="text-md lg:flex-grow my-1">
-        <nuxt-link :to="localePath('/')" class="link-style hover:text-white">{{ $t('links.home') }}</nuxt-link>
+        <nuxt-link 
+        :to="localePath('/')" 
+        class="link-style hover:text-white">
+        {{ $t('links.home') }}
+      </nuxt-link>
         <nuxt-link
           :to="localePath('/portfolio')"
           class="link-style hover:text-white"
@@ -43,9 +45,6 @@
           class="link-style hover:text-white"
         >{{ $t('links.experience') }}</nuxt-link>
       </div>
-      <!--<select v-model="$i18n.locale" class="button-langs hover:text-white">
-        <option v-for="lang in $i18n.locales" :key="lang.code" :value="lang.code">{{ lang.name }}</option>
-      </select>-->
       <div class>
         <div class="dropdown inline-block relative">
           <button
@@ -67,6 +66,7 @@
                 class="button-langs rounded-t hover:text-white"
                 active-class="none"
                 exact
+                @click="setLanguage('pt')"
               >{{ $t('links.english')}}</nuxt-link>
             </li>
             <li class>
@@ -75,6 +75,7 @@
                 class="button-langs hover:text-white"
                 active-class="none"
                 exact
+                @click="setLanguage('pt')"
               >{{ $t('links.portuguese')}}</nuxt-link>
             </li>
             <li class>
@@ -83,26 +84,22 @@
                 class="button-langs rounded-b hover:text-white"
                 active-class="none"
                 exact
+                @click="setLanguage('es')"
               >{{ $t('links.spanish')}}</nuxt-link>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <!--</transition>-->
   </nav>
 </template>
 
 <script>
-/*import Glitch from 'vue-glitch'*/
 export default {
   name: "Navigation",
-  /*components: { Glitch },*/
   data() {
     return {
       open: false,
-      /*langs: ["en", "es", "pt"],*/
-      /*scrollPosition: null*/
       view: {
         atTopOfPage: true,
       },
@@ -112,6 +109,9 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
+    setLanguage(language) {
+      sessionStorage.setItem('language', language);
+    },
     toggle() {
       this.open = !this.open;
     },
@@ -121,17 +121,9 @@ export default {
       } else {
         if (!this.view.atTopOfPage) this.view.atTopOfPage = true;
       }
-      /*updateScroll() {
-          this.scrollPosition = window.scrollY
-        },*/
+      
     },
   },
-  /*mounted() {
-      window.addEventListener('scroll', this.updateScroll);
-    },
-    destroy() {
-      window.removeEventListener('scroll', this.updateScroll)
-    },*/
   watch: {
     $route() {
       this.open = false;
@@ -141,12 +133,6 @@ export default {
 </script>
 
 <style>
-/*.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}*/
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -161,6 +147,9 @@ nav.scrolled {
 }
 .button-langs {
   @apply block font-semibold text-black bg-aqua-100 py-2 px-4 whitespace-no-wrap;
+}
+.exact-active-link {
+  @apply text-white
 }
 @media (min-width: 1024px) {
   .link-style {
