@@ -146,7 +146,7 @@ nav.scrolled {
   @apply block font-semibold text-aqua-100 rounded mr-4 text-base py-3 px-4;
 }
 .button-langs {
-  @apply block font-semibold text-black bg-aqua-100 py-2 px-4 whitespace-no-wrap;
+  @apply block font-semibold text-black bg-aqua-100 py-2 px-4;
 }
 .exact-active-link {
   @apply text-white

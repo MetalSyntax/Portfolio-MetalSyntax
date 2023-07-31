@@ -44,7 +44,7 @@ export default {
     text5: 'Interpretando los datos con las herramientas más potentes para hacer crecer los negocios y realizar planificaciones de escalabilidad.',
     support: 'Soporte',
     text6: 'Comprobando la disponibilidad, accesibilidad y seguridad de los sitios web para satisfacer la demanda de los servicios.',
-    project: "Proyectos recientes",
+    project: "Proyectos destacados",
     more: "Ver más",
     calltoaction: "¿Te interesan mi trabajo?, ¡déjame un correo electrónico!",
     contact: "Contáctame"

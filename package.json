@@ -1,6 +1,10 @@
 {
   "name": "nuxt-portfolio",
-  "version": "1.0.0",
+  "version": "1.0.34",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "description": "Wonder Diaz Portfolio. Develop by MetalSyntax with Vue.js and TailWindCss.",
   "author": "MetalSyntax",
   "private": true,
@@ -8,37 +12,29 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "now-dev": "nuxt"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^3.0.2",
-    "@nuxtjs/robots": "^2.4.2",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "aos": "^3.0.0-beta.6",
-    "imagemin": "^6.0.0",
-    "nuxt": "^2.14.5",
-    "nuxt-i18n": "^6.15.0",
-    "swiper": "^5.2.0",
-    "vue": "^2.6.11",
+    "@nuxtjs/vercel-builder": "^0.24.0",
+    "aos": "^2.3.4",
+    "imagemin": "^7.0.1",
+    "nuxt": "^2.17.1",
+    "nuxt-i18n": "^6.28.1",
+    "swiper": "^5.4.5",
+    "vue": "^2.7.14",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-i18n": "^8.21.0",
-    "vue-server-renderer": "^2.6.12",
-    "vue-tailwind-modal": "0.0.7",
+    "vue-i18n": "^8.27.2",
+    "vue-server-renderer": "^2.7.14",
     "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
-    "@aceforth/nuxt-optimized-images": "^1.3.0",
-    "@nuxtjs/color-mode": "^1.0.3",
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
+    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/tailwindcss": "^1.4.1",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.1",
-    "lqip-loader": "^2.2.0",
-    "responsive-loader": "^2.1.1",
-    "sharp": "^0.26.0",
-    "sqip-loader": "^1.0.0",
-    "tailwindcss-dark-mode": "^1.1.6",
-    "webp-loader": "^0.6.0"
+    "@nuxtjs/imagemin": "^1.0.1",
+    "@nuxtjs/tailwindcss": "^5.3.5"
   }
 }

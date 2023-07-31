@@ -36,17 +36,17 @@ export default {
       {
         rel: "alternate",
         hreflang: "en",
-        href: "http://metalsyntax.now.sh/"
+        href: "http://metalsyntax.vercel.app/"
       },
       {
         rel: "alternate",
         hreflang: "es",
-        href: "http://metalsyntax.now.sh/es"
+        href: "http://metalsyntax.vercel.app/es"
       },
       {
         rel: "alternate",
         hreflang: "pt",
-        href: "http://metalsyntax.now.sh/pt"
+        href: "http://metalsyntax.vercel.app/pt"
       }
     ]
   },
@@ -84,6 +84,10 @@ export default {
     {
       src: "~/plugins/i18n.js"
     },
+    //['gifsicle', { interlaced: true }],
+    //['jpegtran', { progressive: true }],
+    //['optipng', { optimizationLevel: 5 }],
+    //['svgo', { plugins: [{ removeViewBox: false }] }]
   ],
   /*
    ** Generates
@@ -114,6 +118,7 @@ export default {
     "@nuxtjs/google-analytics",
     "@aceforth/nuxt-optimized-images",
     ["@nuxtjs/pwa"],
+    '@nuxtjs/imagemin'
     /*["nuxt-i18n"]*/
   ],
   /*
@@ -191,51 +196,20 @@ export default {
     lazy: true,
     langDir: 'lang/'
   },
-  // Define a custom redirection function that changes the value of "defaultLocale"
-  detectBrowserLanguage: {
-    useCookie: true,
-    cookieKey: "i18n_redirected",
-    // Redirect only on the root page
-    onlyOnRoot: true,
-    // Define a custom redirection function that changes the value of "defaultLocale"
-    redirect: (/* String */ to, /* String */ from, /* Object */ context) => {
-      // Get the browser language
-      const browserLang = context.req.headers['accept-language'].split(',')[0].trim().substring(0, 2);
-      // Change the value of "defaultLocale"
-      context.app.i18n.defaultLocale = browserLang;
-      // Redirect the user to the appropriate page in the correct language
-      return `/${browserLang}${to}`;
-    }
-  },
   /*
    * Optimize Images
    */
   optimizedImages: {
     inlineImageLimit: 2000,
-    imagesName: ({
-        isDev
-      }) =>
-      isDev ?
-      "[path][name][hash:optimized].[ext]" : "img/[contenthash:7].[ext]",
-    responsiveImagesName: ({
-        isDev
-      }) =>
-      isDev ?
-      "[path][name]--[width][hash:optimized].[ext]" : "img/[contenthash:7]-[width].[ext]",
-    handleImages: ["jpeg", "png", "webp"],
+    //imagesName: ({ isDev }) => isDev ? "[path][name][hash:optimized].[ext]" : "img/[contenthash:7].[ext]",
+    //responsiveImagesName: ({ isDev }) => isDev ? "[path][name]--[width][hash:optimized].[ext]" : "img/[contenthash:7]-[width].[ext]",
+    handleImages: ["jpeg", "png" /*,"webp"*/],
     optimizeImages: true,
     optimizeImagesInDev: false,
-    mozjpeg: {
-      quality: 80
-    },
-    optipng: {
-      optimizationLevel: 3
-    },
+    mozjpeg: { quality: 80 },
+    optipng: { optimizationLevel: 3 },
     pngquant: false,
-    webp: {
-      preset: "default",
-      quality: 80
-    }
+    //webp: { preset: "default", quality: 80 }
   },
   /*
    * Progressive Web Application
@@ -261,7 +235,7 @@ export default {
    * Sitemap
    */
   sitemap: {
-    hostname: "http://metalsyntax.now.sh/",
+    hostname: "http://metalsyntax.vercel.app/",
     routes: [
       "/",
       "/portfolio",
@@ -286,13 +260,5 @@ export default {
   robots: {
     /*UserAgent: '*',
     Disallow: '/'*/
-  },
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
   }
 };

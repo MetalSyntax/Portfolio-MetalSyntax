@@ -314,20 +314,28 @@ export default {
       ],
       portfolio: [
         {
-          title: "Syntax Stream",
-          company: "Personal",
-          year: "2021",
-          description: this.$t("portfolio.syntaxstream"),
-          link: "https://www.behance.net/gallery/121536125/Stream-Syntax",
-          image: "Syntax-Stream",
+          title: "Business Market Finders",
+          company: "Genesis Agency",
+          year: "2023",
+          description: this.$t("portfolio.businessmarketfinders"),
+          link: "https://www.behance.net/gallery/175709925/Business-Market-Finders",
+          image: "bmf",
         },
         {
-          title: "The Senior Care Foundation",
+          title: "Work To Earn",
+          company: "Equipo 360",
+          year: "2022",
+          description: this.$t("portfolio.worktoearn"),
+          link: "https://www.behance.net/gallery/153310391/Work-To-Earn",
+          image: "worktoearn",
+        },
+        {
+          title: "Sand of Isla Morada",
           company: "Virtually Present",
           year: "2021",
-          description: this.$t("portfolio.theseniorcarefoundation"),
-          link: "https://theseniorcarefoundation.org/",
-          image: "TSCF",
+          description: this.$t("portfolio.sandsofislamorada"),
+          link: "https://sandsofislamorada.com/",
+          image: "sandsofislamorada",
         },
         {
           title: "Lior Pedidos App",
@@ -337,14 +345,6 @@ export default {
           link: "https://lior-app.vercel.app/",
           image: "Lior-App",
         },
-        {
-          title: "Syntax Project Next",
-          company: "Personal",
-          year: "2020",
-          description: this.$t("portfolio.syntaxprojectnext"),
-          link: "https://syntax-project-next.now.sh/",
-          image: "Tech-Cube",
-        }
       ]
     }
   },
