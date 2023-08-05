@@ -1,9 +1,9 @@
 <template>
   <div class="Content overflow-x-hidden">
-    <section class="bg-gray-100">
-      <div class="flex flex-wrap content-center py-8 px-4 bg-white shadow-xl full-display">
+    <section class="relative flex items-center justify-center h-screen overflow-hidden bg-graylight-200">
+      <div class="flex flex-wrap content-center z-10 py-8 px-4">
         <div class="w-full">
-          <img class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-1/5" src="~/assets/img/WonderDiazPhotoGrey.jpg" alt="Wonder Diaz"/>
+          <img class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3" src="~/assets/img/WonderDiazPhotoGrey.jpg" alt="Wonder Diaz"/>
           <h1
             class="text-gray-900 font-semibold items-center text-center text-4xl lg:text-5xl py-2"
           >Wonder Díaz</h1>
@@ -25,6 +25,13 @@
           </vue-typed-js>
         </div>
       </div>
+      <video autoplay loop muted class="absolute z-1 w-auto min-w-full min-h-full max-w-none md:hidden lg:block">
+        <source
+          src="https://res.cloudinary.com/metalsyntax/video/upload/v1691212423/MetalSyntax-Banner-White_gndunm.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
     </section>
     <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
       <div class="flex flex-wrap px-4 py-6 lg:p-4 sm:w-full md:w-4/6 lg:w-4/6 mx-auto my-0">
@@ -65,7 +72,7 @@
         <div
           v-for="item in portfolio"
           v-bind:key="item.id"
-          class="sm:w-full md:w-1/3 lg:w-1/4 px-2 justify-center"
+          class="sm:w-full md:w-1/2 lg:w-1/4 px-2 justify-center"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="500"
@@ -108,7 +115,7 @@
         </div>
         <nuxt-link
             :to="localePath('/portfolio')"
-            class="block bg-aqua-100 text-xl text-black hover:text-white mt-4 px-4 py-2 border-2 rounded-lg"
+            class="block bg-aqua-100 text-xl text-black hover:text-white mt-4 px-4 py-2 border-2 rounded-lg h-full"
           >
           {{ $t('home.more') }}
         </nuxt-link>
@@ -206,7 +213,7 @@ export default {
           image: "Reactjs",
         },
         {
-          title: "Flux Pattern Architecture in React",
+          title: "Flux",
           image: "ReactFlux",
         },
         {
@@ -216,6 +223,10 @@ export default {
         {
           title: "Next",
           image: "Nextjs",
+        },
+        {
+          title: "Jest",
+          image: "jest",
         },
         {
           title: "JSON",
@@ -234,8 +245,24 @@ export default {
           image: "Mongodb-new",
         },
         {
+          title: "Mysql",
+          image: "Mysql",
+        },
+        {
+          title: "Postgresql",
+          image: "Postgresql",
+        },
+        {
           title: "Apache Cordova",
           image: "ApacheCordova",
+        },
+        {
+          title: "SAP AppGyver",
+          image: "AppGyver",
+        },
+        {
+          title: "PHP",
+          image: "PHP",
         },
         {
           title: "Python",
@@ -244,6 +271,14 @@ export default {
         {
           title: "Flask",
           image: "flask",
+        },
+        {
+          title: "Postman",
+          image: "postman",
+        },
+        {
+          title: "Jenkins",
+          image: "Jenkins",
         },
         {
           title: "Bootstrap",
@@ -373,7 +408,7 @@ export default {
 @media (min-width: 1023px) {
   .full-display {
     height: calc(100vh - 72px);
-    background-image: url("../../assets/img/background/home-background-white.jpg");
+    background-image: url("../../assets/img/background/home-background.jpg");
   }
 }
 :root {

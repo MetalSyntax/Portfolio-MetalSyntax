@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex items-center justify-between flex-wrap bg-grayblacked-100 px-6 py-2 shadow-lg w-full z-10 sticky top-0"
+    class="flex items-center justify-between flex-wrap bg-grayblacked-100 px-6 py-2 shadow-lg w-full z-50 sticky top-0"
     :class="{'scrolled': !view.atTopOfPage}"
   >
     <div class="flex items-center flex-shrink-0 text-white mr-6">

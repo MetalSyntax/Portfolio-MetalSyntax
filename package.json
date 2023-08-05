@@ -1,6 +1,6 @@
 {
   "name": "nuxt-portfolio",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "engines": {
     "node": "16.x",
     "npm": "8.x"

@@ -83,11 +83,7 @@ export default {
     },
     {
       src: "~/plugins/i18n.js"
-    },
-    //['gifsicle', { interlaced: true }],
-    //['jpegtran', { progressive: true }],
-    //['optipng', { optimizationLevel: 5 }],
-    //['svgo', { plugins: [{ removeViewBox: false }] }]
+    }
   ],
   /*
    ** Generates
@@ -128,7 +124,6 @@ export default {
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "nuxt-i18n",
-    /*['@nuxtjs/pwa', {icon: false }]*/
   ],
   /*
    *
@@ -201,15 +196,12 @@ export default {
    */
   optimizedImages: {
     inlineImageLimit: 2000,
-    //imagesName: ({ isDev }) => isDev ? "[path][name][hash:optimized].[ext]" : "img/[contenthash:7].[ext]",
-    //responsiveImagesName: ({ isDev }) => isDev ? "[path][name]--[width][hash:optimized].[ext]" : "img/[contenthash:7]-[width].[ext]",
     handleImages: ["jpeg", "png" /*,"webp"*/],
     optimizeImages: true,
     optimizeImagesInDev: false,
     mozjpeg: { quality: 80 },
     optipng: { optimizationLevel: 3 },
     pngquant: false,
-    //webp: { preset: "default", quality: 80 }
   },
   /*
    * Progressive Web Application
@@ -258,7 +250,6 @@ export default {
    *Robot.txt
    */
   robots: {
-    /*UserAgent: '*',
-    Disallow: '/'*/
+    
   }
 };
