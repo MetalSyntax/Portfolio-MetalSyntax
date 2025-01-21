@@ -34,6 +34,14 @@
         <li class="flex-1 mr-2">
           <a
             class="button-filter-project"
+            href="#Komax"
+            @click="itemsFilterkey = 'Komax'"
+            :class="{ active: itemsFilterkey == 'Komax' }"
+          >Komax</a>
+        </li>
+        <li class="flex-1 mr-2">
+          <a
+            class="button-filter-project"
             href="#genesis"
             @click="itemsFilterkey = 'genesis'"
             :class="{ active: itemsFilterkey == 'genesis' }"
@@ -94,6 +102,7 @@
         v-model="itemsFilterkey"
       >
         <option value="All">{{ $t('portfolio.filter') }}</option>
+        <option value="Komax">Komax</option>
         <option value="genesis">Genesis Agency</option>
         <option value="equipo360">Equipo 360 </option>
         <option value="virtually">Virtually Present</option>
@@ -105,6 +114,7 @@
     </div>
     <div
       :class="[
+    itemsFilterkey == 'Komax' ? 'lg:h-screen' : '',
     itemsFilterkey == 'genesis' ? 'lg:h-screen' : '',
     itemsFilterkey == 'equipo360' ? 'lg:h-screen' : '',
     itemsFilterkey == 'virtually' ? 'lg:h-screen' : '',
@@ -181,6 +191,38 @@ export default {
     return {
       itemsFilterkey: "All",
       items: [
+        {
+          title: "Solufar - Recetario Magistral",
+          company: "Freelance",
+          year: "2025",
+          description: this.$t("portfolio.solufar"),
+          link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
+          image: "solufar",
+        },
+        {
+          title: "JC Cake x GAP",
+          company: "Komax",
+          year: "2024",
+          description: this.$t("portfolio.gapxcake"),
+          link: "https://www.behance.net/gallery/200986933/Landing-Page-JC-CAKE-GAP-Peru",
+          image: "gap",
+        },
+        {
+          title: "The North Face - Circular Design",
+          company: "Komax",
+          year: "2024",
+          description: this.$t("portfolio.circulardesign"),
+          link: "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
+          image: "tnf",
+        },
+        {
+          title: "Barbie x Kipling",
+          company: "Komax",
+          year: "2024",
+          description: this.$t("portfolio.barbiexkipling"),
+          link: "https://www.behance.net/gallery/200987501/Landing-x-Kipling-kipling-Peru",
+          image: "kip",
+        },
         {
           title: "Business Market Finders",
           company: "Genesis Agency",
@@ -430,6 +472,11 @@ export default {
     },
     All() {
       return this.items;
+    },
+    Komax() {
+      return this.items.filter(function (item) {
+        return item.company == "Komax";
+      });
     },
     genesis() {
       return this.items.filter(function (item) {

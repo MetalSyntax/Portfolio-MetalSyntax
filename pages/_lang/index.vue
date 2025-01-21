@@ -3,7 +3,7 @@
     <section class="relative flex items-center justify-center h-screen overflow-hidden bg-graylight-200">
       <div class="flex flex-wrap content-center z-10 py-8 px-4">
         <div class="w-full">
-          <img class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3" src="~/assets/img/WonderDiazPhotoGrey.jpg" alt="Wonder Diaz"/>
+          <img class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3" src="~/assets/img/WonderDiazPhoto.jpg" alt="Wonder Diaz"/>
           <h1
             class="text-gray-900 font-semibold items-center text-center text-4xl lg:text-5xl py-2"
           >Wonder Díaz</h1>
@@ -34,14 +34,20 @@
       </video>
     </section>
     <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
-      <div class="flex flex-wrap px-4 py-6 lg:p-4 sm:w-full md:w-4/6 lg:w-4/6 mx-auto my-0">
-        <h3 class="text-gray-900 text-center text-2xl lg:text-3xl" v-html="$t('home.heroparagraph')"></h3>
+      <div class="flex flex-wrap justify-center px-4 py-6 lg:p-4 sm:w-full md:w-4/5 lg:w-5/6 mx-auto my-0">
+        <h2 class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full" v-html="$t('home.titleaboutme')"></h2>
+        <p class="text-gray-900 text-left text-l pb-4 md:pb-2 lg:text-xl" v-html="$t('home.aboutmetext1')"></p>
+        <p class="text-gray-900 text-left text-l pb-4 md:pb-2 lg:text-xl" v-html="$t('home.aboutmetext2')"></p>
+      </div>
+      <div class="flex flex-wrap justify-center px-4 py-6 lg:p-4 sm:w-full md:w-4/5 lg:w-5/6 mx-auto my-0">
+        <h2 class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full" v-html="$t('home.titleskills')"></h2>
+        <!---<p class="text-gray-900 text-left text-l lg:text-xl" v-html="$t('home.skillstext')"></p>--->
       </div>
       <div class="w-full ml-auto lg:py-4 mr-auto">
         <div v-swiper="swiperOption">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="icon in icons" :key="icon.id">
-              <picture class="flex justify-center">
+              <picture class="flex justify-center align-center">
                 <source
                   :title="icon.title" 
                   :alt="icon.title"
@@ -201,6 +207,10 @@ export default {
           image: "WordPress",
         },
         {
+          title: "Magento 2",
+          image: "magento-2",
+        },
+        {
           title: "Vue",
           image: "Vuejs",
         },
@@ -241,6 +251,14 @@ export default {
           image: "express-trans",
         },
         {
+          title: "Git",
+          image: "Git",
+        },
+        {
+          title: "GitHub",
+          image: "github",
+        },
+        {
           title: "MongoDB",
           image: "Mongodb-new",
         },
@@ -277,8 +295,24 @@ export default {
           image: "postman",
         },
         {
+          title: "Docker",
+          image: "Docker",
+        },
+        {
           title: "Jenkins",
           image: "Jenkins",
+        },
+        {
+          title: "cPanel",
+          image: "CPanel",
+        },
+        {
+          title: "CyberPanel",
+          image: "cyberpanel",
+        },
+        {
+          title: "TestFlight",
+          image: "TestFlight",
         },
         {
           title: "Bootstrap",
@@ -297,16 +331,60 @@ export default {
           image: "AdobeXD",
         },
         {
-          title: "Photoshop",
+          title: "Adobe Photoshop",
           image: "photoshop-v2",
         },
         {
-          title: "Illustrator",
+          title: "Adobe Illustrator",
           image: "illustrator-v2",
+        },
+        {
+          title: "Adobe InDesign",
+          image: "Adobe_InDesign",
         },
         {
           title: "Figma",
           image: "Figma",
+        },
+        {
+          title: "Blender",
+          image: "Blender",
+        },
+        {
+          title: "Adobe Express",
+          image: "Adobe_Express",
+        },
+        {
+          title: "Canva",
+          image: "canva",
+        },
+        {
+          title: "Notion",
+          image: "Notion",
+        },
+        {
+          title: "Microsof Office y 365",
+          image: "Microsoft_365",
+        },
+        {
+          title: "Microsoft Visual Basic for Applications",
+          image: "vba",
+        },
+        {
+          title: "ChatGPT",
+          image: "ChatGPT",
+        },
+        {
+          title: "Antropic Claude",
+          image: "claude",
+        },
+        {
+          title: "Google Gemini",
+          image: "google-gemini",
+        },
+        {
+          title: "Microsoft Copilot",
+          image: "copilot",
         },
       ],
       items: [
@@ -349,6 +427,22 @@ export default {
       ],
       portfolio: [
         {
+          title: "Solufar - Recetario Magistral",
+          company: "Freelance",
+          year: "2025",
+          description: this.$t("portfolio.solufar"),
+          link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
+          image: "solufar",
+        },
+        {
+          title: "The North Face - Circular Design",
+          company: "Komax",
+          year: "2024",
+          description: this.$t("portfolio.circulardesign"),
+          link: "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
+          image: "tnf",
+        },
+        {
           title: "Business Market Finders",
           company: "Genesis Agency",
           year: "2023",
@@ -363,23 +457,7 @@ export default {
           description: this.$t("portfolio.worktoearn"),
           link: "https://www.behance.net/gallery/153310391/Work-To-Earn",
           image: "worktoearn",
-        },
-        {
-          title: "Sand of Isla Morada",
-          company: "Virtually Present",
-          year: "2021",
-          description: this.$t("portfolio.sandsofislamorada"),
-          link: "https://sandsofislamorada.com/",
-          image: "sandsofislamorada",
-        },
-        {
-          title: "Lior Pedidos App",
-          company: "Freelance",
-          year: "2020",
-          description: this.$t("portfolio.liorapp"),
-          link: "https://lior-app.vercel.app/",
-          image: "Lior-App",
-        },
+        }
       ]
     }
   },

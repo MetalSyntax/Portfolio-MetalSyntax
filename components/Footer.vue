@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <section class="flex flex-wrap justify-center lg:justify-between items-center w-full py-6 px-4 bg-graylight-200">
-        <h3 class="text-2xl lg:text-3xl text-center lg:text-left leading-5">{{ $t('home.calltoaction') }}</h3>
+        <h3 class="text-nvxl lg:text-2xl text-center lg:text-left leading-5">{{ $t('home.calltoaction') }}</h3>
         <a class="bg-aqua-100 text-2xl text-black hover:text-white px-4 py-2 border-2 rounded-lg" href="mailto:wonderdxk@gmail.com">{{ $t('home.contact') }}</a>
       </section>
       <section class="flex mb-0">
@@ -100,7 +100,7 @@
         </div>
       </section>
       <div class="flex mb-0">
-        <div class="w-full bg-grayblacked-200 pb-4 p-2 shadow-lg">
+        <div class="w-full bg-grayblacked-100 pb-4 p-2">
           <p class="text-center text-gray-200">©{{ new Date().getFullYear() }} | {{ $t('footer.text') }}</p>
         </div>
       </div>

@@ -109,9 +109,31 @@ export default {
           image: "RG"
         },
         {
+          title: this.$t("experience.uts"),
+          yearfirst: "2024",
+          yearlast: "2024",
+          company: "Instituto Universitario de tecnología Antonio José de Sucre",
+          website: "www.uts.edu.ve",
+          task1: this.$t("experience.task1uts"),
+          task2: this.$t("experience.task2uts"),
+          task3: this.$t("experience.task3uts"),
+          image: "uts"
+        },
+        {
+          title: this.$t("experience.komax"),
+          yearfirst: "2023",
+          yearlast: "2024",
+          company: "Komax, S.A.",
+          website: "www.komax.cl",
+          task1: this.$t("experience.task1komax"),
+          task2: this.$t("experience.task2komax"),
+          task3: this.$t("experience.task3komax"),
+          image: "komax_sa"
+        },
+        {
           title: this.$t("experience.genesisagency"),
           yearfirst: "2022",
-          yearlast: this.$t("experience.status"),
+          yearlast: "2023",
           company: "Genesis",
           website: "genesisagency.digital/",
           task1: this.$t("experience.task1genesisagency"),
