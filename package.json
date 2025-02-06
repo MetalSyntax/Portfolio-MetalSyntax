@@ -2,8 +2,8 @@
   "name": "nuxt-portfolio",
   "version": "1.0.35",
   "engines": {
-    "node": "16.x",
-    "npm": "8.x"
+    "node": "18.x",
+    "npm": "9.x"
   },
   "description": "Wonder Diaz Portfolio. Develop by MetalSyntax with Vue.js and TailWindCss.",
   "author": "MetalSyntax",
