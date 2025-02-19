@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full p-4 bg-aqua-200 shadow-lg">
+    <div class="w-full p-4 bg-white">
       <vue-typed-js
             class="justify-center py-2"
             :strings="[
