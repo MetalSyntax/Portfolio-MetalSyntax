@@ -46,7 +46,7 @@
       <div class="w-full ml-auto lg:py-4 mr-auto">
         <div v-swiper="swiperOption">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="icon in icons" :key="icon.id">
+            <div class="swiper-slide bg-white rounded-full flex items-center justify-center text-center p-1" v-for="icon in icons" :key="icon.id">
               <picture class="flex justify-center align-center">
                 <source
                   :title="icon.title" 
@@ -61,12 +61,13 @@
                   type="image/png"
                 />
                 <img
-                  class="w-32 p-1 px-2 inline"
+                  class="w-20 h-20 p-1 px-2 inline"
                   :title="icon.title"
                   :src="require(`~/assets/img/tech/${icon.image}.png`)"
                   :alt="icon.title"
                 />
               </picture>
+              <p class="text-center">{{ icon.title }}</p>
             </div>
           </div>
           <div class="swiper-pagination" slot="pagination"></div>
@@ -148,7 +149,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        slidesPerView: 6,
+        slidesPerView: 8,
         spaceBetween: 10,
         loop: true,
         effect: 'coverflow',
@@ -172,11 +173,11 @@ export default {
         },
         breakpoints: {
           1024: {
-            slidesPerView: 6,
+            slidesPerView: 9,
             spaceBetween: 10,
           },
           768: {
-            slidesPerView: 5,
+            slidesPerView: 6,
             spaceBetween: 10,
           },
           640: {
@@ -184,7 +185,7 @@ export default {
             spaceBetween: 10,
           },
           320: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 10,
           },
         },
@@ -387,7 +388,7 @@ export default {
           image: "Microsoft_365",
         },
         {
-          title: "Microsoft Visual Basic for Applications",
+          title: "Microsoft VBA",
           image: "vba",
         },
         /*{
@@ -407,7 +408,7 @@ export default {
           image: "copilot",
         },*/
       ],
-      items: [
+      /*items: [
         {
           title: this.$t("home.engineering"),
           text: this.$t("home.text1"),
@@ -444,7 +445,7 @@ export default {
           alt: "Service",
           image: "communications",
         },
-      ],
+      ],*/
       portfolio: [
         {
           title: "Solufar - Recetario Magistral",
