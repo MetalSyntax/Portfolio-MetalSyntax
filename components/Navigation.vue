@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex items-center justify-between flex-wrap bg-grayblacked-100 px-6 py-2 shadow-lg w-full z-50 sticky top-0"
+    class="flex items-center justify-between flex-wrap bg-grayblacked-100 px-6 py-2 shadow-lg size-100 z-50 fixed left-4 top-2 mx-2 rounded-md custom-nav"
     :class="{'scrolled': !view.atTopOfPage}"
   >
     <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -139,6 +139,11 @@ export default {
 #logo {
   filter: none;
 }
+nav.custom-nav {
+    left: 12%;
+    transform: translate(-10%, 0);
+    width: 90%;
+}
 nav.scrolled {
   @apply shadow-2xl border-b-0;
 }
@@ -157,6 +162,11 @@ nav.scrolled {
   }
   .button-langs {
     @apply block mt-0;
+  }
+  nav.custom-nav {
+    left: 40%;
+    transform: translate(-30%, 0);
+    width: 70%;
   }
 }
 </style>

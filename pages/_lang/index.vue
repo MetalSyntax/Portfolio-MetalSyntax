@@ -1,6 +1,6 @@
 <template>
   <div class="Content overflow-x-hidden">
-    <section class="relative flex items-center justify-center h-screen overflow-hidden bg-graylight-200">
+    <section class="relative flex items-center justify-center h-screen overflow-hidden bg-graylight-400">
       <div class="flex flex-wrap content-center z-10 py-8 px-4">
         <div class="w-full">
           <img class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3" src="~/assets/img/WonderDiazPhoto.jpg" alt="Wonder Diaz"/>
@@ -275,8 +275,20 @@ export default {
           image: "ApacheCordova",
         },
         {
+          title: "Phonegap",
+          image: "phonegap",
+        },
+        {
+          title: "Ionic",
+          image: "ionic",
+        },
+        {
           title: "SAP AppGyver",
           image: "AppGyver",
+        },
+        {
+          title: "Bubble",
+          image: "bubble-io",
         },
         {
           title: "PHP",
@@ -303,6 +315,14 @@ export default {
           image: "Jenkins",
         },
         {
+          title: "Vercel",
+          image: "vercel",
+        }, 
+        {
+          title: "Netlify",
+          image: "Netlify",
+        },
+        {
           title: "cPanel",
           image: "CPanel",
         },
@@ -327,6 +347,10 @@ export default {
           image: "tailwindcss",
         },
         {
+          title: "Figma",
+          image: "Figma",
+        },
+        {
           title: "Adobe XD",
           image: "AdobeXD",
         },
@@ -343,34 +367,30 @@ export default {
           image: "Adobe_InDesign",
         },
         {
-          title: "Figma",
-          image: "Figma",
-        },
-        {
           title: "Blender",
           image: "Blender",
         },
-        {
+        /*{
           title: "Adobe Express",
           image: "Adobe_Express",
         },
         {
           title: "Canva",
           image: "canva",
-        },
+        },*/
         {
           title: "Notion",
           image: "Notion",
         },
         {
-          title: "Microsof Office y 365",
+          title: "Microsof Office",
           image: "Microsoft_365",
         },
         {
           title: "Microsoft Visual Basic for Applications",
           image: "vba",
         },
-        {
+        /*{
           title: "ChatGPT",
           image: "ChatGPT",
         },
@@ -385,7 +405,7 @@ export default {
         {
           title: "Microsoft Copilot",
           image: "copilot",
-        },
+        },*/
       ],
       items: [
         {
