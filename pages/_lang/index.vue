@@ -384,7 +384,7 @@ export default {
           image: "Notion",
         },
         {
-          title: "Microsof Office",
+          title: "Microsoft Office",
           image: "Microsoft_365",
         },
         {
