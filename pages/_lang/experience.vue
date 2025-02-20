@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full p-4 bg-white">
+    <div class="w-full p-4 mt-24 bg-white">
       <vue-typed-js
             class="justify-center py-2"
             :strings="[
@@ -10,7 +10,7 @@
             :showCursor="false"
             :typeSpeed="100"
           >
-            <h1 class="text-gray-100 font-medium text-center items-center text-3xl lg:text-4xl">
+            <h1 class="text-aqua-200 font-medium text-center items-center text-3xl lg:text-4xl">
               &lt;
               <span class="typing"></span>/&gt;
             </h1>
@@ -41,7 +41,7 @@
                   type="image/png"
                 />
                 <img
-                  class="mx-auto"
+                  class="mx-auto rounded-lg"
                   :src="require(`~/assets/img/bussines/${item.image}.png`)"
                   :alt="item.title"
                   :title="item.title"
@@ -106,7 +106,7 @@ export default {
           task1: this.$t("experience.task1redgage"),
           task2: this.$t("experience.task2redgage"),
           task3: this.$t("experience.task3redgage"),
-          image: "RG"
+          image: "redgage"
         },
         {
           title: this.$t("experience.uts"),
@@ -150,7 +150,7 @@ export default {
           task1: this.$t("experience.task1equipo360"),
           task2: this.$t("experience.task2equipo360"),
           task3: this.$t("experience.task3equipo360"),
-          image: "Team360"
+          image: "equipo360"
         },
         {
           title: this.$t("experience.virtuallypresent"),
@@ -161,7 +161,7 @@ export default {
           task1: this.$t("experience.task1virtuallypresent"),
           task2: this.$t("experience.task2virtuallypresent"),
           task3: this.$t("experience.task3virtuallypresent"),
-          image: "VP"
+          image: "virtually_present"
         },
         {
           title: this.$t("experience.sigloglobal"),

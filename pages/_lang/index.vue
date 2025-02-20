@@ -34,10 +34,80 @@
       </video>
     </section>
     <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
-      <div class="flex flex-wrap justify-center px-4 py-6 lg:p-4 sm:w-full md:w-4/5 lg:w-5/6 mx-auto my-0">
+      <!--<div class="flex flex-wrap justify-center px-4 py-6 lg:p-4 sm:w-full md:w-4/5 lg:w-5/6 mx-auto my-0">
         <h2 class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full" v-html="$t('home.titleaboutme')"></h2>
         <p class="text-gray-900 text-left text-l pb-4 md:pb-2 lg:text-xl" v-html="$t('home.aboutmetext1')"></p>
         <p class="text-gray-900 text-left text-l pb-4 md:pb-2 lg:text-xl" v-html="$t('home.aboutmetext2')"></p>
+      </div>-->
+      <div class="flex flex-wrap justify-center py-6 sm:w-full md:w-full lg:w-full mx-auto my-0">
+        <h2 class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full" v-html="$t('home.titleexperience')"></h2>
+        <div
+          v-for="item in experience"
+          v-bind:key="item.id"
+          class="w-full md:w-full lg:w-1/3 xl:w-1/3 px-2 py-2"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
+          <div class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white border-2 border-white rounded-lg hover:border-aqua-100">
+            <a class="px-2 py-2 w-3/4 md:w-1/3 m-auto" :href="item.website !== '#' ? `https://${item.website}` : item.website" :target="item.website == '#' ? '' : '_blank'">
+            <picture >
+                <source
+                  :title="item.title"
+                  :alt="item.title"
+                  :srcset="require(`~/assets/img/bussines/${item.image}.png?webp`)"
+                  type="image/webp"
+                />
+                <source
+                  :title="item.title"
+                  :alt="item.title"
+                  :srcset="require(`~/assets/img/bussines/${item.image}.png`)"
+                  type="image/png"
+                />
+                <img
+                  class="mx-auto rounded-lg w-48"
+                  :src="require(`~/assets/img/bussines/${item.image}.png`)"
+                  :alt="item.title"
+                  :title="item.title"
+                />
+              </picture>
+              </a>
+            <div
+              class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center md:justify-start lg:justify-start xl:justify-start items-center"
+            >
+              <h2
+                class="font-bold text-xl mb-2 sm:text-center md:text-left lg:text-left w-full"
+              >
+                {{ item.title }}
+              </h2>
+              <p
+                class="text-gray-700 text-base sm:text-center md:text-left lg:text-left w-full"
+              >
+                {{ item.yearfirst }} - {{ item.yearlast }}
+              </p>
+              <a class="text-left" :href="item.website !== '#' ? `https://${item.website}` : item.website" :target="item.website == '#' ? '' : '_blank'">
+              <p
+                class="text-gray-700 text-base sm:text-center md:text-left lg:text-left w-full text-aqua-200"
+              >
+                {{ item.company }}
+              </p>
+              </a>
+              <ul class="list-disc text-center md:text-left w-full">
+                <li class="list-none">{{ item.task1 }}</li>
+                <li class="list-none">{{ item.task2 }}</li>
+                <li class="list-none">{{ item.task3 }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+        <nuxt-link
+            :to="localePath('/experience')"
+            class="flex flex-wrap justify-center items-center bg-aqua-100 text-xl text-black hover:text-aqua-200 hover:bg-white mt-4 px-4 py-2 border-2 hover:border-aqua-100 rounded-lg"
+          >
+          {{ $t('home.more') }}
+        </nuxt-link>
+      </div>
       </div>
       <div class="flex flex-wrap justify-center px-4 py-6 lg:p-4 sm:w-full md:w-4/5 lg:w-5/6 mx-auto my-0">
         <h2 class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full" v-html="$t('home.titleskills')"></h2>
@@ -61,7 +131,7 @@
                   type="image/png"
                 />
                 <img
-                  class="w-20 h-20 p-1 px-2 inline"
+                  class="w-16 p-1 px-2 inline"
                   :title="icon.title"
                   :src="require(`~/assets/img/tech/${icon.image}.png`)"
                   :alt="icon.title"
@@ -117,12 +187,38 @@
                 class="text-center text-aqua-100 font-semibold text-sm pb-1 block opacity-75"
               >{{ item.company }} - {{ item.year }}</p>
               <p class="text-gray-700 text-base text-center p-2">{{ item.description }}</p>
+              <picture class="flex justify-center align-center">
+                <source
+                  :title="item.iconTitle" 
+                  :alt="item.iconTitle"
+                  :srcset="require(`~/assets/img/tech/${item.iconImage}.png?webp`)"
+                  type="image/webp"
+                  loading="lazy"
+                  @error="handleImageError"
+                />
+                <source
+                  :title="item.iconTitle"
+                  :alt="item.iconTitle"
+                  :srcset="require(`~/assets/img/tech/${item.iconImage}.png`)"
+                  type="image/png"
+                  loading="lazy"
+                  @error="handleImageError"
+                />
+                <img
+                  class="w-12 p-1 px-2 inline"
+                  :title="item.iconTitle"
+                  :src="require(`~/assets/img/tech/${item.iconImage}.png`)"
+                  :alt="item.iconTitle"
+                  loading="lazy"
+                  @error="handleImageError"
+                />
+              </picture>
             </div>
           </div>
         </div>
         <nuxt-link
             :to="localePath('/portfolio')"
-            class="block bg-aqua-100 text-xl text-black hover:text-white mt-4 px-4 py-2 border-2 rounded-lg h-full"
+            class="flex flex-wrap justify-center items-center bg-aqua-100 text-xl text-black hover:text-aqua-200 hover:bg-white mt-4 px-4 py-2 border-2 hover:border-aqua-100 rounded-lg"
           >
           {{ $t('home.more') }}
         </nuxt-link>
@@ -190,6 +286,41 @@ export default {
           },
         },
       },
+      experience: [
+        {
+          title: this.$t("experience.redgage"),
+          yearfirst: "2021",
+          yearlast: this.$t("experience.status"),
+          company: "RedGage, LLC.",
+          website: "www.redgage.com",
+          task1: this.$t("experience.task1redgage"),
+          task2: this.$t("experience.task2redgage"),
+          task3: this.$t("experience.task3redgage"),
+          image: "redgage"
+        },
+        {
+          title: this.$t("experience.uts"),
+          yearfirst: "2024",
+          yearlast: "2024",
+          company: "Instituto Universitario de tecnología Antonio José de Sucre",
+          website: "www.uts.edu.ve",
+          task1: this.$t("experience.task1uts"),
+          task2: this.$t("experience.task2uts"),
+          task3: this.$t("experience.task3uts"),
+          image: "uts"
+        },
+        {
+          title: this.$t("experience.komax"),
+          yearfirst: "2023",
+          yearlast: "2024",
+          company: "Komax, S.A.",
+          website: "www.komax.cl",
+          task1: this.$t("experience.task1komax"),
+          task2: this.$t("experience.task2komax"),
+          task3: this.$t("experience.task3komax"),
+          image: "komax_sa"
+        }
+      ],
       icons: [
         {
           title: "HTML5",
@@ -202,6 +333,10 @@ export default {
         {
           title: "Javascript",
           image: "JS",
+        },
+        {
+          title: "Typescript",
+          image: "typescript",
         },
         {
           title: "WordPress",
@@ -225,7 +360,7 @@ export default {
         },
         {
           title: "Flux",
-          image: "ReactFlux",
+          image: "flux",
         },
         {
           title: "Redux",
@@ -233,23 +368,31 @@ export default {
         },
         {
           title: "Next",
-          image: "Nextjs",
+          image: "next-js",
         },
         {
           title: "Jest",
-          image: "jest",
+          image: "Jest-",
         },
         {
           title: "JSON",
           image: "JSON",
         },
         {
-          title: "Node",
-          image: "NodeJS-black",
+          title: "Node.js",
+          image: "nodejs",
+        },
+        {
+          title: "Webpack",
+          image: "webpack",
+        },
+        {
+          title: "Babel",
+          image: "babel",
         },
         {
           title: "Express",
-          image: "express-trans",
+          image: "express",
         },
         {
           title: "Git",
@@ -261,11 +404,11 @@ export default {
         },
         {
           title: "MongoDB",
-          image: "Mongodb-new",
+          image: "mongodb-original",
         },
         {
           title: "Mysql",
-          image: "Mysql",
+          image: "mysql-",
         },
         {
           title: "Postgresql",
@@ -273,7 +416,7 @@ export default {
         },
         {
           title: "Apache Cordova",
-          image: "ApacheCordova",
+          image: "cordova",
         },
         {
           title: "Phonegap",
@@ -284,12 +427,16 @@ export default {
           image: "ionic",
         },
         {
+          title: "Expo",
+          image: "expo",
+        },
+        {
           title: "SAP AppGyver",
           image: "AppGyver",
         },
         {
           title: "Bubble",
-          image: "bubble-io",
+          image: "bubble",
         },
         {
           title: "PHP",
@@ -321,7 +468,7 @@ export default {
         }, 
         {
           title: "Netlify",
-          image: "Netlify",
+          image: "netlify-n",
         },
         {
           title: "cPanel",
@@ -334,6 +481,14 @@ export default {
         {
           title: "TestFlight",
           image: "TestFlight",
+        },
+        {
+          title: "LESS",
+          image: "less",
+        },
+        {
+          title: "SASS",
+          image: "sass",
         },
         {
           title: "Bootstrap",
@@ -454,6 +609,8 @@ export default {
           description: this.$t("portfolio.solufar"),
           link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
           image: "solufar",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "The North Face - Circular Design",
@@ -462,6 +619,8 @@ export default {
           description: this.$t("portfolio.circulardesign"),
           link: "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
           image: "tnf",
+          iconTitle: "Magento 2",
+          iconImage: "magento-2"
         },
         {
           title: "Business Market Finders",
@@ -470,6 +629,8 @@ export default {
           description: this.$t("portfolio.businessmarketfinders"),
           link: "https://www.behance.net/gallery/175709925/Business-Market-Finders",
           image: "bmf",
+          iconTitle: "SAP AppGyver",
+          iconImage: "AppGyver"
         },
         {
           title: "Work To Earn",
@@ -478,6 +639,8 @@ export default {
           description: this.$t("portfolio.worktoearn"),
           link: "https://www.behance.net/gallery/153310391/Work-To-Earn",
           image: "worktoearn",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         }
       ]
     }
@@ -488,6 +651,11 @@ export default {
   },
   directives: {
     swiper: directive
+  },
+  methods: {
+    handleImageError(event) {
+      event.target.style.display = 'none';
+    }
   },
 };
 </script>

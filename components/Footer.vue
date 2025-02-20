@@ -2,7 +2,7 @@
   <footer class="footer">
     <section class="flex flex-wrap justify-center lg:justify-between items-center w-full py-6 px-4 bg-graylight-200">
         <h3 class="text-nvxl lg:text-2xl text-center lg:text-left leading-5">{{ $t('home.calltoaction') }}</h3>
-        <a class="bg-aqua-100 text-2xl text-black hover:text-white px-4 py-2 border-2 rounded-lg" href="mailto:wonderdxk@gmail.com">{{ $t('home.contact') }}</a>
+        <a class="flex flex-wrap justify-center items-center bg-aqua-100 text-xl text-black hover:text-aqua-200 hover:bg-white mt-4 px-4 py-2 border-2 hover:border-aqua-100 rounded-lg" href="mailto:wonderdxk@gmail.com">{{ $t('home.contact') }}</a>
       </section>
       <section class="flex mb-0">
         <div

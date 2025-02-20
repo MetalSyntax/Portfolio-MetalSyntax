@@ -34,6 +34,7 @@ export default {
     titleaboutme: 'Sobre mim',
     aboutmetext1: 'Sou engenheiro industrial especializado em design e desenvolvimento web, com ampla experiência em ferramentas e tecnologias como Adobe XD, Figma, WordPress, React, Vue e outras. Ao longo da minha carreira, criei sites, lojas online, aplicações híbridas e aplicações web progressivas (PWA) utilizando tecnologias como WordPress com Divi/Elementor, React com Next.js/Redux, Vue com Nuxt.js e também trabalhei com frameworks como Cordova e React Native.',
     aboutmetext2: 'O meu foco é a melhoria contínua e o impacto positivo nas organizações e nos seus produtos. Através da minha experiência multidisciplinar, participei em projetos que tiveram um impacto real e duradouro. Estou apaixonado por tecnologia e estou constantemente à procura de maneiras de melhorar e expandir as minhas habilidades. Utilizo os meus conhecimentos e experiência para criar soluções inovadoras e contribuir para o crescimento e sucesso dos projetos em que participo.',
+    titleexperience: 'Experiência',
     titleskills: 'Habilidades',
     skillstext: "Tenho experiência em desenvolvimento e desenhando com nas seguintes tecnologias e ferramentas",
     engineering: 'Engenharia',

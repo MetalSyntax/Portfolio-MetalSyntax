@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full p-4 bg-white">
+    <div class="w-full p-4 mt-24 bg-white">
       <vue-typed-js
             class="justify-center py-2"
             :strings="[
@@ -10,7 +10,7 @@
             :showCursor="false"
             :typeSpeed="100"
           >
-            <h1 class="text-gray-100 font-medium text-center items-center text-3xl lg:text-4xl">
+            <h1 class="text-aqua-200 font-medium text-center items-center text-3xl lg:text-4xl">
               &lt;
               <span class="typing"></span>/&gt;
             </h1>

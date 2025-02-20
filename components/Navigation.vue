@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex items-center justify-between flex-wrap bg-grayblacked-100 px-6 py-2 shadow-lg size-100 z-50 fixed left-4 top-2 mx-2 rounded-md custom-nav"
+    class="flex items-center justify-between flex-wrap bg-grayblacked-100/95 px-6 py-2 shadow-lg size-100 z-50 fixed left-4 top-2 mx-2 rounded-md custom-nav"
     :class="{'scrolled': !view.atTopOfPage}"
   >
     <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -25,7 +25,8 @@
         </svg>
       </button>
     </div>
-    <div :class="open ? 'block': 'hidden'" class="w-full block lg:flex lg:items-center lg:w-auto">
+    <div  :class="open ? 'block': 'hidden'"
+    class="w-full block lg:flex lg:items-center lg:w-auto ">
       <div class="text-md lg:flex-grow my-1">
         <nuxt-link 
         :to="localePath('/')" 
@@ -140,9 +141,9 @@ export default {
   filter: none;
 }
 nav.custom-nav {
-    left: 12%;
-    transform: translate(-10%, 0);
-    width: 90%;
+  left: 1rem;
+  transform: translate(-1rem);
+  width: calc(100% - 1rem);
 }
 nav.scrolled {
   @apply shadow-2xl border-b-0;
@@ -162,11 +163,6 @@ nav.scrolled {
   }
   .button-langs {
     @apply block mt-0;
-  }
-  nav.custom-nav {
-    left: 40%;
-    transform: translate(-30%, 0);
-    width: 70%;
   }
 }
 </style>
