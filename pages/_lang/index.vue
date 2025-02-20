@@ -67,7 +67,7 @@
                   :alt="icon.title"
                 />
               </picture>
-              <p class="text-center">{{ icon.title }}</p>
+              <p class="text-center text-sm">{{ icon.title }}</p>
             </div>
           </div>
           <div class="swiper-pagination" slot="pagination"></div>
@@ -173,15 +173,15 @@ export default {
         },
         breakpoints: {
           1024: {
-            slidesPerView: 9,
+            slidesPerView: 7,
             spaceBetween: 10,
           },
           768: {
-            slidesPerView: 6,
+            slidesPerView: 5,
             spaceBetween: 10,
           },
           640: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 10,
           },
           320: {
