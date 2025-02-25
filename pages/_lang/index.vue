@@ -44,7 +44,7 @@
         <div
           v-for="item in experience"
           v-bind:key="item.id"
-          class="w-full md:w-full lg:w-1/3 xl:w-1/3 px-2 py-2"
+          class="w-full md:w-full lg:w-1/3 xl:w-1/3 px-4 py-2"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="500"
@@ -65,7 +65,7 @@
                   type="image/png"
                 />
                 <img
-                  class="mx-auto rounded-lg w-48"
+                  class="mx-auto rounded-lg w-32"
                   :src="require(`~/assets/img/bussines/${item.image}.png`)"
                   :alt="item.title"
                   :title="item.title"
@@ -76,23 +76,23 @@
               class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center md:justify-start lg:justify-start xl:justify-start items-center"
             >
               <h2
-                class="font-bold text-xl mb-2 sm:text-center md:text-left lg:text-left w-full"
+                class="font-bold text-xl mb-2 sm:text-left md:text-left lg:text-left w-full"
               >
                 {{ item.title }}
               </h2>
               <p
-                class="text-gray-700 text-base sm:text-center md:text-left lg:text-left w-full"
+                class="text-gray-700 text-base sm:text-left md:text-left lg:text-left w-full"
               >
                 {{ item.yearfirst }} - {{ item.yearlast }}
               </p>
               <a class="text-left" :href="item.website !== '#' ? `https://${item.website}` : item.website" :target="item.website == '#' ? '' : '_blank'">
               <p
-                class="text-gray-700 text-base sm:text-center md:text-left lg:text-left w-full text-aqua-200"
+                class="text-gray-700 text-base sm:text-left md:text-left lg:text-left w-full text-aqua-200"
               >
                 {{ item.company }}
               </p>
               </a>
-              <ul class="list-disc text-center md:text-left w-full">
+              <ul class="list-disc lg:text-left sm:text-left md:text-left w-full">
                 <li class="list-none">{{ item.task1 }}</li>
                 <li class="list-none">{{ item.task2 }}</li>
                 <li class="list-none">{{ item.task3 }}</li>
@@ -149,7 +149,7 @@
         <div
           v-for="item in portfolio"
           v-bind:key="item.id"
-          class="sm:w-full md:w-1/2 lg:w-1/4 px-2 justify-center"
+          class="sm:w-full md:w-1/2 lg:w-1/4 px-2 py-2 justify-center"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="500"

@@ -165,6 +165,32 @@
                 class="text-center text-aqua-100 font-semibold text-sm block opacity-75"
               >{{ item.company }} - {{ item.year }}</p>
               <p class="text-gray-700 text-base text-center p-2">{{ item.description }}</p>
+              <picture class="flex justify-center align-center">
+                <source
+                  :title="item.iconTitle" 
+                  :alt="item.iconTitle"
+                  :srcset="require(`~/assets/img/tech/${item.iconImage}.png?webp`)"
+                  type="image/webp"
+                  loading="lazy"
+                  @error="handleImageError"
+                />
+                <source
+                  :title="item.iconTitle"
+                  :alt="item.iconTitle"
+                  :srcset="require(`~/assets/img/tech/${item.iconImage}.png`)"
+                  type="image/png"
+                  loading="lazy"
+                  @error="handleImageError"
+                />
+                <img
+                  class="w-12 p-1 px-2 inline"
+                  :title="item.iconTitle"
+                  :src="require(`~/assets/img/tech/${item.iconImage}.png`)"
+                  :alt="item.iconTitle"
+                  loading="lazy"
+                  @error="handleImageError"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -198,6 +224,8 @@ export default {
           description: this.$t("portfolio.solufar"),
           link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
           image: "solufar",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "JC Cake x GAP",
@@ -206,6 +234,8 @@ export default {
           description: this.$t("portfolio.gapxcake"),
           link: "https://www.behance.net/gallery/200986933/Landing-Page-JC-CAKE-GAP-Peru",
           image: "gap",
+          iconTitle: "Magento 2",
+          iconImage: "magento-2"
         },
         {
           title: "The North Face - Circular Design",
@@ -214,6 +244,8 @@ export default {
           description: this.$t("portfolio.circulardesign"),
           link: "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
           image: "tnf",
+          iconTitle: "Magento 2",
+          iconImage: "magento-2"
         },
         {
           title: "Barbie x Kipling",
@@ -222,6 +254,8 @@ export default {
           description: this.$t("portfolio.barbiexkipling"),
           link: "https://www.behance.net/gallery/200987501/Landing-x-Kipling-kipling-Peru",
           image: "kip",
+          iconTitle: "Magento 2",
+          iconImage: "magento-2"
         },
         {
           title: "Business Market Finders",
@@ -230,6 +264,8 @@ export default {
           description: this.$t("portfolio.businessmarketfinders"),
           link: "https://www.behance.net/gallery/175709925/Business-Market-Finders",
           image: "bmf",
+          iconTitle: "SAP AppGyver",
+          iconImage: "AppGyver"
         },
         {
           title: "La Martena",
@@ -238,6 +274,8 @@ export default {
           description: this.$t("portfolio.lamartena"),
           link: "http://lamartena.com/",
           image: "lamartena",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "PasareLab",
@@ -246,6 +284,8 @@ export default {
           description: this.$t("portfolio.pasarelab"),
           link: "https://www.behance.net/gallery/153310385/PasareLab",
           image: "pasarelab",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Work To Earn",
@@ -254,6 +294,8 @@ export default {
           description: this.$t("portfolio.worktoearn"),
           link: "https://www.behance.net/gallery/153310391/Work-To-Earn",
           image: "worktoearn",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Den Gode Fisk Fra Havet",
@@ -262,6 +304,8 @@ export default {
           description: this.$t("portfolio.dengodefiskfrahavet"),
           link: "https://www.behance.net/gallery/153310395/Den-Gode-Fisk-Fra-Havet",
           image: "dengodefiskfrahavet",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Boundless Builders",
@@ -270,6 +314,8 @@ export default {
           description: this.$t("portfolio.boundlessbuilders"),
           link: "https://www.behance.net/gallery/153307579/Boundless-Builders",
           image: "boundless-builders",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Clinica Medica",
@@ -278,6 +324,8 @@ export default {
           description: this.$t("portfolio.clinicamedica"),
           link: "https://www.behance.net/gallery/153307581/Clinica-Medica",
           image: "clinicamedica",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Sand of Isla Morada",
@@ -286,6 +334,8 @@ export default {
           description: this.$t("portfolio.sandsofislamorada"),
           link: "https://sandsofislamorada.com/",
           image: "sandsofislamorada",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "The Senior Care Foundation",
@@ -294,6 +344,8 @@ export default {
           description: this.$t("portfolio.theseniorcarefoundation"),
           link: "https://theseniorcarefoundation.org/",
           image: "TSCF",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Vitalcare",
@@ -302,6 +354,8 @@ export default {
           description: this.$t("portfolio.vitalcare"),
           link: "https://www.behance.net/gallery/175651013/Vitalcare",
           image: "vitalcare",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Syntax Stream",
@@ -310,6 +364,8 @@ export default {
           description: this.$t("portfolio.syntaxstream"),
           link: "https://www.behance.net/gallery/121536125/Stream-Syntax",
           image: "Syntax-Stream",
+          iconTitle: "Adobe XD",
+          iconImage: "AdobeXD"
         },
         {
           title: "Lior Pedidos App",
@@ -318,6 +374,8 @@ export default {
           description: this.$t("portfolio.liorapp"),
           link: "https://lior-app.vercel.app/",
           image: "Lior-App",
+          iconTitle: "Nuxt.js",
+          iconImage: "Nuxt"
         },
         {
           title: "Syntax Project Next",
@@ -326,6 +384,8 @@ export default {
           description: this.$t("portfolio.syntaxprojectnext"),
           link: "https://syntax-project-next.now.sh/",
           image: "Tech-Cube",
+          iconTitle: "Next.js",
+          iconImage: "Nextjs"
         },
         {
           title: "Classic Wheels Usa",
@@ -334,6 +394,8 @@ export default {
           description: this.$t("portfolio.classicwheelsusa"),
           link: "https://classicwheelsusa.com/",
           image: "Classic-Wheels-Usa",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Semilla Multicultural-",
@@ -342,6 +404,8 @@ export default {
           description: this.$t("portfolio.semillamulticultural"),
           link: "https://semillamulticultural.com/",
           image: "Semilla-Multicultural",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Bardisa LYL Center",
@@ -350,6 +414,8 @@ export default {
           description: this.$t("portfolio.bardisalylcenter"),
           link: "https://bardisalylcenter.com/",
           image: "BDS",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Radio Caribe",
@@ -358,6 +424,8 @@ export default {
           description: this.$t("portfolio.radiocaribe"),
           link: "http://www.radiocaribe.com/",
           image: "Radio-Caribe",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Florida Doctors Group",
@@ -366,6 +434,8 @@ export default {
           description: this.$t("portfolio.floridadoctorsgroup"),
           link: "https://fdgmso.com/",
           image: "FDGMSO",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Syntax Note",
@@ -373,7 +443,9 @@ export default {
           year: "2019",
           description: this.$t("portfolio.syntaxnote"),
           link: "https://metalsyntax.github.io/Notes/",
-          image: "Syntax-Note"
+          image: "Syntax-Note",
+          iconTitle: "Javascript",
+          iconImage: "JS"
         },
         {
           title: "Syntax Monitor",
@@ -381,7 +453,9 @@ export default {
           year: "2019",
           description: this.$t("portfolio.syntaxmonitor"),
           link: "https://metalsyntax.github.io/Syntax-Monitor/",
-          image: "Syntax-Monitor"
+          image: "Syntax-Monitor",
+          iconTitle: "Javascript",
+          iconImage: "JS"
         },
         {
           title: "Ofertas del Motor",
@@ -390,6 +464,8 @@ export default {
           description: this.$t("portfolio.ofertasdelmotor"),
           link: "https://www.behance.net/gallery/96603035/ODM",
           image: "Ofertas-del-motor",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Mi Secretaria Virtual",
@@ -398,6 +474,8 @@ export default {
           description: this.$t("portfolio.misecretariavirtual"),
           link: "https://www.behance.net/gallery/96600341/MSV",
           image: "Mi-Secretaria-Virtual",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Renderizados",
@@ -406,6 +484,8 @@ export default {
           description: this.$t("portfolio.renderizados"),
           link: "https://www.behance.net/gallery/96600761/Renderizados",
           image: "Renderizados",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Soluciones Web",
@@ -414,6 +494,8 @@ export default {
           description: this.$t("portfolio.solucionesweb"),
           link: "https://www.behance.net/gallery/79186095/Soluciones-Web",
           image: "Soluciones-Web",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "AW Travel Guides",
@@ -422,6 +504,8 @@ export default {
           description: this.$t("portfolio.awtravelguides"),
           link: "https://www.behance.net/gallery/79183575/AW-Travel-Guides",
           image: "AW-Travel-Guides",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Traductores Malaga",
@@ -430,6 +514,8 @@ export default {
           description: this.$t("portfolio.traductoresmalaga"),
           link: "https://www.behance.net/gallery/72284307/Traductores-Malaga",
           image: "Traductores-Malaga",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Domiserver",
@@ -437,7 +523,9 @@ export default {
           year: "2018",
           description: this.$t("portfolio.domiserver"),
           link: "https://www.behance.net/gallery/66801367/DomiServer",
-          image: "DomiServer"
+          image: "DomiServer",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Latin Talents",
@@ -445,7 +533,9 @@ export default {
           year: "2018",
           description: this.$t("portfolio.latintalents"),
           link: "https://www.behance.net/gallery/66800623/LatinTalents",
-          image: "LatinTalens"
+          image: "LatinTalens",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
         },
         {
           title: "Methods",
@@ -453,7 +543,9 @@ export default {
           year: "2017",
           description: this.$t("portfolio.methods"),
           link: "https://metalsyntax.github.io/Methods/",
-          image: "Methods"
+          image: "Methods",
+          iconTitle: "PhoneGap",
+          iconImage: "phonegap"
         },
         {
           title: "Code of Paid",
@@ -461,7 +553,9 @@ export default {
           year: "2017",
           description: this.$t("portfolio.codeofpaid"),
           link: "https://www.behance.net/gallery/66803173/Code-of-Paid",
-          image: "Yanbal-Code-Of-Paid"
+          image: "Yanbal-Code-Of-Paid",
+          iconTitle: "PhoneGap",
+          iconImage: "phonegap"
         },
       ],
     };
@@ -513,6 +607,11 @@ export default {
         return item.company == "Personal";
       });
     },
+  },
+  methods: {
+    handleImageError(event) {
+      event.target.style.display = 'none';
+    }
   },
 };
 </script>
