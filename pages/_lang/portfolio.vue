@@ -218,8 +218,48 @@ export default {
       itemsFilterkey: "All",
       items: [
         {
-          title: "Solufar - Recetario Magistral",
+          title: "Crux Food",
           company: "Freelance",
+          year: "2025",
+          description: this.$t("portfolio.cruxfood"),
+          link: "https://www.behance.net/gallery/220324661/Crux-Food-Re-design",
+          image: "Crux-Food",
+          iconTitle: "WordPress",
+          iconImage: "WordPress"
+        },
+        {
+          title: "Ecommerce App",
+          company: "Personal",
+          year: "2025",
+          description: this.$t("portfolio.ecommerceapp"),
+          link: "https://www.behance.net/gallery/220324399/Ecommerce-App",
+          image: "Ecommerce-App",
+          iconTitle: "Reactjs",
+          iconImage: "Reactjs"
+        },
+        {
+          title: "Dashboard Particles",
+          company: "Personal",
+          year: "2025",
+          description: this.$t("portfolio.dashboardparticles"),
+          link: "https://www.behance.net/gallery/220321939/Dashboard-Particle",
+          image: "Dasboard-Particles",
+          iconTitle: "Figma",
+          iconImage: "Figma"
+        },
+        {
+          title: "Class Manager",
+          company: "Freelance",
+          year: "2025",
+          description: this.$t("portfolio.classmanager"),
+          link: "https://www.behance.net/gallery/220323193/Class-Manager-App",
+          image: "Class-Manager",
+          iconTitle: "Ionic",
+          iconImage: "ionic"
+        },
+        {
+          title: "Solufar - Recetario Magistral",
+          company: "Personal",
           year: "2025",
           description: this.$t("portfolio.solufar"),
           link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
@@ -272,7 +312,7 @@ export default {
           company: "Genesis Agency",
           year: "2023",
           description: this.$t("portfolio.lamartena"),
-          link: "http://lamartena.com/",
+          link: "https://www.behance.net/gallery/175647981/La-Martena",
           image: "lamartena",
           iconTitle: "WordPress",
           iconImage: "WordPress"
@@ -444,8 +484,8 @@ export default {
           description: this.$t("portfolio.syntaxnote"),
           link: "https://metalsyntax.github.io/Notes/",
           image: "Syntax-Note",
-          iconTitle: "Javascript",
-          iconImage: "JS"
+          iconTitle: "Angurjs",
+          iconImage: "angularjs"
         },
         {
           title: "Syntax Monitor",
@@ -454,8 +494,8 @@ export default {
           description: this.$t("portfolio.syntaxmonitor"),
           link: "https://metalsyntax.github.io/Syntax-Monitor/",
           image: "Syntax-Monitor",
-          iconTitle: "Javascript",
-          iconImage: "JS"
+          iconTitle: "Jquery",
+          iconImage: "jquery"
         },
         {
           title: "Ofertas del Motor",

@@ -57,7 +57,11 @@ export default {
   portfolio: {
     title: 'Portfolio',
     heroparagraph: 'Projects in which I have participated as a developer and/or web designer, and to which I have realized maintenance and improvements, while I was active in companies or projects.',
-   solufar: "We are one of the pharmacies that make master formulas in Chile",
+    cruxfood: "Strategic support in institutional food services, culinary events, and catering services.",
+    ecommerceapp: "A powerful mobile e-commerce application",
+    dashboardparticles: "Dashboard with interactive charts to visualize information.",
+    classmanager: "Seamless experience managing bookings, students, and tutors.",
+    solufar: "We are one of the pharmacies that make master formulas in Chile",
     gapxcake: "Campaign landing page for GAP with the artist JC Cake in Peru",
     circulardesign: "Campaign landing page for The North Face about Circular Design in Peru",
     barbiexkipling: "Campaign landing page for Kipling with Barbie in Peru",

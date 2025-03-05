@@ -57,6 +57,10 @@ export default {
   portfolio: {
     title: 'Portafolio',
     heroparagraph: 'Proyectos en los que he participado como desarrollador y/o diseñador web, y a los que he realizado mantenimientos y mejoras, mientras estuve activo en empresas o proyectos.',
+    cruxfood: 'Apoyo estratégico en alimentación institucional, eventos gastronómicos y servicios de alimentación.',
+    ecommerceapp: 'Una potente aplicación de comercio electrónico móvil',
+    dashboardparticles:'Dashboard con gráficos interactivos para observar información visual.',
+    classmanager: 'Experiencia fluida en la gestión de reservas, estudiantes y tutores',
     solufar: 'Somos de las Farmacias que hacen recetas magistrales en Chile',
     gapxcake: 'Landing de campaña de GAP con el artista JC Cake en Peru',
     circulardesign: 'Landing de campaña de The North Face sobre Circular Design en Peru',
