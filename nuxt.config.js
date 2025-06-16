@@ -39,7 +39,7 @@ export default {
         href: "http://metalsyntax.vercel.app/"
       },
       {
-        rel: "alternate",
+        rel: "canonical",
         hreflang: "es",
         href: "http://metalsyntax.vercel.app/es"
       },

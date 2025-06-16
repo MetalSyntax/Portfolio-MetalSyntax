@@ -45,10 +45,10 @@
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://twitter.com/MetalSyntax" target="_blank">
+            <a class="p-1" href="https://x.com/MetalSyntax" target="_blank">
               <img
                 class="icons-social"
-                src="../assets/img/social/twitter.png"
+                src="../assets/img/social/twitterx.png"
                 alt="Twitter"
                 height="35"
                 width="35"
@@ -58,16 +58,16 @@
               <img
                 class="icons-social"
                 src="../assets/img/social/gmail.png"
-                alt="Twitter"
+                alt="Gmail"
                 height="35"
                 width="35"
               />
             </a>
-            <a class="p-1" href="https://api.whatsapp.com/send?phone=584241143120" target="_blank">
+            <a class="p-1" href="https://api.whatsapp.com/send?phone=584123654728" target="_blank">
               <img
                 class="icons-social"
                 src="../assets/img/social/whatsapp.png"
-                alt="Twitter"
+                alt="WhatsApp"
                 height="35"
                 width="35"
               />
