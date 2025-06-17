@@ -210,7 +210,10 @@ export default {
    */
   image: {
     domains: ['metalsyntax.vercel.app'],
-    provider: 'ipx'
+    provider: 'ipx',
+    ipx: {
+      baseURL: 'https://metalsyntax.vercel.app'
+    }
   },
   /*
    * Optimize Images
