@@ -61,11 +61,20 @@
       </video>
     </section>
     <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
-      <!--<div class="flex flex-wrap justify-center px-4 py-6 lg:p-4 sm:w-full md:w-4/5 lg:w-5/6 mx-auto my-0">
-        <h2 class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full" v-html="$t('home.titleaboutme')"></h2>
-        <p class="text-gray-900 text-left text-l pb-4 md:pb-2 lg:text-xl" v-html="$t('home.aboutmetext1')"></p>
-        <p class="text-gray-900 text-left text-l pb-4 md:pb-2 lg:text-xl" v-html="$t('home.aboutmetext2')"></p>
-      </div>-->
+      <div class="max-w-4xl mx-auto px-6 py-12 sm:py-16 lg:py-20">
+        <div class="space-y-8">
+          <h2
+            class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full"
+          >
+            {{ $t("home.titleaboutme") }}
+          </h2>
+
+          <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+            <p class="text-justify" v-html="$t('home.aboutmetext1')"></p>
+            <p class="text-justify" v-html="$t('home.aboutmetext2')"></p>
+          </div>
+        </div>
+      </div>
       <div
         class="flex flex-wrap justify-center py-6 sm:w-full md:w-full lg:w-full mx-auto my-0"
       >
@@ -177,7 +186,7 @@
             :to="localePath('/experience')"
             class="flex flex-wrap justify-center items-center bg-aqua-100 text-xl text-black hover:text-aqua-200 hover:bg-white mt-4 px-4 py-2 border-2 hover:border-aqua-100 rounded-lg"
           >
-            {{ $t("home.more") }}
+            {{ $t("home.more") + " " + $t("experience.title") }}
           </nuxt-link>
         </div>
       </div>
@@ -316,37 +325,41 @@
             <p class="text-gray-700 text-base text-center p-2">
               {{ item.description }}
             </p>
-            <div class="flex flex-nowrap justify-center overflow-x-auto py-2 hide-scrollbar">
-            <div 
-              v-for="(icon, index) in item.icons"
-              :key="index"
-              class="flex-shrink-0"
+            <div
+              class="flex flex-nowrap justify-center overflow-x-auto py-2 hide-scrollbar"
             >
-              <picture>
-                <source
-                  :title="icon.title"
-                  :alt="icon.title"
-                  :srcset="require(`~/assets/img/tech/${icon.image}.png?webp`)"
-                  type="image/webp"
-                />
-                <source
-                  :title="icon.title"
-                  :alt="icon.title"
-                  :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
-                  type="image/png"
-                />
-                <img
-                  class="w-10 h-10 object-contain"
-                  :title="icon.title"
-                  :src="require(`~/assets/img/tech/${icon.image}.png`)"
-                  :alt="icon.title"
-                  loading="lazy"
-                  width="48"
-                  height="48"
-                />
-              </picture>
+              <div
+                v-for="(icon, index) in item.icons"
+                :key="index"
+                class="flex-shrink-0"
+              >
+                <picture>
+                  <source
+                    :title="icon.title"
+                    :alt="icon.title"
+                    :srcset="
+                      require(`~/assets/img/tech/${icon.image}.png?webp`)
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    :title="icon.title"
+                    :alt="icon.title"
+                    :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
+                    type="image/png"
+                  />
+                  <img
+                    class="w-10 h-10 object-contain"
+                    :title="icon.title"
+                    :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                    :alt="icon.title"
+                    loading="lazy"
+                    width="48"
+                    height="48"
+                  />
+                </picture>
+              </div>
             </div>
-          </div>
             <!--<nuxt-picture
               class="flex justify-center align-center"
               :title="item.iconTitle"
@@ -384,7 +397,7 @@
         :to="localePath('/portfolio')"
         class="flex flex-wrap justify-center items-center bg-aqua-100 text-xl text-black hover:text-aqua-200 hover:bg-white mt-4 px-4 py-2 border-2 hover:border-aqua-100 rounded-lg"
       >
-        {{ $t("home.more") }}
+        {{ $t("home.more") + " " + $t("portfolio.title") }}
       </nuxt-link>
     </section>
   </div>

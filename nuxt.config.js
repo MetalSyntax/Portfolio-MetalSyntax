@@ -148,6 +148,7 @@ export default {
     // Set the default locale to "en"
     defaultLocale: "en",
     seo: true,
+    baseUrl: "https://metalsyntax.vercel.app",
     // Configure browser language detection
     detectBrowserLanguage: {
       // Use a cookie to store the redirected language
@@ -190,15 +191,33 @@ export default {
         file: 'en-US.js'
       },
       {
+        code: 'en-US', 
+        iso: 'en-US',
+        name: 'English (US)',
+        file: 'en-US.js'
+      },
+      {
         code: "es",
         name: "Español",
         iso: "es-ES",
         file: 'es-ES.js'
       },
       {
+        code: 'es-ES',
+        iso: 'es-ES',
+        name: 'Español (España)',
+        file: 'es-ES.js'
+      },
+      {
         code: "pt",
         name: "Portuguese",
         iso: "pt-PT",
+        file: 'pt-PT.js'
+      },
+      {
+        code: 'pt-PT',
+        iso: 'pt-PT',
+        name: 'Português (Portugal)',
         file: 'pt-PT.js'
       }
     ],
