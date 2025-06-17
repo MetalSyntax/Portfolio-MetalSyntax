@@ -5,8 +5,14 @@
     >
       <div class="flex flex-wrap content-center z-10 py-8 px-4">
         <div class="w-full">
-          <!--<img class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3" src="~/assets/img/WonderDiazPhoto.jpg" alt="Wonder Diaz" width="500px" height="500px"/>-->
-          <nuxt-img
+          <img
+            class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3"
+            src="~/assets/img/WonderDiazPhoto.jpg"
+            alt="Wonder Diaz"
+            width="500px"
+            height="500px"
+          />
+          <!--<nuxt-img
             class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3"
             format="webp"
             quality="80"
@@ -15,7 +21,7 @@
             height="500"
             placeholder
             preload
-          />
+          />-->
           <h1
             class="text-gray-900 font-semibold items-center text-center text-4xl lg:text-5xl py-2"
           >
@@ -85,11 +91,13 @@
               "
               :target="item.website == '#' ? '' : '_blank'"
             >
-              <!--<picture >
+              <picture>
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/bussines/${item.image}.png?webp`)"
+                  :srcset="
+                    require(`~/assets/img/bussines/${item.image}.png?webp`)
+                  "
                   type="image/webp"
                   width="128"
                   height="128"
@@ -110,8 +118,8 @@
                   width="128"
                   height="128"
                 />
-              </picture>-->
-              <nuxt-picture
+              </picture>
+              <!--<nuxt-picture
                 :title="item.title"
                 :alt="item.title"
                 format="webp"
@@ -124,7 +132,7 @@
                   height: '128',
                   loading: 'lazy',
                 }"
-              />
+              />-->
             </a>
             <div
               class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center md:justify-start lg:justify-start xl:justify-start items-center"
@@ -190,7 +198,7 @@
               v-for="icon in icons"
               :key="icon.id"
             >
-              <!--<picture class="flex justify-center align-center">
+              <picture class="flex justify-center align-center">
                 <source
                   :title="icon.title"
                   :alt="icon.title"
@@ -212,8 +220,8 @@
                   :alt="icon.title"
                   height="56"
                 />
-              </picture>-->
-              <nuxt-picture
+              </picture>
+              <!--<nuxt-picture
                 :title="icon.title"
                 :alt="icon.title"
                 format="webp"
@@ -225,7 +233,7 @@
                   height: '56',
                   loading: 'lazy',
                 }"
-              />
+              />-->
               <p class="text-center text-sm">{{ icon.title }}</p>
             </div>
           </div>
@@ -249,7 +257,7 @@
           class="rounded-lg overflow-hidden shadow-lg mx-auto my-2 bg-white border-2 border-gray-100 hover:border-aqua-100"
         >
           <a :href="item.link" target="_blank">
-            <!--<picture>
+            <picture>
               <source
                 :title="item.title"
                 :alt="item.title"
@@ -276,8 +284,8 @@
                 width="750"
                 height="450"
               />
-            </picture>-->
-            <nuxt-picture
+            </picture>
+            <!--<nuxt-picture
               :title="item.title"
               :alt="item.title"
               format="webp"
@@ -290,7 +298,7 @@
                 height: '450',
                 loading: 'lazy',
               }"
-            />
+            />-->
           </a>
           <div>
             <a :href="item.link" target="_blank">
@@ -307,35 +315,38 @@
             </p>
             <p class="text-gray-700 text-base text-center p-2">
               {{ item.description }}
-            </p >
-            <!--<picture class="flex justify-center align-center">
-              <source
-                :title="item.iconTitle"
-                :alt="item.iconTitle"
-                :srcset="
-                  require(`~/assets/img/tech/${item.iconImage}.png?webp`)
-                "
-                type="image/webp"
-                loading="lazy"
-                @error="handleImageError"
-              />
-              <source
-                :title="item.iconTitle"
-                :alt="item.iconTitle"
-                :srcset="require(`~/assets/img/tech/${item.iconImage}.png`)"
-                type="image/png"
-                loading="lazy"
-                @error="handleImageError"
-              />
-              <img
-                class="w-12 p-1 px-2 inline"
-                :title="item.iconTitle"
-                :src="require(`~/assets/img/tech/${item.iconImage}.png`)"
-                :alt="item.iconTitle"
-                loading="lazy"
-                @error="handleImageError"
-              />
-            </picture>-->
+            </p>
+            <div class="flex flex-nowrap justify-center overflow-x-auto py-2 hide-scrollbar">
+            <div 
+              v-for="(icon, index) in item.icons"
+              :key="index"
+              class="flex-shrink-0"
+            >
+              <picture>
+                <source
+                  :title="icon.title"
+                  :alt="icon.title"
+                  :srcset="require(`~/assets/img/tech/${icon.image}.png?webp`)"
+                  type="image/webp"
+                />
+                <source
+                  :title="icon.title"
+                  :alt="icon.title"
+                  :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
+                  type="image/png"
+                />
+                <img
+                  class="w-10 h-10 object-contain"
+                  :title="icon.title"
+                  :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                  :alt="icon.title"
+                  loading="lazy"
+                  width="48"
+                  height="48"
+                />
+              </picture>
+            </div>
+          </div>
             <!--<nuxt-picture
               class="flex justify-center align-center"
               :title="item.iconTitle"
@@ -350,7 +361,7 @@
               @error="handleImageError"
             />-->
             <div class="flex flex-wrap justify-center">
-              <nuxt-picture
+              <!--<nuxt-picture
                 v-for="(icon, index) in item.icons"
                 :key="index"
                 class="flex justify-center align-center"
@@ -364,7 +375,7 @@
                   loading: 'lazy',
                 }"
                 @error="handleImageError"
-              />
+              />-->
             </div>
           </div>
         </div>
@@ -765,8 +776,8 @@ export default {
           image: "solufar",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "The North Face - Circular Design",
@@ -779,8 +790,8 @@ export default {
             { title: "Magento 2", image: "magento-2" },
             { title: "HTML5", image: "HTML5" },
             { title: "CSS3", image: "CSS" },
-            { title: "JavaScript", image: "JS" }
-          ]
+            { title: "JavaScript", image: "JS" },
+          ],
         },
         {
           title: "Business Market Finders",
@@ -790,9 +801,9 @@ export default {
           link: "https://www.behance.net/gallery/175709925/Business-Market-Finders",
           image: "bmf",
           icons: [
-          { title: "SAP AppGyver", image: "AppGyver" },
-          { title: "JavaScript", image: "JS" }
-          ]
+            { title: "SAP AppGyver", image: "AppGyver" },
+            { title: "JavaScript", image: "JS" },
+          ],
         },
         {
           title: "Work To Earn",
@@ -803,8 +814,8 @@ export default {
           image: "worktoearn",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
       ],
     };

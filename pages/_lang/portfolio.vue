@@ -146,7 +146,7 @@
             class="rounded-lg overflow-hidden shadow-lg mx-auto my-2 bg-white border-2 border-white hover:border-aqua-100"
           >
             <a :href="item.link" target="_blank">
-              <!-- <picture>
+              <picture>
                 <source
                   :title="item.title"
                   :alt="item.title"
@@ -167,8 +167,8 @@
                   :alt="item.title"
                   :title="item.title"
                 />
-              </picture> -->
-              <nuxt-img
+              </picture>
+              <!--<nuxt-img
                 :title="item.title"
                 :alt="item.title"
                 format="webp"
@@ -176,7 +176,7 @@
                 :src="`/img/projects/${item.image}-.jpg`"
                 class="w-full"
                 loading="lazy"
-              />
+              />  -->
             </a>
             <div>
               <a :href="item.link" target="_blank">
@@ -194,36 +194,43 @@
               <p class="text-gray-700 text-base text-center p-2">
                 {{ item.description }}
               </p>
-              <!--
-              <picture class="flex justify-center align-center">
-                <source
-                  :title="item.iconTitle" 
-                  :alt="item.iconTitle"
-                  :srcset="require(`~/assets/img/tech/${item.iconImage}.png?webp`)"
-                  type="image/webp"
-                  loading="lazy"
-                  @error="handleImageError"
-                />
-                <source
-                  :title="item.iconTitle"
-                  :alt="item.iconTitle"
-                  :srcset="require(`~/assets/img/tech/${item.iconImage}.png`)"
-                  type="image/png"
-                  loading="lazy"
-                  @error="handleImageError"
-                />
-                <img
-                  class="w-12 p-1 px-2 inline"
-                  :title="item.iconTitle"
-                  :src="require(`~/assets/img/tech/${item.iconImage}.png`)"
-                  :alt="item.iconTitle"
-                  loading="lazy"
-                  @error="handleImageError"
-                />
-              </picture>
-              -->
+              <div
+                class="flex flex-nowrap justify-center overflow-x-auto py-2 hide-scrollbar"
+              >
+                <div
+                  v-for="(icon, index) in item.icons"
+                  :key="index"
+                  class="flex-shrink-0"
+                >
+                  <picture>
+                    <source
+                      :title="icon.title"
+                      :alt="icon.title"
+                      :srcset="
+                        require(`~/assets/img/tech/${icon.image}.png?webp`)
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      :title="icon.title"
+                      :alt="icon.title"
+                      :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
+                      type="image/png"
+                    />
+                    <img
+                      class="w-10 h-10 object-contain"
+                      :title="icon.title"
+                      :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                      :alt="icon.title"
+                      loading="lazy"
+                      width="40"
+                      height="40"
+                    />
+                  </picture>
+                </div>
+              </div>
               <div class="flex flex-wrap justify-center">
-                <nuxt-picture
+                <!--<nuxt-picture
                   v-for="(icon, index) in item.icons"
                   :key="index"
                   :title="icon.title"
@@ -239,7 +246,7 @@
                     loading: 'lazy',
                   }"
                   @error="handleImageError"
-                />
+                />-->
               </div>
             </div>
           </div>
@@ -276,8 +283,8 @@ export default {
           image: "Crux-Food",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Ecommerce App",
@@ -288,8 +295,8 @@ export default {
           image: "Ecommerce-App",
           icons: [
             { title: "React.js", image: "Reactjs" },
-            { title: "Node.js", image: "Nodejs" },
-          ]
+            { title: "Node.js", image: "nodejs" },
+          ],
         },
         {
           title: "Dashboard Particles",
@@ -303,7 +310,7 @@ export default {
               title: "Figma",
               image: "Figma",
             },
-          ]
+          ],
         },
         {
           title: "Class Manager",
@@ -313,9 +320,9 @@ export default {
           link: "https://www.behance.net/gallery/220323193/Class-Manager-App",
           image: "Class-Manager",
           icons: [
-            { title: "Ionic", image: "Ionic" },
-            { title: "Angular", image: "angular" },
-          ]
+            { title: "ionic", image: "ionic" },
+            { title: "Angular", image: "Angular" },
+          ],
         },
         {
           title: "Solufar - Recetario Magistral",
@@ -326,8 +333,8 @@ export default {
           image: "solufar",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "JC Cake x GAP",
@@ -340,8 +347,8 @@ export default {
             { title: "Magento 2", image: "magento-2" },
             { title: "HTML5", image: "HTML5" },
             { title: "CSS3", image: "CSS" },
-            { title: "JavaScript", image: "JS" }
-          ]
+            { title: "JavaScript", image: "JS" },
+          ],
         },
         {
           title: "The North Face - Circular Design",
@@ -354,8 +361,8 @@ export default {
             { title: "Magento 2", image: "magento-2" },
             { title: "HTML5", image: "HTML5" },
             { title: "CSS3", image: "CSS" },
-            { title: "JavaScript", image: "JS" }
-          ]
+            { title: "JavaScript", image: "JS" },
+          ],
         },
         {
           title: "Barbie x Kipling",
@@ -368,8 +375,8 @@ export default {
             { title: "Magento 2", image: "magento-2" },
             { title: "HTML5", image: "HTML5" },
             { title: "CSS3", image: "CSS" },
-            { title: "JavaScript", image: "JS" }
-          ]
+            { title: "JavaScript", image: "JS" },
+          ],
         },
         {
           title: "Business Market Finders",
@@ -379,9 +386,9 @@ export default {
           link: "https://www.behance.net/gallery/175709925/Business-Market-Finders",
           image: "bmf",
           icons: [
-          { title: "SAP AppGyver", image: "AppGyver" },
-          { title: "JavaScript", image: "JS" }
-          ]
+            { title: "SAP AppGyver", image: "AppGyver" },
+            { title: "JavaScript", image: "JS" },
+          ],
         },
         {
           title: "La Martena",
@@ -392,8 +399,8 @@ export default {
           image: "lamartena",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "PasareLab",
@@ -404,8 +411,8 @@ export default {
           image: "pasarelab",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Work To Earn",
@@ -416,8 +423,8 @@ export default {
           image: "worktoearn",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Den Gode Fisk Fra Havet",
@@ -428,8 +435,8 @@ export default {
           image: "dengodefiskfrahavet",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Boundless Builders",
@@ -440,8 +447,8 @@ export default {
           image: "boundless-builders",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Clinica Medica",
@@ -452,8 +459,8 @@ export default {
           image: "clinicamedica",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Sand of Isla Morada",
@@ -464,8 +471,8 @@ export default {
           image: "sandsofislamorada",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "The Senior Care Foundation",
@@ -476,8 +483,8 @@ export default {
           image: "TSCF",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Vitalcare",
@@ -488,8 +495,8 @@ export default {
           image: "vitalcare",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Syntax Stream",
@@ -503,7 +510,7 @@ export default {
               title: "Adobe XD",
               image: "AdobeXD",
             },
-          ]
+          ],
         },
         {
           title: "Lior Pedidos App",
@@ -525,7 +532,7 @@ export default {
               title: "TailWind",
               image: "tailwindcss",
             },
-          ]
+          ],
         },
         {
           title: "Syntax Project Next",
@@ -539,7 +546,7 @@ export default {
               title: "Next.js",
               image: "Nextjs",
             },
-          ]
+          ],
         },
         {
           title: "Classic Wheels Usa",
@@ -550,8 +557,8 @@ export default {
           image: "Classic-Wheels-Usa",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Semilla Multicultural-",
@@ -562,8 +569,8 @@ export default {
           image: "Semilla-Multicultural",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Bardisa LYL Center",
@@ -574,8 +581,8 @@ export default {
           image: "BDS",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Radio Caribe",
@@ -586,8 +593,8 @@ export default {
           image: "Radio-Caribe",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Florida Doctors Group",
@@ -598,8 +605,8 @@ export default {
           image: "FDGMSO",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Syntax Note",
@@ -613,7 +620,7 @@ export default {
               title: "AngularJS",
               image: "angularjs",
             },
-          ]
+          ],
         },
         {
           title: "Syntax Monitor",
@@ -627,7 +634,7 @@ export default {
               title: "Jquery",
               image: "jquery",
             },
-          ]
+          ],
         },
         {
           title: "Ofertas del Motor",
@@ -638,8 +645,8 @@ export default {
           image: "Ofertas-del-motor",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Mi Secretaria Virtual",
@@ -650,8 +657,8 @@ export default {
           image: "Mi-Secretaria-Virtual",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Renderizados",
@@ -662,8 +669,8 @@ export default {
           image: "Renderizados",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Soluciones Web",
@@ -674,8 +681,8 @@ export default {
           image: "Soluciones-Web",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "AW Travel Guides",
@@ -686,8 +693,8 @@ export default {
           image: "AW-Travel-Guides",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Traductores Malaga",
@@ -698,8 +705,8 @@ export default {
           image: "Traductores-Malaga",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Domiserver",
@@ -710,8 +717,8 @@ export default {
           image: "DomiServer",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Latin Talents",
@@ -722,8 +729,8 @@ export default {
           image: "LatinTalens",
           icons: [
             { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "php" },
-          ]
+            { title: "PHP", image: "PHP" },
+          ],
         },
         {
           title: "Methods",
@@ -736,8 +743,8 @@ export default {
             { title: "PhoneGap", image: "phonegap" },
             { title: "HTML5", image: "HTML5" },
             { title: "CSS3", image: "CSS" },
-            { title: "JavaScript", image: "JS" }
-          ]
+            { title: "JavaScript", image: "JS" },
+          ],
         },
         {
           title: "Code of Paid",
@@ -750,8 +757,8 @@ export default {
             { title: "PhoneGap", image: "phonegap" },
             { title: "HTML5", image: "HTML5" },
             { title: "CSS3", image: "CSS" },
-            { title: "JavaScript", image: "JS" }
-          ]
+            { title: "JavaScript", image: "JS" },
+          ],
         },
       ],
     };

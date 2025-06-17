@@ -18,15 +18,14 @@
       >
         <div class="flex">
           <a class="p-1" href="https://linktr.ee/MetalSyntax" target="_blank">
-            <!-- Original img tag:
             <img
               class="icons-social"
               src="../assets/img/social/linktree.png"
               alt="Linktree"
               height="35"
               width="35"
-            /> -->
-            <nuxt-img
+            /> 
+            <!--<nuxt-img
               class="icons-social"
               format="webp"
               quality="80"
@@ -36,18 +35,17 @@
               height="35"
               loading="lazy"
               placeholder
-            />
+            /> -->
           </a>
           <a class="p-1" href="https://behance.net/MetalSyntax" target="_blank">
-            <!-- Original img tag:
             <img
               class="icons-social"
               src="../assets/img/social/behance.png"
               alt="Behance"
               height="35"
               width="35"
-            /> -->
-            <nuxt-img
+            /> 
+            <!--<nuxt-img
               class="icons-social"
               format="webp"
               quality="80"
@@ -57,18 +55,17 @@
               height="35"
               loading="lazy"
               placeholder
-            />
+            /> -->
           </a>
           <a class="p-1" href="https://github.com/metalsyntax" target="_blank">
-            <!-- Original img tag:
             <img
               class="icons-social"
               src="../assets/img/social/github.png"
               alt="GitHub"
               height="35"
               width="35"
-            /> -->
-            <nuxt-img
+            /> 
+            <!--<nuxt-img
               class="icons-social"
               format="webp"
               quality="80"
@@ -78,18 +75,17 @@
               height="35"
               loading="lazy"
               placeholder
-            />
+            /> -->
           </a>
           <a class="p-1" href="https://x.com/MetalSyntax" target="_blank">
-            <!-- Original img tag:
             <img
               class="icons-social"
               src="../assets/img/social/twitterx.png"
               alt="Twitter"
               height="35"
               width="35"
-            /> -->
-            <nuxt-img
+            /> 
+            <!--<nuxt-img
               class="icons-social"
               format="webp"
               quality="80"
@@ -99,18 +95,17 @@
               height="35"
               loading="lazy"
               placeholder
-            />
+            /> -->
           </a>
           <a class="p-1" href="mailto:wonderdxk@gmail.com" target="_blank">
-            <!-- Original img tag:
             <img
               class="icons-social"
               src="../assets/img/social/gmail.png"
               alt="Gmail"
               height="35"
               width="35"
-            /> -->
-            <nuxt-img
+            /> 
+            <!--<nuxt-img
               class="icons-social"
               format="webp"
               quality="80"
@@ -120,22 +115,21 @@
               height="35"
               loading="lazy"
               placeholder
-            />
+            /> -->
           </a>
           <a
             class="p-1"
             href="https://api.whatsapp.com/send?phone=584123654728"
             target="_blank"
           >
-            <!-- Original img tag:
             <img
               class="icons-social"
               src="../assets/img/social/whatsapp.png"
               alt="WhatsApp"
               height="35"
               width="35"
-            /> -->
-            <nuxt-img
+            /> 
+            <!--<nuxt-img
               class="icons-social"
               format="webp"
               quality="80"
@@ -145,7 +139,7 @@
               height="35"
               loading="lazy"
               placeholder
-            />
+            /> -->
           </a>
         </div>
       </div>

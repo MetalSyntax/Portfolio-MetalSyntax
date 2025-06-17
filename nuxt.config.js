@@ -105,7 +105,7 @@ export default {
       "/pt/experience"
     ]
   },
-  build: {
+  /*build: {
     extend(config, { isDev, isClient, loaders: { vue } }) {
       config.module.rules.push({
         test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
@@ -117,7 +117,7 @@ export default {
         }
       })
     }
-  },
+  },*/
   /*
    ** Nuxt.js dev-modules
    */
@@ -207,14 +207,13 @@ export default {
   },
   /*
    * Images
-   */
   image: {
     domains: ['metalsyntax.vercel.app'],
     provider: 'ipx',
     ipx: {
       baseURL: 'https://metalsyntax.vercel.app'
     }
-  },
+  },*/
   /*
    * Optimize Images
    */
