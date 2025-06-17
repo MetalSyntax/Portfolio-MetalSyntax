@@ -27,7 +27,7 @@
           data-aos-duration="500"
         >
           <div class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white border-2 border-white rounded-lg hover:border-aqua-100">
-            <picture class="px-2 py-2 w-3/4 md:w-1/3 m-auto">
+            <!--<picture class="px-2 py-2 w-3/4 md:w-1/3 m-auto">
                 <source
                   :title="item.title"
                   :alt="item.title"
@@ -46,7 +46,18 @@
                   :alt="item.title"
                   :title="item.title"
                 />
-              </picture>
+              </picture>-->
+              <nuxt-picture
+                class="px-2 py-2 w-3/4 md:w-1/3 m-auto"
+                :title="item.title"
+                :alt="item.title"
+                :src="`/img/bussines/${item.image}.png`"
+                format="webp"
+                quality="80"
+                loading="lazy"
+                :img-attrs="{ class: 'mx-auto rounded-lg' }"
+                placeholder
+              />
             <div
               class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center lg:justify-start items-center"
             >

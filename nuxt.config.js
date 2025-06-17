@@ -114,7 +114,8 @@ export default {
     "@nuxtjs/google-analytics",
     "@aceforth/nuxt-optimized-images",
     ["@nuxtjs/pwa"],
-    '@nuxtjs/imagemin'
+    '@nuxtjs/imagemin',
+    '@nuxt/image'
     /*["nuxt-i18n"]*/
   ],
   /*

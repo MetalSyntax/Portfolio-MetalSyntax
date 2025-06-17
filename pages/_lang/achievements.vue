@@ -106,7 +106,7 @@
         >
           <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 border-2 border-white hover:border-aqua-100">
             <a :href="item.link" target="_blank">
-              <picture>
+              <!--<picture>
               <source
                 :title="item.title"
                 :alt="item.title"
@@ -125,7 +125,16 @@
                 :alt="item.title"
                 :title="item.title"
               />
-            </picture>
+            </picture>-->
+            <nuxt-picture
+              :title="item.title"
+              :alt="item.title"
+              :src="`/img/diplomas/${item.image}.png`"
+              format="webp"
+              quality="80"
+              loading="lazy"
+              :img-attrs="{ class: 'w-20 h-20 rounded-full' }"
+            />
             </a>
             <div class="text-sm">
               <a :href="item.link" target="_blank">
