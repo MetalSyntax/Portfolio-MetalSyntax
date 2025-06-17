@@ -105,6 +105,19 @@ export default {
       "/pt/experience"
     ]
   },
+  build: {
+    extend(config, { isDev, isClient, loaders: { vue } }) {
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+          outputPath: 'img/',
+          publicPath: '/_nuxt/'
+        }
+      })
+    }
+  },
   /*
    ** Nuxt.js dev-modules
    */
@@ -191,6 +204,13 @@ export default {
     ],
     lazy: true,
     langDir: 'lang/'
+  },
+  /*
+   * Images
+   */
+  image: {
+    domains: ['metalsyntax.vercel.app'],
+    provider: 'ipx'
   },
   /*
    * Optimize Images
