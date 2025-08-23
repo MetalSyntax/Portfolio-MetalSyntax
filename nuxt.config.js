@@ -286,7 +286,7 @@ export default {
     ],
     path: "/sitemap.xml",
     gzip: true,
-    generate: false
+    generate: true
   },
   /*
    *Robot.txt

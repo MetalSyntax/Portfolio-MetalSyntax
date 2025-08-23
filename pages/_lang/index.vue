@@ -61,7 +61,7 @@
       </video>
     </section>
     <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
-      <div class="max-w-4xl mx-auto px-6 py-12 sm:py-16 lg:py-20">
+      <!--<div class="max-w-4xl mx-auto px-6 py-12 sm:py-16 lg:py-20">
         <div class="space-y-8">
           <h2
             class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full"
@@ -74,7 +74,7 @@
             <p class="text-justify" v-html="$t('home.aboutmetext2')"></p>
           </div>
         </div>
-      </div>
+      </div>-->
       <div
         class="flex flex-wrap justify-center py-6 sm:w-full md:w-full lg:w-full mx-auto my-0"
       >

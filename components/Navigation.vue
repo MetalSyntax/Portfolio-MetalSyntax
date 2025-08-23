@@ -5,8 +5,8 @@
   >
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <nuxt-link :to="localePath('/')">
-        <img id="logo" class="h-10 px-2 inline" src="../assets/img/icons/Logo-MS.png" alt="Logo" width="56" height="56" />
-        <!--<nuxt-img id="logo" class="h-10 px-2 inline" format="webp" quality="80" src="/img/icons/Logo-MS.png" width="56" height="56" preload placeholder />-->
+        <!--<img id="logo" class="h-10 px-2 inline" src="../assets/img/icons/Logo-MS.png" alt="Logo" width="56" height="56" />-->
+        <nuxt-img id="logo" class="h-10 px-2 inline" provider="static" format="webp" quality="80" src="/img/icons/Logo-MS.png" width="56" height="56" preload placeholder />
       </nuxt-link>
       <nuxt-link
         :to="localePath('/')"
