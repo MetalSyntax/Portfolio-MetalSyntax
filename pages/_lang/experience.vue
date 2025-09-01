@@ -109,14 +109,14 @@ export default {
     return {
       items: [
         {
-          title: this.$t("experience.redgage"),
+          title: this.$t("experience.ditrali"),
           yearfirst: "Jun. 2025",
           yearlast: this.$t("experience.status"),
-          company: "RedGage, LLC.",
-          website: "www.redgage.com",
-          task1: this.$t("experience.task1redgage"),
-          task2: this.$t("experience.task2redgage"),
-          task3: this.$t("experience.task3redgage"),
+          company: "Ditrali",
+          website: "www.ditrali.com",
+          task1: this.$t("experience.task1ditrali"),
+          task2: this.$t("experience.task2ditrali"),
+          task3: this.$t("experience.task3ditrali"),
           image: "ditrali"
         },
         {
