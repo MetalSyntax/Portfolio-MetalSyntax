@@ -110,7 +110,18 @@ export default {
       items: [
         {
           title: this.$t("experience.redgage"),
-          yearfirst: "2021",
+          yearfirst: "Jun. 2025",
+          yearlast: this.$t("experience.status"),
+          company: "RedGage, LLC.",
+          website: "www.redgage.com",
+          task1: this.$t("experience.task1redgage"),
+          task2: this.$t("experience.task2redgage"),
+          task3: this.$t("experience.task3redgage"),
+          image: "ditrali"
+        },
+        {
+          title: this.$t("experience.redgage"),
+          yearfirst: "Feb. 2021",
           yearlast: this.$t("experience.status"),
           company: "RedGage, LLC.",
           website: "www.redgage.com",
@@ -121,8 +132,8 @@ export default {
         },
         {
           title: this.$t("experience.uts"),
-          yearfirst: "2024",
-          yearlast: "2024",
+          yearfirst: "Jun. 2024",
+          yearlast: "Ago. 2024",
           company: "Instituto Universitario de tecnología Antonio José de Sucre",
           website: "www.uts.edu.ve",
           task1: this.$t("experience.task1uts"),
@@ -132,8 +143,8 @@ export default {
         },
         {
           title: this.$t("experience.komax"),
-          yearfirst: "2023",
-          yearlast: "2024",
+          yearfirst: "Ago. 2023",
+          yearlast: "Dic. 2024",
           company: "Komax, S.A.",
           website: "www.komax.cl",
           task1: this.$t("experience.task1komax"),
@@ -143,8 +154,8 @@ export default {
         },
         {
           title: this.$t("experience.genesisagency"),
-          yearfirst: "2022",
-          yearlast: "2023",
+          yearfirst: "Nov. 2022",
+          yearlast: "Jul. 2023",
           company: "Genesis",
           website: "genesisagency.digital/",
           task1: this.$t("experience.task1genesisagency"),
@@ -154,8 +165,8 @@ export default {
         },
         {
           title: this.$t("experience.equipo360"),
-          yearfirst: "2022",
-          yearlast: "2022",
+          yearfirst: "May. 2022",
+          yearlast: "Jul.2022",
           company: "Equipo360 S.L.",
           website: "www.equipo360.com",
           task1: this.$t("experience.task1equipo360"),
@@ -165,8 +176,8 @@ export default {
         },
         {
           title: this.$t("experience.virtuallypresent"),
-          yearfirst: "2019",
-          yearlast: "2021",
+          yearfirst: "Ago.2019",
+          yearlast: "Nov. 2021",
           company: "Virtually Present, LLC.",
           website: "virtuallypresent.net",
           task1: this.$t("experience.task1virtuallypresent"),
@@ -176,8 +187,8 @@ export default {
         },
         {
           title: this.$t("experience.sigloglobal"),
-          yearfirst: "2018",
-          yearlast: "2021",
+          yearfirst: "Jul. 2018",
+          yearlast: "Oct. 2021",
           company: "Siglo Global, S.L.U.",
           website: "#",
           task1: this.$t("experience.task1sigloglobal"),
@@ -187,8 +198,8 @@ export default {
         },
         {
           title: this.$t("experience.kainver"),
-          yearfirst: "2018",
-          yearlast: "2019",
+          yearfirst: "Jul. 2018",
+          yearlast: "Jul. 2019",
           company: "Kainver Venezuela",
           website: "www.kainver.com",
           task1: this.$t("experience.task1kainver"),
@@ -198,8 +209,8 @@ export default {
         },
         {
           title: this.$t("experience.domiserver"),
-          yearfirst: "2018",
-          yearlast: "2018",
+          yearfirst: "Mar. 2018",
+          yearlast: "Jul.2018",
           company: "Domiserver",
           website: "domiserver.com",
           task1: this.$t("experience.task1domiserver"),
@@ -209,8 +220,8 @@ export default {
         },
         {
           title: this.$t("experience.sanofi"),
-          yearfirst: "2017",
-          yearlast: "2018",
+          yearfirst: "Nov. 2017",
+          yearlast: "Abr.2018",
           company: "Sanofi Venezuela",
           website: "www.sanofi.com.ve",
           task1: this.$t("experience.task1sanofi"),
