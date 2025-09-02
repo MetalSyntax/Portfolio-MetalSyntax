@@ -203,7 +203,7 @@
         <div v-swiper="swiperOption">
           <div class="swiper-wrapper">
             <div
-              class="swiper-slide bg-white rounded-full flex items-center justify-center text-center p-1"
+              class="swiper-slide bg-transparent rounded-full flex items-center justify-center text-center p-1"
               v-for="icon in icons"
               :key="icon.id"
             >
@@ -466,7 +466,7 @@ export default {
       experience: [
         {
           title: this.$t("experience.redgage"),
-          yearfirst: "2021",
+          yearfirst: "Feb. 2021",
           yearlast: this.$t("experience.status"),
           company: "RedGage, LLC.",
           website: "www.redgage.com",
@@ -476,9 +476,20 @@ export default {
           image: "redgage",
         },
         {
+          title: this.$t("experience.ditrali"),
+          yearfirst: "Jun. 2025",
+          yearlast: this.$t("experience.status"),
+          company: "Ditrali",
+          website: "www.ditrali.com",
+          task1: this.$t("experience.task1ditrali"),
+          task2: this.$t("experience.task2ditrali"),
+          task3: this.$t("experience.task3ditrali"),
+          image: "ditrali"
+        },
+        {
           title: this.$t("experience.uts"),
-          yearfirst: "2024",
-          yearlast: "2024",
+          yearfirst: "Jun. 2024",
+          yearlast: "Ago. 2024",
           company:
             "Instituto Universitario de tecnología Antonio José de Sucre",
           website: "www.uts.edu.ve",
@@ -486,18 +497,7 @@ export default {
           task2: this.$t("experience.task2uts"),
           task3: this.$t("experience.task3uts"),
           image: "uts",
-        },
-        {
-          title: this.$t("experience.komax"),
-          yearfirst: "2023",
-          yearlast: "2024",
-          company: "Komax, S.A.",
-          website: "www.komax.cl",
-          task1: this.$t("experience.task1komax"),
-          task2: this.$t("experience.task2komax"),
-          task3: this.$t("experience.task3komax"),
-          image: "komax_sa",
-        },
+        }
       ],
       icons: [
         {
@@ -523,6 +523,10 @@ export default {
         {
           title: "Magento 2",
           image: "magento-2",
+        },
+        {
+          title: "Prestashop",
+          image: "Prestashop",
         },
         {
           title: "Vue",
@@ -619,6 +623,10 @@ export default {
         {
           title: "PHP",
           image: "PHP",
+        },
+        {
+          title: "Codeigniter",
+          image: "Codeigniter",
         },
         {
           title: "Python",
@@ -860,6 +868,9 @@ export default {
   height: calc(100vh - 56px);
   background-blend-mode: normal;
 }
+/*.swiper-viewport {
+  background-color: transparent;
+}*/
 @media (min-width: 1023px) {
   .full-display {
     height: calc(100vh - 72px);

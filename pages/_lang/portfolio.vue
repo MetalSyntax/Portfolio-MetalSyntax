@@ -314,7 +314,7 @@ export default {
         },
         {
           title: "Class Manager",
-          company: "Freelance",
+          company: "Personal",
           year: "2025",
           description: this.$t("portfolio.classmanager"),
           link: "https://www.behance.net/gallery/220323193/Class-Manager-App",
@@ -326,7 +326,7 @@ export default {
         },
         {
           title: "Solufar - Recetario Magistral",
-          company: "Personal",
+          company: "Freelance",
           year: "2025",
           description: this.$t("portfolio.solufar"),
           link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
