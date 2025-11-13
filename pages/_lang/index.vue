@@ -425,23 +425,16 @@ export default {
         slidesPerView: 8,
         spaceBetween: 10,
         loop: true,
-        effect: "coverflow",
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 0,
-          modifier: 0,
-          slideShadows: true,
-        },
-        pagination: {
+        freeMode: true,
+        speed: 5000,
+        allowTouchMove: false,
+        /*pagination: {
           el: ".swiper-pagination",
           dynamicBullets: true,
           clickable: true,
-        },
-        navigation: true,
+        },*/
         autoplay: {
-          delay: 1000,
+          delay: 0,
           disableOnInteraction: false,
         },
         breakpoints: {
@@ -868,6 +861,12 @@ export default {
   height: calc(100vh - 56px);
   background-blend-mode: normal;
 }
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+/*.swiper-slide img {
+  filter: grayscale(1);
+}*/
 /*.swiper-viewport {
   background-color: transparent;
 }*/
