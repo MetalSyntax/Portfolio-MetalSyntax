@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full p-4 mt-24 bg-white">
+    <div class="w-full p-4 mt-24 bg-ui-bg">
       <vue-typed-js
             class="justify-center py-2"
             :strings="[
@@ -10,15 +10,20 @@
             :showCursor="false"
             :typeSpeed="100"
           >
-            <h1 class="text-aqua-200 font-medium text-center items-center text-3xl lg:text-4xl">
+            <h1 class="text-nuxt-green font-medium text-center items-center text-3xl lg:text-4xl font-mono">
               &lt;
               <span class="typing"></span>/&gt;
             </h1>
           </vue-typed-js>
     </div>
-    <div class="w-full px-2 pt-6">
-      <ul class="hidden lg:flex flex-wrap">
-        <li class="flex-1 mr-2">
+    <div class="w-full px-6 py-4 text-center bg-ui-bg">
+      <span class="text-gray-400 font-base text-xl lg:text-2xl">
+        {{ $t("achievements.heroparagraph") }}
+      </span>
+    </div>
+    <div class="w-full px-2 pt-6 bg-ui-bg">
+      <ul class="hidden lg:flex flex-wrap justify-center">
+        <li class="flex-1 mr-2 max-w-xs">
           <a
             class="button-filter"
             href="#all"
@@ -26,7 +31,7 @@
             :class="{ active: itemsFilterkey == 'All' }"
           >{{ $t('achievements.filter') }}</a>
         </li>
-        <li class="flex-1 mr-2">
+        <li class="flex-1 mr-2 max-w-xs">
           <a
             class="button-filter"
             href="#certiprof"
@@ -34,7 +39,7 @@
             :class="{ active: itemsFilterkey == 'CertiProf' }"
           >CertiProf</a>
         </li>
-        <li class="flex-1 mr-2">
+        <li class="flex-1 mr-2 max-w-xs">
           <a
             class="button-filter"
             href="#codigofacilito"
@@ -42,7 +47,7 @@
             :class="{ active: itemsFilterkey == 'Código Facilito' }"
           >Código Facilito</a>
         </li>
-        <li class="flex-1 mr-2">
+        <li class="flex-1 mr-2 max-w-xs">
           <a
             class="button-filter"
             href="#platzi"
@@ -50,7 +55,7 @@
             :class="{ active: itemsFilterkey == 'Platzi' }"
           >Platzi</a>
         </li>
-        <li class="flex-1 mr-2">
+        <li class="flex-1 mr-2 max-w-xs">
           <a
             class="button-filter"
             href="#linkedIn"
@@ -58,7 +63,7 @@
             :class="{ active: itemsFilterkey == 'LinkedIn Learning'}"
           >LinkedIn Learning</a>
         </li>
-        <li class="flex-1 mr-2">
+        <li class="flex-1 mr-2 max-w-xs">
           <a
             class="button-filter"
             href="#aprende"
@@ -66,7 +71,7 @@
             :class="{ active: itemsFilterkey == 'Fundación Carlos Slim' }"
           >Aprende.org</a>
         </li>
-        <li class="flex-1 mr-2">
+        <li class="flex-1 mr-2 max-w-xs">
           <a
             class="button-filter"
             href="#universidad"
@@ -77,16 +82,16 @@
       </ul>
       <select
       name="items"
-      class="lg:hidden flex w-full justify-center mx-auto text-center rounded border-2 border-white hover:border-aqua-100 focus:border-green-500 shadow-lg text-black hover:text-green-500 hover:bg-white py-2 px-4 outline-none"
+      class="lg:hidden flex w-full justify-center mx-auto text-center rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none"
       v-model="itemsFilterkey"
     >
-      <option class="button-filter" :class="{ 'bg-white text-aqua-200 border-aqua-100': itemsFilterkey === 'All' }" value="All">{{ $t('achievements.filter') }}</option>
-      <option class="button-filter" :class="{ 'bg-white text-aqua-200 border-aqua-100': itemsFilterkey === 'CertiProf' }" value="CertiProf">CertiProf</option>
-      <option class="button-filter" :class="{ 'bg-white text-aqua-200 border-aqua-100': itemsFilterkey === 'CodigoFacilito' }" value="CodigoFacilito">Código Facilito</option>
-      <option class="button-filter" :class="{ 'bg-white text-aqua-200 border-aqua-100': itemsFilterkey === 'Platzi' }" value="Platzi">Platzi</option>
-      <option class="button-filter" :class="{ 'bg-white text-aqua-200 border-aqua-100': itemsFilterkey === 'LinkedIn' }" value="LinkedIn">LinkedIn Learning</option>
-      <option class="button-filter" :class="{ 'bg-white text-aqua-200 border-aqua-100': itemsFilterkey === 'Aprende' }" value="Aprende">Aprende.org</option>
-      <option class="button-filter" :class="{ 'bg-white text-aqua-200 border-aqua-100': itemsFilterkey === 'Universidad' }" value="Universidad">Universidad</option>
+      <option class="bg-ui-bg-muted text-white" value="All">{{ $t('achievements.filter') }}</option>
+      <option class="bg-ui-bg-muted text-white" value="CertiProf">CertiProf</option>
+      <option class="bg-ui-bg-muted text-white" value="CodigoFacilito">Código Facilito</option>
+      <option class="bg-ui-bg-muted text-white" value="Platzi">Platzi</option>
+      <option class="bg-ui-bg-muted text-white" value="LinkedIn">LinkedIn Learning</option>
+      <option class="bg-ui-bg-muted text-white" value="Aprende">Aprende.org</option>
+      <option class="bg-ui-bg-muted text-white" value="Universidad">Universidad</option>
     </select>
     </div>
     <div
@@ -94,7 +99,7 @@
     itemsFilterkey == 'LinkedIn' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Aprende' ? 'lg:h-screen' : '',
     itemsFilterkey == 'Universidad' ? 'h-screen' : '']"
-    class="py-4 px-2">
+    class="py-4 px-2 bg-ui-bg h-full min-h-screen">
       <div class="flex flex-wrap -mx-2">
         <div
           v-for="item in itemFilter"
@@ -104,8 +109,8 @@
           data-aos-easing="linear"
           data-aos-duration="500"
         >
-          <div class="flex items-center shadow-lg overflow-hidden bg-white rounded-full mx-auto my-2 border-2 border-white hover:border-aqua-100">
-            <a :href="item.link" target="_blank">
+          <div class="flex items-center shadow-lg overflow-hidden bg-ui-bg-muted rounded-xl mx-auto my-2 border border-gray-800 hover:border-nuxt-green transition-all duration-300 p-4">
+            <a :href="item.link" target="_blank" class="flex-shrink-0">
               <picture>
               <source
                 :title="item.title"
@@ -120,26 +125,17 @@
                 type="image/png"
               />
               <img
-                class="w-20 h-20 rounded-full"
+                class="w-20 h-20 rounded-full border-2 border-gray-700"
                 :src="require(`~/assets/img/diplomas/${item.image}.png`)"
                 :alt="item.title"
                 :title="item.title"
               />
             </picture>
-            <!--<nuxt-picture
-              :title="item.title"
-              :alt="item.title"
-              :src="`/img/diplomas/${item.image}.png`"
-              format="webp"
-              quality="80"
-              loading="lazy"
-              :img-attrs="{ class: 'w-20 h-20 rounded-full' }"
-            />-->
             </a>
-            <div class="text-sm">
+            <div class="text-sm ml-4">
               <a :href="item.link" target="_blank">
-                <p class="mx-2 text-gray-900 font-regular sm:text-sm md:text-lg hover:text-aqua-200">{{ item.title }}</p>
-                <p class="text-gray-700 block pl-2 opacity-75 text-sm">{{ item.company }}</p>
+                <p class="text-white font-bold sm:text-sm md:text-lg hover:text-nuxt-green transition-colors">{{ item.title }}</p>
+                <p class="text-nuxt-green block opacity-90 text-sm font-medium">{{ item.company }}</p>
               </a>
             </div>
           </div>
@@ -633,13 +629,13 @@ export default {
 
 <style>
 .button-filter {
- @apply block text-center rounded border-2 border-white shadow-lg text-black py-2 px-4;
+ @apply block text-center rounded border border-gray-700 bg-ui-bg-muted text-gray-300 py-2 px-4 transition-colors;
 }
 .button-filter:hover {
-  @apply bg-white text-aqua-200 border-aqua-100;
+  @apply border-nuxt-green text-nuxt-green;
 }
 .button-filter.active {
-  @apply bg-white text-aqua-200 border-aqua-100;
+  @apply border-nuxt-green text-nuxt-green bg-ui-bg-accented;
 }
 </style>
 

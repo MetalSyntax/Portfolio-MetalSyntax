@@ -35,7 +35,9 @@ export default {
     aboutmetext1: 'I am an industrial engineer specializing in web design and development, with extensive experience in tools and technologies such as Adobe XD, Figma, WordPress, React, Vue, and others. Throughout my career, I have created websites, online stores, hybrid apps, and progressive web apps (PWAs) using technologies such as WordPress with Divi/Elementor, React with Next.js/Redux, Vue with Nuxt.js, and I have also worked with frameworks such as Cordova and React Native.',
     aboutmetext2: 'My focus is on continuous improvement and making a positive impact on organizations and their products. Through my multidisciplinary experience, I have participated in projects that have had a real and lasting impact. I am passionate about technology and I am constantly looking for ways to improve and expand my skills. I use my knowledge and experience to create innovative solutions and contribute to the growth and success of the projects in which I participate.',
     titleexperience: 'Experience',
+    experiencedescription: 'My professional career and the companies I have collaborated with.',
     titleskills: 'Skills',
+    skillsdescription: 'Technologies and tools I use to bring projects to life.',
     skillstext: "I've experience developing and designing with the following technologies and tools",
     engineering: "Engineering",
     text1: "Implemented management knowledge, Lean Manufacturing, continuous improvement and quality to offer the best results.",
@@ -50,9 +52,12 @@ export default {
     support: "Support",
     text6: "Checking the availability, accessibility and security of websites to meet the demand for services.",
     project: "Featured projects",
+    projectdescription: 'A selection of my most recent and significant work.',
     more: "See more",
     calltoaction: "Are you interested in my work?, let's me a email!",
-    contact: "Contact me"
+    contact: "Contact me",
+    dark: 'Dark',
+    light: 'Light'
   },
   portfolio: {
     title: 'Portfolio',
@@ -65,8 +70,8 @@ export default {
     gapxcake: "Campaign landing page for GAP with the artist JC Cake in Peru",
     circulardesign: "Campaign landing page for The North Face about Circular Design in Peru",
     barbiexkipling: "Campaign landing page for Kipling with Barbie in Peru",
-    vitalcare : "A company that offers laboratory services in less than 24 hours.",
-    classicwheelsusa: 'An online store that offers classic wheels and rims for vintage cars.', 
+    vitalcare: "A company that offers laboratory services in less than 24 hours.",
+    classicwheelsusa: 'An online store that offers classic wheels and rims for vintage cars.',
     semillamulticultural: 'A multicultural creative agency based in Miami.',
     businessmarketfinders: 'Mobile app of the leading company in the financial industry.',
     lamartena: 'Gastronomic and family experience in Albacete.',
@@ -112,10 +117,12 @@ export default {
   },
   achievements: {
     title: 'Achievements',
+    heroparagraph: 'Certifications and achievements that validate my expertise and commitment to continuous professional development.',
     filter: 'All'
   },
   experience: {
     title: "Experience",
+    heroparagraph: 'My professional journey through different companies and roles, showcasing growth and diverse expertise.',
     status: "Present",
     uts: "Graphic Design Professor",
     task1uts: "Design and development of evaluation instruments.",

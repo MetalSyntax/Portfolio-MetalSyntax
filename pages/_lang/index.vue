@@ -1,48 +1,51 @@
 <template>
   <div class="Content overflow-x-hidden">
     <section
-      class="relative flex items-center justify-center h-screen overflow-hidden bg-graylight-400"
+      class="relative flex items-center justify-center h-screen overflow-hidden bg-ui-bg bg-gradient-to-b"
+      style="--tw-gradient-from: color-mix(in oklab, var(--ui-bg-muted) 40%, transparent);"
     >
-      <div class="flex flex-wrap content-center z-10 py-8 px-4">
-        <div class="w-full">
-          <img
-            class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3"
-            src="~/assets/img/WonderDiazPhoto.jpg"
-            alt="Wonder Diaz"
-            width="500px"
-            height="500px"
-          />
-          <!--<nuxt-img
-            class="mb-10 mx-auto rounded-full w-64 md:2/5 lg:w-2/3"
-            format="webp"
-            quality="80"
-            src="/img/WonderDiazPhoto.jpg"
-            width="500"
-            height="500"
-            placeholder
-            preload
-          />-->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-gradient-to-br from-nuxt-green/20 to-transparent opacity-30 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-transparent to-ui-bg"></div>
+      </div>
+
+      <div class="flex flex-wrap content-center z-10 py-8 px-4 relative">
+        <div class="w-full text-center">
+          <div class="relative inline-block mb-10">
+             <div class="absolute inset-0 bg-nuxt-green blur-xl opacity-20 rounded-full"></div>
+             <img
+              class="relative rounded-full w-48 md:w-64 lg:w-72 border-4 border-aqua-200 shadow-2xl"
+              src="~/assets/img/WonderDiazPhoto.jpg"
+              alt="Wonder Diaz"
+              width="500px"
+              height="500px"
+            />
+          </div>
+         
           <h1
-            class="text-gray-900 font-semibold items-center text-center text-4xl lg:text-5xl py-2"
+            class="font-bold items-center text-center text-5xl lg:text-7xl py-4 tracking-tight"
           >
-            Wonder Díaz
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+              Wonder Díaz
+            </span>
           </h1>
           <vue-typed-js
-            class="justify-center py-2"
+            class="justify-center py-4"
             :strings="[
               $t('home.industrialengineer'),
               $t('home.webdeveloper'),
               $t('home.webdesing'),
             ]"
             :loop="true"
-            :showCursor="false"
-            :typeSpeed="100"
+            :showCursor="true"
+            :cursorChar="'_'"
+            :typeSpeed="50"
+            :backSpeed="30"
           >
             <h2
-              class="text-aqua-100 font-medium text-center items-center text-3xl lg:text-4xl"
+              class="text-nuxt-green font-mono text-center items-center text-2xl lg:text-3xl bg-black/30 px-6 py-2 rounded-lg border border-nuxt-gray/50 backdrop-blur-sm"
             >
-              &lt;
-              <span class="typing"></span>/&gt;
+              <span class="text-gray-500 mr-2">$</span><span class="typing"></span>
             </h2>
           </vue-typed-js>
         </div>
@@ -54,34 +57,25 @@
         class="absolute z-1 w-auto min-w-full min-h-full max-w-none md:hidden lg:block"
       >
         <source
-          src="https://res.cloudinary.com/metalsyntax/video/upload/v1691212423/MetalSyntax-Banner-White_gndunm.mp4"
+          src="https://res.cloudinary.com/metalsyntax/video/upload/v1691212426/MetalSyntax-Banner-Black_xdfbpg.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
     </section>
-    <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-graylight-100">
-      <!--<div class="max-w-4xl mx-auto px-6 py-12 sm:py-16 lg:py-20">
-        <div class="space-y-8">
-          <h2
-            class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full"
-          >
-            {{ $t("home.titleaboutme") }}
-          </h2>
-
-          <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-            <p class="text-justify" v-html="$t('home.aboutmetext1')"></p>
-            <p class="text-justify" v-html="$t('home.aboutmetext2')"></p>
-          </div>
-        </div>
-      </div>-->
+    <section class="sm:py-2 sm:px-2 lg:py-4 lg:px-4 bg-ui-bg bg-gradient-to-b">
       <div
         class="flex flex-wrap justify-center py-6 sm:w-full md:w-full lg:w-full mx-auto my-0"
       >
         <h2
-          class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full"
+          class="text-white text-center pb-4 text-2xl lg:text-3xl w-full font-bold"
           v-html="$t('home.titleexperience')"
         ></h2>
+        <div class="w-full text-center pb-6">
+          <p class="text-ui-text-muted text-lg" style="color: var(--ui-text-muted)">
+            {{ $t('home.experiencedescription') }}
+          </p>
+        </div>
         <div
           v-for="item in experience"
           v-bind:key="item.id"
@@ -91,7 +85,7 @@
           data-aos-duration="500"
         >
           <div
-            class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white border-2 border-white rounded-lg hover:border-aqua-100"
+            class="md:flex md:flex-wrap rounded-xl overflow-hidden shadow-lg mx-2 my-2 bg-ui-bg border border-gray-800 hover:border-nuxt-green transition-colors duration-300 h-full"
           >
             <a
               class="px-2 py-2 w-3/4 md:w-1/3 m-auto"
@@ -120,7 +114,7 @@
                   height="128"
                 />
                 <img
-                  class="mx-auto rounded-lg w-32"
+                  class="mx-auto rounded-lg w-32 bg-transparent"
                   :src="require(`~/assets/img/bussines/${item.image}.png`)"
                   :alt="item.title"
                   :title="item.title"
@@ -128,36 +122,22 @@
                   height="128"
                 />
               </picture>
-              <!--<nuxt-picture
-                :title="item.title"
-                :alt="item.title"
-                format="webp"
-                quality="80"
-                :src="`/img/bussines/${item.image}.png`"
-                placeholder
-                :img-attrs="{
-                  class: 'mx-auto rounded-lg w-32',
-                  width: '128',
-                  height: '128',
-                  loading: 'lazy',
-                }"
-              />-->
             </a>
             <div
-              class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center md:justify-start lg:justify-start xl:justify-start items-center"
+              class="md:flex md:flex-wrap px-4 py-4 md:w-2/3 justify-center md:justify-start lg:justify-start xl:justify-start items-center"
             >
               <h2
-                class="font-bold text-xl mb-2 sm:text-left md:text-left lg:text-left w-full"
+                class="font-bold text-xl mb-2 sm:text-left md:text-left lg:text-left w-full text-white"
               >
                 {{ item.title }}
               </h2>
               <p
-                class="text-gray-700 text-base sm:text-left md:text-left lg:text-left w-full"
+                class="text-gray-400 text-base sm:text-left md:text-left lg:text-left w-full"
               >
                 {{ item.yearfirst }} - {{ item.yearlast }}
               </p>
               <a
-                class="text-left"
+                class="text-left w-full"
                 :href="
                   item.website !== '#'
                     ? `https://${item.website}`
@@ -166,17 +146,17 @@
                 :target="item.website == '#' ? '' : '_blank'"
               >
                 <p
-                  class="text-gray-700 text-base sm:text-left md:text-left lg:text-left w-full text-aqua-200"
+                  class="text-base sm:text-left md:text-left lg:text-left w-full text-nuxt-green hover:text-nuxt-green/80 transition-colors"
                 >
                   {{ item.company }}
                 </p>
               </a>
               <ul
-                class="list-disc lg:text-left sm:text-left md:text-left w-full"
+                class="list-disc lg:text-left sm:text-left md:text-left w-full text-gray-300 mt-2"
               >
-                <li class="list-none">{{ item.task1 }}</li>
-                <li class="list-none">{{ item.task2 }}</li>
-                <li class="list-none">{{ item.task3 }}</li>
+                <li class="list-none mb-1 text-sm">{{ item.task1 }}</li>
+                <li class="list-none mb-1 text-sm">{{ item.task2 }}</li>
+                <li class="list-none mb-1 text-sm">{{ item.task3 }}</li>
               </ul>
             </div>
           </div>
@@ -184,7 +164,7 @@
         <div>
           <nuxt-link
             :to="localePath('/experience')"
-            class="flex flex-wrap justify-center items-center bg-aqua-100 text-xl text-black hover:text-aqua-200 hover:bg-white mt-4 px-4 py-2 border-2 hover:border-aqua-100 rounded-lg"
+            class="flex flex-wrap justify-center items-center bg-nuxt-green text-xl text-nuxt-dark font-bold hover:bg-white mt-8 px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-nuxt-green/20"
           >
             {{ $t("home.more") + " " + $t("experience.title") }}
           </nuxt-link>
@@ -194,20 +174,24 @@
         class="flex flex-wrap justify-center px-4 py-6 lg:p-4 sm:w-full md:w-4/5 lg:w-5/6 mx-auto my-0"
       >
         <h2
-          class="text-gray-900 text-center pb-4 text-2xl lg:text-3xl w-full"
+          class="text-white text-center pb-4 text-2xl lg:text-3xl w-full font-bold"
           v-html="$t('home.titleskills')"
         ></h2>
-        <!---<p class="text-gray-900 text-left text-l lg:text-xl" v-html="$t('home.skillstext')"></p>--->
+        <div class="w-full text-center pb-6">
+          <p class="text-ui-text-muted text-lg" style="color: var(--ui-text-muted)">
+            {{ $t('home.skillsdescription') }}
+          </p>
+        </div>
       </div>
       <div class="w-full ml-auto lg:py-4 mr-auto">
         <div v-swiper="swiperOption">
           <div class="swiper-wrapper">
             <div
-              class="swiper-slide bg-transparent rounded-full flex items-center justify-center text-center p-1"
+              class="swiper-slide bg-ui-bg/30 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center text-center p-4 border border-gray-700 hover:border-nuxt-green transition-colors"
               v-for="icon in icons"
               :key="icon.id"
             >
-              <picture class="flex justify-center align-center">
+              <picture class="flex justify-center align-center mb-2">
                 <source
                   :title="icon.title"
                   :alt="icon.title"
@@ -223,27 +207,14 @@
                   height="56"
                 />
                 <img
-                  class="w-16 p-1 px-2 inline"
+                  class="w-12 h-12 object-contain icon-grayscale"
                   :title="icon.title"
                   :src="require(`~/assets/img/tech/${icon.image}.png`)"
                   :alt="icon.title"
                   height="56"
                 />
               </picture>
-              <!--<nuxt-picture
-                :title="icon.title"
-                :alt="icon.title"
-                format="webp"
-                quality="80"
-                :src="`/img/tech/${icon.image}.png`"
-                placeholder
-                :img-attrs="{
-                  class: 'w-16 p-1 px-2 inline',
-                  height: '56',
-                  loading: 'lazy',
-                }"
-              />-->
-              <p class="text-center text-sm">{{ icon.title }}</p>
+              <p class="text-center text-xs text-gray-300 font-medium">{{ icon.title }}</p>
             </div>
           </div>
           <div class="swiper-pagination" slot="pagination"></div>
@@ -251,21 +222,27 @@
       </div>
     </section>
     <section
-      class="flex flex-wrap justify-center w-full py-6 px-4 bg-graylight-100"
+      class="flex flex-wrap justify-center w-full py-12 px-4 bg-ui-bg"
     >
-      <h2 class="text-center w-full py-4 text-3xl">{{ $t("home.project") }}</h2>
+      <h2 class="text-center w-full pt-8 pb-4 text-3xl lg:text-4xl font-bold text-white">{{ $t("home.project") }}</h2>
+      <div class="w-full text-center pb-8">
+        <p class="text-ui-text-muted text-lg" style="color: var(--ui-text-muted)">
+          {{ $t('home.projectdescription') }}
+        </p>
+      </div>
       <div
         v-for="item in portfolio"
         v-bind:key="item.id"
-        class="sm:w-full md:w-1/2 lg:w-1/4 px-2 py-2 justify-center"
-        data-aos="fade-down"
+        class="sm:w-full md:w-1/2 lg:w-1/4 px-4 py-4 justify-center"
+        data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="500"
       >
         <div
-          class="rounded-lg overflow-hidden shadow-lg mx-auto my-2 bg-white border-2 border-gray-100 hover:border-aqua-100"
+          class="rounded-xl overflow-hidden shadow-xl mx-auto bg-ui-bg bg-gradient-to-b border border-gray-800 hover:border-nuxt-green transition-all duration-300 hover:-translate-y-1 h-full flex flex-col"
         >
-          <a :href="item.link" target="_blank">
+          <a :href="item.link" target="_blank" class="block overflow-hidden relative group">
+             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
             <picture>
               <source
                 :title="item.title"
@@ -286,7 +263,7 @@
                 height="450"
               />
               <img
-                class="w-full"
+                class="w-full transform group-hover:scale-105 transition-transform duration-500"
                 :src="require(`~/assets/img/projects/${item.image}-.jpg`)"
                 :alt="item.title"
                 :title="item.title"
@@ -294,44 +271,31 @@
                 height="450"
               />
             </picture>
-            <!--<nuxt-picture
-              :title="item.title"
-              :alt="item.title"
-              format="webp"
-              quality="80"
-              :src="`/img/projects/${item.image}-.jpg`"
-              placeholder
-              :img-attrs="{
-                class: 'w-full',
-                width: '750',
-                height: '450',
-                loading: 'lazy',
-              }"
-            />-->
           </a>
-          <div>
+          <div class="p-6 flex-grow flex flex-col">
             <a :href="item.link" target="_blank">
               <p
-                class="text-center text-gray-900 text-xl pt-2 font-semibold hover:text-aqua-200"
+                class="text-center text-white text-xl font-bold hover:text-nuxt-green transition-colors mb-1"
               >
                 {{ item.title }}
               </p>
             </a>
             <p
-              class="text-center text-aqua-100 font-semibold text-sm pb-1 block opacity-75"
+              class="text-center text-nuxt-green font-semibold text-sm pb-3 block opacity-90"
             >
               {{ item.company }} - {{ item.year }}
             </p>
-            <p class="text-gray-700 text-base text-center p-2">
+            <p class="text-gray-400 text-sm text-center mb-4 flex-grow">
               {{ item.description }}
             </p>
             <div
-              class="flex flex-nowrap justify-center overflow-x-auto py-2 hide-scrollbar"
+              class="flex flex-wrap justify-center gap-2 mt-auto"
             >
               <div
                 v-for="(icon, index) in item.icons"
                 :key="index"
-                class="flex-shrink-0"
+                class="bg-graylight-300 rounded-full p-2"
+                :title="icon.title"
               >
                 <picture>
                   <source
@@ -349,56 +313,28 @@
                     type="image/png"
                   />
                   <img
-                    class="w-10 h-10 object-contain"
+                    class="w-6 h-6 object-contain"
                     :title="icon.title"
                     :src="require(`~/assets/img/tech/${icon.image}.png`)"
                     :alt="icon.title"
                     loading="lazy"
-                    width="48"
-                    height="48"
+                    width="24"
+                    height="24"
                   />
                 </picture>
               </div>
             </div>
-            <!--<nuxt-picture
-              class="flex justify-center align-center"
-              :title="item.iconTitle"
-              :alt="item.iconTitle"
-              format="webp"
-              quality="80"
-              :src="`/img/tech/${item.iconImage}.png`"
-              :img-attrs="{
-                class: 'w-12 p-1 px-2 inline',
-                loading: 'lazy',
-              }"
-              @error="handleImageError"
-            />-->
-            <div class="flex flex-wrap justify-center">
-              <!--<nuxt-picture
-                v-for="(icon, index) in item.icons"
-                :key="index"
-                class="flex justify-center align-center"
-                :title="icon.title"
-                :alt="icon.title"
-                format="webp"
-                quality="80"
-                :src="`/img/tech/${icon.image}.png`"
-                :img-attrs="{
-                  class: 'w-12 p-1 px-2 inline',
-                  loading: 'lazy',
-                }"
-                @error="handleImageError"
-              />-->
-            </div>
           </div>
         </div>
       </div>
-      <nuxt-link
-        :to="localePath('/portfolio')"
-        class="flex flex-wrap justify-center items-center bg-aqua-100 text-xl text-black hover:text-aqua-200 hover:bg-white mt-4 px-4 py-2 border-2 hover:border-aqua-100 rounded-lg"
-      >
-        {{ $t("home.more") + " " + $t("portfolio.title") }}
-      </nuxt-link>
+      <div class="w-full flex justify-center mt-8">
+        <nuxt-link
+            :to="localePath('/portfolio')"
+            class="flex flex-wrap justify-center items-center bg-nuxt-green text-xl text-nuxt-dark font-bold hover:bg-white mt-8 px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-nuxt-green/20"
+        >
+            {{ $t("home.more") + " " + $t("portfolio.title") }}
+        </nuxt-link>
+      </div>
     </section>
   </div>
 </template>
@@ -861,6 +797,16 @@ export default {
   height: calc(100vh - 56px);
   background-blend-mode: normal;
 }
+
+
+.icon-grayscale {
+  filter: grayscale(100%) brightness(150%);
+  transition: filter 0.3s ease;
+}
+
+.icon-grayscale:hover {
+  filter: grayscale(0%) brightness(100%);
+}
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
@@ -876,8 +822,5 @@ export default {
     background-image: url("../../assets/img/background/home-background.jpg");
   }
 }
-:root {
-  --swiper-navigation-color: #00c08b !important;
-  --swiper-theme-color: #00c08b !important;
-}
+
 </style>

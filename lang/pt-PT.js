@@ -35,7 +35,9 @@ export default {
     aboutmetext1: 'Sou engenheiro industrial especializado em design e desenvolvimento web, com ampla experiência em ferramentas e tecnologias como Adobe XD, Figma, WordPress, React, Vue e outras. Ao longo da minha carreira, criei sites, lojas online, aplicações híbridas e aplicações web progressivas (PWA) utilizando tecnologias como WordPress com Divi/Elementor, React com Next.js/Redux, Vue com Nuxt.js e também trabalhei com frameworks como Cordova e React Native.',
     aboutmetext2: 'O meu foco é a melhoria contínua e o impacto positivo nas organizações e nos seus produtos. Através da minha experiência multidisciplinar, participei em projetos que tiveram um impacto real e duradouro. Estou apaixonado por tecnologia e estou constantemente à procura de maneiras de melhorar e expandir as minhas habilidades. Utilizo os meus conhecimentos e experiência para criar soluções inovadoras e contribuir para o crescimento e sucesso dos projetos em que participo.',
     titleexperience: 'Experiência',
+    experiencedescription: 'Minha trajetória profissional e as empresas com as quais colaborei.',
     titleskills: 'Habilidades',
+    skillsdescription: 'Tecnologias e ferramentas que utilizo para dar vida aos projetos.',
     skillstext: "Tenho experiência em desenvolvimento e desenhando com nas seguintes tecnologias e ferramentas",
     engineering: 'Engenharia',
     text1: 'Implementando conhecimentos de Gestão, Lean Manufacturing, Melhoria Contínua e Qualidade para oferecer os melhores resultados.',
@@ -48,11 +50,14 @@ export default {
     analysis: 'Análise',
     text5: 'Interpretar os dados com as ferramentas mais poderosas para aumentar os negócios e executar o planejamento de escalabilidade.',
     support: 'Suporte',
-    text6: 'Verificar a disponibilidade, acessibilidade e segurança dos sites para atender à demanda por serviços.',
+    text6: "Verificar a disponibilidade, acessibilidade e segurança dos sites para atender à demanda por serviços.",
     project: "Projetos em destaque",
+    projectdescription: 'Uma seleção dos meus trabalhos mais recentes e significativos.',
     more: "Olhar mais",
     calltoaction: "Você está interessado em meus serviços?, me mande um e-mail!",
-    contact: "contate-me"
+    contact: "contate-me",
+    dark: 'Escuro',
+    light: 'Claro'
   },
   portfolio: {
     title: 'Portfólio',
@@ -66,7 +71,7 @@ export default {
     circulardesign: "Landing page de campanha da The North Face sobre Design Circular no Peru.",
     barbiexkipling: "Landing page de campanha da Kipling com a Barbie no Peru.",
     vitalcare: "Uma empresa que oferece serviços de laboratório em menos de 24 horas.",
-    classicwheelsusa: 'Uma loja online que oferece rodas e aros clássicos para carros antigos.', 
+    classicwheelsusa: 'Uma loja online que oferece rodas e aros clássicos para carros antigos.',
     semillamulticultural: 'Uma agência criativa multicultural sediada em Miami.',
     businessmarketfinders: 'Aplicativo móvel da empresa líder na indústria financeira.',
     lamartena: 'Experiência gastronômica e familiar em Albacete.',
@@ -112,10 +117,12 @@ export default {
   },
   achievements: {
     title: 'Certificações',
+    heroparagraph: 'Certificações e conquistas que validam minha experiência e compromisso com o desenvolvimento profissional contínuo.',
     filter: 'Todos'
   },
   experience: {
     title: "Experiência",
+    heroparagraph: 'Minha jornada profissional através de diferentes empresas e funções, mostrando crescimento e experiência diversificada.',
     status: "Presente",
     uts: "Professor de Design Gráfico",
     task1uts: "Design e desenvolvimento de instrumentos de avaliação.",

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full p-4 mt-24 bg-white">
+    <div class="w-full p-4 mt-24 bg-ui-bg">
       <vue-typed-js
             class="justify-center py-2"
             :strings="[
@@ -10,13 +10,18 @@
             :showCursor="false"
             :typeSpeed="100"
           >
-            <h1 class="text-aqua-200 font-medium text-center items-center text-3xl lg:text-4xl">
+            <h1 class="text-nuxt-green font-medium text-center items-center text-3xl lg:text-4xl font-mono">
               &lt;
               <span class="typing"></span>/&gt;
             </h1>
           </vue-typed-js>
     </div>
-    <div class="py-4 px-2 h-full">
+    <div class="w-full px-6 py-4 text-center bg-ui-bg">
+      <span class="text-gray-400 font-base text-xl lg:text-2xl">
+        {{ $t("experience.heroparagraph") }}
+      </span>
+    </div>
+    <div class="py-4 px-2 h-full bg-ui-bg">
       <div class="flex flex-wrap -mx-2">
         <div
           v-for="item in items"
@@ -26,7 +31,7 @@
           data-aos-easing="linear"
           data-aos-duration="500"
         >
-          <div class="md:flex md:flex-wrap rounded overflow-hidden shadow-lg mx-2 my-2 bg-white border-2 border-white rounded-lg hover:border-aqua-100">
+          <div class="md:flex md:flex-wrap rounded-xl overflow-hidden shadow-lg mx-2 my-2 bg-ui-bg-muted border border-gray-800 hover:border-nuxt-green transition-colors duration-300 h-full">
             <picture class="px-2 py-2 w-3/4 md:w-1/3 m-auto">
                 <source
                   :title="item.title"
@@ -41,47 +46,36 @@
                   type="image/png"
                 />
                 <img
-                  class="mx-auto rounded-lg"
+                  class="mx-auto rounded-lg bg-white"
                   :src="require(`~/assets/img/bussines/${item.image}.png`)"
                   :alt="item.title"
                   :title="item.title"
                 />
               </picture>
-              <!--<nuxt-picture
-                class="px-2 py-2 w-3/4 md:w-1/3 m-auto"
-                :title="item.title"
-                :alt="item.title"
-                :src="`/img/bussines/${item.image}.png`"
-                format="webp"
-                quality="80"
-                loading="lazy"
-                :img-attrs="{ class: 'mx-auto rounded-lg' }"
-                placeholder
-              />-->
             <div
-              class="md:flex md:flex-wrap px-2 py-2 md:w-2/3 justify-center lg:justify-start items-center"
+              class="md:flex md:flex-wrap px-4 py-4 md:w-2/3 justify-center lg:justify-start items-center"
             >
               <h2
-                class="font-bold text-xl mb-2 text-center md:text-left w-full"
+                class="font-bold text-xl mb-2 text-center md:text-left w-full text-white"
               >
                 {{ item.title }}
               </h2>
               <p
-                class="text-gray-700 text-base text-center md:text-left w-full"
+                class="text-gray-400 text-base text-center md:text-left w-full"
               >
                 {{ item.yearfirst }} - {{ item.yearlast }}
               </p>
-              <a :href="item.website !== '#' ? `https://${item.website}` : item.website" :target="item.website == '#' ? '' : '_blank'">
+              <a :href="item.website !== '#' ? `https://${item.website}` : item.website" :target="item.website == '#' ? '' : '_blank'" class="w-full">
               <p
-                class="text-gray-700 text-base text-center md:text-left w-full text-aqua-100"
+                class="text-base text-center md:text-left w-full text-nuxt-green hover:text-nuxt-green/80 transition-colors"
               >
                 {{ item.company }}
               </p>
               </a>
-              <ul class="list-disc text-center md:text-left w-full">
-                <li class="list-none">{{ item.task1 }}</li>
-                <li class="list-none">{{ item.task2 }}</li>
-                <li class="list-none">{{ item.task3 }}</li>
+              <ul class="list-disc text-center md:text-left w-full text-gray-300 pl-4 mt-2">
+                <li class="list-none mb-1 text-sm">{{ item.task1 }}</li>
+                <li class="list-none mb-1 text-sm">{{ item.task2 }}</li>
+                <li class="list-none mb-1 text-sm">{{ item.task3 }}</li>
               </ul>
             </div>
           </div>

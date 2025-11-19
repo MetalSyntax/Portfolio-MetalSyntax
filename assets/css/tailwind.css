@@ -2,9 +2,43 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/*.theme-light{
-    
+:root {
+    /* ==== Dark palette (already present) ==== */
+    --ui-color-neutral-950: #0a0a0a;
+    --ui-color-neutral-900: #171717;
+    --ui-color-neutral-800: #262626;
+
+    --ui-bg: var(--ui-color-neutral-950);
+    --ui-bg-muted: var(--ui-color-neutral-900);
+    --ui-bg-elevated: var(--ui-color-neutral-900);
+    --ui-bg-accented: var(--ui-color-neutral-800);
+    --ui-text-muted: var(--ui-color-neutral-400);
+    --ui-color-neutral-400: #a3a3a3;
+
+    /* These values are only applied when the <html> element has the class “light” */
+    .light & {
+        --ui-color-neutral-950: #ffffff;
+        /* white background */
+        --ui-color-neutral-900: #f5f5f5;
+        /* very light gray */
+        --ui-color-neutral-800: #e5e5e5;
+        /* light gray */
+        --ui-color-neutral-400: #4b5563;
+        /* dark‑gray for muted text */
+
+        --ui-bg: var(--ui-color-neutral-950);
+        --ui-bg-muted: var(--ui-color-neutral-900);
+        --ui-bg-elevated: var(--ui-color-neutral-900);
+        --ui-bg-accented: var(--ui-color-neutral-800);
+        --ui-text-muted: var(--ui-color-neutral-400);
+    }
+
+    /* Swiper colours (unchanged) */
+    --swiper-navigation-color: #00c08b !important;
+    --swiper-theme-color: #00c08b !important;
 }
-.theme-dark{
-    
-}*/
+
+/* body already uses the UI variables */
+body {
+    @apply bg-ui-bg text-gray-200;
+}

@@ -16,38 +16,38 @@ export default {
   head: {
     title: process.env.npm_package_name || "",
     meta: [{
-        charset: "utf-8"
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1"
-      },
-      {
-        hid: "description",
-        name: "description",
-        content: process.env.npm_package_description || ""
-      }
+      charset: "utf-8"
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1"
+    },
+    {
+      hid: "description",
+      name: "description",
+      content: process.env.npm_package_description || ""
+    }
     ],
     link: [{
-        rel: "icon",
-        type: "image/x-icon",
-        href: "/favicon-ms.ico"
-      },
-      {
-        rel: "alternate",
-        hreflang: "en",
-        href: "http://metalsyntax.vercel.app/"
-      },
-      {
-        rel: "canonical",
-        hreflang: "es",
-        href: "http://metalsyntax.vercel.app/es"
-      },
-      {
-        rel: "alternate",
-        hreflang: "pt",
-        href: "http://metalsyntax.vercel.app/pt"
-      }
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon-ms.ico"
+    },
+    {
+      rel: "alternate",
+      hreflang: "en",
+      href: "http://metalsyntax.vercel.app/"
+    },
+    {
+      rel: "canonical",
+      hreflang: "es",
+      href: "http://metalsyntax.vercel.app/es"
+    },
+    {
+      rel: "alternate",
+      hreflang: "pt",
+      href: "http://metalsyntax.vercel.app/pt"
+    }
     ]
   },
   /*
@@ -84,6 +84,9 @@ export default {
     {
       src: "~/plugins/i18n.js"
     }
+    /*{
+      src: '~/plugins/theme-switch.client.js', mode: 'client'
+    }*/
   ],
   /*
    ** Generates
@@ -180,46 +183,46 @@ export default {
         pt: "/experience"
       }
     },
-   // Define a custom redirection function that changes the value of "defaultLocale"
+    // Define a custom redirection function that changes the value of "defaultLocale"
     vueI18n: {
       fallbackLocale: "en"
     },
     locales: [{
-        code: "en",
-        name: "English",
-        iso: "en-US",
-        file: 'en-US.js'
-      },
-      {
-        code: 'en-US', 
-        iso: 'en-US',
-        name: 'English (US)',
-        file: 'en-US.js'
-      },
-      {
-        code: "es",
-        name: "Español",
-        iso: "es-ES",
-        file: 'es-ES.js'
-      },
-      {
-        code: 'es-ES',
-        iso: 'es-ES',
-        name: 'Español (España)',
-        file: 'es-ES.js'
-      },
-      {
-        code: "pt",
-        name: "Portuguese",
-        iso: "pt-PT",
-        file: 'pt-PT.js'
-      },
-      {
-        code: 'pt-PT',
-        iso: 'pt-PT',
-        name: 'Português (Portugal)',
-        file: 'pt-PT.js'
-      }
+      code: "en",
+      name: "English",
+      iso: "en-US",
+      file: 'en-US.js'
+    },
+    {
+      code: 'en-US',
+      iso: 'en-US',
+      name: 'English (US)',
+      file: 'en-US.js'
+    },
+    {
+      code: "es",
+      name: "Español",
+      iso: "es-ES",
+      file: 'es-ES.js'
+    },
+    {
+      code: 'es-ES',
+      iso: 'es-ES',
+      name: 'Español (España)',
+      file: 'es-ES.js'
+    },
+    {
+      code: "pt",
+      name: "Portuguese",
+      iso: "pt-PT",
+      file: 'pt-PT.js'
+    },
+    {
+      code: 'pt-PT',
+      iso: 'pt-PT',
+      name: 'Português (Portugal)',
+      file: 'pt-PT.js'
+    }
     ],
     lazy: true,
     langDir: 'lang/'
@@ -292,6 +295,6 @@ export default {
    *Robot.txt
    */
   robots: {
-    
+
   }
 };
