@@ -195,6 +195,7 @@
                 <source
                   :title="icon.title"
                   :alt="icon.title"
+                  loading="lazy"
                   :srcset="require(`~/assets/img/tech/${icon.image}.png?webp`)"
                   type="image/webp"
                   height="56"
@@ -202,12 +203,14 @@
                 <source
                   :title="icon.title"
                   :alt="icon.title"
+                  loading="lazy"
                   :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
                   type="image/png"
                   height="56"
                 />
                 <img
                   class="w-12 h-12 object-contain icon-grayscale"
+                  loading="lazy"
                   :title="icon.title"
                   :src="require(`~/assets/img/tech/${icon.image}.png`)"
                   :alt="icon.title"
