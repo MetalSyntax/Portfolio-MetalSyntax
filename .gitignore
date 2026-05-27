@@ -94,3 +94,8 @@ sw.*
 .vercel
 
 Tienda-de-webs
+
+# Antigravity CLI
+.antigravitycli
+pnpm-lock.yaml
+.env*

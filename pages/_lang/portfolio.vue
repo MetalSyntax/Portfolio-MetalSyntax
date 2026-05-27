@@ -104,6 +104,24 @@
             >Freelance</a
           >
         </li>
+        <li class="flex-1 mr-2 max-w-xs">
+          <a
+            class="button-filter-project"
+            href="#alcancevirtual"
+            @click="itemsFilterkey = 'alcancevirtual'"
+            :class="{ active: itemsFilterkey == 'alcancevirtual' }"
+            >Alcance Virtual</a
+          >
+        </li>
+        <li class="flex-1 mr-2 max-w-xs">
+          <a
+            class="button-filter-project"
+            href="#multipro"
+            @click="itemsFilterkey = 'multipro'"
+            :class="{ active: itemsFilterkey == 'multipro' }"
+            >Multipro</a
+          >
+        </li>
       </ul>
       <select
         name="items"
@@ -119,6 +137,8 @@
         <option class="bg-ui-bg-muted text-white" value="domiserver">DomiServer</option>
         <option class="bg-ui-bg-muted text-white" value="personal">Personal</option>
         <option class="bg-ui-bg-muted text-white" value="freelance">Freelance</option>
+        <option class="bg-ui-bg-muted text-white" value="alcancevirtual">Alcance Virtual</option>
+        <option class="bg-ui-bg-muted text-white" value="multipro">Multipro</option>
       </select>
     </div>
     <div
@@ -130,6 +150,8 @@
         itemsFilterkey == 'domiserver' ? 'lg:h-screen' : '',
         itemsFilterkey == 'personal' ? 'lg:h-screen' : '',
         itemsFilterkey == 'freelance' ? 'lg:h-screen' : '',
+        itemsFilterkey == 'alcancevirtual' ? 'lg:h-screen' : '',
+        itemsFilterkey == 'multipro' ? 'lg:h-screen' : '',
       ]"
       class="p-4 px-2 bg-ui-bg min-h-screen"
     >
@@ -250,8 +272,72 @@ export default {
       itemsFilterkey: "All",
       items: [
         {
+          title: "Parity",
+          company: "Personal",
+          year: "2026",
+          description: this.$t("portfolio.parity"),
+          link: "https://parity-finance.vercel.app/",
+          image: "Parity",
+          icons: [
+            { title: "React.js", image: "Reactjs" },
+            { title: "TypeScript", image: "typescript" },
+            { title: "TailwindCSS", image: "tailwindcss" },
+          ],
+        },
+        {
+          title: "Vitreon",
+          company: "Personal",
+          year: "2026",
+          description: this.$t("portfolio.vitreon"),
+          link: "https://vitreon-notes.vercel.app/",
+          image: "Vitreon",
+          icons: [
+            { title: "React.js", image: "Reactjs" },
+            { title: "TypeScript", image: "typescript" },
+            { title: "TailwindCSS", image: "tailwindcss" },
+          ],
+        },
+        {
+          title: "Alere",
+          company: "Alcance Virtual SPA",
+          year: "2026",
+          description: this.$t("portfolio.alere"),
+          link: "#",
+          image: "alere",
+          icons: [
+            { title: "WordPress", image: "WordPress" },
+            { title: "PHP", image: "PHP" },
+          ],
+        },
+        {
+          title: "Pharmahub",
+          company: "Alcance Virtual SPA",
+          year: "2026",
+          description: this.$t("portfolio.pharmahub"),
+          link: "#",
+          image: "pharmahub",
+          icons: [
+            { title: "WordPress", image: "WordPress" },
+            { title: "PHP", image: "PHP" },
+          ],
+        },
+        {
+          title: "Sitef Venezuela",
+          company: "Multipro Consulting",
+          year: "2026",
+          description: this.$t("portfolio.sitef"),
+          link: "#",
+          image: "sitef",
+          icons: [
+            { title: "WordPress", image: "WordPress" },
+            { title: "PHP", image: "PHP" },
+            { title: "Google Stitch", image: "google-stitch-logo" },
+            { title: "Elementor", image: "elementor" },
+          ],
+        },
+        {
           title: "Crux Food",
-          company: "Freelance",
+          company: "Alcance Virtual SPA",
           year: "2025",
           description: this.$t("portfolio.cruxfood"),
           link: "https://www.behance.net/gallery/220324661/Crux-Food-Re-design",
@@ -259,6 +345,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Elementor", image: "elementor" },
           ],
         },
         {
@@ -301,7 +388,7 @@ export default {
         },
         {
           title: "Solufar - Recetario Magistral",
-          company: "Freelance",
+          company: "Alcance Virtual SPA",
           year: "2025",
           description: this.$t("portfolio.solufar"),
           link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
@@ -309,6 +396,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Elementor", image: "elementor" },
           ],
         },
         {
@@ -375,6 +463,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Elementor", image: "elementor" },
           ],
         },
         {
@@ -387,6 +476,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Elementor", image: "elementor" },
           ],
         },
         {
@@ -399,6 +489,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Elementor", image: "elementor" },
           ],
         },
         {
@@ -411,6 +502,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Elementor", image: "elementor" },
           ],
         },
         {
@@ -423,6 +515,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -435,6 +528,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -447,6 +541,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -459,6 +554,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -471,6 +567,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -533,6 +630,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -545,6 +643,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -557,6 +656,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -581,6 +681,7 @@ export default {
           icons: [
             { title: "WordPress", image: "WordPress" },
             { title: "PHP", image: "PHP" },
+            { title: "Divi", image: "Divi" },
           ],
         },
         {
@@ -783,6 +884,16 @@ export default {
     Personal() {
       return this.items.filter(function (item) {
         return item.company == "Personal";
+      });
+    },
+    alcancevirtual() {
+      return this.items.filter(function (item) {
+        return item.company == "Alcance Virtual SPA";
+      });
+    },
+    multipro() {
+      return this.items.filter(function (item) {
+        return item.company == "Multipro Consulting";
       });
     },
   },
