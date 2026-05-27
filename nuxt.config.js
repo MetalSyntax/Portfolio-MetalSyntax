@@ -138,6 +138,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    "@nuxt/content",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "nuxt-i18n",

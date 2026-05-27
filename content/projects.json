@@ -1,0 +1,631 @@
+{
+  "items": [
+    {
+      "title": "Parity",
+      "company": "Personal",
+      "year": "2026",
+      "description_es": "Aplicación web PWA de finanzas personales, open source, con datos encriptados y sin tracking.",
+      "description_en": "Personal finance PWA web app, open source, with encrypted data and no tracking.",
+      "description_pt": "Aplicação web PWA de finanças pessoais, open source, com dados encriptados e sem rastreamento.",
+      "link": "https://parity-finance.vercel.app/",
+      "image": "Parity",
+      "icons": [
+        { "title": "React.js", "image": "Reactjs" },
+        { "title": "TypeScript", "image": "typescript" },
+        { "title": "TailwindCSS", "image": "tailwindcss" }
+      ]
+    },
+    {
+      "title": "Vitreon",
+      "company": "Personal",
+      "year": "2026",
+      "description_es": "Aplicación web PWA de notas, open source, con datos encriptados y sin tracking.",
+      "description_en": "Notes PWA web app, open source, with encrypted data and no tracking.",
+      "description_pt": "Aplicação web PWA de notas, open source, com dados encriptados e sem rastreamento.",
+      "link": "https://vitreon-notes.vercel.app/",
+      "image": "Vitreon",
+      "icons": [
+        { "title": "React.js", "image": "Reactjs" },
+        { "title": "TypeScript", "image": "typescript" },
+        { "title": "TailwindCSS", "image": "tailwindcss" }
+      ]
+    },
+    {
+      "title": "Alere",
+      "company": "Alcance Virtual SPA",
+      "year": "2026",
+      "description_es": "Empresa de alimentación industrial que provee servicios de casino para colegios, empresas y más en Chile.",
+      "description_en": "Industrial food company providing cafeteria services for schools, businesses, and more in Chile.",
+      "description_pt": "Empresa de alimentação industrial que fornece serviços de refeitório para escolas, empresas e mais no Chile.",
+      "link": "#",
+      "image": "alere",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Pharmahub",
+      "company": "Alcance Virtual SPA",
+      "year": "2026",
+      "description_es": "Hub digital para la industria farmacéutica, conectando laboratorios y farmacias en Chile.",
+      "description_en": "Digital hub for the pharmaceutical industry, connecting laboratories and pharmacies in Chile.",
+      "description_pt": "Hub digital para a indústria farmacêutica, conectando laboratórios e farmácias no Chile.",
+      "link": "#",
+      "image": "pharmahub",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Sitef Venezuela",
+      "company": "Multipro Consulting",
+      "year": "2026",
+      "description_es": "Sistema de medios de pago y soluciones financieras tecnológicas para Venezuela.",
+      "description_en": "Payment solutions and financial technology systems for Venezuela.",
+      "description_pt": "Soluções de pagamento e sistemas de tecnologia financeira para a Venezuela.",
+      "link": "#",
+      "image": "sitef",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Google Stitch", "image": "google-stitch-logo" },
+        { "title": "Elementor", "image": "elementor" }
+      ]
+    },
+    {
+      "title": "Crux Food",
+      "company": "Alcance Virtual SPA",
+      "year": "2025",
+      "description_es": "Apoyo estratégico en alimentación institucional, eventos gastronómicos y servicios de alimentación.",
+      "description_en": "Strategic support in institutional food services, culinary events, and catering services.",
+      "description_pt": "Apoio estratégico em alimentação institucional, eventos gastronômicos e serviços de alimentação.",
+      "link": "https://www.behance.net/gallery/220324661/Crux-Food-Re-design",
+      "image": "Crux-Food",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Elementor", "image": "elementor" }
+      ]
+    },
+    {
+      "title": "Ecommerce App",
+      "company": "Personal",
+      "year": "2025",
+      "description_es": "Una potente aplicación de comercio electrónico móvil",
+      "description_en": "A powerful mobile e-commerce application",
+      "description_pt": "Um poderoso aplicativo de comércio eletrônico móvel",
+      "link": "https://www.behance.net/gallery/220324399/Ecommerce-App",
+      "image": "Ecommerce-App",
+      "icons": [
+        { "title": "React.js", "image": "Reactjs" },
+        { "title": "Node.js", "image": "nodejs" }
+      ]
+    },
+    {
+      "title": "Dashboard Particles",
+      "company": "Personal",
+      "year": "2025",
+      "description_es": "Dashboard con gráficos interactivos para observar información visual.",
+      "description_en": "Dashboard with interactive charts to visualize information.",
+      "description_pt": "Dashboard com gráficos interativos para visualização de informações.",
+      "link": "https://www.behance.net/gallery/220321939/Dashboard-Particle",
+      "image": "Dasboard-Particles",
+      "icons": [
+        { "title": "Figma", "image": "Figma" }
+      ]
+    },
+    {
+      "title": "Class Manager",
+      "company": "Personal",
+      "year": "2025",
+      "description_es": "Experiencia fluida en la gestión de reservas, estudiantes y tutores",
+      "description_en": "Seamless experience managing bookings, students, and tutors.",
+      "description_pt": "Experiência fluida na gestão de reservas, alunos e tutores.",
+      "link": "https://www.behance.net/gallery/220323193/Class-Manager-App",
+      "image": "Class-Manager",
+      "icons": [
+        { "title": "ionic", "image": "ionic" },
+        { "title": "Angular", "image": "Angular" }
+      ]
+    },
+    {
+      "title": "Solufar - Recetario Magistral",
+      "company": "Alcance Virtual SPA",
+      "year": "2025",
+      "description_es": "Somos de las Farmacias que hacen recetas magistrales en Chile",
+      "description_en": "We are one of the pharmacies that make master formulas in Chile",
+      "description_pt": "Somos uma das farmácias que fazem fórmulas magistrais no Chile.",
+      "link": "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
+      "image": "solufar",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Elementor", "image": "elementor" }
+      ]
+    },
+    {
+      "title": "JC Cake x GAP",
+      "company": "Komax",
+      "year": "2024",
+      "description_es": "Landing de campaña de GAP con el artista JC Cake en Peru",
+      "description_en": "Campaign landing page for GAP with the artist JC Cake in Peru",
+      "description_pt": "Landing page de campanha da GAP com o artista JC Cake no Peru.",
+      "link": "https://www.behance.net/gallery/200986933/Landing-Page-JC-CAKE-GAP-Peru",
+      "image": "gap",
+      "icons": [
+        { "title": "Magento 2", "image": "magento-2" },
+        { "title": "HTML5", "image": "HTML5" },
+        { "title": "CSS3", "image": "CSS" },
+        { "title": "JavaScript", "image": "JS" }
+      ]
+    },
+    {
+      "title": "The North Face - Circular Design",
+      "company": "Komax",
+      "year": "2024",
+      "description_es": "Landing de campaña de The North Face sobre Circular Design en Peru",
+      "description_en": "Campaign landing page for The North Face about Circular Design in Peru",
+      "description_pt": "Landing page de campanha da The North Face sobre Design Circular no Peru.",
+      "link": "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
+      "image": "tnf",
+      "icons": [
+        { "title": "Magento 2", "image": "magento-2" },
+        { "title": "HTML5", "image": "HTML5" },
+        { "title": "CSS3", "image": "CSS" },
+        { "title": "JavaScript", "image": "JS" }
+      ]
+    },
+    {
+      "title": "Barbie x Kipling",
+      "company": "Komax",
+      "year": "2024",
+      "description_es": "Landing de campaña de Kipling con Barbie en Peru",
+      "description_en": "Campaign landing page for Kipling with Barbie in Peru",
+      "description_pt": "Landing page de campanha da Kipling com a Barbie no Peru.",
+      "link": "https://www.behance.net/gallery/200987501/Landing-x-Kipling-kipling-Peru",
+      "image": "kip",
+      "icons": [
+        { "title": "Magento 2", "image": "magento-2" },
+        { "title": "HTML5", "image": "HTML5" },
+        { "title": "CSS3", "image": "CSS" },
+        { "title": "JavaScript", "image": "JS" }
+      ]
+    },
+    {
+      "title": "Business Market Finders",
+      "company": "Genesis Agency",
+      "year": "2023",
+      "description_es": "App movil de la empresa líder en la industria financiera.",
+      "description_en": "Mobile app of the leading company in the financial industry.",
+      "description_pt": "Aplicativo móvel da empresa líder na indústria financeira.",
+      "link": "https://www.behance.net/gallery/175709925/Business-Market-Finders",
+      "image": "bmf",
+      "icons": [
+        { "title": "SAP AppGyver", "image": "AppGyver" },
+        { "title": "JavaScript", "image": "JS" }
+      ]
+    },
+    {
+      "title": "La Martena",
+      "company": "Genesis Agency",
+      "year": "2023",
+      "description_es": "Experiencia gastronómica y familiar en Albacete.",
+      "description_en": "Gastronomic and family experience in Albacete.",
+      "description_pt": "Experiência gastronômica e familiar em Albacete.",
+      "link": "https://www.behance.net/gallery/175647981/La-Martena",
+      "image": "lamartena",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Elementor", "image": "elementor" }
+      ]
+    },
+    {
+      "title": "PasareLab",
+      "company": "Equipo 360",
+      "year": "2022",
+      "description_es": "El directorio que te conecta con la industria farmaceutica.",
+      "description_en": "The directory that connects you with the pharmaceutical industry.",
+      "description_pt": "O diretório que conecta você com a indústria farmacêutica.",
+      "link": "https://www.behance.net/gallery/153310385/PasareLab",
+      "image": "pasarelab",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Elementor", "image": "elementor" }
+      ]
+    },
+    {
+      "title": "Work To Earn",
+      "company": "Equipo 360",
+      "year": "2022",
+      "description_es": "Tecnología de Blockchain aplicada a los recursos humanos.",
+      "description_en": "Technology of Blockchain applied to human resources.",
+      "description_pt": "Tecnologia de Blockchain aplicada aos recursos humanos.",
+      "link": "https://www.behance.net/gallery/153310391/Work-To-Earn",
+      "image": "worktoearn",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Elementor", "image": "elementor" }
+      ]
+    },
+    {
+      "title": "Den Gode Fisk Fra Havet",
+      "company": "Equipo 360",
+      "year": "2022",
+      "description_es": "Empresa que suministra solo materias primas de primera clase.",
+      "description_en": "Company that supplies only top-quality raw materials.",
+      "description_pt": "Empresa que fornece apenas matérias-primas de primeira classe.",
+      "link": "https://www.behance.net/gallery/153310395/Den-Gode-Fisk-Fra-Havet",
+      "image": "dengodefiskfrahavet",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Elementor", "image": "elementor" }
+      ]
+    },
+    {
+      "title": "Boundless Builders",
+      "company": "Virtually Present",
+      "year": "2021",
+      "description_es": "Contratista de remodelación cerca de usted.",
+      "description_en": "Remodeling contractor near you.",
+      "description_pt": "Empreiteiro de reforma perto de você.",
+      "link": "https://www.behance.net/gallery/153307579/Boundless-Builders",
+      "image": "boundless-builders",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Clinica Medica",
+      "company": "Virtually Present",
+      "year": "2021",
+      "description_es": "La atención y el servicio de alta calidad que necesita.",
+      "description_en": "High-quality attention and service you need.",
+      "description_pt": "Atendimento e serviço de alta qualidade que você precisa.",
+      "link": "https://www.behance.net/gallery/153307581/Clinica-Medica",
+      "image": "clinicamedica",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Sand of Isla Morada",
+      "company": "Virtually Present",
+      "year": "2021",
+      "description_es": "Visita uno de los mejores hoteles en los cayos de Florida.",
+      "description_en": "Visit one of the best hotels in the Florida Keys.",
+      "description_pt": "Visite um dos melhores hotéis nas Florida Keys.",
+      "link": "https://sandsofislamorada.com/",
+      "image": "sandsofislamorada",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "The Senior Care Foundation",
+      "company": "Virtually Present",
+      "year": "2021",
+      "description_es": "Organización sin fines de lucro, dedicada al cuidado y el bienestar de las personas mayores.",
+      "description_en": "Non-profit organization, dedicated to elder care and wellness.",
+      "description_pt": "Organização sem fins lucrativos, dedicada ao cuidado e bem-estar dos idosos.",
+      "link": "https://theseniorcarefoundation.org/",
+      "image": "TSCF",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Vitalcare",
+      "company": "Virtually Present",
+      "year": "2021",
+      "description_es": "Empresa que ofrece servicios de laboratorio en menos de 24 horas.",
+      "description_en": "A company that offers laboratory services in less than 24 hours.",
+      "description_pt": "Uma empresa que oferece serviços de laboratório em menos de 24 horas.",
+      "link": "https://www.behance.net/gallery/175651013/Vitalcare",
+      "image": "vitalcare",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Syntax Stream",
+      "company": "Personal",
+      "year": "2021",
+      "description_es": "Aplicación móvil de servicio de eventos en vivo con integración a compras.",
+      "description_en": "Live events service mobile application with integration to purchases.",
+      "description_pt": "Aplicativo móvel do serviço de eventos ao vivo com integração às compras.",
+      "link": "https://www.behance.net/gallery/121536125/Stream-Syntax",
+      "image": "Syntax-Stream",
+      "icons": [
+        { "title": "Adobe XD", "image": "AdobeXD" }
+      ]
+    },
+    {
+      "title": "Lior Pedidos App",
+      "company": "Freelance",
+      "year": "2020",
+      "description_es": "Aplicación Web para realizar pedidos de productos de belleza.",
+      "description_en": "Web application to order beauty products with customers in Venezuela.",
+      "description_pt": "Aplicativo da Web para solicitar produtos de beleza.",
+      "link": "https://lior-app.vercel.app/",
+      "image": "Lior-App",
+      "icons": [
+        { "title": "Nuxt.js", "image": "Nuxt" },
+        { "title": "Vue", "image": "Vuejs" },
+        { "title": "TailWind", "image": "tailwindcss" }
+      ]
+    },
+    {
+      "title": "Syntax Project Next",
+      "company": "Personal",
+      "year": "2020",
+      "description_es": "Sitio web moderno sobre servicios comerciales en línea.",
+      "description_en": "Modern website on online business services tailored to the needs of customers.",
+      "description_pt": "Web sobre serviços comerciais online.",
+      "link": "https://syntax-project-next.now.sh/",
+      "image": "Tech-Cube",
+      "icons": [
+        { "title": "Next.js", "image": "Nextjs" }
+      ]
+    },
+    {
+      "title": "Classic Wheels Usa",
+      "company": "Virtually Present",
+      "year": "2020",
+      "description_es": "Tienda en línea que ofrece ruedas y llantas para autos antiguos.",
+      "description_en": "An online store that offers classic wheels and rims for vintage cars.",
+      "description_pt": "Uma loja online que oferece rodas e aros clássicos para carros antigos.",
+      "link": "https://classicwheelsusa.com/",
+      "image": "Classic-Wheels-Usa",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Semilla Multicultural",
+      "company": "Virtually Present",
+      "year": "2021",
+      "description_es": "Agencia creativa multicultural con sede en Miami.",
+      "description_en": "A multicultural creative agency based in Miami.",
+      "description_pt": "Uma agência criativa multicultural sediada em Miami.",
+      "link": "https://semillamulticultural.com/",
+      "image": "Semilla-Multicultural",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Bardisa LYL Center",
+      "company": "Virtually Present",
+      "year": "2020",
+      "description_es": "Enfoque holístico de la medicina convencional y alternativa ubicada en Florida.",
+      "description_en": "Holistic approach to conventional and alternative medicine located in Florida.",
+      "description_pt": "Abordagem holística da medicina convencional e alternativa localizada na Flórida.",
+      "link": "https://bardisalylcenter.com/",
+      "image": "BDS",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Radio Caribe",
+      "company": "Freelance",
+      "year": "2019",
+      "description_es": "Emisora oficial de los venezolanos en el exterior, y tambien en Venezuela.",
+      "description_en": "Official radio station for Venezuelans abroad, and also in Venezuela.",
+      "description_pt": "Rádio oficial dos venezuelanos no exterior e também na Venezuela.",
+      "link": "http://www.radiocaribe.com/",
+      "image": "Radio-Caribe",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Florida Doctors Group",
+      "company": "Virtually Present",
+      "year": "2019",
+      "description_es": "Organización de gestión de servicios de salud de propiedad privada.",
+      "description_en": "Privately-owned management health service organization in all Florida.",
+      "description_pt": "Organização privada de gestão de serviços de saúde.",
+      "link": "https://fdgmso.com/",
+      "image": "FDGMSO",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" },
+        { "title": "Divi", "image": "Divi" }
+      ]
+    },
+    {
+      "title": "Syntax Note",
+      "company": "Personal",
+      "year": "2019",
+      "description_es": "Aplicación que permite guardar información a través del archivo de notas.",
+      "description_en": "Application that allows saving information through the notes file.",
+      "description_pt": "Aplicativo que permite salvar informações através do arquivo de notas.",
+      "link": "https://metalsyntax.github.io/Notes/",
+      "image": "Syntax-Note",
+      "icons": [
+        { "title": "AngularJS", "image": "angularjs" }
+      ]
+    },
+    {
+      "title": "Syntax Monitor",
+      "company": "Personal",
+      "year": "2019",
+      "description_es": "Aplicación para la verificación de tasas del dólar paralelo en Venezuela.",
+      "description_en": "Application for the verification of parallel dollar rates.",
+      "description_pt": "Pedido de verificação de taxas paralelas de dólares na Venezuela.",
+      "link": "https://metalsyntax.github.io/Syntax-Monitor/",
+      "image": "Syntax-Monitor",
+      "icons": [
+        { "title": "Jquery", "image": "jquery" }
+      ]
+    },
+    {
+      "title": "Ofertas del Motor",
+      "company": "kainver",
+      "year": "2019",
+      "description_es": "Clasificados para la compra-venta de coches en España.",
+      "description_en": "Classifieds for buying and selling cars in Spain.",
+      "description_pt": "Classificados para compra e venda de carros na Espanha.",
+      "link": "https://www.behance.net/gallery/96603035/ODM",
+      "image": "Ofertas-del-motor",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Mi Secretaria Virtual",
+      "company": "kainver",
+      "year": "2019",
+      "description_es": "Secretarias virtuales para actividades administrativas de empresas.",
+      "description_en": "Virtual secretaries for business administrative activities.",
+      "description_pt": "Secretárias virtuais para atividades administrativas de negócios.",
+      "link": "https://www.behance.net/gallery/96600341/MSV",
+      "image": "Mi-Secretaria-Virtual",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Renderizados",
+      "company": "kainver",
+      "year": "2019",
+      "description_es": "Renderizados fotorealistas de alta calidad.",
+      "description_en": "High quality photorealistic renderings.",
+      "description_pt": "Renderizações fotorrealistas de alta qualidade.",
+      "link": "https://www.behance.net/gallery/96600761/Renderizados",
+      "image": "Renderizados",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Soluciones Web",
+      "company": "kainver",
+      "year": "2019",
+      "description_es": "Alternativas para impulsar y posicionar productos digitales en España.",
+      "description_en": "Alternatives to promote and position products online in Spain.",
+      "description_pt": "Alternativas para promover e posicionar produtos.",
+      "link": "https://www.behance.net/gallery/79186095/Soluciones-Web",
+      "image": "Soluciones-Web",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "AW Travel Guides",
+      "company": "kainver",
+      "year": "2019",
+      "description_es": "Web de viajes para destinos, guías, hoteles, tour, vacaciones y más.",
+      "description_en": "Travel website for destinations, guides, hotels, tour, vacations and more.",
+      "description_pt": "Site de viagens para destinos, guias, hotéis, passeios, férias e muito mais.",
+      "link": "https://www.behance.net/gallery/79183575/AW-Travel-Guides",
+      "image": "AW-Travel-Guides",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Traductores Malaga",
+      "company": "kainver",
+      "year": "2018",
+      "description_es": "Red de profesionales en la traducción jurada y otros servicios de traducción en Malaga.",
+      "description_en": "Network of professionals in legal translation in Malaga, Spain.",
+      "description_pt": "Rede de profissionais em tradução juramentada em Málaga.",
+      "link": "https://www.behance.net/gallery/72284307/Traductores-Malaga",
+      "image": "Traductores-Malaga",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Domiserver",
+      "company": "Domiserver",
+      "year": "2018",
+      "description_es": "Servicio de hosting con la relación óptima entre precio y rendimiento en Venezuela.",
+      "description_en": "The optimal relationship between price and performance in Venezuela.",
+      "description_pt": "A relação ideal entre preço e desempenho na Venezuela.",
+      "link": "https://www.behance.net/gallery/66801367/DomiServer",
+      "image": "DomiServer",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Latin Talents",
+      "company": "Domiserver",
+      "year": "2018",
+      "description_es": "Empresa dedicada a la búsqueda y promoción de modelos para eventos corporativos",
+      "description_en": "Company dedicated to the search and promotion of models for corporate events.",
+      "description_pt": "Empresa dedicada à busca e promoção de modelos para eventos corporativos.",
+      "link": "https://www.behance.net/gallery/66800623/LatinTalents",
+      "image": "LatinTalens",
+      "icons": [
+        { "title": "WordPress", "image": "WordPress" },
+        { "title": "PHP", "image": "PHP" }
+      ]
+    },
+    {
+      "title": "Methods",
+      "company": "Personal",
+      "year": "2017",
+      "description_es": "Aplicación Web para cálculos relacionados con la Ingeniería de Métodos.",
+      "description_en": "Web application for calculations related to Method Engineering.",
+      "description_pt": "Aplicativo da Web para cálculos relacionados à Engenharia de Métodos.",
+      "link": "https://metalsyntax.github.io/Methods/",
+      "image": "Methods",
+      "icons": [
+        { "title": "PhoneGap", "image": "phonegap" },
+        { "title": "HTML5", "image": "HTML5" },
+        { "title": "CSS3", "image": "CSS" },
+        { "title": "JavaScript", "image": "JS" }
+      ]
+    },
+    {
+      "title": "Code of Paid",
+      "company": "Personal",
+      "year": "2017",
+      "description_es": "Aplicación Web para generar un código sencillo mediante un ID personal.",
+      "description_en": "Web application to generate a simple code using a personal ID.",
+      "description_pt": "Aplicativo da Web para gerar um código simples usando um ID pessoal.",
+      "link": "https://www.behance.net/gallery/66803173/Code-of-Paid",
+      "image": "Yanbal-Code-Of-Paid",
+      "icons": [
+        { "title": "PhoneGap", "image": "phonegap" },
+        { "title": "HTML5", "image": "HTML5" },
+        { "title": "CSS3", "image": "CSS" },
+        { "title": "JavaScript", "image": "JS" }
+      ]
+    }
+  ]
+}
