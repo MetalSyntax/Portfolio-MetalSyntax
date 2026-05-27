@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>MetalSyntax Admin</title>
-    <script>window.CMS_MANUAL_INIT = true;</script>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+      // Vercel's catch-all returns HTML for /admin/config.yml.
+      // We intercept that fetch and return empty YAML so Decap CMS
+      // initializes fully and registers its OAuth callback handler.
+      const _origFetch = window.fetch.bind(window);
+      window.fetch = function(url, ...args) {
+        if (typeof url === 'string' && url.includes('config.yml')) {
+          return Promise.resolve(new Response('backend:\n  name: github\n', {
+            status: 200,
+            headers: { 'Content-Type': 'application/x-yaml' }
+          }));
+        }
+        return _origFetch(url, ...args);
+      };
+    </script>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
