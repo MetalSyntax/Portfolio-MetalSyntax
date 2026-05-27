@@ -2,20 +2,25 @@
   "version": 2,
   "builds": [
     {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": [
-					"package.json",
-					"server/**",
-					".nuxt/dist/sitemap-routes.json"
-				],
+          "package.json",
+          "server/**",
+          ".nuxt/dist/sitemap-routes.json"
+        ],
         "internalServer": true
       }
     }
   ],
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=31557600" } },
     {
       "src": "/sw.js",
