@@ -5,8 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>MetalSyntax Admin</title>
+    <script>window.CMS_MANUAL_INIT = true;</script>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'MetalSyntax/Portfolio-MetalSyntax',
+            branch: 'master',
+            base_url: 'https://api.netlify.com',
+            auth_endpoint: 'auth'
+          },
+          locale: 'es',
+          media_folder: 'assets/img/projects',
+          public_folder: 'assets/img/projects',
+          collections: [
+            {
+              name: 'portfolio',
+              label: 'Portafolio',
+              files: [
+                {
+                  name: 'projects',
+                  label: 'Proyectos',
+                  file: 'content/projects.json',
+                  fields: [
+                    {
+                      name: 'items',
+                      label: 'Lista de Proyectos',
+                      widget: 'list',
+                      allow_add: true,
+                      collapsed: true,
+                      minimize_collapsed: true,
+                      summary: '{{fields.title}} — {{fields.company}} ({{fields.year}})',
+                      fields: [
+                        { name: 'title', label: 'Título', widget: 'string' },
+                        {
+                          name: 'company',
+                          label: 'Empresa',
+                          widget: 'select',
+                          options: [
+                            'Personal',
+                            'Freelance',
+                            'Komax',
+                            'Genesis Agency',
+                            'Equipo 360',
+                            'Virtually Present',
+                            'kainver',
+                            'Domiserver',
+                            'Alcance Virtual SPA',
+                            'Multipro Consulting'
+                          ]
+                        },
+                        { name: 'year', label: 'Año', widget: 'string' },
+                        { name: 'description_es', label: 'Descripción (Español)', widget: 'text' },
+                        { name: 'description_en', label: 'Description (English)', widget: 'text' },
+                        { name: 'description_pt', label: 'Descrição (Português)', widget: 'text' },
+                        { name: 'link', label: 'Link', widget: 'string', default: '#' },
+                        {
+                          name: 'image',
+                          label: 'Nombre de imagen (sin -.jpg)',
+                          widget: 'string',
+                          hint: 'Ejemplo: Parity → assets/img/projects/Parity-.jpg'
+                        },
+                        {
+                          name: 'icons',
+                          label: 'Tecnologías',
+                          widget: 'list',
+                          allow_add: true,
+                          collapsed: true,
+                          summary: '{{fields.title}}',
+                          fields: [
+                            { name: 'title', label: 'Nombre', widget: 'string' },
+                            {
+                              name: 'image',
+                              label: 'Archivo icono (sin .png)',
+                              widget: 'string',
+                              hint: 'Ejemplo: Reactjs → assets/img/tech/Reactjs.png'
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
   </body>
 </html>
