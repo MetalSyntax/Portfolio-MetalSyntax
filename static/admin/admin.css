@@ -1,22 +1,25 @@
 /* Dark theme and modern styles for Decap CMS */
-body {
+body, #nc-root {
   background-color: #0b0f19 !important; /* dark background */
   color: #e2e8f0 !important;
 }
 
 /* Header / App Bar */
-.nc-appHeader-header {
+header, [class*="AppHeader"], [class*="Header"] {
   background-color: #1a202c !important;
   border-bottom: 1px solid #2d3748 !important;
+  color: #e2e8f0 !important;
 }
 
-/* Sidebar */
-.nc-appHeader-sidebar {
+/* Sidebar and its items */
+aside, [class*="Sidebar"] {
   background-color: #1a202c !important;
   border-right: 1px solid #2d3748 !important;
+  color: #e2e8f0 !important;
 }
 
 /* Cards, panels, and entry editor backgrounds */
+[class*="Card"], [class*="Pane"], [class*="Panel"], [class*="Toolbar"],
 .nc-collectionPage-card,
 .nc-entryEditor-toolbar,
 .nc-entryEditor-editorControlPane,
@@ -27,19 +30,29 @@ body {
   color: #e2e8f0 !important;
 }
 
+/* Sub-elements inside cards (like the active collection item) */
+[class*="SidebarItem"] {
+  background-color: transparent !important;
+  color: #e2e8f0 !important;
+}
+[class*="SidebarItem"].active, [class*="SidebarItem"]:hover {
+  background-color: #2d3748 !important;
+  color: #00df9a !important;
+}
+
 /* Labels and Texts */
 h1, h2, h3, h4, h5, h6, p, span, a, label, li, div {
   color: inherit;
 }
+a { text-decoration: none !important; }
 
-.nc-collectionPage-cardTitle {
+h1, h2, [class*="Title"] {
   color: #00df9a !important; /* nuxt-green */
 }
 
 /* Inputs, Textareas, Selects, and Editor Controls */
 input, textarea, select, 
-.nc-controlPane-control,
-.nc-controlPane-widget {
+[class*="ControlPane"], [class*="Widget"] {
   background-color: #0b0f19 !important;
   color: #e2e8f0 !important;
   border: 1px solid #4a5568 !important;
@@ -47,26 +60,25 @@ input, textarea, select,
 }
 
 /* Fix for black text inside the editor inputs */
-input[type="text"], textarea, .css-1n43n21, .css-1qw32p9 {
+input[type="text"], textarea, [class*="Input"] {
   color: #e2e8f0 !important;
   background-color: #0b0f19 !important;
 }
 
-/* Dropdown selections (for list/select widgets) */
-.css-1r0i37h-control, /* react-select specific classes might exist */
-[class*="controlPane"] select {
+/* Dropdown selections */
+[class*="Control"], select {
   background-color: #0b0f19 !important;
   color: #e2e8f0 !important;
 }
 
 /* Make sure the text on black is readable */
-.nc-previewPane-previewPane {
+[class*="PreviewPane"] {
   background-color: #1a202c !important;
   color: #e2e8f0 !important;
 }
 
 /* Generic buttons */
-button {
+button, [class*="Button"] {
   border-radius: 6px !important;
   color: #e2e8f0 !important;
 }
@@ -74,7 +86,7 @@ button {
 /* Primary/Login buttons */
 button[class*="LoginButton"],
 button[class*="PublishButton"],
-button[class*="Button-button-primary"] {
+button[class*="ButtonPrimary"] {
   background-color: #00df9a !important;
   color: #0b0f19 !important;
   font-weight: 600 !important;
@@ -88,18 +100,18 @@ button[class*="PublishButton"]:hover {
 }
 
 /* Secondary buttons */
-button[class*="Button-button-default"] {
+button[class*="ButtonDefault"] {
   background-color: #2d3748 !important;
   color: #e2e8f0 !important;
   border: 1px solid #4a5568 !important;
 }
 
 /* Dropdown menus */
-div[class*="Menu-menu"] {
+[class*="Menu"] {
   background-color: #1a202c !important;
   border: 1px solid #2d3748 !important;
 }
-div[class*="Menu-menu"] * {
+[class*="Menu"] * {
   color: #e2e8f0 !important;
 }
 
