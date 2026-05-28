@@ -1,0 +1,24 @@
+{
+  "title": "Sand of Isla Morada",
+  "company": "Virtually Present",
+  "year": "2021",
+  "description_es": "Visita uno de los mejores hoteles en los cayos de Florida.",
+  "description_en": "Visit one of the best hotels in the Florida Keys.",
+  "description_pt": "Visite um dos melhores hotéis nas Florida Keys.",
+  "link": "https://sandsofislamorada.com/",
+  "image": "sandsofislamorada",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Crux Food",
+  "company": "Alcance Virtual SPA",
+  "year": "2025",
+  "description_es": "Apoyo estratégico en alimentación institucional, eventos gastronómicos y servicios de alimentación.",
+  "description_en": "Strategic support in institutional food services, culinary events, and catering services.",
+  "description_pt": "Apoio estratégico em alimentação institucional, eventos gastronômicos e serviços de alimentação.",
+  "link": "https://www.behance.net/gallery/220324661/Crux-Food-Re-design",
+  "image": "Crux-Food",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Elementor",
+      "image": "elementor"
+    }
+  ]
+}

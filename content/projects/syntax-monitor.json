@@ -1,0 +1,16 @@
+{
+  "title": "Syntax Monitor",
+  "company": "Personal",
+  "year": "2019",
+  "description_es": "Aplicación para la verificación de tasas del dólar paralelo en Venezuela.",
+  "description_en": "Application for the verification of parallel dollar rates.",
+  "description_pt": "Pedido de verificação de taxas paralelas de dólares na Venezuela.",
+  "link": "https://metalsyntax.github.io/Syntax-Monitor/",
+  "image": "Syntax-Monitor",
+  "icons": [
+    {
+      "title": "Jquery",
+      "image": "jquery"
+    }
+  ]
+}

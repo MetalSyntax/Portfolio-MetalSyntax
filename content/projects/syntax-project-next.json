@@ -1,0 +1,16 @@
+{
+  "title": "Syntax Project Next",
+  "company": "Personal",
+  "year": "2020",
+  "description_es": "Sitio web moderno sobre servicios comerciales en línea.",
+  "description_en": "Modern website on online business services tailored to the needs of customers.",
+  "description_pt": "Web sobre serviços comerciais online.",
+  "link": "https://syntax-project-next.now.sh/",
+  "image": "Tech-Cube",
+  "icons": [
+    {
+      "title": "Next.js",
+      "image": "Nextjs"
+    }
+  ]
+}

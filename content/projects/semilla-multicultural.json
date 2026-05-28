@@ -1,0 +1,24 @@
+{
+  "title": "Semilla Multicultural",
+  "company": "Virtually Present",
+  "year": "2021",
+  "description_es": "Agencia creativa multicultural con sede en Miami.",
+  "description_en": "A multicultural creative agency based in Miami.",
+  "description_pt": "Uma agência criativa multicultural sediada em Miami.",
+  "link": "https://semillamulticultural.com/",
+  "image": "Semilla-Multicultural",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

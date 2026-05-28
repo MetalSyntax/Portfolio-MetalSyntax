@@ -1,0 +1,24 @@
+{
+  "title": "Parity",
+  "company": "Personal",
+  "year": "2026",
+  "description_es": "Aplicación web PWA de finanzas personales, open source, con datos encriptados y sin tracking.",
+  "description_en": "Personal finance PWA web app, open source, with encrypted data and no tracking.",
+  "description_pt": "Aplicação web PWA de finanças pessoais, open source, com dados encriptados e sem rastreamento.",
+  "link": "https://parity-finance.vercel.app/",
+  "image": "Parity",
+  "icons": [
+    {
+      "title": "React.js",
+      "image": "Reactjs"
+    },
+    {
+      "title": "TypeScript",
+      "image": "typescript"
+    },
+    {
+      "title": "TailwindCSS",
+      "image": "tailwindcss"
+    }
+  ]
+}

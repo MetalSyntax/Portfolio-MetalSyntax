@@ -148,8 +148,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const data = await $content('achievements').fetch()
-    const items = data.items || []
+    const items = await $content('achievements').fetch()
     return { items }
   },
   head() {

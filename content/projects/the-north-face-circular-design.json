@@ -1,0 +1,28 @@
+{
+  "title": "The North Face - Circular Design",
+  "company": "Komax",
+  "year": "2024",
+  "description_es": "Landing de campaña de The North Face sobre Circular Design en Peru",
+  "description_en": "Campaign landing page for The North Face about Circular Design in Peru",
+  "description_pt": "Landing page de campanha da The North Face sobre Design Circular no Peru.",
+  "link": "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
+  "image": "tnf",
+  "icons": [
+    {
+      "title": "Magento 2",
+      "image": "magento-2"
+    },
+    {
+      "title": "HTML5",
+      "image": "HTML5"
+    },
+    {
+      "title": "CSS3",
+      "image": "CSS"
+    },
+    {
+      "title": "JavaScript",
+      "image": "JS"
+    }
+  ]
+}

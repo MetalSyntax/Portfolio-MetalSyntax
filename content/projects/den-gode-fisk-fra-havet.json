@@ -1,0 +1,24 @@
+{
+  "title": "Den Gode Fisk Fra Havet",
+  "company": "Equipo 360",
+  "year": "2022",
+  "description_es": "Empresa que suministra solo materias primas de primera clase.",
+  "description_en": "Company that supplies only top-quality raw materials.",
+  "description_pt": "Empresa que fornece apenas matérias-primas de primeira classe.",
+  "link": "https://www.behance.net/gallery/153310395/Den-Gode-Fisk-Fra-Havet",
+  "image": "dengodefiskfrahavet",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Elementor",
+      "image": "elementor"
+    }
+  ]
+}

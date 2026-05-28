@@ -1,0 +1,24 @@
+{
+  "title": "Florida Doctors Group",
+  "company": "Virtually Present",
+  "year": "2019",
+  "description_es": "Organización de gestión de servicios de salud de propiedad privada.",
+  "description_en": "Privately-owned management health service organization in all Florida.",
+  "description_pt": "Organização privada de gestão de serviços de saúde.",
+  "link": "https://fdgmso.com/",
+  "image": "FDGMSO",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

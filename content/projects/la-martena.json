@@ -1,0 +1,24 @@
+{
+  "title": "La Martena",
+  "company": "Genesis Agency",
+  "year": "2023",
+  "description_es": "Experiencia gastronómica y familiar en Albacete.",
+  "description_en": "Gastronomic and family experience in Albacete.",
+  "description_pt": "Experiência gastronômica e familiar em Albacete.",
+  "link": "https://www.behance.net/gallery/175647981/La-Martena",
+  "image": "lamartena",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Elementor",
+      "image": "elementor"
+    }
+  ]
+}

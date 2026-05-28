@@ -1,0 +1,24 @@
+{
+  "title": "Solufar - Recetario Magistral",
+  "company": "Alcance Virtual SPA",
+  "year": "2025",
+  "description_es": "Somos de las Farmacias que hacen recetas magistrales en Chile",
+  "description_en": "We are one of the pharmacies that make master formulas in Chile",
+  "description_pt": "Somos uma das farmácias que fazem fórmulas magistrais no Chile.",
+  "link": "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
+  "image": "solufar",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Elementor",
+      "image": "elementor"
+    }
+  ]
+}

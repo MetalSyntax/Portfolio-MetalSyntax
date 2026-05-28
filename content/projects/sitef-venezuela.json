@@ -1,0 +1,28 @@
+{
+  "title": "Sitef Venezuela",
+  "company": "Multipro Consulting",
+  "year": "2026",
+  "description_es": "Sistema de medios de pago y soluciones financieras tecnológicas para Venezuela.",
+  "description_en": "Payment solutions and financial technology systems for Venezuela.",
+  "description_pt": "Soluções de pagamento e sistemas de tecnologia financeira para a Venezuela.",
+  "link": "#",
+  "image": "sitef",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Google Stitch",
+      "image": "google-stitch-logo"
+    },
+    {
+      "title": "Elementor",
+      "image": "elementor"
+    }
+  ]
+}

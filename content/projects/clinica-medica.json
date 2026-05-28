@@ -1,0 +1,24 @@
+{
+  "title": "Clinica Medica",
+  "company": "Virtually Present",
+  "year": "2021",
+  "description_es": "La atención y el servicio de alta calidad que necesita.",
+  "description_en": "High-quality attention and service you need.",
+  "description_pt": "Atendimento e serviço de alta qualidade que você precisa.",
+  "link": "https://www.behance.net/gallery/153307581/Clinica-Medica",
+  "image": "clinicamedica",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

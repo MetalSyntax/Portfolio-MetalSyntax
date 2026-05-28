@@ -1,0 +1,28 @@
+{
+  "title": "Methods",
+  "company": "Personal",
+  "year": "2017",
+  "description_es": "Aplicación Web para cálculos relacionados con la Ingeniería de Métodos.",
+  "description_en": "Web application for calculations related to Method Engineering.",
+  "description_pt": "Aplicativo da Web para cálculos relacionados à Engenharia de Métodos.",
+  "link": "https://metalsyntax.github.io/Methods/",
+  "image": "Methods",
+  "icons": [
+    {
+      "title": "PhoneGap",
+      "image": "phonegap"
+    },
+    {
+      "title": "HTML5",
+      "image": "HTML5"
+    },
+    {
+      "title": "CSS3",
+      "image": "CSS"
+    },
+    {
+      "title": "JavaScript",
+      "image": "JS"
+    }
+  ]
+}

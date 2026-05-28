@@ -1,0 +1,24 @@
+{
+  "title": "Classic Wheels Usa",
+  "company": "Virtually Present",
+  "year": "2020",
+  "description_es": "Tienda en línea que ofrece ruedas y llantas para autos antiguos.",
+  "description_en": "An online store that offers classic wheels and rims for vintage cars.",
+  "description_pt": "Uma loja online que oferece rodas e aros clássicos para carros antigos.",
+  "link": "https://classicwheelsusa.com/",
+  "image": "Classic-Wheels-Usa",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

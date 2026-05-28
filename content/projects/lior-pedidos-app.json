@@ -1,0 +1,24 @@
+{
+  "title": "Lior Pedidos App",
+  "company": "Freelance",
+  "year": "2020",
+  "description_es": "Aplicación Web para realizar pedidos de productos de belleza.",
+  "description_en": "Web application to order beauty products with customers in Venezuela.",
+  "description_pt": "Aplicativo da Web para solicitar produtos de beleza.",
+  "link": "https://lior-app.vercel.app/",
+  "image": "Lior-App",
+  "icons": [
+    {
+      "title": "Nuxt.js",
+      "image": "Nuxt"
+    },
+    {
+      "title": "Vue",
+      "image": "Vuejs"
+    },
+    {
+      "title": "TailWind",
+      "image": "tailwindcss"
+    }
+  ]
+}

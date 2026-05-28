@@ -44,61 +44,50 @@
             {
               name: 'projects',
               label: 'Proyectos',
-              files: [
+              folder: 'content/projects',
+              create: true,
+              slug: '{{slug}}',
+              extension: 'json',
+              format: 'json',
+              identifier_field: 'title',
+              summary: '{{title}} — {{company}} ({{year}})',
+              fields: [
+                { name: 'title', label: 'Título', widget: 'string' },
                 {
-                  name: 'projects',
-                  label: 'Proyectos',
-                  file: 'content/projects.json',
+                  name: 'company',
+                  label: 'Empresa',
+                  widget: 'select',
+                  options: [
+                    'Personal', 'Freelance', 'Komax', 'Genesis Agency',
+                    'Equipo 360', 'Virtually Present', 'kainver',
+                    'Domiserver', 'Alcance Virtual SPA', 'Multipro Consulting'
+                  ]
+                },
+                { name: 'year', label: 'Año', widget: 'string' },
+                { name: 'description_es', label: 'Descripción (Español)', widget: 'text' },
+                { name: 'description_en', label: 'Description (English)', widget: 'text' },
+                { name: 'description_pt', label: 'Descrição (Português)', widget: 'text' },
+                { name: 'link', label: 'Link', widget: 'string', default: '#' },
+                {
+                  name: 'image',
+                  label: 'Nombre de imagen (sin -.jpg)',
+                  widget: 'string',
+                  hint: 'Ejemplo: Parity → assets/img/projects/Parity-.jpg'
+                },
+                {
+                  name: 'icons',
+                  label: 'Tecnologías',
+                  widget: 'list',
+                  allow_add: true,
+                  collapsed: true,
+                  summary: '{{fields.title}}',
                   fields: [
+                    { name: 'title', label: 'Nombre', widget: 'string' },
                     {
-                      name: 'items',
-                      label: 'Lista de Proyectos',
-                      widget: 'list',
-                      allow_add: true,
-                      collapsed: true,
-                      minimize_collapsed: false,
-                      summary: '{{fields.title}} — {{fields.company}} ({{fields.year}})',
-                      fields: [
-                        { name: 'title', label: 'Título', widget: 'string' },
-                        {
-                          name: 'company',
-                          label: 'Empresa',
-                          widget: 'select',
-                          options: [
-                            'Personal', 'Freelance', 'Komax', 'Genesis Agency',
-                            'Equipo 360', 'Virtually Present', 'kainver',
-                            'Domiserver', 'Alcance Virtual SPA', 'Multipro Consulting'
-                          ]
-                        },
-                        { name: 'year', label: 'Año', widget: 'string' },
-                        { name: 'description_es', label: 'Descripción (Español)', widget: 'text' },
-                        { name: 'description_en', label: 'Description (English)', widget: 'text' },
-                        { name: 'description_pt', label: 'Descrição (Português)', widget: 'text' },
-                        { name: 'link', label: 'Link', widget: 'string', default: '#' },
-                        {
-                          name: 'image',
-                          label: 'Nombre de imagen (sin -.jpg)',
-                          widget: 'string',
-                          hint: 'Ejemplo: Parity → assets/img/projects/Parity-.jpg'
-                        },
-                        {
-                          name: 'icons',
-                          label: 'Tecnologías',
-                          widget: 'list',
-                          allow_add: true,
-                          collapsed: true,
-                          summary: '{{fields.title}}',
-                          fields: [
-                            { name: 'title', label: 'Nombre', widget: 'string' },
-                            {
-                              name: 'image',
-                              label: 'Archivo icono (sin .png)',
-                              widget: 'string',
-                              hint: 'Ejemplo: Reactjs → assets/img/tech/Reactjs.png'
-                            }
-                          ]
-                        }
-                      ]
+                      name: 'image',
+                      label: 'Archivo icono (sin .png)',
+                      widget: 'string',
+                      hint: 'Ejemplo: Reactjs → assets/img/tech/Reactjs.png'
                     }
                   ]
                 }
@@ -108,44 +97,33 @@
             {
               name: 'achievements',
               label: 'Certificados',
-              files: [
+              folder: 'content/achievements',
+              create: true,
+              slug: '{{slug}}',
+              extension: 'json',
+              format: 'json',
+              identifier_field: 'title',
+              summary: '{{title}} — {{company}}',
+              fields: [
+                { name: 'title', label: 'Título', widget: 'string' },
                 {
-                  name: 'achievements',
-                  label: 'Certificados',
-                  file: 'content/achievements.json',
-                  fields: [
-                    {
-                      name: 'items',
-                      label: 'Lista de Certificados',
-                      widget: 'list',
-                      allow_add: true,
-                      collapsed: true,
-                      minimize_collapsed: false,
-                      summary: '{{fields.title}} — {{fields.company}}',
-                      fields: [
-                        { name: 'title', label: 'Título', widget: 'string' },
-                        {
-                          name: 'company',
-                          label: 'Institución / Empresa',
-                          widget: 'select',
-                          options: [
-                            'Código Facilito', 'CertiProf', 'Platzi',
-                            'LinkedIn Learning', 'Fundación Carlos Slim', 'UJAP', 'UCV'
-                          ]
-                        },
-                        { name: 'academy', label: 'Academia (Opcional)', widget: 'string', required: false },
-                        { name: 'link', label: 'Link', widget: 'string', default: '#' },
-                        {
-                          name: 'image',
-                          label: 'Imagen del diploma',
-                          widget: 'image',
-                          media_folder: '/assets/img/diplomas',
-                          public_folder: 'img/diplomas',
-                          hint: 'Se guarda como img/diplomas/nombre.png'
-                        }
-                      ]
-                    }
+                  name: 'company',
+                  label: 'Institución / Empresa',
+                  widget: 'select',
+                  options: [
+                    'Código Facilito', 'CertiProf', 'Platzi',
+                    'LinkedIn Learning', 'Fundación Carlos Slim', 'UJAP', 'UCV'
                   ]
+                },
+                { name: 'academy', label: 'Academia (Opcional)', widget: 'string', required: false },
+                { name: 'link', label: 'Link', widget: 'string', default: '#' },
+                {
+                  name: 'image',
+                  label: 'Imagen del diploma',
+                  widget: 'image',
+                  media_folder: '/assets/img/diplomas',
+                  public_folder: 'img/diplomas',
+                  hint: 'Se guarda como img/diplomas/nombre.png'
                 }
               ]
             },
@@ -153,51 +131,69 @@
             {
               name: 'experience',
               label: 'Experiencia',
-              files: [
+              folder: 'content/experience',
+              create: true,
+              slug: '{{slug}}',
+              extension: 'json',
+              format: 'json',
+              identifier_field: 'company',
+              summary: '{{company}} — {{title_es}} ({{yearfirst}})',
+              fields: [
+                { name: 'company', label: 'Empresa', widget: 'string' },
+                { name: 'website', label: 'Sitio Web (sin https://)', widget: 'string', default: '#' },
                 {
-                  name: 'experience',
-                  label: 'Experiencia',
-                  file: 'content/experience.json',
-                  fields: [
-                    {
-                      name: 'items',
-                      label: 'Lista de Experiencia',
-                      widget: 'list',
-                      allow_add: true,
-                      collapsed: true,
-                      minimize_collapsed: false,
-                      summary: '{{fields.company}} — {{fields.title_es}} ({{fields.yearfirst}})',
-                      fields: [
-                        { name: 'company', label: 'Empresa', widget: 'string' },
-                        { name: 'website', label: 'Sitio Web (sin https://)', widget: 'string', default: '#' },
-                        {
-                          name: 'image',
-                          label: 'Logo de la empresa',
-                          widget: 'image',
-                          media_folder: '/assets/img/bussines',
-                          public_folder: 'img/bussines',
-                          hint: 'Se guarda como img/bussines/nombre.png'
-                        },
-                        { name: 'yearfirst', label: 'Fecha de Inicio (Ej. Jun. 2025)', widget: 'string' },
-                        { name: 'yearlast_es', label: 'Fecha de Fin (ES)', widget: 'string' },
-                        { name: 'yearlast_en', label: 'Fecha de Fin (EN)', widget: 'string' },
-                        { name: 'yearlast_pt', label: 'Fecha de Fin (PT)', widget: 'string' },
-                        { name: 'title_es', label: 'Cargo (Español)', widget: 'string' },
-                        { name: 'title_en', label: 'Cargo (English)', widget: 'string' },
-                        { name: 'title_pt', label: 'Cargo (Português)', widget: 'string' },
-                        { name: 'task1_es', label: 'Tarea 1 (Español)', widget: 'text' },
-                        { name: 'task1_en', label: 'Tarea 1 (English)', widget: 'text' },
-                        { name: 'task1_pt', label: 'Tarea 1 (Português)', widget: 'text' },
-                        { name: 'task2_es', label: 'Tarea 2 (Español)', widget: 'text' },
-                        { name: 'task2_en', label: 'Tarea 2 (English)', widget: 'text' },
-                        { name: 'task2_pt', label: 'Tarea 2 (Português)', widget: 'text' },
-                        { name: 'task3_es', label: 'Tarea 3 (Español)', widget: 'text' },
-                        { name: 'task3_en', label: 'Tarea 3 (English)', widget: 'text' },
-                        { name: 'task3_pt', label: 'Tarea 3 (Português)', widget: 'text' }
-                      ]
-                    }
-                  ]
-                }
+                  name: 'image',
+                  label: 'Logo de la empresa',
+                  widget: 'image',
+                  media_folder: '/assets/img/bussines',
+                  public_folder: 'img/bussines',
+                  hint: 'Se guarda como img/bussines/nombre.png'
+                },
+                { name: 'yearfirst', label: 'Fecha de Inicio (Ej. Jun. 2025)', widget: 'string' },
+                { name: 'yearlast_es', label: 'Fecha de Fin (ES)', widget: 'string' },
+                { name: 'yearlast_en', label: 'Fecha de Fin (EN)', widget: 'string' },
+                { name: 'yearlast_pt', label: 'Fecha de Fin (PT)', widget: 'string' },
+                { name: 'title_es', label: 'Cargo (Español)', widget: 'string' },
+                { name: 'title_en', label: 'Cargo (English)', widget: 'string' },
+                { name: 'title_pt', label: 'Cargo (Português)', widget: 'string' },
+                { name: 'task1_es', label: 'Tarea 1 (Español)', widget: 'text' },
+                { name: 'task1_en', label: 'Tarea 1 (English)', widget: 'text' },
+                { name: 'task1_pt', label: 'Tarea 1 (Português)', widget: 'text' },
+                { name: 'task2_es', label: 'Tarea 2 (Español)', widget: 'text' },
+                { name: 'task2_en', label: 'Tarea 2 (English)', widget: 'text' },
+                { name: 'task2_pt', label: 'Tarea 2 (Português)', widget: 'text' },
+                { name: 'task3_es', label: 'Tarea 3 (Español)', widget: 'text' },
+                { name: 'task3_en', label: 'Tarea 3 (English)', widget: 'text' },
+                { name: 'task3_pt', label: 'Tarea 3 (Português)', widget: 'text' }
+              ]
+            },
+            // ── Skills ───────────────────────────────────────────────
+            {
+              name: 'skills',
+              label: 'Skills',
+              folder: 'content/skills',
+              create: true,
+              slug: '{{slug}}',
+              extension: 'json',
+              format: 'json',
+              identifier_field: 'title',
+              summary: '{{title}} — {{category}}',
+              fields: [
+                { name: 'title', label: 'Nombre', widget: 'string' },
+                {
+                  name: 'image',
+                  label: 'Icono',
+                  widget: 'image',
+                  media_folder: '/assets/img/tech',
+                  public_folder: 'img/tech'
+                },
+                {
+                  name: 'category',
+                  label: 'Categoría',
+                  widget: 'select',
+                  options: ['Frontend', 'Backend', 'Tools', 'Design', 'Database', 'DevOps', 'CMS', 'Mobile', 'NoCode']
+                },
+                { name: 'order', label: 'Orden (Número)', widget: 'number', value_type: 'int' }
               ]
             }
           ]

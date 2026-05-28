@@ -1,0 +1,20 @@
+{
+  "title": "Latin Talents",
+  "company": "Domiserver",
+  "year": "2018",
+  "description_es": "Empresa dedicada a la búsqueda y promoción de modelos para eventos corporativos",
+  "description_en": "Company dedicated to the search and promotion of models for corporate events.",
+  "description_pt": "Empresa dedicada à busca e promoção de modelos para eventos corporativos.",
+  "link": "https://www.behance.net/gallery/66800623/LatinTalents",
+  "image": "LatinTalens",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    }
+  ]
+}

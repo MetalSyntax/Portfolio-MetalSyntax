@@ -1,0 +1,24 @@
+{
+  "title": "Vitreon",
+  "company": "Personal",
+  "year": "2026",
+  "description_es": "Aplicación web PWA de notas, open source, con datos encriptados y sin tracking.",
+  "description_en": "Notes PWA web app, open source, with encrypted data and no tracking.",
+  "description_pt": "Aplicação web PWA de notas, open source, com dados encriptados e sem rastreamento.",
+  "link": "https://vitreon-notes.vercel.app/",
+  "image": "Vitreon",
+  "icons": [
+    {
+      "title": "React.js",
+      "image": "Reactjs"
+    },
+    {
+      "title": "TypeScript",
+      "image": "typescript"
+    },
+    {
+      "title": "TailwindCSS",
+      "image": "tailwindcss"
+    }
+  ]
+}

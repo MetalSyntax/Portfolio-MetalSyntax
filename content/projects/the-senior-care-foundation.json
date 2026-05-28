@@ -1,0 +1,24 @@
+{
+  "title": "The Senior Care Foundation",
+  "company": "Virtually Present",
+  "year": "2021",
+  "description_es": "Organización sin fines de lucro, dedicada al cuidado y el bienestar de las personas mayores.",
+  "description_en": "Non-profit organization, dedicated to elder care and wellness.",
+  "description_pt": "Organização sem fins lucrativos, dedicada ao cuidado e bem-estar dos idosos.",
+  "link": "https://theseniorcarefoundation.org/",
+  "image": "TSCF",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Alere",
+  "company": "Alcance Virtual SPA",
+  "year": "2026",
+  "description_es": "Empresa de alimentación industrial que provee servicios de casino para colegios, empresas y más en Chile.",
+  "description_en": "Industrial food company providing cafeteria services for schools, businesses, and more in Chile.",
+  "description_pt": "Empresa de alimentação industrial que fornece serviços de refeitório para escolas, empresas e mais no Chile.",
+  "link": "#",
+  "image": "alere",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    }
+  ]
+}

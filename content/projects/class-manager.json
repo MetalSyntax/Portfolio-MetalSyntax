@@ -1,0 +1,20 @@
+{
+  "title": "Class Manager",
+  "company": "Personal",
+  "year": "2025",
+  "description_es": "Experiencia fluida en la gestión de reservas, estudiantes y tutores",
+  "description_en": "Seamless experience managing bookings, students, and tutors.",
+  "description_pt": "Experiência fluida na gestão de reservas, alunos e tutores.",
+  "link": "https://www.behance.net/gallery/220323193/Class-Manager-App",
+  "image": "Class-Manager",
+  "icons": [
+    {
+      "title": "ionic",
+      "image": "ionic"
+    },
+    {
+      "title": "Angular",
+      "image": "Angular"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Code of Paid",
+  "company": "Personal",
+  "year": "2017",
+  "description_es": "Aplicación Web para generar un código sencillo mediante un ID personal.",
+  "description_en": "Web application to generate a simple code using a personal ID.",
+  "description_pt": "Aplicativo da Web para gerar um código simples usando um ID pessoal.",
+  "link": "https://www.behance.net/gallery/66803173/Code-of-Paid",
+  "image": "Yanbal-Code-Of-Paid",
+  "icons": [
+    {
+      "title": "PhoneGap",
+      "image": "phonegap"
+    },
+    {
+      "title": "HTML5",
+      "image": "HTML5"
+    },
+    {
+      "title": "CSS3",
+      "image": "CSS"
+    },
+    {
+      "title": "JavaScript",
+      "image": "JS"
+    }
+  ]
+}

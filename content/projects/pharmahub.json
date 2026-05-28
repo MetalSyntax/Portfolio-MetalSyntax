@@ -1,0 +1,20 @@
+{
+  "title": "Pharmahub",
+  "company": "Alcance Virtual SPA",
+  "year": "2026",
+  "description_es": "Hub digital para la industria farmacéutica, conectando laboratorios y farmacias en Chile.",
+  "description_en": "Digital hub for the pharmaceutical industry, connecting laboratories and pharmacies in Chile.",
+  "description_pt": "Hub digital para a indústria farmacêutica, conectando laboratórios e farmácias no Chile.",
+  "link": "#",
+  "image": "pharmahub",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    }
+  ]
+}

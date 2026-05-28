@@ -1,0 +1,24 @@
+{
+  "title": "PasareLab",
+  "company": "Equipo 360",
+  "year": "2022",
+  "description_es": "El directorio que te conecta con la industria farmaceutica.",
+  "description_en": "The directory that connects you with the pharmaceutical industry.",
+  "description_pt": "O diretório que conecta você com a indústria farmacêutica.",
+  "link": "https://www.behance.net/gallery/153310385/PasareLab",
+  "image": "pasarelab",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Elementor",
+      "image": "elementor"
+    }
+  ]
+}

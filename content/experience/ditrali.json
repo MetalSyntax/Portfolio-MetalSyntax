@@ -1,0 +1,21 @@
+{
+  "title_es": "Diseñador web",
+  "title_en": "Web designer",
+  "title_pt": "Web designer",
+  "yearfirst": "Jun. 2025",
+  "yearlast_es": "Presente",
+  "yearlast_en": "Present",
+  "yearlast_pt": "Presente",
+  "company": "Ditrali",
+  "website": "www.ditrali.com",
+  "task1_es": "Corrección de errores en sistemas PHP",
+  "task1_en": "Bug fixes for PHP systems.",
+  "task1_pt": "Correções de bugs em sistemas PHP.",
+  "task2_es": "Desarrollo de sistemas PHP",
+  "task2_en": "PHP system development.",
+  "task2_pt": "Desenvolvimento de sistemas PHP.",
+  "task3_es": "Migración de CodeIgniter 4 y PrestaShop 1.7",
+  "task3_en": "Migration from CodeIgniter 4 and PrestaShop 1.7.",
+  "task3_pt": "Migração do CodeIgniter 4 e PrestaShop 1.7.",
+  "image": "img/bussines/ditrali.png"
+}

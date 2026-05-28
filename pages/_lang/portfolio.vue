@@ -256,12 +256,12 @@
 <script>
 export default {
   async asyncData({ $content, app }) {
-    const data = await $content('projects').fetch()
+    const itemsRaw = await $content('projects').fetch()
     const locale = app.i18n.locale
     const key = ['es', 'es-ES'].includes(locale) ? 'description_es'
       : ['pt', 'pt-PT'].includes(locale) ? 'description_pt'
       : 'description_en'
-    const items = (data.items || []).map(p => ({ ...p, description: p[key] }))
+    const items = itemsRaw.map(p => ({ ...p, description: p[key] }))
     return { items }
   },
   head() {

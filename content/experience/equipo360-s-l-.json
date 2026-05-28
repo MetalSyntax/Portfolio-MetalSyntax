@@ -1,0 +1,21 @@
+{
+  "title_es": "Programador web",
+  "title_en": "Web programmer",
+  "title_pt": "Programador web",
+  "yearfirst": "May. 2022",
+  "yearlast_es": "Jul. 2022",
+  "yearlast_en": "Jul. 2022",
+  "yearlast_pt": "Jul. 2022",
+  "company": "Equipo360 S.L.",
+  "website": "www.equipo360.com",
+  "task1_es": "Configuración de entornos de desarrollo en cPanel.",
+  "task1_en": "Set up development environments in cPanel.",
+  "task1_pt": "Configuração de ambientes de desenvolvimento no cPanel.",
+  "task2_es": "Migración de sitios web WordPress a diferentes servidores.",
+  "task2_en": "Migrate WordPress sites to different servers.",
+  "task2_pt": "Migração de sites WordPress para diferentes servidores.",
+  "task3_es": "Desarrollo de sitios web personalizados con WordPress.",
+  "task3_en": "Develop custom websites with WordPress.",
+  "task3_pt": "Desenvolvimento de sites personalizados com WordPress.",
+  "image": "img/bussines/equipo360.png"
+}

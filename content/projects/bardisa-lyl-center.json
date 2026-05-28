@@ -1,0 +1,24 @@
+{
+  "title": "Bardisa LYL Center",
+  "company": "Virtually Present",
+  "year": "2020",
+  "description_es": "Enfoque holístico de la medicina convencional y alternativa ubicada en Florida.",
+  "description_en": "Holistic approach to conventional and alternative medicine located in Florida.",
+  "description_pt": "Abordagem holística da medicina convencional e alternativa localizada na Flórida.",
+  "link": "https://bardisalylcenter.com/",
+  "image": "BDS",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

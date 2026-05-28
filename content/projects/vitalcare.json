@@ -1,0 +1,24 @@
+{
+  "title": "Vitalcare",
+  "company": "Virtually Present",
+  "year": "2021",
+  "description_es": "Empresa que ofrece servicios de laboratorio en menos de 24 horas.",
+  "description_en": "A company that offers laboratory services in less than 24 hours.",
+  "description_pt": "Uma empresa que oferece serviços de laboratório em menos de 24 horas.",
+  "link": "https://www.behance.net/gallery/175651013/Vitalcare",
+  "image": "vitalcare",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Divi",
+      "image": "Divi"
+    }
+  ]
+}

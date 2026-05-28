@@ -88,20 +88,21 @@
 <script>
 export default {
   async asyncData({ $content, app }) {
-    const data = await $content('experience').fetch()
+    const itemsRaw = await $content('experience').fetch()
     const locale = app.i18n.locale
     const sfx = ['es', 'es-ES'].includes(locale) ? '_es'
       : ['pt', 'pt-PT'].includes(locale) ? '_pt'
       : '_en'
     
-    const items = (data.items || []).map(p => ({
+    const items = itemsRaw.map(p => ({
       ...p,
-      title: p['title' + sfx],
-      yearlast: p['yearlast' + sfx],
-      task1: p['task1' + sfx],
-      task2: p['task2' + sfx],
-      task3: p['task3' + sfx]
+      title: p[`title${sfx}`],
+      yearlast: p[`yearlast${sfx}`],
+      task1: p[`task1${sfx}`],
+      task2: p[`task2${sfx}`],
+      task3: p[`task3${sfx}`]
     }))
+
     return { items }
   },
   head() {

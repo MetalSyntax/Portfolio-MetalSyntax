@@ -1,0 +1,28 @@
+{
+  "title": "JC Cake x GAP",
+  "company": "Komax",
+  "year": "2024",
+  "description_es": "Landing de campaña de GAP con el artista JC Cake en Peru",
+  "description_en": "Campaign landing page for GAP with the artist JC Cake in Peru",
+  "description_pt": "Landing page de campanha da GAP com o artista JC Cake no Peru.",
+  "link": "https://www.behance.net/gallery/200986933/Landing-Page-JC-CAKE-GAP-Peru",
+  "image": "gap",
+  "icons": [
+    {
+      "title": "Magento 2",
+      "image": "magento-2"
+    },
+    {
+      "title": "HTML5",
+      "image": "HTML5"
+    },
+    {
+      "title": "CSS3",
+      "image": "CSS"
+    },
+    {
+      "title": "JavaScript",
+      "image": "JS"
+    }
+  ]
+}

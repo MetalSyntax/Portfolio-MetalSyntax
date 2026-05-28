@@ -1,0 +1,24 @@
+{
+  "title": "Work To Earn",
+  "company": "Equipo 360",
+  "year": "2022",
+  "description_es": "Tecnología de Blockchain aplicada a los recursos humanos.",
+  "description_en": "Technology of Blockchain applied to human resources.",
+  "description_pt": "Tecnologia de Blockchain aplicada aos recursos humanos.",
+  "link": "https://www.behance.net/gallery/153310391/Work-To-Earn",
+  "image": "worktoearn",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    },
+    {
+      "title": "Elementor",
+      "image": "elementor"
+    }
+  ]
+}

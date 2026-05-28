@@ -1,0 +1,16 @@
+{
+  "title": "Syntax Note",
+  "company": "Personal",
+  "year": "2019",
+  "description_es": "Aplicación que permite guardar información a través del archivo de notas.",
+  "description_en": "Application that allows saving information through the notes file.",
+  "description_pt": "Aplicativo que permite salvar informações através do arquivo de notas.",
+  "link": "https://metalsyntax.github.io/Notes/",
+  "image": "Syntax-Note",
+  "icons": [
+    {
+      "title": "AngularJS",
+      "image": "angularjs"
+    }
+  ]
+}

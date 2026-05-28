@@ -1,0 +1,20 @@
+{
+  "title": "Domiserver",
+  "company": "Domiserver",
+  "year": "2018",
+  "description_es": "Servicio de hosting con la relación óptima entre precio y rendimiento en Venezuela.",
+  "description_en": "The optimal relationship between price and performance in Venezuela.",
+  "description_pt": "A relação ideal entre preço e desempenho na Venezuela.",
+  "link": "https://www.behance.net/gallery/66801367/DomiServer",
+  "image": "DomiServer",
+  "icons": [
+    {
+      "title": "WordPress",
+      "image": "WordPress"
+    },
+    {
+      "title": "PHP",
+      "image": "PHP"
+    }
+  ]
+}
