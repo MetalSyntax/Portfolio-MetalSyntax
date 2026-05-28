@@ -13,6 +13,9 @@ export default {
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
    */
+  publicRuntimeConfig: {
+    turnstileSiteKey: process.env.TURNSTILE_SITE_KEY || ''
+  },
   head: {
     title: process.env.npm_package_name || "",
     meta: [{
@@ -28,6 +31,11 @@ export default {
       content: process.env.npm_package_description || ""
     }
     ],
+    script: [{
+      src: 'https://challenges.cloudflare.com/turnstile/v0/api.js',
+      async: true,
+      defer: true
+    }],
     link: [{
       rel: "icon",
       type: "image/x-icon",

@@ -173,5 +173,21 @@ export default {
     task1sanofi: "Melhoria geral do sistema OEE.",
     task2sanofi: "Um guia rápido para OEE.",
     task3sanofi: "Aprimoramento do relatório mensal global OEE."
+  },
+  contact: {
+    title: "Contate-me",
+    subtitle: "Tem um projeto em mente? Vamos conversar.",
+    name: "Nome",
+    namePlaceholder: "Seu nome",
+    email: "E-mail",
+    emailPlaceholder: "seu@email.com",
+    message: "Mensagem",
+    messagePlaceholder: "Escreva sua mensagem aqui...",
+    send: "Enviar Mensagem",
+    sending: "Enviando...",
+    successTitle: "Mensagem enviada!",
+    successMessage: "Obrigado por entrar em contato. Responderei em breve.",
+    errorMessage: "Algo deu errado. Por favor, tente novamente.",
+    turnstileRequired: "Por favor, complete a verificação de segurança."
   }
 }

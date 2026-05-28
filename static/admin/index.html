@@ -8,15 +8,15 @@
     <script>
       window.CMS_MANUAL_INIT = true;
       // Vercel's catch-all returns HTML for /admin/config.yml.
-      // We intercept that fetch and return empty YAML so Decap CMS
-      // initializes fully and registers its OAuth callback handler.
+      // We intercept that fetch so Decap initializes correctly during
+      // the OAuth callback before CMS.init() injects the full config.
       const _origFetch = window.fetch.bind(window);
       window.fetch = function(url, ...args) {
         if (typeof url === 'string' && url.includes('config.yml')) {
-          return Promise.resolve(new Response('backend:\n  name: github\n', {
-            status: 200,
-            headers: { 'Content-Type': 'application/x-yaml' }
-          }));
+          return Promise.resolve(new Response(
+            'backend:\n  name: github\n  base_url: https://portfolio-oauth.wonderdxk.workers.dev\n',
+            { status: 200, headers: { 'Content-Type': 'application/x-yaml' } }
+          ));
         }
         return _origFetch(url, ...args);
       };
@@ -31,8 +31,8 @@
             name: 'github',
             repo: 'MetalSyntax/Portfolio-MetalSyntax',
             branch: 'master',
-            base_url: 'https://metalsyntax.vercel.app',
-            auth_endpoint: 'api/auth'
+            base_url: 'https://portfolio-oauth.wonderdxk.workers.dev',
+            auth_endpoint: 'auth'
           },
           locale: 'es',
           media_folder: 'assets/img/projects',
