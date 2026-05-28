@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>MetalSyntax Admin</title>
-    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="/admin/admin.css" />
     <script>
       window.CMS_MANUAL_INIT = true;
       // Vercel's catch-all returns HTML for /admin/config.yml.
@@ -22,7 +22,6 @@
         return _origFetch(url, ...args);
       };
     </script>
-    <link rel="stylesheet" href="/admin/admin.css" />
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@3.12.2/dist/decap-cms.js"></script>
@@ -56,7 +55,7 @@
                       widget: 'list',
                       allow_add: true,
                       collapsed: true,
-                      minimize_collapsed: true,
+                      minimize_collapsed: false,
                       summary: '{{fields.title}} — {{fields.company}} ({{fields.year}})',
                       fields: [
                         { name: 'title', label: 'Título', widget: 'string' },
@@ -120,7 +119,7 @@
                       widget: 'list',
                       allow_add: true,
                       collapsed: true,
-                      minimize_collapsed: true,
+                      minimize_collapsed: false,
                       summary: '{{fields.title}} — {{fields.company}}',
                       fields: [
                         { name: 'title', label: 'Título', widget: 'string' },
@@ -156,7 +155,7 @@
                       widget: 'list',
                       allow_add: true,
                       collapsed: true,
-                      minimize_collapsed: true,
+                      minimize_collapsed: false,
                       summary: '{{fields.company}} — {{fields.title_es}} ({{fields.yearfirst}})',
                       fields: [
                         { name: 'company', label: 'Empresa', widget: 'string' },
@@ -187,8 +186,6 @@
           ]
         }
       });
-      // Register custom styles for the admin UI preview
-      CMS.registerPreviewStyle("/admin/admin.css");
     </script>
   </body>
 </html>
