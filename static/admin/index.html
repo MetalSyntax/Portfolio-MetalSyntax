@@ -40,9 +40,10 @@
           media_folder: 'assets/img/projects',
           public_folder: 'assets/img/projects',
           collections: [
+            // ── Proyectos ────────────────────────────────────────────
             {
-              name: 'portfolio',
-              label: 'Portafolio',
+              name: 'projects',
+              label: 'Proyectos',
               files: [
                 {
                   name: 'projects',
@@ -64,16 +65,9 @@
                           label: 'Empresa',
                           widget: 'select',
                           options: [
-                            'Personal',
-                            'Freelance',
-                            'Komax',
-                            'Genesis Agency',
-                            'Equipo 360',
-                            'Virtually Present',
-                            'kainver',
-                            'Domiserver',
-                            'Alcance Virtual SPA',
-                            'Multipro Consulting'
+                            'Personal', 'Freelance', 'Komax', 'Genesis Agency',
+                            'Equipo 360', 'Virtually Present', 'kainver',
+                            'Domiserver', 'Alcance Virtual SPA', 'Multipro Consulting'
                           ]
                         },
                         { name: 'year', label: 'Año', widget: 'string' },
@@ -107,7 +101,14 @@
                       ]
                     }
                   ]
-                },
+                }
+              ]
+            },
+            // ── Certificados ─────────────────────────────────────────
+            {
+              name: 'achievements',
+              label: 'Certificados',
+              files: [
                 {
                   name: 'achievements',
                   label: 'Certificados',
@@ -128,22 +129,31 @@
                           label: 'Institución / Empresa',
                           widget: 'select',
                           options: [
-                            'Código Facilito',
-                            'CertiProf',
-                            'Platzi',
-                            'LinkedIn Learning',
-                            'Fundación Carlos Slim',
-                            'UJAP',
-                            'UCV'
+                            'Código Facilito', 'CertiProf', 'Platzi',
+                            'LinkedIn Learning', 'Fundación Carlos Slim', 'UJAP', 'UCV'
                           ]
                         },
                         { name: 'academy', label: 'Academia (Opcional)', widget: 'string', required: false },
                         { name: 'link', label: 'Link', widget: 'string', default: '#' },
-                        { name: 'image', label: 'Nombre de imagen de diploma', widget: 'string', hint: 'Ejemplo: CodigoFacilito' }
+                        {
+                          name: 'image',
+                          label: 'Imagen del diploma',
+                          widget: 'image',
+                          media_folder: '/assets/img/diplomas',
+                          public_folder: 'img/diplomas',
+                          hint: 'Se guarda como img/diplomas/nombre.png'
+                        }
                       ]
                     }
                   ]
-                },
+                }
+              ]
+            },
+            // ── Experiencia ──────────────────────────────────────────
+            {
+              name: 'experience',
+              label: 'Experiencia',
+              files: [
                 {
                   name: 'experience',
                   label: 'Experiencia',
@@ -160,7 +170,14 @@
                       fields: [
                         { name: 'company', label: 'Empresa', widget: 'string' },
                         { name: 'website', label: 'Sitio Web (sin https://)', widget: 'string', default: '#' },
-                        { name: 'image', label: 'Nombre de logo', widget: 'string', hint: 'Ejemplo: ditrali' },
+                        {
+                          name: 'image',
+                          label: 'Logo de la empresa',
+                          widget: 'image',
+                          media_folder: '/assets/img/bussines',
+                          public_folder: 'img/bussines',
+                          hint: 'Se guarda como img/bussines/nombre.png'
+                        },
                         { name: 'yearfirst', label: 'Fecha de Inicio (Ej. Jun. 2025)', widget: 'string' },
                         { name: 'yearlast_es', label: 'Fecha de Fin (ES)', widget: 'string' },
                         { name: 'yearlast_en', label: 'Fecha de Fin (EN)', widget: 'string' },

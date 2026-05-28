@@ -36,18 +36,18 @@
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/bussines/${item.image}.png?webp`)"
+                  :srcset="require(`~/assets/${item.image}?webp`)"
                   type="image/webp"
                 />
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/bussines/${item.image}.png`)"
+                  :srcset="require(`~/assets/${item.image}`)"
                   type="image/png"
                 />
                 <img
                   class="mx-auto rounded-lg bg-white"
-                  :src="require(`~/assets/img/bussines/${item.image}.png`)"
+                  :src="require(`~/assets/${item.image}`)"
                   :alt="item.title"
                   :title="item.title"
                 />

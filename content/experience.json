@@ -19,7 +19,7 @@
       "task3_es": "Migración de CodeIgniter 4 y PrestaShop 1.7",
       "task3_en": "Migration from CodeIgniter 4 and PrestaShop 1.7.",
       "task3_pt": "Migração do CodeIgniter 4 e PrestaShop 1.7.",
-      "image": "ditrali"
+      "image": "img/bussines/ditrali.png"
     },
     {
       "title_es": "Desarrollador Frontend",
@@ -40,7 +40,7 @@
       "task3_es": "Desarrollar código de verificación en transacciones financieras.",
       "task3_en": "Develop verification code for financial transactions.",
       "task3_pt": "Desenvolver código de verificação para transações financeiras.",
-      "image": "redgage"
+      "image": "img/bussines/redgage.png"
     },
     {
       "title_es": "Profesor de diseño gráfico",
@@ -61,7 +61,7 @@
       "task3_es": "Participación como jurado evaluador del trabajo especial de grado.",
       "task3_en": "Participation as a jury evaluator of the special degree project.",
       "task3_pt": "Participação como jurado avaliador do trabalho especial de graduação.",
-      "image": "uts"
+      "image": "img/bussines/uts.png"
     },
     {
       "title_es": "Desarrollador Frontend eCommerce",
@@ -82,7 +82,7 @@
       "task3_es": "Canalización de solicitudes de incidencias en los sitios.",
       "task3_en": "Channel requests for incidents on the sites.",
       "task3_pt": "Canalização de solicitações de incidentes nos sites.",
-      "image": "komax_sa"
+      "image": "img/bussines/komax_sa.png"
     },
     {
       "title_es": "Desarrollador WordPress",
@@ -103,7 +103,7 @@
       "task3_es": "Modificar diversos snippets, plug-ins y temas en PHP",
       "task3_en": "Modify various snippets, plugins, and themes in PHP.",
       "task3_pt": "Modificação de diversos snippets, plug-ins e temas em PHP",
-      "image": "Genesis"
+      "image": "img/bussines/Genesis.png"
     },
     {
       "title_es": "Programador web",
@@ -124,7 +124,7 @@
       "task3_es": "Desarrollo de sitios web personalizados con WordPress.",
       "task3_en": "Develop custom websites with WordPress.",
       "task3_pt": "Desenvolvimento de sites personalizados com WordPress.",
-      "image": "equipo360"
+      "image": "img/bussines/equipo360.png"
     },
     {
       "title_es": "Diseñador web",
@@ -145,7 +145,7 @@
       "task3_es": "Estandarización y documentación de los procesos.",
       "task3_en": "Process documentation and code.",
       "task3_pt": "Documentação do processo.",
-      "image": "virtually_present"
+      "image": "img/bussines/virtually_present.png"
     },
     {
       "title_es": "Webmaster",
@@ -166,7 +166,7 @@
       "task3_es": "Actividades de marketing y diseño.",
       "task3_en": "Marketing and design activities.",
       "task3_pt": "Atividades de marketing e design.",
-      "image": "SG"
+      "image": "img/bussines/SG.png"
     },
     {
       "title_es": "Desarrollador web",
@@ -187,7 +187,7 @@
       "task3_es": "Auditorías y mejoras de proyectos web.",
       "task3_en": "Audits and improvements of web projects.",
       "task3_pt": "Auditorias e melhorias de projetos web.",
-      "image": "kainver"
+      "image": "img/bussines/kainver.png"
     },
     {
       "title_es": "Programador web",
@@ -208,7 +208,7 @@
       "task3_es": "Elaboración del manual de programación.",
       "task3_en": "Development of Programming Manual.",
       "task3_pt": "Desenvolvimento do manual de programação.",
-      "image": "DomiServer"
+      "image": "img/bussines/DomiServer.png"
     },
     {
       "title_es": "Pasante de Ingeniería Industrial",
@@ -229,7 +229,7 @@
       "task3_es": "Mejora del informe mensual global de OEE.",
       "task3_en": "OEE Global Monthly Report Improvement.",
       "task3_pt": "Aprimoramento do relatório mensal global OEE.",
-      "image": "Sanofi"
+      "image": "img/bussines/Sanofi.png"
     }
   ]
 }

@@ -115,18 +115,18 @@
               <source
                 :title="item.title"
                 :alt="item.title"
-                :srcset="require(`~/assets/img/diplomas/${item.image}.png?webp`)"
+                :srcset="require(`~/assets/${item.image}?webp`)"
                 type="image/webp"
               />
               <source
                 :title="item.title"
                 :alt="item.title"
-                :srcset="require(`~/assets/img/diplomas/${item.image}.png`)"
+                :srcset="require(`~/assets/${item.image}`)"
                 type="image/png"
               />
               <img
                 class="w-20 h-20 rounded-full border-2 border-gray-700"
-                :src="require(`~/assets/img/diplomas/${item.image}.png`)"
+                :src="require(`~/assets/${item.image}`)"
                 :alt="item.title"
                 :title="item.title"
               />
