@@ -188,6 +188,8 @@ export default {
     successTitle: "Mensagem enviada!",
     successMessage: "Obrigado por entrar em contato. Responderei em breve.",
     errorMessage: "Algo deu errado. Por favor, tente novamente.",
-    turnstileRequired: "Por favor, complete a verificação de segurança."
+    turnstileRequired: "Por favor, complete a verificação de segurança.",
+    turnstileWaiting: "Carregando verificação de segurança...",
+    turnstileOk: "Verificação concluída"
   }
 }

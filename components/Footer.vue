@@ -85,8 +85,15 @@
           </div>
 
           <!-- Cloudflare Turnstile -->
-          <div class="mb-4">
+          <div v-if="$config.turnstileSiteKey" class="mb-4">
             <div ref="turnstileContainer"></div>
+            <p v-if="!turnstileToken && !errors.turnstile" class="text-gray-500 text-xs mt-1">
+              {{ $t('contact.turnstileWaiting') }}
+            </p>
+            <p v-if="turnstileToken" class="text-nuxt-green text-xs mt-1 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              {{ $t('contact.turnstileOk') }}
+            </p>
             <p v-if="errors.turnstile" class="text-red-400 text-xs mt-1">{{ errors.turnstile }}</p>
           </div>
 
@@ -315,7 +322,8 @@ export default {
           this.formSuccess = true
         } else {
           const data = await res.json().catch(() => ({}))
-          this.formError = (data && data.error) || this.$t('contact.errorMessage')
+          const fieldError = data && data.errors && data.errors[0] && data.errors[0].message
+          this.formError = (data && data.error) || fieldError || this.$t('contact.errorMessage')
           this.resetTurnstile()
         }
       } catch (_) {
