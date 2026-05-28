@@ -14,7 +14,7 @@
       window.fetch = function(url, ...args) {
         if (typeof url === 'string' && url.includes('config.yml')) {
           return Promise.resolve(new Response(
-            'backend:\n  name: github\n  base_url: https://portfolio-oauth.wonderdxk.workers.dev\n',
+            'backend:\n  name: github\n  repo: MetalSyntax/Portfolio-MetalSyntax\n  branch: master\n  base_url: https://portfolio-oauth.wonderdxk.workers.dev\n  auth_endpoint: auth\n',
             { status: 200, headers: { 'Content-Type': 'application/x-yaml' } }
           ));
         }
