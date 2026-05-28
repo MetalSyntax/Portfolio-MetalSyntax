@@ -16,12 +16,28 @@ CMS.registerPreviewStyle(`
   .border-nuxt-green { border-color: var(--cms-accent) !important; }
 `, { raw: true });
 
+// Helper function to resolve image URLs for preview
+function resolvePreviewImage(imageStr, getAsset) {
+  if (!imageStr) return null;
+  var asset = getAsset(imageStr);
+  if (!asset) return null;
+  var url = asset.toString();
+  if (url.startsWith('blob:') || url.startsWith('http') || url.startsWith('data:')) {
+    return url;
+  }
+  // Decap CMS might return the raw public path (e.g. img/projects/Parity-.jpg)
+  // which fails locally because it's relative to /admin/.
+  // Since images are in the "assets/" folder in the repository, we load them from GitHub raw:
+  var cleanUrl = url.startsWith('/') ? url.substring(1) : url;
+  return "https://raw.githubusercontent.com/MetalSyntax/Portfolio-MetalSyntax/master/assets/" + cleanUrl;
+}
+
 // --- VISTA PREVIA PARA PROYECTOS ---
 var ProjectPreview = createClass({
   render: function() {
     var entry = this.props.entry;
     var image = entry.getIn(['data', 'image']);
-    var bgImageUrl = this.props.getAsset(image);
+    var bgImageUrl = resolvePreviewImage(image, this.props.getAsset);
     
     var title = entry.getIn(['data', 'title']);
     var company = entry.getIn(['data', 'company']);
@@ -54,7 +70,7 @@ var ProjectPreview = createClass({
           // Iteración de Skills/Íconos
           h('div', { className: 'flex flex-wrap justify-center py-2' },
             icons.map(function(icon, index) {
-              var iconUrl = this.props.getAsset(icon.image);
+              var iconUrl = resolvePreviewImage(icon.image, this.props.getAsset);
               return h('div', { key: index, className: 'mx-1 mt-2 bg-gray-800 rounded-full p-2', title: icon.title },
                 iconUrl ? h('img', { 
                   src: iconUrl.toString(), 
@@ -76,7 +92,7 @@ var ExperiencePreview = createClass({
   render: function() {
     var entry = this.props.entry;
     var image = entry.getIn(['data', 'image']);
-    var bgImageUrl = this.props.getAsset(image);
+    var bgImageUrl = resolvePreviewImage(image, this.props.getAsset);
     
     var title = entry.getIn(['data', 'title_es']);
     var company = entry.getIn(['data', 'company']);
@@ -117,7 +133,7 @@ var AchievementPreview = createClass({
   render: function() {
     var entry = this.props.entry;
     var image = entry.getIn(['data', 'image']);
-    var bgImageUrl = this.props.getAsset(image);
+    var bgImageUrl = resolvePreviewImage(image, this.props.getAsset);
     
     var title = entry.getIn(['data', 'title']);
     var company = entry.getIn(['data', 'company']);
@@ -146,7 +162,7 @@ var SkillPreview = createClass({
   render: function() {
     var entry = this.props.entry;
     var image = entry.getIn(['data', 'image']);
-    var bgImageUrl = this.props.getAsset(image);
+    var bgImageUrl = resolvePreviewImage(image, this.props.getAsset);
     var title = entry.getIn(['data', 'title']);
 
     return h('div', { className: 'w-full flex justify-center py-10' },
