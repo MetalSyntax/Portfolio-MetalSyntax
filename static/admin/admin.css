@@ -1,132 +1,384 @@
-/* Dark theme and modern styles for Decap CMS */
+/* ================================================================
+   MetalSyntax Admin — Decap CMS Dark Theme
+   Colores del portfolio: bg #0b0f19 · accent #00df9a · card #111827
+   ================================================================ */
+
+/* ── Reset base ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
 body, #nc-root {
-  background-color: #0b0f19 !important; /* dark background */
+  background-color: #0b0f19 !important;
+  color: #e2e8f0 !important;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* ── Header / App bar ────────────────────────────────────────── */
+[class*="AppHeader"] {
+  background-color: #111827 !important;
+  border-bottom: 1px solid #1f2937 !important;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Nav links inside the header */
+[class*="AppHeaderNavLink"],
+[class*="AppHeaderButton"] {
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border: none !important;
+  transition: color 0.2s !important;
+}
+
+[class*="AppHeaderNavLink"]:hover,
+[class*="AppHeaderButton"]:hover {
+  color: #00df9a !important;
+  background: transparent !important;
+}
+
+/* Active nav tab ("Contenido") */
+[class*="buttonActive"],
+.header-link-active {
+  color: #00df9a !important;
+  border-bottom: 2px solid #00df9a !important;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────── */
+[class*="SidebarContainer"] {
+  background-color: #111827 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
   color: #e2e8f0 !important;
 }
 
-/* Header / App Bar */
-header, [class*="AppHeader"], [class*="Header"] {
-  background-color: #1a202c !important;
-  border-bottom: 1px solid #2d3748 !important;
-  color: #e2e8f0 !important;
+[class*="SidebarHeading"] {
+  color: #94a3b8 !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
 }
 
-/* Sidebar and its items */
-aside, [class*="Sidebar"] {
-  background-color: #1a202c !important;
-  border-right: 1px solid #2d3748 !important;
-  color: #e2e8f0 !important;
-}
-
-/* Cards, panels, and entry editor backgrounds */
-[class*="Card"], [class*="Pane"], [class*="Panel"], [class*="Toolbar"],
-.nc-collectionPage-card,
-.nc-entryEditor-toolbar,
-.nc-entryEditor-editorControlPane,
-.nc-entryEditor-editorPreviewPane {
-  background-color: #1a202c !important;
-  border: 1px solid #2d3748 !important;
+/* Search box */
+[class*="SearchContainer"],
+[class*="InputContainer"] {
+  background-color: #0b0f19 !important;
+  border: 1px solid #1f2937 !important;
   border-radius: 8px !important;
-  color: #e2e8f0 !important;
 }
 
-/* Sub-elements inside cards (like the active collection item) */
-[class*="SidebarItem"] {
+[class*="SearchInput"] {
   background-color: transparent !important;
   color: #e2e8f0 !important;
+  border: none !important;
 }
-[class*="SidebarItem"].active, [class*="SidebarItem"]:hover {
-  background-color: #2d3748 !important;
+
+[class*="SearchInput"]::placeholder { color: #4b5563 !important; }
+
+[class*="SearchInput"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+[class*="SearchContainer"]:focus-within {
+  border-color: #00df9a !important;
+  box-shadow: 0 0 0 2px rgba(0, 223, 154, 0.12) !important;
+}
+
+/* Sidebar nav list links */
+[class*="SidebarNavLink"] {
+  color: #94a3b8 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+}
+
+[class*="SidebarNavLink"]:hover {
+  background-color: #1f2937 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Active sidebar item */
+[class*="sidebarNavLinkActive"],
+.sidebar-active {
+  background-color: rgba(0, 223, 154, 0.08) !important;
+  color: #00df9a !important;
+  border-left: 3px solid #00df9a !important;
+  font-weight: 600 !important;
+}
+
+/* ── Main container ──────────────────────────────────────────── */
+[class*="AppMainContainer"],
+[class*="CollectionContainer"],
+[class*="CollectionMain"] {
+  background-color: transparent !important;
+}
+
+/* Collection top bar ("Portafolio" heading area) */
+[class*="CollectionTopContainer"],
+[class*="cardTop"] {
+  background-color: #111827 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+[class*="CollectionTopHeading"],
+[class*="cardTopHeading"] {
+  color: #e2e8f0 !important;
+  font-weight: 700 !important;
+}
+
+/* ── Collection view controls (list/grid, sort) ──────────────── */
+[class*="CollectionControls"],
+[class*="ControlsContainer"] {
+  background: transparent !important;
+}
+
+[class*="ViewControlsButton"] {
+  color: #4b5563 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+[class*="ViewControlsButton"]:hover {
   color: #00df9a !important;
 }
 
-/* Labels and Texts */
-h1, h2, h3, h4, h5, h6, p, span, a, label, li, div {
-  color: inherit;
-}
-a { text-decoration: none !important; }
-
-h1, h2, [class*="Title"] {
-  color: #00df9a !important; /* nuxt-green */
-}
-
-/* Inputs, Textareas, Selects, and Editor Controls */
-input, textarea, select, 
-[class*="ControlPane"], [class*="Widget"] {
-  background-color: #0b0f19 !important;
-  color: #e2e8f0 !important;
-  border: 1px solid #4a5568 !important;
-  border-radius: 6px !important;
+[class*="ControlButton"],
+[class*="DropdownButton"],
+[class*="StyledDropdownButton"] {
+  background-color: #111827 !important;
+  color: #94a3b8 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s !important;
 }
 
-/* Fix for black text inside the editor inputs */
-input[type="text"], textarea, [class*="Input"] {
-  color: #e2e8f0 !important;
-  background-color: #0b0f19 !important;
-}
-
-/* Dropdown selections */
-[class*="Control"], select {
-  background-color: #0b0f19 !important;
+[class*="ControlButton"]:hover,
+[class*="DropdownButton"]:hover {
+  border-color: #374151 !important;
   color: #e2e8f0 !important;
 }
 
-/* Make sure the text on black is readable */
+/* ── Grid cards (Proyectos, Certificados, Experiencia) ───────── */
+[class*="GridCard"] {
+  background-color: #111827 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease !important;
+  overflow: hidden !important;
+}
+
+[class*="GridCard"]:hover {
+  border-color: #00df9a !important;
+  box-shadow: 0 8px 28px rgba(0, 223, 154, 0.14) !important;
+  transform: translateY(-3px) !important;
+}
+
+[class*="GridCardLink"] {
+  text-decoration: none !important;
+  display: block !important;
+  height: 100% !important;
+}
+
+[class*="CardBody"] {
+  background-color: transparent !important;
+}
+
+[class*="CardHeading"] {
+  color: #e2e8f0 !important;
+  font-weight: 600 !important;
+}
+
+[class*="TitleIcons"] {
+  color: #4b5563 !important;
+}
+
+/* ── Entry editor ────────────────────────────────────────────── */
+[class*="EditorToolbar"],
+[class*="Toolbar"] {
+  background-color: #111827 !important;
+  border-bottom: 1px solid #1f2937 !important;
+}
+
+[class*="EditorControlPane"],
+[class*="ControlPane"] {
+  background-color: #0b0f19 !important;
+}
+
 [class*="PreviewPane"] {
-  background-color: #1a202c !important;
+  background-color: #111827 !important;
   color: #e2e8f0 !important;
 }
 
-/* Generic buttons */
-button, [class*="Button"] {
-  border-radius: 6px !important;
-  color: #e2e8f0 !important;
+/* Labels */
+label, [class*="ControlLabel"] {
+  color: #94a3b8 !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
 }
 
-/* Primary/Login buttons */
-button[class*="LoginButton"],
-button[class*="PublishButton"],
-button[class*="ButtonPrimary"] {
+/* ── Inputs & textareas ──────────────────────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+  background-color: #111827 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 8px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #00df9a !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 223, 154, 0.12) !important;
+}
+
+input::placeholder,
+textarea::placeholder { color: #4b5563 !important; }
+
+/* Widget container */
+[class*="Widget"],
+[class*="WidgetContainer"] {
+  background-color: transparent !important;
+  border-color: #1f2937 !important;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+button {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Primary (publish / save) */
+[class*="PublishButton"],
+[class*="ButtonPrimary"],
+[class*="LoginButton"] {
   background-color: #00df9a !important;
   color: #0b0f19 !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   border: none !important;
-  transition: all 0.3s ease !important;
 }
-button[class*="LoginButton"]:hover,
-button[class*="PublishButton"]:hover {
+
+[class*="PublishButton"]:hover,
+[class*="ButtonPrimary"]:hover,
+[class*="LoginButton"]:hover {
   background-color: #00c689 !important;
-  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 223, 154, 0.35) !important;
 }
 
-/* Secondary buttons */
-button[class*="ButtonDefault"] {
-  background-color: #2d3748 !important;
+/* Default / secondary */
+[class*="ButtonDefault"],
+[class*="ButtonSecondary"] {
+  background-color: #1f2937 !important;
   color: #e2e8f0 !important;
-  border: 1px solid #4a5568 !important;
+  border: 1px solid #374151 !important;
 }
 
-/* Dropdown menus */
-[class*="Menu"] {
-  background-color: #1a202c !important;
-  border: 1px solid #2d3748 !important;
+[class*="ButtonDefault"]:hover {
+  background-color: #374151 !important;
 }
-[class*="Menu"] * {
+
+/* Danger */
+[class*="ButtonDanger"],
+[class*="delete"],
+[class*="Delete"] {
+  background-color: transparent !important;
+  color: #f87171 !important;
+  border: 1px solid #f87171 !important;
+}
+
+[class*="ButtonDanger"]:hover {
+  background-color: rgba(248, 113, 113, 0.1) !important;
+}
+
+/* ── Dropdown menus ──────────────────────────────────────────── */
+[class*="Menu"],
+[class*="DropdownList"] {
+  background-color: #111827 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
   color: #e2e8f0 !important;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+[class*="Menu"] li,
+[class*="Menu"] button,
+[class*="DropdownItem"] {
+  color: #e2e8f0 !important;
+  border-radius: 6px !important;
 }
-::-webkit-scrollbar-track {
-  background: #0b0f19;
+
+[class*="Menu"] li:hover,
+[class*="Menu"] button:hover,
+[class*="DropdownItem"]:hover {
+  background-color: #1f2937 !important;
+  color: #00df9a !important;
 }
-::-webkit-scrollbar-thumb {
-  background: #2d3748;
-  border-radius: 4px;
+
+/* ── Toast / notifications ───────────────────────────────────── */
+.Toastify__toast {
+  background-color: #111827 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #4a5568;
+
+.Toastify__toast--success { border-left: 3px solid #00df9a !important; }
+.Toastify__toast--error   { border-left: 3px solid #f87171 !important; }
+
+/* ── List view rows ──────────────────────────────────────────── */
+[class*="ListCard"],
+[class*="EntryCard"] {
+  background-color: #111827 !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 10px !important;
+  transition: all 0.2s !important;
 }
+
+[class*="ListCard"]:hover,
+[class*="EntryCard"]:hover {
+  border-color: #00df9a !important;
+  box-shadow: 0 4px 16px rgba(0, 223, 154, 0.1) !important;
+}
+
+/* ── Avatar ──────────────────────────────────────────────────── */
+[class*="AvatarDropdown"],
+[class*="AvatarPlaceholder"] {
+  background-color: #1f2937 !important;
+  color: #e2e8f0 !important;
+  border-radius: 50% !important;
+}
+
+[class*="AvatarDropdown"]:hover {
+  box-shadow: 0 0 0 2px #00df9a !important;
+}
+
+/* ── Icon wrappers ───────────────────────────────────────────── */
+[class*="IconWrapper"] svg {
+  fill: currentColor !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0b0f19; }
+::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #374151; }
+
+/* ── Generic text ────────────────────────────────────────────── */
+p, span, li { color: inherit; }
+a { text-decoration: none !important; }
