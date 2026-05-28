@@ -6,23 +6,23 @@
   "description_en": "Campaign landing page for Kipling with Barbie in Peru",
   "description_pt": "Landing page de campanha da Kipling com a Barbie no Peru.",
   "link": "https://www.behance.net/gallery/200987501/Landing-x-Kipling-kipling-Peru",
-  "image": "kip",
+  "image": "img/projects/kip-.jpg",
   "icons": [
     {
       "title": "Magento 2",
-      "image": "magento-2"
+      "image": "img/tech/magento-2.png"
     },
     {
       "title": "HTML5",
-      "image": "HTML5"
+      "image": "img/tech/HTML5.png"
     },
     {
       "title": "CSS3",
-      "image": "CSS"
+      "image": "img/tech/CSS.png"
     },
     {
       "title": "JavaScript",
-      "image": "JS"
+      "image": "img/tech/JS.png"
     }
   ]
 }

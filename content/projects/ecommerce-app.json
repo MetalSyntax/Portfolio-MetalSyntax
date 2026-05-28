@@ -6,15 +6,15 @@
   "description_en": "A powerful mobile e-commerce application",
   "description_pt": "Um poderoso aplicativo de comércio eletrônico móvel",
   "link": "https://www.behance.net/gallery/220324399/Ecommerce-App",
-  "image": "Ecommerce-App",
+  "image": "img/projects/Ecommerce-App-.jpg",
   "icons": [
     {
       "title": "React.js",
-      "image": "Reactjs"
+      "image": "img/tech/Reactjs.png"
     },
     {
       "title": "Node.js",
-      "image": "nodejs"
+      "image": "img/tech/nodejs.png"
     }
   ]
 }

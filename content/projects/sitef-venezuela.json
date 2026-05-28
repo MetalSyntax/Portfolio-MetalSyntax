@@ -6,23 +6,23 @@
   "description_en": "Payment solutions and financial technology systems for Venezuela.",
   "description_pt": "Soluções de pagamento e sistemas de tecnologia financeira para a Venezuela.",
   "link": "#",
-  "image": "sitef",
+  "image": "img/projects/sitef-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Google Stitch",
-      "image": "google-stitch-logo"
+      "image": "img/tech/google-stitch-logo.png"
     },
     {
       "title": "Elementor",
-      "image": "elementor"
+      "image": "img/tech/elementor.png"
     }
   ]
 }

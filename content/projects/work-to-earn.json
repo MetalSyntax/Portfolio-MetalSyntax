@@ -6,19 +6,19 @@
   "description_en": "Technology of Blockchain applied to human resources.",
   "description_pt": "Tecnologia de Blockchain aplicada aos recursos humanos.",
   "link": "https://www.behance.net/gallery/153310391/Work-To-Earn",
-  "image": "worktoearn",
+  "image": "img/projects/worktoearn-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Elementor",
-      "image": "elementor"
+      "image": "img/tech/elementor.png"
     }
   ]
 }

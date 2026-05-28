@@ -6,15 +6,15 @@
   "description_en": "Classifieds for buying and selling cars in Spain.",
   "description_pt": "Classificados para compra e venda de carros na Espanha.",
   "link": "https://www.behance.net/gallery/96603035/ODM",
-  "image": "Ofertas-del-motor",
+  "image": "img/projects/Ofertas-del-motor-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     }
   ]
 }

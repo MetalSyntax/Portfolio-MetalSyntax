@@ -6,11 +6,11 @@
   "description_en": "Modern website on online business services tailored to the needs of customers.",
   "description_pt": "Web sobre serviços comerciais online.",
   "link": "https://syntax-project-next.now.sh/",
-  "image": "Tech-Cube",
+  "image": "img/projects/Tech-Cube-.jpg",
   "icons": [
     {
       "title": "Next.js",
-      "image": "Nextjs"
+      "image": "img/tech/Nextjs.png"
     }
   ]
 }

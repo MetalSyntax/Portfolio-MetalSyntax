@@ -6,23 +6,23 @@
   "description_en": "Campaign landing page for The North Face about Circular Design in Peru",
   "description_pt": "Landing page de campanha da The North Face sobre Design Circular no Peru.",
   "link": "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
-  "image": "tnf",
+  "image": "img/projects/tnf-.jpg",
   "icons": [
     {
       "title": "Magento 2",
-      "image": "magento-2"
+      "image": "img/tech/magento-2.png"
     },
     {
       "title": "HTML5",
-      "image": "HTML5"
+      "image": "img/tech/HTML5.png"
     },
     {
       "title": "CSS3",
-      "image": "CSS"
+      "image": "img/tech/CSS.png"
     },
     {
       "title": "JavaScript",
-      "image": "JS"
+      "image": "img/tech/JS.png"
     }
   ]
 }

@@ -173,19 +173,19 @@
                   :title="item.title"
                   :alt="item.title"
                   :srcset="
-                    require(`~/assets/img/projects/${item.image}-.jpg?webp`)
+                    require(`~/assets/${item.image}?webp`)
                   "
                   type="image/webp"
                 />
                 <source
                   :title="item.title"
                   :alt="item.title"
-                  :srcset="require(`~/assets/img/projects/${item.image}-.jpg`)"
+                  :srcset="require(`~/assets/${item.image}`)"
                   type="image/jpeg"
                 />
                 <img
                   class="w-full transition-transform duration-500 group-hover:scale-105"
-                  :src="require(`~/assets/img/projects/${item.image}-.jpg`)"
+                  :src="require(`~/assets/${item.image}`)"
                   :alt="item.title"
                   :title="item.title"
                 />
@@ -222,20 +222,20 @@
                         :title="icon.title"
                         :alt="icon.title"
                         :srcset="
-                          require(`~/assets/img/tech/${icon.image}.png?webp`)
+                          require(`~/assets/${icon.image}?webp`)
                         "
                         type="image/webp"
                       />
                       <source
                         :title="icon.title"
                         :alt="icon.title"
-                        :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
+                        :srcset="require(`~/assets/${icon.image}`)"
                         type="image/png"
                       />
                       <img
                         class="w-6 h-6 object-contain"
                         :title="icon.title"
-                        :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                        :src="require(`~/assets/${icon.image}`)"
                         :alt="icon.title"
                         loading="lazy"
                         width="24"

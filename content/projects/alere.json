@@ -6,15 +6,15 @@
   "description_en": "Industrial food company providing cafeteria services for schools, businesses, and more in Chile.",
   "description_pt": "Empresa de alimentação industrial que fornece serviços de refeitório para escolas, empresas e mais no Chile.",
   "link": "#",
-  "image": "alere",
+  "image": "img/projects/alere-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     }
   ]
 }

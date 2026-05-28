@@ -6,23 +6,23 @@
   "description_en": "Web application for calculations related to Method Engineering.",
   "description_pt": "Aplicativo da Web para cálculos relacionados à Engenharia de Métodos.",
   "link": "https://metalsyntax.github.io/Methods/",
-  "image": "Methods",
+  "image": "img/projects/Methods-.jpg",
   "icons": [
     {
       "title": "PhoneGap",
-      "image": "phonegap"
+      "image": "img/tech/phonegap.png"
     },
     {
       "title": "HTML5",
-      "image": "HTML5"
+      "image": "img/tech/HTML5.png"
     },
     {
       "title": "CSS3",
-      "image": "CSS"
+      "image": "img/tech/CSS.png"
     },
     {
       "title": "JavaScript",
-      "image": "JS"
+      "image": "img/tech/JS.png"
     }
   ]
 }

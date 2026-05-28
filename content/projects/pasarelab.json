@@ -6,19 +6,19 @@
   "description_en": "The directory that connects you with the pharmaceutical industry.",
   "description_pt": "O diretório que conecta você com a indústria farmacêutica.",
   "link": "https://www.behance.net/gallery/153310385/PasareLab",
-  "image": "pasarelab",
+  "image": "img/projects/pasarelab-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Elementor",
-      "image": "elementor"
+      "image": "img/tech/elementor.png"
     }
   ]
 }

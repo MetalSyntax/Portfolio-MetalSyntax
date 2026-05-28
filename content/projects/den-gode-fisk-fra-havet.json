@@ -6,19 +6,19 @@
   "description_en": "Company that supplies only top-quality raw materials.",
   "description_pt": "Empresa que fornece apenas matérias-primas de primeira classe.",
   "link": "https://www.behance.net/gallery/153310395/Den-Gode-Fisk-Fra-Havet",
-  "image": "dengodefiskfrahavet",
+  "image": "img/projects/dengodefiskfrahavet-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Elementor",
-      "image": "elementor"
+      "image": "img/tech/elementor.png"
     }
   ]
 }

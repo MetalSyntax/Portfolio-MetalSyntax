@@ -6,11 +6,11 @@
   "description_en": "Application that allows saving information through the notes file.",
   "description_pt": "Aplicativo que permite salvar informações através do arquivo de notas.",
   "link": "https://metalsyntax.github.io/Notes/",
-  "image": "Syntax-Note",
+  "image": "img/projects/Syntax-Note-.jpg",
   "icons": [
     {
       "title": "AngularJS",
-      "image": "angularjs"
+      "image": "img/tech/angularjs.png"
     }
   ]
 }

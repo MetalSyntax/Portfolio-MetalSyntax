@@ -6,15 +6,15 @@
   "description_en": "The optimal relationship between price and performance in Venezuela.",
   "description_pt": "A relação ideal entre preço e desempenho na Venezuela.",
   "link": "https://www.behance.net/gallery/66801367/DomiServer",
-  "image": "DomiServer",
+  "image": "img/projects/DomiServer-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     }
   ]
 }

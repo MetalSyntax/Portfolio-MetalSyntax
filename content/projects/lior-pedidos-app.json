@@ -6,19 +6,19 @@
   "description_en": "Web application to order beauty products with customers in Venezuela.",
   "description_pt": "Aplicativo da Web para solicitar produtos de beleza.",
   "link": "https://lior-app.vercel.app/",
-  "image": "Lior-App",
+  "image": "img/projects/Lior-App-.jpg",
   "icons": [
     {
       "title": "Nuxt.js",
-      "image": "Nuxt"
+      "image": "img/tech/Nuxt.png"
     },
     {
       "title": "Vue",
-      "image": "Vuejs"
+      "image": "img/tech/Vuejs.png"
     },
     {
       "title": "TailWind",
-      "image": "tailwindcss"
+      "image": "img/tech/tailwindcss.png"
     }
   ]
 }

@@ -6,11 +6,11 @@
   "description_en": "Dashboard with interactive charts to visualize information.",
   "description_pt": "Dashboard com gráficos interativos para visualização de informações.",
   "link": "https://www.behance.net/gallery/220321939/Dashboard-Particle",
-  "image": "Dasboard-Particles",
+  "image": "img/projects/Dasboard-Particles-.jpg",
   "icons": [
     {
       "title": "Figma",
-      "image": "Figma"
+      "image": "img/tech/Figma.png"
     }
   ]
 }

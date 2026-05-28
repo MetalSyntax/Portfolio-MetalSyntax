@@ -6,15 +6,15 @@
   "description_en": "High quality photorealistic renderings.",
   "description_pt": "Renderizações fotorrealistas de alta qualidade.",
   "link": "https://www.behance.net/gallery/96600761/Renderizados",
-  "image": "Renderizados",
+  "image": "img/projects/Renderizados-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     }
   ]
 }

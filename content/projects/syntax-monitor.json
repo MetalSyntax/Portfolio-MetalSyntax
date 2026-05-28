@@ -6,11 +6,11 @@
   "description_en": "Application for the verification of parallel dollar rates.",
   "description_pt": "Pedido de verificação de taxas paralelas de dólares na Venezuela.",
   "link": "https://metalsyntax.github.io/Syntax-Monitor/",
-  "image": "Syntax-Monitor",
+  "image": "img/projects/Syntax-Monitor-.jpg",
   "icons": [
     {
       "title": "Jquery",
-      "image": "jquery"
+      "image": "img/tech/jquery.png"
     }
   ]
 }

@@ -6,15 +6,15 @@
   "description_en": "Network of professionals in legal translation in Malaga, Spain.",
   "description_pt": "Rede de profissionais em tradução juramentada em Málaga.",
   "link": "https://www.behance.net/gallery/72284307/Traductores-Malaga",
-  "image": "Traductores-Malaga",
+  "image": "img/projects/Traductores-Malaga-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     }
   ]
 }

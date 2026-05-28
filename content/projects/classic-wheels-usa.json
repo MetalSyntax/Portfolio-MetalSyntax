@@ -6,19 +6,19 @@
   "description_en": "An online store that offers classic wheels and rims for vintage cars.",
   "description_pt": "Uma loja online que oferece rodas e aros clássicos para carros antigos.",
   "link": "https://classicwheelsusa.com/",
-  "image": "Classic-Wheels-Usa",
+  "image": "img/projects/Classic-Wheels-Usa-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Divi",
-      "image": "Divi"
+      "image": "img/tech/Divi.png"
     }
   ]
 }

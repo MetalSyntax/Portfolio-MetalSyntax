@@ -6,19 +6,19 @@
   "description_en": "Gastronomic and family experience in Albacete.",
   "description_pt": "Experiência gastronômica e familiar em Albacete.",
   "link": "https://www.behance.net/gallery/175647981/La-Martena",
-  "image": "lamartena",
+  "image": "img/projects/lamartena-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Elementor",
-      "image": "elementor"
+      "image": "img/tech/elementor.png"
     }
   ]
 }

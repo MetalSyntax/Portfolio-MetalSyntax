@@ -6,15 +6,15 @@
   "description_en": "Mobile app of the leading company in the financial industry.",
   "description_pt": "Aplicativo móvel da empresa líder na indústria financeira.",
   "link": "https://www.behance.net/gallery/175709925/Business-Market-Finders",
-  "image": "bmf",
+  "image": "img/projects/bmf-.jpg",
   "icons": [
     {
       "title": "SAP AppGyver",
-      "image": "AppGyver"
+      "image": "img/tech/AppGyver.png"
     },
     {
       "title": "JavaScript",
-      "image": "JS"
+      "image": "img/tech/JS.png"
     }
   ]
 }

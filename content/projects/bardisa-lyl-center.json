@@ -6,19 +6,19 @@
   "description_en": "Holistic approach to conventional and alternative medicine located in Florida.",
   "description_pt": "Abordagem holística da medicina convencional e alternativa localizada na Flórida.",
   "link": "https://bardisalylcenter.com/",
-  "image": "BDS",
+  "image": "img/projects/BDS-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Divi",
-      "image": "Divi"
+      "image": "img/tech/Divi.png"
     }
   ]
 }

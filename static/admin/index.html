@@ -71,9 +71,10 @@
                 { name: 'link', label: 'Link', widget: 'string', default: '#' },
                 {
                   name: 'image',
-                  label: 'Nombre de imagen (sin -.jpg)',
-                  widget: 'string',
-                  hint: 'Ejemplo: Parity → assets/img/projects/Parity-.jpg'
+                  label: 'Imagen principal',
+                  widget: 'image',
+                  media_folder: '/assets/img/projects',
+                  public_folder: 'img/projects'
                 },
                 {
                   name: 'icons',
@@ -87,9 +88,10 @@
                     { name: 'title', label: 'Nombre', widget: 'string' },
                     {
                       name: 'image',
-                      label: 'Archivo icono (sin .png)',
-                      widget: 'string',
-                      hint: 'Ejemplo: Reactjs → assets/img/tech/Reactjs.png'
+                      label: 'Icono',
+                      widget: 'image',
+                      media_folder: '/assets/img/tech',
+                      public_folder: 'img/tech'
                     }
                   ]
                 }

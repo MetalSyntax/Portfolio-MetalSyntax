@@ -6,11 +6,11 @@
   "description_en": "Live events service mobile application with integration to purchases.",
   "description_pt": "Aplicativo móvel do serviço de eventos ao vivo com integração às compras.",
   "link": "https://www.behance.net/gallery/121536125/Stream-Syntax",
-  "image": "Syntax-Stream",
+  "image": "img/projects/Syntax-Stream-.jpg",
   "icons": [
     {
       "title": "Adobe XD",
-      "image": "AdobeXD"
+      "image": "img/tech/AdobeXD.png"
     }
   ]
 }

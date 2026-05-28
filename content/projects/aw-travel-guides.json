@@ -6,15 +6,15 @@
   "description_en": "Travel website for destinations, guides, hotels, tour, vacations and more.",
   "description_pt": "Site de viagens para destinos, guias, hotéis, passeios, férias e muito mais.",
   "link": "https://www.behance.net/gallery/79183575/AW-Travel-Guides",
-  "image": "AW-Travel-Guides",
+  "image": "img/projects/AW-Travel-Guides-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     }
   ]
 }

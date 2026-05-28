@@ -6,19 +6,19 @@
   "description_en": "Privately-owned management health service organization in all Florida.",
   "description_pt": "Organização privada de gestão de serviços de saúde.",
   "link": "https://fdgmso.com/",
-  "image": "FDGMSO",
+  "image": "img/projects/FDGMSO-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Divi",
-      "image": "Divi"
+      "image": "img/tech/Divi.png"
     }
   ]
 }

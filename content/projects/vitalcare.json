@@ -6,19 +6,19 @@
   "description_en": "A company that offers laboratory services in less than 24 hours.",
   "description_pt": "Uma empresa que oferece serviços de laboratório em menos de 24 horas.",
   "link": "https://www.behance.net/gallery/175651013/Vitalcare",
-  "image": "vitalcare",
+  "image": "img/projects/vitalcare-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Divi",
-      "image": "Divi"
+      "image": "img/tech/Divi.png"
     }
   ]
 }

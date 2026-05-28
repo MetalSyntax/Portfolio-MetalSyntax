@@ -6,19 +6,19 @@
   "description_en": "Visit one of the best hotels in the Florida Keys.",
   "description_pt": "Visite um dos melhores hotéis nas Florida Keys.",
   "link": "https://sandsofislamorada.com/",
-  "image": "sandsofislamorada",
+  "image": "img/projects/sandsofislamorada-.jpg",
   "icons": [
     {
       "title": "WordPress",
-      "image": "WordPress"
+      "image": "img/tech/WordPress.png"
     },
     {
       "title": "PHP",
-      "image": "PHP"
+      "image": "img/tech/PHP.png"
     },
     {
       "title": "Divi",
-      "image": "Divi"
+      "image": "img/tech/Divi.png"
     }
   ]
 }
