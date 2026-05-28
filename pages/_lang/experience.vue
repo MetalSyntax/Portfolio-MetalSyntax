@@ -87,6 +87,23 @@
 
 <script>
 export default {
+  async asyncData({ $content, app }) {
+    const data = await $content('experience').fetch()
+    const locale = app.i18n.locale
+    const sfx = ['es', 'es-ES'].includes(locale) ? '_es'
+      : ['pt', 'pt-PT'].includes(locale) ? '_pt'
+      : '_en'
+    
+    const items = (data.items || []).map(p => ({
+      ...p,
+      title: p['title' + sfx],
+      yearlast: p['yearlast' + sfx],
+      task1: p['task1' + sfx],
+      task2: p['task2' + sfx],
+      task3: p['task3' + sfx]
+    }))
+    return { items }
+  },
   head() {
     return {
       title: this.$t("head.experience"),
@@ -101,129 +118,7 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          title: this.$t("experience.ditrali"),
-          yearfirst: "Jun. 2025",
-          yearlast: this.$t("experience.status"),
-          company: "Ditrali",
-          website: "www.ditrali.com",
-          task1: this.$t("experience.task1ditrali"),
-          task2: this.$t("experience.task2ditrali"),
-          task3: this.$t("experience.task3ditrali"),
-          image: "ditrali"
-        },
-        {
-          title: this.$t("experience.redgage"),
-          yearfirst: "Feb. 2021",
-          yearlast: this.$t("experience.status"),
-          company: "RedGage, LLC.",
-          website: "www.redgage.com",
-          task1: this.$t("experience.task1redgage"),
-          task2: this.$t("experience.task2redgage"),
-          task3: this.$t("experience.task3redgage"),
-          image: "redgage"
-        },
-        {
-          title: this.$t("experience.uts"),
-          yearfirst: "Jun. 2024",
-          yearlast: "Ago. 2024",
-          company: "Instituto Universitario de tecnología Antonio José de Sucre",
-          website: "www.uts.edu.ve",
-          task1: this.$t("experience.task1uts"),
-          task2: this.$t("experience.task2uts"),
-          task3: this.$t("experience.task3uts"),
-          image: "uts"
-        },
-        {
-          title: this.$t("experience.komax"),
-          yearfirst: "Ago. 2023",
-          yearlast: "Dic. 2024",
-          company: "Komax, S.A.",
-          website: "www.komax.cl",
-          task1: this.$t("experience.task1komax"),
-          task2: this.$t("experience.task2komax"),
-          task3: this.$t("experience.task3komax"),
-          image: "komax_sa"
-        },
-        {
-          title: this.$t("experience.genesisagency"),
-          yearfirst: "Nov. 2022",
-          yearlast: "Jul. 2023",
-          company: "Genesis",
-          website: "genesisagency.digital/",
-          task1: this.$t("experience.task1genesisagency"),
-          task2: this.$t("experience.task2genesisagency"),
-          task3: this.$t("experience.task3genesisagency"),
-          image: "Genesis"
-        },
-        {
-          title: this.$t("experience.equipo360"),
-          yearfirst: "May. 2022",
-          yearlast: "Jul.2022",
-          company: "Equipo360 S.L.",
-          website: "www.equipo360.com",
-          task1: this.$t("experience.task1equipo360"),
-          task2: this.$t("experience.task2equipo360"),
-          task3: this.$t("experience.task3equipo360"),
-          image: "equipo360"
-        },
-        {
-          title: this.$t("experience.virtuallypresent"),
-          yearfirst: "Ago.2019",
-          yearlast: "Nov. 2021",
-          company: "Virtually Present, LLC.",
-          website: "virtuallypresent.net",
-          task1: this.$t("experience.task1virtuallypresent"),
-          task2: this.$t("experience.task2virtuallypresent"),
-          task3: this.$t("experience.task3virtuallypresent"),
-          image: "virtually_present"
-        },
-        {
-          title: this.$t("experience.sigloglobal"),
-          yearfirst: "Jul. 2018",
-          yearlast: "Oct. 2021",
-          company: "Siglo Global, S.L.U.",
-          website: "#",
-          task1: this.$t("experience.task1sigloglobal"),
-          task2: this.$t("experience.task2sigloglobal"),
-          task3: this.$t("experience.task3sigloglobal"),
-          image: "SG"
-        },
-        {
-          title: this.$t("experience.kainver"),
-          yearfirst: "Jul. 2018",
-          yearlast: "Jul. 2019",
-          company: "Kainver Venezuela",
-          website: "www.kainver.com",
-          task1: this.$t("experience.task1kainver"),
-          task2: this.$t("experience.task2kainver"),
-          task3: this.$t("experience.task3kainver"),
-          image: "kainver"
-        },
-        {
-          title: this.$t("experience.domiserver"),
-          yearfirst: "Mar. 2018",
-          yearlast: "Jul.2018",
-          company: "Domiserver",
-          website: "domiserver.com",
-          task1: this.$t("experience.task1domiserver"),
-          task2: this.$t("experience.task2domiserver"),
-          task3: this.$t("experience.task3domiserver"),
-          image: "DomiServer"
-        },
-        {
-          title: this.$t("experience.sanofi"),
-          yearfirst: "Nov. 2017",
-          yearlast: "Abr.2018",
-          company: "Sanofi Venezuela",
-          website: "www.sanofi.com.ve",
-          task1: this.$t("experience.task1sanofi"),
-          task2: this.$t("experience.task2sanofi"),
-          task3: this.$t("experience.task3sanofi"),
-          image: "Sanofi"
-        }
-      ]
+      items: []
     };
   }
 };
