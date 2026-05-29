@@ -9,22 +9,20 @@
           "package.json",
           "server/**",
           ".nuxt/dist/sitemap-routes.json"
-        ],
-        "internalServer": true
+        ]
       }
     }
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=31557600" } },
     {
       "src": "/sw.js",
-      "dest": "/_nuxt/static/sw.js",
       "headers": {
-        "cache-control": "public, max-age=43200, immutable",
+        "cache-control": "public, max-age=0, must-revalidate",
         "Service-Worker-Allowed": "/"
       }
     },
+    { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=31557600" } },
     { "src": "/(.*)", "dest": "/" }
   ]
 }

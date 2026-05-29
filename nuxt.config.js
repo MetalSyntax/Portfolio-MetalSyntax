@@ -261,6 +261,7 @@ export default {
    * Progressive Web Application
    */
   pwa: {
+    workbox: false,
     manifest: {
       name: "Wonder Diaz Portfolio. MetalSyntax",
       short_name: "MetalSyntax PWA",
