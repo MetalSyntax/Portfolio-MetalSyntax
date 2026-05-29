@@ -118,7 +118,13 @@ export default {
     codeofpaid: 'Aplicativo da Web para gerar um código simples usando um ID pessoal.',
     syntaxnote: 'Aplicativo que permite salvar informações através do arquivo de notas.',
     syntaxmonitor: 'Pedido de verificação de taxas paralelas de dólares na Venezuela.',
-    filter: 'Todos'
+    filter: 'Todos',
+    filterClient: 'Cliente',
+    filterTech: 'Tecnologia',
+    filterYear: 'Ano',
+    allClients: 'Todos os clientes',
+    allTech: 'Todas as tecnologias',
+    allYears: 'Todos os anos'
   },
   achievements: {
     title: 'Certificações',

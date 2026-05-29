@@ -118,7 +118,13 @@ export default {
     codeofpaid: 'Web application to generate a simple code using a personal ID.',
     syntaxnote: 'Application that allows saving information through the notes file.',
     syntaxmonitor: 'Application for the verification of parallel dollar rates.',
-    filter: 'All'
+    filter: 'All',
+    filterClient: 'Client',
+    filterTech: 'Technology',
+    filterYear: 'Year',
+    allClients: 'All Clients',
+    allTech: 'All Technologies',
+    allYears: 'All Years'
   },
   achievements: {
     title: 'Achievements',

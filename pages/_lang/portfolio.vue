@@ -21,143 +21,53 @@
         {{ $t("portfolio.heroparagraph") }}
       </span>
     </div>
-    <div class="w-full px-2 pt-6 bg-ui-bg">
-      <ul class="hidden lg:flex flex-wrap justify-center">
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#all"
-            @click="itemsFilterkey = 'All'"
-            :class="{ active: itemsFilterkey == 'All' }"
-            >{{ $t("portfolio.filter") }}</a
+    <div class="w-full px-4 pt-6 pb-4 bg-ui-bg">
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-4 max-w-5xl mx-auto">
+        <!-- Year Filter -->
+        <div class="w-full lg:w-1/3">
+          <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("portfolio.filterYear") }}</label>
+          <select
+            v-model="filterYear"
+            class="w-full rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none transition-colors cursor-pointer"
           >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#Komax"
-            @click="itemsFilterkey = 'Komax'"
-            :class="{ active: itemsFilterkey == 'Komax' }"
-            >Komax</a
+            <option value="All">{{ $t("portfolio.allYears") }}</option>
+            <option v-for="year in uniqueYears" :key="year" :value="year">{{ year }}</option>
+          </select>
+        </div>
+
+        <!-- Client Filter -->
+        <div class="w-full lg:w-1/3">
+          <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("portfolio.filterClient") }}</label>
+          <select
+            v-model="filterClient"
+            class="w-full rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none transition-colors cursor-pointer"
           >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#genesis"
-            @click="itemsFilterkey = 'genesis'"
-            :class="{ active: itemsFilterkey == 'genesis' }"
-            >Genesis Agency</a
+            <option value="All">{{ $t("portfolio.allClients") }}</option>
+            <option v-for="client in uniqueClients" :key="client" :value="client">{{ client }}</option>
+          </select>
+        </div>
+
+        <!-- Tech Filter -->
+        <div class="w-full lg:w-1/3">
+          <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("portfolio.filterTech") }}</label>
+          <select
+            v-model="filterTech"
+            class="w-full rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none transition-colors cursor-pointer"
           >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#equipo360"
-            @click="itemsFilterkey = 'equipo360'"
-            :class="{ active: itemsFilterkey == 'equipo360' }"
-            >Equipo 360</a
-          >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#virtually"
-            @click="itemsFilterkey = 'virtually'"
-            :class="{ active: itemsFilterkey == 'virtually' }"
-            >Virtually Present</a
-          >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#kainver"
-            @click="itemsFilterkey = 'kainver'"
-            :class="{ active: itemsFilterkey == 'kainver' }"
-            >Kainver</a
-          >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#domiserver"
-            @click="itemsFilterkey = 'Domiserver'"
-            :class="{ active: itemsFilterkey == 'Domiserver' }"
-            >Domiserver</a
-          >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#personal"
-            @click="itemsFilterkey = 'Personal'"
-            :class="{ active: itemsFilterkey == 'Personal' }"
-            >Personal</a
-          >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#freelance"
-            @click="itemsFilterkey = 'Freelance'"
-            :class="{ active: itemsFilterkey == 'Freelance' }"
-            >Freelance</a
-          >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#alcancevirtual"
-            @click="itemsFilterkey = 'alcancevirtual'"
-            :class="{ active: itemsFilterkey == 'alcancevirtual' }"
-            >Alcance Virtual</a
-          >
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter-project"
-            href="#multipro"
-            @click="itemsFilterkey = 'multipro'"
-            :class="{ active: itemsFilterkey == 'multipro' }"
-            >Multipro</a
-          >
-        </li>
-      </ul>
-      <select
-        name="items"
-        class="lg:hidden flex w-full justify-center mx-auto text-center rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none"
-        v-model="itemsFilterkey"
-      >
-        <option class="bg-ui-bg-muted text-white" value="All">{{ $t("portfolio.filter") }}</option>
-        <option class="bg-ui-bg-muted text-white" value="Komax">Komax</option>
-        <option class="bg-ui-bg-muted text-white" value="genesis">Genesis Agency</option>
-        <option class="bg-ui-bg-muted text-white" value="equipo360">Equipo 360</option>
-        <option class="bg-ui-bg-muted text-white" value="virtually">Virtually Present</option>
-        <option class="bg-ui-bg-muted text-white" value="kainver">Kainver</option>
-        <option class="bg-ui-bg-muted text-white" value="domiserver">DomiServer</option>
-        <option class="bg-ui-bg-muted text-white" value="personal">Personal</option>
-        <option class="bg-ui-bg-muted text-white" value="freelance">Freelance</option>
-        <option class="bg-ui-bg-muted text-white" value="alcancevirtual">Alcance Virtual</option>
-        <option class="bg-ui-bg-muted text-white" value="multipro">Multipro</option>
-      </select>
+            <option value="All">{{ $t("portfolio.allTech") }}</option>
+            <option v-for="tech in uniqueTechs" :key="tech" :value="tech">{{ tech }}</option>
+          </select>
+        </div>
+      </div>
     </div>
-    <div
-      :class="[
-        itemsFilterkey == 'Komax' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'genesis' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'equipo360' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'virtually' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'domiserver' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'personal' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'freelance' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'alcancevirtual' ? 'lg:h-screen' : '',
-        itemsFilterkey == 'multipro' ? 'lg:h-screen' : '',
-      ]"
-      class="p-4 px-2 bg-ui-bg min-h-screen"
-    >
+    <div class="p-4 px-2 bg-ui-bg min-h-screen">
+      <div v-if="filteredItems.length === 0" class="text-center text-gray-400 py-12">
+        <p class="text-xl">No projects found matching the selected filters.</p>
+        <button @click="resetFilters" class="mt-4 text-nuxt-green hover:underline">Reset Filters</button>
+      </div>
       <div class="flex flex-wrap justify-center -mx-2">
         <div
-          v-for="item in itemFilter"
+          v-for="item in filteredItems"
           v-bind:key="item.id"
           class="sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 justify-center py-2"
           data-aos="fade-down"
@@ -278,84 +188,58 @@ export default {
   },
   data() {
     return {
-      itemsFilterkey: "All",
+      filterClient: "All",
+      filterYear: "2026",
+      filterTech: "All",
       items: [],
     };
   },
   computed: {
-    itemFilter() {
-      return this[this.itemsFilterkey];
+    uniqueClients() {
+      const clients = this.items.map(item => item.company).filter(Boolean);
+      return [...new Set(clients)].sort();
     },
-    All() {
-      return this.items;
+    uniqueYears() {
+      const years = this.items.map(item => item.year).filter(Boolean);
+      return [...new Set(years)].sort((a, b) => b - a); // Descending order
     },
-    Komax() {
-      return this.items.filter(function (item) {
-        return item.company == "Komax";
+    uniqueTechs() {
+      const techs = [];
+      this.items.forEach(item => {
+        if (item.icons) {
+          item.icons.forEach(icon => techs.push(icon.title));
+        }
       });
+      return [...new Set(techs)].sort();
     },
-    genesis() {
-      return this.items.filter(function (item) {
-        return item.company == "Genesis Agency";
+    filteredItems() {
+      return this.items.filter(item => {
+        const matchClient = this.filterClient === "All" || item.company === this.filterClient;
+        const matchYear = this.filterYear === "All" || item.year === this.filterYear;
+        const matchTech = this.filterTech === "All" || (item.icons && item.icons.some(icon => icon.title === this.filterTech));
+        return matchClient && matchYear && matchTech;
       });
-    },
-    equipo360() {
-      return this.items.filter(function (item) {
-        return item.company == "Equipo 360";
-      });
-    },
-    virtually() {
-      return this.items.filter(function (item) {
-        return item.company == "Virtually Present";
-      });
-    },
-    kainver() {
-      return this.items.filter(function (item) {
-        return item.company == "kainver";
-      });
-    },
-    Domiserver() {
-      return this.items.filter(function (item) {
-        return item.company == "Domiserver";
-      });
-    },
-    Freelance() {
-      return this.items.filter(function (item) {
-        return item.company == "Freelance";
-      });
-    },
-    Personal() {
-      return this.items.filter(function (item) {
-        return item.company == "Personal";
-      });
-    },
-    alcancevirtual() {
-      return this.items.filter(function (item) {
-        return item.company == "Alcance Virtual SPA";
-      });
-    },
-    multipro() {
-      return this.items.filter(function (item) {
-        return item.company == "Multipro Consulting";
-      });
-    },
+    }
   },
   methods: {
     handleImageError(event) {
       event.target.style.display = "none";
     },
+    resetFilters() {
+      this.filterClient = "All";
+      this.filterYear = "All";
+      this.filterTech = "All";
+    }
   },
 };
 </script>
 
 <style>
-.button-filter-project {
-  @apply block text-center rounded border border-gray-700 bg-ui-bg-muted text-gray-300 py-2 px-4 transition-colors;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-.button-filter-project:hover {
-  @apply border-nuxt-green text-nuxt-green;
-}
-.button-filter-project.active {
-  @apply border-nuxt-green text-nuxt-green bg-ui-bg-accented;
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>

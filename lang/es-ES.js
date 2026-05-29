@@ -118,7 +118,13 @@ export default {
     codeofpaid: 'Aplicación Web para generar un código sencillo mediante un ID personal.',
     syntaxnote: 'Aplicación que permite guardar información a través del archivo de notas.',
     syntaxmonitor: 'Aplicación para la verificación de tasas del dólar paralelo en Venezuela.',
-    filter: 'Todos'
+    filter: 'Todos',
+    filterClient: 'Cliente',
+    filterTech: 'Tecnología',
+    filterYear: 'Año',
+    allClients: 'Todos los clientes',
+    allTech: 'Todas las tecnologías',
+    allYears: 'Todos los años'
   },
   achievements: {
     title: 'Certificaciones',
