@@ -1,28 +1,23 @@
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "npm run generate",
+  "outputDirectory": "dist",
+  "headers": [
     {
-      "src": "nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder",
-      "config": {
-        "serverFiles": [
-          "package.json",
-          "server/**",
-          ".nuxt/dist/sitemap-routes.json"
-        ]
-      }
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
+      ]
+    },
+    {
+      "source": "/_nuxt/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31557600, immutable" }
+      ]
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "/sw.js",
-      "headers": {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "Service-Worker-Allowed": "/"
-      }
-    },
-    { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=31557600" } },
-    { "src": "/(.*)", "dest": "/" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

@@ -22,7 +22,6 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/vercel-builder": "^0.24.0",
     "aos": "^2.3.4",
     "imagemin": "^7.0.1",
     "nuxt": "^2.17.1",
