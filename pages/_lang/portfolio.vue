@@ -21,42 +21,30 @@
         {{ $t("portfolio.heroparagraph") }}
       </span>
     </div>
-    <div class="w-full px-4 pt-6 pb-4 bg-ui-bg">
+    <div class="w-full px-4 pt-6 pb-4 bg-ui-bg relative z-40">
       <div class="flex flex-col lg:flex-row justify-center items-center gap-4 max-w-5xl mx-auto">
         <!-- Year Filter -->
-        <div class="w-full lg:w-1/3">
+        <div class="w-full lg:w-1/4">
           <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("portfolio.filterYear") }}</label>
-          <select
-            v-model="filterYear"
-            class="w-full rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none transition-colors cursor-pointer"
-          >
-            <option value="All">{{ $t("portfolio.allYears") }}</option>
-            <option v-for="year in uniqueYears" :key="year" :value="year">{{ year }}</option>
-          </select>
+          <CustomSelect v-model="filterYear" :options="yearOptions" />
         </div>
 
         <!-- Client Filter -->
-        <div class="w-full lg:w-1/3">
+        <div class="w-full lg:w-1/4">
           <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("portfolio.filterClient") }}</label>
-          <select
-            v-model="filterClient"
-            class="w-full rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none transition-colors cursor-pointer"
-          >
-            <option value="All">{{ $t("portfolio.allClients") }}</option>
-            <option v-for="client in uniqueClients" :key="client" :value="client">{{ client }}</option>
-          </select>
+          <CustomSelect v-model="filterClient" :options="clientOptions" />
         </div>
 
         <!-- Tech Filter -->
-        <div class="w-full lg:w-1/3">
+        <div class="w-full lg:w-1/4">
           <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("portfolio.filterTech") }}</label>
-          <select
-            v-model="filterTech"
-            class="w-full rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none transition-colors cursor-pointer"
-          >
-            <option value="All">{{ $t("portfolio.allTech") }}</option>
-            <option v-for="tech in uniqueTechs" :key="tech" :value="tech">{{ tech }}</option>
-          </select>
+          <CustomSelect v-model="filterTech" :options="techOptions" />
+        </div>
+
+        <!-- Sort By -->
+        <div class="w-full lg:w-1/4">
+          <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("portfolio.sort") }}</label>
+          <CustomSelect v-model="sortBy" :options="sortOptions" />
         </div>
       </div>
     </div>
@@ -164,7 +152,10 @@
 </template>
 
 <script>
+import CustomSelect from '~/components/CustomSelect.vue';
+
 export default {
+  components: { CustomSelect },
   async asyncData({ $content, app }) {
     const itemsRaw = await $content('projects').fetch()
     const locale = app.i18n.locale
@@ -189,12 +180,36 @@ export default {
   data() {
     return {
       filterClient: "All",
-      filterYear: "2026",
+      filterYear: "All",
       filterTech: "All",
+      sortBy: "date-desc",
       items: [],
     };
   },
   computed: {
+    yearOptions() {
+      const opts = [{ value: 'All', label: this.$t("portfolio.allYears") }];
+      this.uniqueYears.forEach(y => opts.push({ value: y, label: y }));
+      return opts;
+    },
+    clientOptions() {
+      const opts = [{ value: 'All', label: this.$t("portfolio.allClients") }];
+      this.uniqueClients.forEach(c => opts.push({ value: c, label: c }));
+      return opts;
+    },
+    techOptions() {
+      const opts = [{ value: 'All', label: this.$t("portfolio.allTech") }];
+      this.uniqueTechs.forEach(t => opts.push({ value: t, label: t }));
+      return opts;
+    },
+    sortOptions() {
+      return [
+        { value: 'date-desc', label: this.$t("portfolio.sortDateDesc") },
+        { value: 'date-asc', label: this.$t("portfolio.sortDateAsc") },
+        { value: 'name-asc', label: this.$t("portfolio.sortNameAsc") },
+        { value: 'name-desc', label: this.$t("portfolio.sortNameDesc") },
+      ];
+    },
     uniqueClients() {
       const clients = this.items.map(item => item.company).filter(Boolean);
       return [...new Set(clients)].sort();
@@ -213,12 +228,27 @@ export default {
       return [...new Set(techs)].sort();
     },
     filteredItems() {
-      return this.items.filter(item => {
+      let result = this.items.filter(item => {
         const matchClient = this.filterClient === "All" || item.company === this.filterClient;
         const matchYear = this.filterYear === "All" || item.year === this.filterYear;
         const matchTech = this.filterTech === "All" || (item.icons && item.icons.some(icon => icon.title === this.filterTech));
         return matchClient && matchYear && matchTech;
       });
+
+      result.sort((a, b) => {
+        if (this.sortBy === "date-desc") {
+          return parseInt(b.year || 0) - parseInt(a.year || 0);
+        } else if (this.sortBy === "date-asc") {
+          return parseInt(a.year || 0) - parseInt(b.year || 0);
+        } else if (this.sortBy === "name-asc") {
+          return (a.title || "").localeCompare(b.title || "");
+        } else if (this.sortBy === "name-desc") {
+          return (b.title || "").localeCompare(a.title || "");
+        }
+        return 0;
+      });
+
+      return result;
     }
   },
   methods: {
@@ -229,6 +259,7 @@ export default {
       this.filterClient = "All";
       this.filterYear = "All";
       this.filterTech = "All";
+      this.sortBy = "date-desc";
     }
   },
 };

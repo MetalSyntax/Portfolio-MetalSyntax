@@ -21,78 +21,20 @@
         {{ $t("achievements.heroparagraph") }}
       </span>
     </div>
-    <div class="w-full px-2 pt-6 bg-ui-bg">
-      <ul class="hidden lg:flex flex-wrap justify-center">
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter"
-            href="#all"
-            @click="itemsFilterkey = 'All'"
-            :class="{ active: itemsFilterkey == 'All' }"
-          >{{ $t('achievements.filter') }}</a>
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter"
-            href="#certiprof"
-            @click="itemsFilterkey = 'CertiProf'"
-            :class="{ active: itemsFilterkey == 'CertiProf' }"
-          >CertiProf</a>
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter"
-            href="#codigofacilito"
-            @click="itemsFilterkey = 'CodigoFacilito'"
-            :class="{ active: itemsFilterkey == 'Código Facilito' }"
-          >Código Facilito</a>
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter"
-            href="#platzi"
-            @click="itemsFilterkey = 'Platzi'"
-            :class="{ active: itemsFilterkey == 'Platzi' }"
-          >Platzi</a>
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter"
-            href="#linkedIn"
-            @click="itemsFilterkey = 'LinkedIn'"
-            :class="{ active: itemsFilterkey == 'LinkedIn Learning'}"
-          >LinkedIn Learning</a>
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter"
-            href="#aprende"
-            @click="itemsFilterkey = 'Aprende'"
-            :class="{ active: itemsFilterkey == 'Fundación Carlos Slim' }"
-          >Aprende.org</a>
-        </li>
-        <li class="flex-1 mr-2 max-w-xs">
-          <a
-            class="button-filter"
-            href="#universidad"
-            @click="itemsFilterkey = 'Universidad'"
-            :class="{ active: itemsFilterkey == 'Universidad' }"
-          >Universidad</a>
-        </li>
-      </ul>
-      <select
-      name="items"
-      class="lg:hidden flex w-full justify-center mx-auto text-center rounded border border-gray-700 bg-ui-bg-muted text-white focus:border-nuxt-green shadow-lg py-2 px-4 outline-none"
-      v-model="itemsFilterkey"
-    >
-      <option class="bg-ui-bg-muted text-white" value="All">{{ $t('achievements.filter') }}</option>
-      <option class="bg-ui-bg-muted text-white" value="CertiProf">CertiProf</option>
-      <option class="bg-ui-bg-muted text-white" value="CodigoFacilito">Código Facilito</option>
-      <option class="bg-ui-bg-muted text-white" value="Platzi">Platzi</option>
-      <option class="bg-ui-bg-muted text-white" value="LinkedIn">LinkedIn Learning</option>
-      <option class="bg-ui-bg-muted text-white" value="Aprende">Aprende.org</option>
-      <option class="bg-ui-bg-muted text-white" value="Universidad">Universidad</option>
-    </select>
+    <div class="w-full px-2 pt-6 bg-ui-bg relative z-40">
+      <div class="flex flex-col lg:flex-row justify-center items-center gap-4 max-w-5xl mx-auto">
+        <!-- Client Filter -->
+        <div class="w-full lg:w-1/2">
+          <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("achievements.filterClient") }}</label>
+          <CustomSelect v-model="itemsFilterkey" :options="clientOptions" />
+        </div>
+
+        <!-- Sort By -->
+        <div class="w-full lg:w-1/2">
+          <label class="block text-gray-400 text-sm font-bold mb-2">{{ $t("achievements.sort") }}</label>
+          <CustomSelect v-model="sortBy" :options="sortOptions" />
+        </div>
+      </div>
     </div>
     <div
     :class="[
@@ -135,7 +77,10 @@
             <div class="text-sm ml-4">
               <a :href="item.link" target="_blank">
                 <p class="text-white font-bold sm:text-sm md:text-lg hover:text-nuxt-green transition-colors">{{ item.title }}</p>
-                <p class="text-nuxt-green block opacity-90 text-sm font-medium">{{ item.company }}</p>
+                <p class="text-nuxt-green block opacity-90 text-sm font-medium">
+                  {{ item.company }}
+                  <span v-if="item.date" class="text-gray-400 ml-1 font-normal text-xs">| {{ item.date }}</span>
+                </p>
               </a>
             </div>
           </div>
@@ -146,7 +91,10 @@
 </template>
 
 <script>
+import CustomSelect from '~/components/CustomSelect.vue';
+
 export default {
+  components: { CustomSelect },
   async asyncData({ $content }) {
     const items = await $content('achievements').fetch()
     return { items }
@@ -166,45 +114,47 @@ export default {
   data() {
     return {
       itemsFilterkey: "All",
+      sortBy: "date-desc",
       items: [],
     };
   },
   computed: {
+    clientOptions() {
+      const opts = [{ value: 'All', label: this.$t("achievements.filter") }];
+      this.uniqueClients.forEach(c => opts.push({ value: c, label: c }));
+      return opts;
+    },
+    sortOptions() {
+      return [
+        { value: 'date-desc', label: this.$t("achievements.sortDateDesc") },
+        { value: 'date-asc', label: this.$t("achievements.sortDateAsc") },
+        { value: 'name-asc', label: this.$t("achievements.sortNameAsc") },
+        { value: 'name-desc', label: this.$t("achievements.sortNameDesc") },
+      ];
+    },
+    uniqueClients() {
+      const clients = this.items.map(item => item.company || item.academy).filter(Boolean);
+      return [...new Set(clients)].sort();
+    },
     itemFilter() {
-      return this[this.itemsFilterkey];
-    },
-    All() {
-      return this.items;
-    },
-    CertiProf() {
-      return this.items.filter(function(item) {
-        return item.company == "CertiProf";
+      let result = this.items.filter(item => {
+        return this.itemsFilterkey === "All" || item.company === this.itemsFilterkey || item.academy === this.itemsFilterkey;
       });
-    },
-    CodigoFacilito() {
-      return this.items.filter(function(item) {
-        return item.company == "Código Facilito";
+
+      result.sort((a, b) => {
+        if (this.sortBy === "date-desc") {
+          return new Date(b.date || b.createdAt || 0) - new Date(a.date || a.createdAt || 0);
+        } else if (this.sortBy === "date-asc") {
+          return new Date(a.date || a.createdAt || 0) - new Date(b.date || b.createdAt || 0);
+        } else if (this.sortBy === "name-asc") {
+          return (a.title || "").localeCompare(b.title || "");
+        } else if (this.sortBy === "name-desc") {
+          return (b.title || "").localeCompare(a.title || "");
+        }
+        return 0;
       });
-    },
-    Platzi() {
-      return this.items.filter(function(item) {
-        return item.company == "Platzi";
-      });
-    },
-    LinkedIn() {
-      return this.items.filter(function(item) {
-        return item.company == "LinkedIn Learning";
-      });
-    },
-    Aprende() {
-      return this.items.filter(function(item) {
-        return item.company == "Fundación Carlos Slim";
-      });
-    },
-    Universidad() {
-      return this.items.filter(function(item) {
-        return item.academy == "Universidad";
-      });
+
+      return result;
     }
   }
 };

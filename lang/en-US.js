@@ -124,12 +124,23 @@ export default {
     filterYear: 'Year',
     allClients: 'All Clients',
     allTech: 'All Technologies',
-    allYears: 'All Years'
+    allYears: 'All Years',
+    sort: 'Sort By',
+    sortDateDesc: 'Date (Newest)',
+    sortDateAsc: 'Date (Oldest)',
+    sortNameAsc: 'Name (A-Z)',
+    sortNameDesc: 'Name (Z-A)'
   },
   achievements: {
     title: 'Achievements',
     heroparagraph: 'Certifications and achievements that validate my expertise and commitment to continuous professional development.',
-    filter: 'All'
+    filter: 'All',
+    filterClient: 'Academy',
+    sort: 'Sort By',
+    sortDateDesc: 'Date (Newest)',
+    sortDateAsc: 'Date (Oldest)',
+    sortNameAsc: 'Name (A-Z)',
+    sortNameDesc: 'Name (Z-A)'
   },
   experience: {
     title: "Experience",

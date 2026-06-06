@@ -80,6 +80,7 @@ collections:
                   - UJAP
                   - UCV
               - { name: academy, label: Academia (Opcional), widget: string, required: false }
+              - { name: date, label: Fecha / Año, widget: string, required: false }
               - { name: link, label: Link, widget: string, default: "#" }
               - { name: image, label: "Nombre de imagen de diploma", widget: string, hint: "Ejemplo: CodigoFacilito (corresponde a assets/img/diplomas/CodigoFacilito.png)" }
       - name: experience

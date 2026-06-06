@@ -99,3 +99,5 @@ Tienda-de-webs
 .antigravitycli
 pnpm-lock.yaml
 .env*
+.plans
+.tools
