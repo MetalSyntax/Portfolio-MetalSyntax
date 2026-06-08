@@ -19,6 +19,12 @@ CMS.registerPreviewStyle(`
 // Helper function to resolve image URLs for preview
 function resolvePreviewImage(imageStr, getAsset) {
   if (!imageStr) return null;
+  
+  // If the image is a File object (e.g. freshly uploaded or cropped but not yet saved)
+  if (typeof imageStr === 'object' && (imageStr instanceof File || imageStr instanceof Blob)) {
+    return URL.createObjectURL(imageStr);
+  }
+
   var asset = getAsset(imageStr);
   if (!asset) return null;
   var url = asset.toString();

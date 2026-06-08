@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>MetalSyntax Admin</title>
-    <link rel="stylesheet" href="/admin/admin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />
     <script>
       window.CMS_MANUAL_INIT = true;
       // Vercel's catch-all returns HTML for /admin/config.yml.
@@ -73,7 +73,7 @@
                   name: 'image',
                   label: 'Imagen principal',
                   widget: 'image',
-                  media_folder: '/assets/img/projects',
+                  media_folder: 'assets/img/projects',
                   public_folder: 'img/projects'
                 },
                 {
@@ -90,7 +90,7 @@
                       name: 'image',
                       label: 'Icono',
                       widget: 'image',
-                      media_folder: '/assets/img/tech',
+                      media_folder: 'assets/img/tech',
                       public_folder: 'img/tech'
                     }
                   ]
@@ -126,7 +126,7 @@
                   name: 'image',
                   label: 'Imagen del diploma',
                   widget: 'image',
-                  media_folder: '/assets/img/diplomas',
+                  media_folder: 'assets/img/diplomas',
                   public_folder: 'img/diplomas',
                   hint: 'Se guarda como img/diplomas/nombre.png'
                 }
@@ -151,7 +151,7 @@
                   name: 'image',
                   label: 'Logo de la empresa',
                   widget: 'image',
-                  media_folder: '/assets/img/bussines',
+                  media_folder: 'assets/img/bussines',
                   public_folder: 'img/bussines',
                   hint: 'Se guarda como img/bussines/nombre.png'
                 },
@@ -191,7 +191,7 @@
                   name: 'image',
                   label: 'Icono',
                   widget: 'image',
-                  media_folder: '/assets/img/tech',
+                  media_folder: 'assets/img/tech',
                   public_folder: 'img/tech'
                 },
                 {
@@ -207,6 +207,8 @@
         }
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="image-cropper.js"></script>
     <script src="previews.js"></script>
   </body>
 </html>
