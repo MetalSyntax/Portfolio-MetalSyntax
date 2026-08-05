@@ -397,15 +397,15 @@ export default {
       },
       experience: [
         {
-          title: this.$t("experience.redgage"),
-          yearfirst: "Feb. 2021",
+          title: this.$t("experience.multipro"),
+          yearfirst: "Feb. 2026",
           yearlast: this.$t("experience.status"),
-          company: "RedGage, LLC.",
-          website: "www.redgage.com",
-          task1: this.$t("experience.task1redgage"),
-          task2: this.$t("experience.task2redgage"),
-          task3: this.$t("experience.task3redgage"),
-          image: "redgage",
+          company: "Multipro Consulting",
+          website: "www.multiprowebstudio.com",
+          task1: this.$t("experience.task1multipro"),
+          task2: this.$t("experience.task2multipro"),
+          task3: this.$t("experience.task3multipro"),
+          image: "mws",
         },
         {
           title: this.$t("experience.ditrali"),
@@ -419,16 +419,15 @@ export default {
           image: "ditrali"
         },
         {
-          title: this.$t("experience.uts"),
-          yearfirst: "Jun. 2024",
-          yearlast: "Ago. 2024",
-          company:
-            "Instituto Universitario de tecnología Antonio José de Sucre",
-          website: "www.uts.edu.ve",
-          task1: this.$t("experience.task1uts"),
-          task2: this.$t("experience.task2uts"),
-          task3: this.$t("experience.task3uts"),
-          image: "uts",
+          title: this.$t("experience.redgage"),
+          yearfirst: "Feb. 2021",
+          yearlast: "May. 2026",
+          company: "RedGage, LLC.",
+          website: "www.redgage.com",
+          task1: this.$t("experience.task1redgage"),
+          task2: this.$t("experience.task2redgage"),
+          task3: this.$t("experience.task3redgage"),
+          image: "redgage",
         }
       ],
       icons: [
