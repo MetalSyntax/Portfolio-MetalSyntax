@@ -1,0 +1,28 @@
+{
+  "title": "Zenonia 3",
+  "company": "Personal",
+  "year": "2011",
+  "description_es": "Wrapper/port para PS Vita de Zenonia 3. Este repositorio contiene solo el código del loader y el wrapper.",
+  "description_en": "A PS Vita wrapper/port of Zenonia 3. This repository contains only the loader and wrapper code.",
+  "description_pt": "Wrapper/port para PS Vita de Zenonia 3. Este repositório contém apenas o código do loader e do wrapper.",
+  "link": "https://github.com/MetalSyntax/zenonia3-psvita-port",
+  "image": "img/projects/Zenonia-3-.jpg",
+  "icons": [
+    {
+      "title": "C",
+      "image": "img/tech/C.png"
+    },
+    {
+      "title": "C++",
+      "image": "img/tech/Cplusplus.png"
+    },
+    {
+      "title": "Python",
+      "image": "img/tech/Python.png"
+    },
+    {
+      "title": "Claude",
+      "image": "img/tech/claude.png"
+    }
+  ]
+}

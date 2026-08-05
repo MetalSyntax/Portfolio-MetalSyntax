@@ -1,0 +1,24 @@
+{
+  "title": "Prince of Persia Classic",
+  "company": "Personal",
+  "year": "2012",
+  "description_es": "Port/wrapper homebrew para PS Vita de Prince of Persia Classic (Android), construido sobre soloader-boilerplate.",
+  "description_en": "PS Vita homebrew port/wrapper for Prince of Persia Classic (Android), built on soloader-boilerplate.",
+  "description_pt": "Port/wrapper homebrew para PS Vita de Prince of Persia Classic (Android), construído sobre soloader-boilerplate.",
+  "link": "https://github.com/MetalSyntax/prince-of-persia-classic-psvita-port",
+  "image": "img/projects/Prince-Of-Persia-Classic-.jpg",
+  "icons": [
+    {
+      "title": "C",
+      "image": "img/tech/C.png"
+    },
+    {
+      "title": "C++",
+      "image": "img/tech/Cplusplus.png"
+    },
+    {
+      "title": "Claude",
+      "image": "img/tech/claude.png"
+    }
+  ]
+}

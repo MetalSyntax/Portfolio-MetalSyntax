@@ -1,0 +1,28 @@
+{
+  "title": "Zenonia 2",
+  "company": "Personal",
+  "year": "2010",
+  "description_es": "Port/loader para PS Vita de la versión Android (Xperia Play) de Zenonia 2. Este repositorio contiene solo el código del loader y el wrapper.",
+  "description_en": "PS Vita port/loader of the Android (Xperia Play) release of Zenonia 2. This repository contains only the loader and wrapper code.",
+  "description_pt": "Port/loader para PS Vita da versão Android (Xperia Play) de Zenonia 2. Este repositório contém apenas o código do loader e do wrapper.",
+  "link": "https://github.com/MetalSyntax/Zenonia2-psvita-port",
+  "image": "img/projects/Zenonia-2-.jpg",
+  "icons": [
+    {
+      "title": "C",
+      "image": "img/tech/C.png"
+    },
+    {
+      "title": "C++",
+      "image": "img/tech/Cplusplus.png"
+    },
+    {
+      "title": "Python",
+      "image": "img/tech/Python.png"
+    },
+    {
+      "title": "Claude",
+      "image": "img/tech/claude.png"
+    }
+  ]
+}
