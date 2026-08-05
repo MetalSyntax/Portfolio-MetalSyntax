@@ -103,6 +103,18 @@ export default {
       task3: p[`task3${sfx}`]
     }))
 
+    const months = {
+      ene: 0, jan: 0, feb: 1, mar: 2, abr: 3, apr: 3, may: 4,
+      jun: 5, jul: 6, ago: 7, aug: 7, sep: 8, oct: 9, nov: 10, dic: 11, dec: 11
+    }
+    const parseYearFirst = (str) => {
+      const match = /^(\w+)\.?\s+(\d{4})$/.exec((str || '').trim())
+      if (!match) return -Infinity
+      const month = months[match[1].toLowerCase()] || 0
+      return parseInt(match[2], 10) * 12 + month
+    }
+    items.sort((a, b) => parseYearFirst(b.yearfirst) - parseYearFirst(a.yearfirst))
+
     return { items }
   },
   head() {
