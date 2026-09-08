@@ -162,7 +162,7 @@ export default {
     const key = ['es', 'es-ES'].includes(locale) ? 'description_es'
       : ['pt', 'pt-PT'].includes(locale) ? 'description_pt'
       : 'description_en'
-    const items = itemsRaw.map(p => ({ ...p, description: p[key] }))
+    const items = itemsRaw.filter(p => !p.draft).map(p => ({ ...p, description: p[key] }))
     return { items }
   },
   head() {

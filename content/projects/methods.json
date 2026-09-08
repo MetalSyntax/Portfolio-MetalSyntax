@@ -9,20 +9,21 @@
   "image": "img/projects/Methods-.jpg",
   "icons": [
     {
-      "title": "PhoneGap",
-      "image": "img/tech/phonegap.png"
+      "title": "CSS3",
+      "image": "img/tech/CSS.png"
     },
     {
       "title": "HTML5",
       "image": "img/tech/HTML5.png"
     },
     {
-      "title": "CSS3",
-      "image": "img/tech/CSS.png"
-    },
-    {
       "title": "JavaScript",
       "image": "img/tech/JS.png"
+    },
+    {
+      "title": "PhoneGap",
+      "image": "img/tech/phonegap.png"
     }
-  ]
+  ],
+  "draft": true
 }

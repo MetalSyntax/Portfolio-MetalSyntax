@@ -1,0 +1,16 @@
+{
+  "title": "Rail 71",
+  "company": "Multipro Consulting",
+  "year": "2026",
+  "description_es": "RAIL 71 is a landing page for a photography studio rental in Miami, FL.",
+  "description_en": "RAIL 71 is a landing page for a photography studio rental in Miami, FL.",
+  "description_pt": "RAIL 71 é uma landing page para aluguel de estúdio fotográfico em Miami, FL.",
+  "link": "https://rail71studio.com/",
+  "image": "img/projects/Rail-71-.jpg",
+  "icons": [
+    {
+      "title": "Webflow",
+      "image": "img/tech/Webflow.png"
+    }
+  ]
+}

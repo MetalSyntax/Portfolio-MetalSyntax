@@ -16,5 +16,6 @@
       "title": "Node.js",
       "image": "img/tech/nodejs.png"
     }
-  ]
+  ],
+  "featured": true
 }

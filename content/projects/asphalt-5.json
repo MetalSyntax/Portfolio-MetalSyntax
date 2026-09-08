@@ -1,0 +1,24 @@
+{
+  "title": "Asphalt 5",
+  "company": "Personal",
+  "year": "2026",
+  "description_es": "Adaptación nativa para PS Vita de Asphalt 5, desarrollada a partir de soloader-boilerplate.",
+  "description_en": "Native PS Vita wrapper/port of Asphalt 5,, built on soloader-boilerplate.",
+  "description_pt": "Port/wrapper nativo para PS Vita de Asphalt 5, desenvolvido com base no soloader-boilerplate.",
+  "link": "https://github.com/MetalSyntax/Asphalt-5-Vita/releases",
+  "image": "img/projects/Asphalt-5-.jpg",
+  "icons": [
+    {
+      "title": "C",
+      "image": "img/tech/C.png"
+    },
+    {
+      "title": "C++",
+      "image": "img/tech/Cplusplus.png"
+    },
+    {
+      "title": "Python",
+      "image": "img/tech/python.png"
+    }
+  ]
+}

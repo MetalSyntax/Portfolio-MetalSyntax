@@ -1,0 +1,24 @@
+{
+  "title": "Dungeon Hunter 2",
+  "company": "Personal",
+  "year": "2026",
+  "description_es": "Puerto nativo de Dungeon Hunter 2 para PS Vita mediante so-loader.",
+  "description_en": "Dungeon Hunter 2 native port for PS Vita via so-loader.",
+  "description_pt": "Port nativo de Dungeon Hunter 2 para PS Vita via so-loader",
+  "link": "https://github.com/MetalSyntax/Dungeon-Hunter-2-vita/releases",
+  "image": "img/projects/Dungeon-Hunter-2-.jpg",
+  "icons": [
+    {
+      "title": "C",
+      "image": "img/tech/C.png"
+    },
+    {
+      "title": "C++",
+      "image": "img/tech/Cplusplus.png"
+    },
+    {
+      "title": "Python",
+      "image": "img/tech/python.png"
+    }
+  ]
+}

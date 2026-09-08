@@ -1,0 +1,24 @@
+{
+  "title": "Shadow Guardian",
+  "company": "Personal",
+  "year": "2026",
+  "description_es": "Port de Shadow Guardian HD de Android a PS Vita",
+  "description_en": "Android to PS Vita port of Shadow Guardian HD",
+  "description_pt": "Port de Shadow Guardian HD do Android para o PS Vita",
+  "link": "https://github.com/MetalSyntax/Shadow-Guardian-vita/releases",
+  "image": "img/projects/Shadow-Guardian-.jpg",
+  "icons": [
+    {
+      "title": "C",
+      "image": "img/tech/C.png"
+    },
+    {
+      "title": "C++",
+      "image": "img/tech/Cplusplus.png"
+    },
+    {
+      "title": "Python",
+      "image": "img/tech/python.png"
+    }
+  ]
+}

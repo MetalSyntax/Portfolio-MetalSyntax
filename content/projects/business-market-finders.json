@@ -16,5 +16,6 @@
       "title": "JavaScript",
       "image": "img/tech/JS.png"
     }
-  ]
+  ],
+  "featured": true
 }

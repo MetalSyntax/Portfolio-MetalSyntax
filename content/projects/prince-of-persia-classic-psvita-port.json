@@ -19,10 +19,7 @@
     {
       "title": "Python",
       "image": "img/tech/python.png"
-    },
-    {
-      "title": "Claude",
-      "image": "img/tech/claude.png"
     }
-  ]
+  ],
+  "featured": true
 }

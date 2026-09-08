@@ -9,12 +9,13 @@
   "image": "img/projects/Class-Manager-.jpg",
   "icons": [
     {
-      "title": "ionic",
-      "image": "img/tech/ionic.png"
-    },
-    {
       "title": "Angular",
       "image": "img/tech/Angular.png"
+    },
+    {
+      "title": "ionic",
+      "image": "img/tech/ionic.png"
     }
-  ]
+  ],
+  "draft": true
 }

@@ -251,7 +251,7 @@
                 :title="item.title"
                 :alt="item.title"
                 :srcset="
-                  require(`~/assets/img/projects/${item.image}-.jpg?webp`)
+                  require(`~/assets/${item.image}?webp`)
                 "
                 type="image/webp"
                 width="750"
@@ -260,14 +260,14 @@
               <source
                 :title="item.title"
                 :alt="item.title"
-                :srcset="require(`~/assets/img/projects/${item.image}-.jpg`)"
+                :srcset="require(`~/assets/${item.image}`)"
                 type="image/jpeg"
                 width="750"
                 height="450"
               />
               <img
                 class="w-full transform group-hover:scale-105 transition-transform duration-500"
-                :src="require(`~/assets/img/projects/${item.image}-.jpg`)"
+                :src="require(`~/assets/${item.image}`)"
                 :alt="item.title"
                 :title="item.title"
                 width="750"
@@ -305,20 +305,20 @@
                     :title="icon.title"
                     :alt="icon.title"
                     :srcset="
-                      require(`~/assets/img/tech/${icon.image}.png?webp`)
+                      require(`~/assets/${icon.image}?webp`)
                     "
                     type="image/webp"
                   />
                   <source
                     :title="icon.title"
                     :alt="icon.title"
-                    :srcset="require(`~/assets/img/tech/${icon.image}.png`)"
+                    :srcset="require(`~/assets/${icon.image}`)"
                     type="image/png"
                   />
                   <img
                     class="w-6 h-6 object-contain"
                     :title="icon.title"
-                    :src="require(`~/assets/img/tech/${icon.image}.png`)"
+                    :src="require(`~/assets/${icon.image}`)"
                     :alt="icon.title"
                     loading="lazy"
                     width="24"
@@ -346,6 +346,19 @@
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 
 export default {
+  async asyncData({ $content, app }) {
+    const itemsRaw = await $content('projects').fetch()
+    const locale = app.i18n.locale
+    const key = ['es', 'es-ES'].includes(locale) ? 'description_es'
+      : ['pt', 'pt-PT'].includes(locale) ? 'description_pt'
+      : 'description_en'
+    const portfolio = itemsRaw
+      .filter(p => p.featured && !p.draft)
+      .sort((a, b) => parseInt(b.year || 0) - parseInt(a.year || 0))
+      .slice(0, 4)
+      .map(p => ({ ...p, description: p[key] }))
+    return { portfolio }
+  },
   head() {
     return {
       title: this.$t("head.home"),
@@ -405,7 +418,7 @@ export default {
           task1: this.$t("experience.task1multipro"),
           task2: this.$t("experience.task2multipro"),
           task3: this.$t("experience.task3multipro"),
-          image: "mws",
+          image: "mws-green",
         },
         {
           title: this.$t("experience.ditrali"),
@@ -718,58 +731,6 @@ export default {
           image: "communications",
         },
       ],*/
-      portfolio: [
-        {
-          title: "Solufar - Recetario Magistral",
-          company: "Freelance",
-          year: "2025",
-          description: this.$t("portfolio.solufar"),
-          link: "https://www.behance.net/gallery/217321013/Recetario-Magistral-Solufar",
-          image: "solufar",
-          icons: [
-            { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "PHP" },
-          ],
-        },
-        {
-          title: "The North Face - Circular Design",
-          company: "Komax",
-          year: "2024",
-          description: this.$t("portfolio.circulardesign"),
-          link: "https://www.behance.net/gallery/200987549/Circular-Design-Landing-The-North-Face-Peru",
-          image: "tnf",
-          icons: [
-            { title: "Magento 2", image: "magento-2" },
-            { title: "HTML5", image: "HTML5" },
-            { title: "CSS3", image: "CSS" },
-            { title: "JavaScript", image: "JS" },
-          ],
-        },
-        {
-          title: "Business Market Finders",
-          company: "Genesis Agency",
-          year: "2023",
-          description: this.$t("portfolio.businessmarketfinders"),
-          link: "https://www.behance.net/gallery/175709925/Business-Market-Finders",
-          image: "bmf",
-          icons: [
-            { title: "SAP AppGyver", image: "AppGyver" },
-            { title: "JavaScript", image: "JS" },
-          ],
-        },
-        {
-          title: "Work To Earn",
-          company: "Equipo 360",
-          year: "2022",
-          description: this.$t("portfolio.worktoearn"),
-          link: "https://www.behance.net/gallery/153310391/Work-To-Earn",
-          image: "worktoearn",
-          icons: [
-            { title: "WordPress", image: "WordPress" },
-            { title: "PHP", image: "PHP" },
-          ],
-        },
-      ],
     };
   },
   components: {
